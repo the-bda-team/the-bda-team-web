@@ -1,0 +1,11 @@
+url: "https://the-bda.team"
+
+description: >-
+  The BDA Team addresses challenges of modern society via basic research and infrastructure development.
+
+exclude:
+  - README.md
+  - LICENSE
+  - .jekyll-cache/
+  - Gemfile
+  - Gemfile.lock

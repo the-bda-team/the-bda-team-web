@@ -11,7 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - uses: actions/setup-python@v3
+    - name: Set up Python
+      uses: actions/setup-python@v3
     - name: Pre-commit Checks
       uses: pre-commit/action@v3.0.1
 
@@ -21,9 +22,18 @@ jobs:
     if: github.ref == 'refs/heads/main'
     steps:
     - uses: actions/checkout@v4
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.2'
+        bundler-cache: true
+    - name: Install dependencies
+      run: bundle install
+    - name: Build Jekyll
+      run: bundle exec jekyll build
     - name: Deploy to Cloudflare Pages
       uses: cloudflare/wrangler-action@v3
       with:
         apiToken: ${{ secrets.CLOUDFLARE_PAGES_API_TOKEN }}
-        command: pages deploy ./dist --project-name=the-bda-team-web
+        command: pages deploy ./_site --project-name=the-bda-team-web
 
