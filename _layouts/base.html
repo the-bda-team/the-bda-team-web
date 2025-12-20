@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>{{ page.title }}</title>
+<meta charset="utf-8">
+<meta name="description" content="{{ page.description }}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="copyright" content="&copy; {{site.time | date: '%Y'}} BDA Team">
+<link rel="canonical" href="{{ page.url }}">
+<link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}?{{site.time | date: '%s'}}">
+{%- for css in page.additional_css %}
+<link rel="stylesheet" href="{{ css | relative_url }}?{{site.time | date: '%s'}}">
+{%- endfor %}
+</head>
+<body>
+
+<nav>
+BDA
+</nav>
+
+<main>
+{{ content }}
+</main>
+
+<footer>
+Footer
+</footer>
+
+</body>
+</html>

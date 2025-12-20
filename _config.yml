@@ -9,3 +9,4 @@ exclude:
   - .jekyll-cache/
   - Gemfile
   - Gemfile.lock
+  - _schemas/
