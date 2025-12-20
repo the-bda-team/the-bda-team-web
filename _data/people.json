@@ -1,0 +1,61 @@
+{
+  "Teamlead": [
+    {
+      "id": "kiesel",
+      "title": "Dr.",
+      "name": ["Johannes", "Kiesel"],
+      "email": "Johannes.Kiesel@gesis.org",
+      "url": "https://kiesels.de/johannes"
+    }
+  ],
+  "Staff": [
+    {
+      "id": "chang",
+      "name": ["Po-Chun", "Chang"],
+      "email": "Po-Chun.Chang@gesis.org",
+      "years": "2025 - today"
+    },
+    {
+      "id": "khan",
+      "title": "Dr.",
+      "name": ["Muhammad Taimoor", "Khan"],
+      "email": "Taimoor.Khan@gesis.org",
+      "years": "2025 - today"
+    },
+    {
+      "id": "linzbach",
+      "name": ["Stephan", "Linzbach"],
+      "email": "Stephan.Linzbach@gesis.org",
+      "years": "2025 - today"
+    },
+    {
+      "id": "momeni",
+      "title": "Dr.",
+      "name": ["Fakhri", "Momeni"],
+      "email": "Fakhri.Momeni@gesis.org",
+      "years": "2025 - today"
+    },
+    {
+      "id": "muench",
+      "title": "Dr.",
+      "name": ["Felix Viktor", "Münch"],
+      "email": "Felix.Muench@gesis.org",
+      "years": "2025 - today"
+    },
+    {
+      "id": "rieger",
+      "title": "Dr.",
+      "name": ["Alisa", "Rieger"],
+      "email": "Alisa.Rieger@gesis.org",
+      "years": "2025 - today"
+    },
+    {
+      "id": "yu",
+      "title": "Dr.",
+      "name": ["Ran", "Yu"],
+      "email": "Ran.Yu@gesis.org",
+      "years": "2025 - today"
+    }
+  ]
+}
+
