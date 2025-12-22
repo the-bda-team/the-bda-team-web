@@ -25,7 +25,7 @@ title: People of the BDA Team
 {% if person.title %}<span class="title">{{ person.title }}</span> {% endif -%}
 <span class="name">{{ person.name[0] }} {{ person.name[1] }}</span>
 {%- if person.url %}</a>{% endif -%}
-{% if person.years %}<span class="years">[{{ person.years }}]</span>{% endif -%}
+{% if person.years %}<span class="years">[{{ person.years | replace: '-', '&ndash;' | replace: ' ', '&nbsp;' }}]</span>{% endif -%}
 <br>
 Email: <a href="mailto:{{ person.email }}" class="email">{{ person.email }}</a>
 {%- if person.orcid %}
