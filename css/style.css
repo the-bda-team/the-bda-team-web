@@ -1,1 +1,173 @@
-/**/
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.5;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Loading Fonts */
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('/fonts/OpenSans-Bold.woff2') format('woff2'),
+        url('/fonts/OpenSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('/fonts/OpenSans.woff2') format('woff2'),
+        url('/fonts/OpenSans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('/fonts/OpenSans-BoldItalic.woff2') format('woff2'),
+        url('/fonts/OpenSans-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('/fonts/OpenSans-Italic.woff2') format('woff2'),
+        url('/fonts/OpenSans-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Actual CSS */
+
+/* Core */
+
+:root {
+  --color-background: #F8F8F8;
+  --color-background-font: #666;
+  --color-headline-font: #444;
+  --color-selected: #D9E7F7;
+  --color-grayed-out-font: #666;
+  --color-link-font: rgb(6, 69, 173);
+  --color-separator-line: #888;
+  --space-default: 5px;
+}
+html, body {
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  max-width: 800px;
+  width: 100%;
+  padding: var(--space-default);
+}
+nav, main, footer {
+  display: flex;
+  justify-content: center;
+}
+main {
+  flex-grow: 1;
+}
+nav, footer {
+  background-color: var(--color-background);
+  color: var(--color-background-font);
+  padding: var(--space-default);
+}
+h1, h2 {
+  margin-bottom: calc(2 * var(--space-default));
+  color: var(--color-headline-font);
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+  margin-top: calc(6 * var(--space-default));
+}
+a {
+  color: var(--color-link-font) !important;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Table of Contents */
+
+.table-of-contents {
+  margin-bottom: calc(12 * var(--space-default));
+}
+.table-of-contents li {
+  list-style: url("data:image/svg+xml;utf8,<svg  xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 10'> <polyline fill='none' stroke='%23000' stroke-width='1.03' points='16 7 10 13 4 7'></polyline></svg>") inside;
+}
+
+/* Entries */
+
+.entries > li {
+  border-top: 1px solid var(--color-separator-line);
+  padding: calc(2 * var(--space-default));
+  display: flex;
+  gap: calc(4 * var(--space-default));
+}
+.entries > li:target {
+  background-color: var(--color-selected) !important;
+}
+.entry-image > img {
+  width: 90px;
+}
+.entry-body > .years {
+  margin-left: calc(4 * var(--space-default));
+  color: var(--color-grayed-out-font);
+}
+.entry-body > .description {
+  margin-top: calc(2 * var(--space-default));
+}
+

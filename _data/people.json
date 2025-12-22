@@ -5,7 +5,9 @@
       "title": "Dr.",
       "name": ["Johannes", "Kiesel"],
       "email": "Johannes.Kiesel@gesis.org",
-      "url": "https://kiesels.de/johannes"
+      "orcid": "0000-0002-1617-6508",
+      "url": "https://kiesels.de/johannes",
+      "topics": ["Conversational AI", "Computational Argumentation", "Human Values", "User Simulation"]
     }
   ],
   "Staff": [

@@ -44,6 +44,10 @@
           "type": "string",
           "format": "email"
         },
+        "orcid": {
+          "type": "string",
+          "pattern": "^[0-9X]{4}-[0-9X]{4}-[0-9X]{4}-[0-9X]{4}$"
+        },
         "url": {
           "type": "string",
           "format": "uri"
@@ -51,6 +55,13 @@
         "years": {
           "type": "string",
           "pattern": "^[1-9][0-9]{3} - ([1-9][0-9]{3}|today)$"
+        },
+        "topics": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
         }
       },
       "additionalProperties": false

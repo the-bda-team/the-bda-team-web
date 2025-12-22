@@ -1,0 +1,47 @@
+---
+layout: base
+nav_active: people 
+title: People of the BDA Team
+---
+
+<h1>People</h1>
+
+<ul class="table-of-contents">
+{% for category in site.data.people %}
+<li><a href="#{{ category[0] | downcase | replace: ' ', '' }}">{{ category[0] }}</a></li>
+{% endfor %}
+</ul>
+
+{% for category in site.data.people %}
+<h2 id="{{ category[0] | downcase | replace: ' ', '' }}">{{ category[0] }}</h2>
+
+<ul class="entries people">
+{% assign people = category[1] | sort: "id" %}
+{% for person in people %}
+<li id="{{ person.id }}">
+<div class="entry-image"><img src="/img/people/{{ person.id }}.jpg"></div>
+<div class="entry-body">
+{% if person.url %}<a href="{{ person.url }}">{% endif -%}
+{% if person.title %}<span class="title">{{ person.title }}</span> {% endif -%}
+<span class="name">{{ person.name[0] }} {{ person.name[1] }}</span>
+{%- if person.url %}</a>{% endif -%}
+{% if person.years %}<span class="years">[{{ person.years }}]</span>{% endif -%}
+<br>
+Email: <a href="mailto:{{ person.email }}" class="email">{{ person.email }}</a>
+{%- if person.orcid %}
+<br>
+ORCID: <a href="https://orcid.org/{{ person.orcid }}" class="orcid">{{ person.orcid }}</a>
+{% endif -%}
+<div class="description">
+{% if person.topics %}
+Topics:
+{%- for topic in person.topics %}{% if forloop.first == false %}, {% endif %}
+<span class="topic">{{ topic }}</span>{% endfor %}
+{% endif -%}
+</div>
+</div>
+</li>
+{% endfor %}
+</ul>
+{% endfor %}
+
