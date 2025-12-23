@@ -16,7 +16,12 @@
 
 <nav>
 <div class="content">
-BDA
+<div class="home">BDA</div>
+<div class="links">
+<a href="/people"{% if page.nav_active == "people" %} class="selected"{% endif %}>People</a>
+<a href="/publications"{% if page.nav_active == "publications" %} class="selected"{% endif %}>Publications</a>
+<a href="/events"{% if page.nav_active == "events" %} class="selected"{% endif %}>Events</a>
+</div>
 </div>
 </nav>
 
@@ -24,7 +29,7 @@ BDA
 <div class="content">
 {% if page.breadcrumbs %}
 <ul class="breadcrumbs">
-<li><a href="/">BDA</a></li>
+<li><a href="/">the-bda.team</a></li>
 {% assign path = "" %}
 {% for breadcrumb in page.breadcrumbs %}
 {% assign path = path | append: "/" | append: breadcrumb %}

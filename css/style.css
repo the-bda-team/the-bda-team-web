@@ -121,6 +121,19 @@ nav, footer {
   color: var(--color-background-font);
   padding: var(--space-default);
 }
+nav a, footer a {
+  color: var(--color-background-font) !important;
+}
+nav a.selected, footer a.selected {
+  text-decoration: underline;
+}
+nav .content {
+  display: flex;
+  justify-content: space-between;
+}
+nav .links a {
+  margin-left: calc(4 * var(--space-default));
+}
 h1, h2 {
   margin-top: calc(6 * var(--space-default));
   margin-bottom: calc(2 * var(--space-default));
