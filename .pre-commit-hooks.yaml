@@ -1,0 +1,5 @@
+- id: format-json
+  name: Format JSON
+  entry: _schemas/format_json.py
+  language: python
+  types: [json]

@@ -7,7 +7,7 @@
       "email": "Johannes.Kiesel@gesis.org",
       "orcid": "0000-0002-1617-6508",
       "url": "https://kiesels.de/johannes",
-      "topics": ["Conversational AI", "Computational Argumentation", "Human Values", "User Simulation"]
+      "topics": ["Conversational AI", "Computational Argumentation", "Human Values", "Methods Hub", "User Simulation"]
     }
   ],
   "Staff": [
@@ -15,7 +15,8 @@
       "id": "chang",
       "name": ["Po-Chun", "Chang"],
       "email": "Po-Chun.Chang@gesis.org",
-      "years": "2025 - today"
+      "years": "2025 - today",
+      "topics": ["Methods Hub"]
     },
     {
       "id": "khan",

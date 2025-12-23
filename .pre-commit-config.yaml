@@ -2,7 +2,15 @@ repos:
 - repo: https://github.com/python-jsonschema/check-jsonschema
   rev: 0.36.0
   hooks:
-    - id: check-jsonschema
+    - name: check-jsonschema-people
+      id: check-jsonschema
       files: ^_data/people.json$
       args: ["--schemafile", "_schemas/people.json"]
+- repo: local
+  hooks:
+    - name: format-json-publications
+      id: format-json
+      entry: python3 _schemas/format_json.py
+      files: ^_data/publications.json$
+      language: python
 

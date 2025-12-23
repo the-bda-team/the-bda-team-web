@@ -1,0 +1,21 @@
+[
+  {
+    "year": 2026,
+    "entries": [
+      {
+        "key": "kiesel:2026a",
+        "category": "InProceedings",
+        "address": "Cham, Switzerland",
+        "author": [["Johannes", "Kiesel"], ["Marc", "Feger"], ["Tim", "Hagen"], ["Sebastian", "Heineking"], ["Maximilian", "Heinrich"], ["Maik", "Fröbe"], ["Katarina", "Boland"], ["Wilhelm", "Pertsch"], ["Julia", "Romberg"], ["Ines", "Zelch"], ["Stefan", "Dietze"], ["Matthias", "Hagen"], ["Martin", "Potthast"], ["Benno", "Stein"]],
+        "booktitle": "Advances in Information Retrieval. 48th European Conference on IR Research (ECIR 2026)",
+        "editor": [["Avishek", "Anand"], ["Zhaochun", "Ren"], ["Suzan", "Verberne"], ["Adam", "Jatowt"], ["Ricardo", "Campos"], ["Yanyan", "Lan"], ["Sean", "MacAvaney"], ["Mohammad", "Aliannejadi"], ["Christine", "Bauer"], ["Masoud", "Mansoury"]],
+        "month": "apr",
+        "publisher": "Springer Nature",
+        "series": "Lecture Notes in Computer Science",
+        "site": "Delft, Netherlands",
+        "title": "Overview of Touché 2026: Argumentation Systems",
+        "year": "2026"
+      }
+    ]
+  }
+]

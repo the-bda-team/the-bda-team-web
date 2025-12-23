@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="copyright" content="&copy; {{site.time | date: '%Y'}} BDA Team">
 <link rel="canonical" href="{{ page.url }}">
-<link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}?{{site.time | date: '%s'}}">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?{{site.time | date: '%s'}}">
 {%- for css in page.additional_css %}
 <link rel="stylesheet" href="{{ css | relative_url }}?{{site.time | date: '%s'}}">
 {%- endfor %}
@@ -16,11 +16,11 @@
 
 <nav>
 <div class="content">
-<div class="home"><a href="/">BDA</a></div>
+<div class="home"><a href="{{ '/' | relative_url }}"{% if page.nav_active == "index" %} class="selected"{% endif %}>BDA</a></div>
 <div class="links">
-<a href="/people"{% if page.nav_active == "people" %} class="selected"{% endif %}>People</a>
-<a href="/publications"{% if page.nav_active == "publications" %} class="selected"{% endif %}>Publications</a>
-<a href="/events"{% if page.nav_active == "events" %} class="selected"{% endif %}>Events</a>
+<a href="{{ '/people' | relative_url }}"{% if page.nav_active == "people" %} class="selected"{% endif %}>People</a>
+<a href="{{ '/publications' | relative_url }}"{% if page.nav_active == "publications" %} class="selected"{% endif %}>Publications</a>
+<a href="{{ '/events' | relative_url }}"{% if page.nav_active == "events" %} class="selected"{% endif %}>Events</a>
 </div>
 </div>
 </nav>
@@ -29,11 +29,11 @@
 <div class="content">
 {% if page.breadcrumbs %}
 <ul class="breadcrumbs">
-<li><a href="/">the-bda.team</a></li>
+<li><a href="{{ '/' | relative_url }}">the-bda.team</a></li>
 {% assign path = "" %}
 {% for breadcrumb in page.breadcrumbs %}
 {% assign path = path | append: "/" | append: breadcrumb %}
-<li>› <a href="{{ path }}">{{ breadcrumb }}</a></li>
+<li>› <a href="{{ path | relative_url }}">{{ breadcrumb }}</a></li>
 {% endfor %}
 </ul>
 {% endif %}
@@ -50,3 +50,4 @@ Footer
 
 </body>
 </html>
+

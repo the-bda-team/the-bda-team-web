@@ -1,0 +1,19 @@
+---
+layout: base
+nav_active: publications
+title: Publications of the BDA Team
+breadcrumbs: [ "publications" ]
+---
+
+<h1>Publications</h1>
+
+{% for publicationsByYear in site.data.publications %}
+<h2 id="{{ publicationsByYear.year | downcase | replace: ' ', '' }}">{{ publicationsByYear.year }}</h2>
+
+<ul class="entries publications">
+{% for publication in publicationsByYear.entries %}
+<li>{{ publication }}</li>
+{% endfor %}
+</ul>
+{% endfor %}
+

@@ -47,8 +47,8 @@ table {
 
 @font-face {
     font-family: 'Open Sans';
-    src: url('/fonts/OpenSans-Bold.woff2') format('woff2'),
-        url('/fonts/OpenSans-Bold.woff') format('woff');
+    src: url('/assets/webfonts/OpenSans-Bold.woff2') format('woff2'),
+        url('/assets/webfonts/OpenSans-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -56,8 +56,8 @@ table {
 
 @font-face {
     font-family: 'Open Sans';
-    src: url('/fonts/OpenSans.woff2') format('woff2'),
-        url('/fonts/OpenSans.woff') format('woff');
+    src: url('/assets/webfonts/OpenSans.woff2') format('woff2'),
+        url('/assets/webfonts/OpenSans.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -65,8 +65,8 @@ table {
 
 @font-face {
     font-family: 'Open Sans';
-    src: url('/fonts/OpenSans-BoldItalic.woff2') format('woff2'),
-        url('/fonts/OpenSans-BoldItalic.woff') format('woff');
+    src: url('/assets/webfonts/OpenSans-BoldItalic.woff2') format('woff2'),
+        url('/assets/webfonts/OpenSans-BoldItalic.woff') format('woff');
     font-weight: bold;
     font-style: italic;
     font-display: swap;
@@ -74,8 +74,8 @@ table {
 
 @font-face {
     font-family: 'Open Sans';
-    src: url('/fonts/OpenSans-Italic.woff2') format('woff2'),
-        url('/fonts/OpenSans-Italic.woff') format('woff');
+    src: url('/assets/webfonts/OpenSans-Italic.woff2') format('woff2'),
+        url('/assets/webfonts/OpenSans-Italic.woff') format('woff');
     font-weight: normal;
     font-style: italic;
     font-display: swap;
@@ -91,6 +91,7 @@ table {
   --color-headline-font: #444;
   --color-selected: #D9E7F7;
   --color-grayed-out-font: #666;
+  --color-dark-grayed-out-font: #444;
   --color-link-font: rgb(6, 69, 173);
   --color-separator-line: #888;
   --space-default: 5px;
@@ -188,11 +189,27 @@ a:hover {
 .entry-image > img {
   width: 90px;
 }
+.entry-body > .name {
+  margin-right: calc(2 * var(--space-default));
+}
 .entry-body > .years {
-  margin-left: calc(4 * var(--space-default));
   color: var(--color-grayed-out-font);
+  white-space: nowrap;
 }
 .entry-body > .description {
   margin-top: calc(2 * var(--space-default));
+}
+
+/* Logos */
+
+a.logo > svg {
+  width: 2em;
+  fill: var(--color-grayed-out-font);
+}
+a.logo:hover {
+  text-decoration: none;
+}
+a.logo:hover > svg {
+  fill: var(--color-dark-grayed-out-font);
 }
 
