@@ -8,9 +8,9 @@ repos:
       args: ["--schemafile", "_schemas/people.json"]
 - repo: local
   hooks:
-    - name: format-json-publications
+    - name: format-json
       id: format-json
       entry: python3 _schemas/format_json.py
-      files: ^_data/publications.json$
+      files: ^_data/.*\.json$
       language: python
 
