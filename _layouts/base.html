@@ -22,6 +22,17 @@ BDA
 
 <main>
 <div class="content">
+{% if page.breadcrumbs %}
+<ul class="breadcrumbs">
+<li><a href="/">BDA</a></li>
+{% assign path = "" %}
+{% for breadcrumb in page.breadcrumbs %}
+{% assign path = path | append: "/" | append: breadcrumb %}
+<li>› <a href="{{ path }}">{{ breadcrumb }}</a></li>
+{% endfor %}
+</ul>
+{% endif %}
+
 {{ content }}
 </div>
 </main>
