@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.org/team-schema.json",
+  "$id": "https://the-bda.team/_schemas/people.json",
   "type": "array",
   "items": {
     "$ref": "#/$defs/Person"

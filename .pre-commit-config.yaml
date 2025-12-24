@@ -6,6 +6,10 @@ repos:
       id: check-jsonschema
       files: ^_data/people.json$
       args: ["--schemafile", "_schemas/people.json"]
+    - name: check-jsonschema-publications
+      id: check-jsonschema
+      files: ^_data/publications.json$
+      args: ["--schemafile", "_schemas/publications.json"]
 - repo: local
   hooks:
     - name: format-json

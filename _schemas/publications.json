@@ -1,0 +1,206 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://the-bda.team/_schemas/publications.json",
+  "type": "array",
+  "items": {
+    "$ref": "#/$defs/Publication"
+  },
+  "$defs": {
+    "Publication": {
+      "type": "object",
+      "required": ["id", "category", "title", "author", "month", "year"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z-]*[a-z]:[12][0-9]{3}[a-z]?$"
+        },
+        "category": {
+          "type": "string",
+          "enum": ["InProceedings", "Article", "PhDThesis"]
+        },
+        "title": {
+          "type": "string"
+        },
+        "author": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "minItems": 1
+        },
+        "month": {
+          "type": "string",
+          "enum": ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"]
+        },
+        "year": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2999
+        },
+        "doi": {
+          "type": "string",
+          "pattern": "^10\\.\\d{4,9}/[-._;()/:a-zA-Z0-9]+$"
+        },
+        "isbn": {
+          "type": "string",
+          "oneOf": [
+            { "pattern": "^(\\d-?){9}-[\\dX]$" },
+            { "pattern": "^(97[89])-(\\d-?){10}$" }
+          ]
+        },
+        "issn": {
+          "type": "string",
+          "format": "^\\d{4}-\\d{3}[\\dX]$"
+        },
+        "pages": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]*--[1-9][0-9]*$"
+        },
+        "numpages": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "address": {
+          "type": "string"
+        },
+        "appurl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "awardurl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "codeurl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "dataurl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "eventurl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "videourl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "arxivurl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "arxivpassword": {
+          "type": "string"
+        },
+        "annote": {
+          "type": "string"
+        },
+        "todo": {
+          "type": "string"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": { "category": { "const": "InProceedings" } }
+          },
+          "then": {
+            "required": [ "booktitle" ],
+            "properties": {
+              "booktitle": {
+                "type": "string"
+              },
+              "editor": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "minItems": 2,
+                  "maxItems": 2
+                },
+                "minItems": 1
+              },
+              "volume": {
+                "type": "string"
+              },
+              "number": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "series": {
+                "type": "string"
+              },
+              "organization": {
+                "type": "string"
+              },
+              "publisher": {
+                "type": "string"
+              },
+              "site": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": { "category": { "const": "Article" } }
+          },
+          "then": {
+            "required": [ "journal" ],
+            "properties": {
+              "journal": {
+                "type": "string"
+              },
+              "editor": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "minItems": 2,
+                  "maxItems": 2
+                },
+                "minItems": 1
+              },
+              "volume": {
+                "type": "string"
+              },
+              "number": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "publisher": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": { "category": { "const": "PhDThesis" } }
+          },
+          "then": {
+            "required": [ "school" ],
+            "properties": {
+              "school": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      ],
+      "unevaluatedProperties": false
+    }
+  }
+}
