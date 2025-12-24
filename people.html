@@ -6,18 +6,19 @@ breadcrumbs: [ "people" ]
 ---
 
 <h1>People</h1>
+{% assign peopleByCategory = site.data.people | group_by: "category" %}
 
 <ul class="table-of-contents">
-{% for category in site.data.people %}
-<li><a href="#{{ category[0] | downcase | replace: ' ', '' }}">{{ category[0] }}</a></li>
+{% for category in peopleByCategory %}
+<li><a href="#{{ category.name | downcase | replace: ' ', '' }}">{{ category.name }}</a></li>
 {% endfor %}
 </ul>
 
-{% for category in site.data.people %}
-<h2 id="{{ category[0] | downcase | replace: ' ', '' }}">{{ category[0] }}</h2>
+{% for category in peopleByCategory %}
+<h2 id="{{ category.name | downcase | replace: ' ', '' }}">{{ category.name }}</h2>
 
 <ul class="entries people">
-{% assign people = category[1] | sort: "id" %}
+{% assign people = category.items | sort: "id" %}
 {% for person in people %}
 <li id="{{ person.id }}">
 <div class="entry-image"><img src="/assets/img/people/{{ person.id }}.jpg"></div>

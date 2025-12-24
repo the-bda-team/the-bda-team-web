@@ -1,32 +1,21 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://example.org/team-schema.json",
-  "type": "object",
-  "required": ["Teamlead", "Staff"],
-  "properties": {
-    "Teamlead": {
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/Person"
-      },
-      "minItems": 1,
-      "maxItems": 1
-    },
-    "Staff": {
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/Person"
-      }
-    }
+  "type": "array",
+  "items": {
+    "$ref": "#/$defs/Person"
   },
-  "additionalProperties": false,
   "$defs": {
     "Person": {
       "type": "object",
-      "required": ["id", "name", "email"],
+      "required": ["id", "category", "name", "email"],
       "properties": {
         "id": {
           "type": "string"
+        },
+        "category": {
+          "type": "string",
+          "enum": ["Teamlead", "Staff"]
         },
         "title": {
           "type": "string",
