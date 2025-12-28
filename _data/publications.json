@@ -1,5 +1,17 @@
 [
   {
+    "id": "gohsen:2026",
+    "category": "InProceedings",
+    "author": [["Marcel", "Gohsen"], ["Nicola Lea", "Libera"], ["Johannes", "Kiesel"], ["Jan", "Ehlers"], ["Benno", "Stein"]],
+    "booktitle": "11th ACM SIGIR Conference on Human Information Interaction and Retrieval (CHIIR 2026)",
+    "editor": [["Adam", "Fourney"], ["Carla", "Lopes"], ["Johanne", "Trippas"]],
+    "month": "mar",
+    "publisher": "ACM",
+    "site": "Seattle, USA",
+    "title": "Does Cognitive Load Affect Human Accuracy in Detecting Voice-Based Deepfakes",
+    "year": 2026
+  },
+  {
     "id": "kiesel:2026a",
     "category": "InProceedings",
     "address": "Cham, Switzerland",
@@ -11,18 +23,6 @@
     "series": "Lecture Notes in Computer Science",
     "site": "Delft, Netherlands",
     "title": "Overview of Touch\u00e9 2026: Argumentation Systems",
-    "year": 2026
-  },
-  {
-    "id": "gohsen:2026",
-    "category": "InProceedings",
-    "author": [["Marcel", "Gohsen"], ["Nicola Lea", "Libera"], ["Johannes", "Kiesel"], ["Jan", "Ehlers"], ["Benno", "Stein"]],
-    "booktitle": "11th ACM SIGIR Conference on Human Information Interaction and Retrieval (CHIIR 2026)",
-    "editor": [["Adam", "Fourney"], ["Carla", "Lopes"], ["Johanne", "Trippas"]],
-    "month": "mar",
-    "publisher": "ACM",
-    "site": "Seattle, USA",
-    "title": "Does Cognitive Load Affect Human Accuracy in Detecting Voice-Based Deepfakes",
     "year": 2026
   },
   {

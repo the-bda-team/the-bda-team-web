@@ -17,6 +17,8 @@ jobs:
       uses: actions/setup-python@v3
     - name: Pre-commit Checks
       uses: pre-commit/action@v3.0.1
+    - name: Format JSON
+      run: python3 _schemas/format_json.py _data/*.json
     - name: Commit back changes
       uses: stefanzweifel/git-auto-commit-action@v7
       with:
