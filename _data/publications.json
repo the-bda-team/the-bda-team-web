@@ -42,29 +42,17 @@
     "year": 2025
   },
   {
-    "id": "kanadan:2025",
+    "id": "momeni:2025a",
     "category": "InProceedings",
-    "author": [["Midhun", "Kanadan"], ["Johannes", "Kiesel"], ["Maximilian", "Heinrich"], ["Benno", "Stein"]],
-    "booktitle": "12th Workshop on Argument Mining (ArgMining 2025) at ACL",
-    "editor": [["Elena", "Chistova"], ["Philipp", "Cimiano"], ["Shohreh", "Haddadan"], ["Gabriella", "Lapesa"], ["Ramon", "Ruiz-Dolz"]],
+    "author": [["Fakhri", "Momeni"], ["Muhammad Taimoor", "Khan"], ["Johannes", "Kiesel"], ["Tony", "Ross-Hellauer"]],
+    "booktitle": "3rd ACM Conference for Reproducibility and Replicability (REP 2025)",
+    "doi": "10.1145/3736731.3746161",
+    "editor": [["Thomas", "Pasquier"], ["Ashish", "Gehani"], ["Khalid", "Belhajjame"]],
     "month": "jul",
-    "publisher": "Association for Computational Linguistics",
-    "site": "Wien, Austria",
-    "title": "Webis at CQs-Gen 2025: Prompting and Reranking for Critical Questions",
-    "year": 2025
-  },
-  {
-    "id": "zelch:2025a",
-    "category": "InProceedings",
-    "author": [["Ines", "Zelch"], ["Matthias", "Hagen"], ["Benno", "Stein"], ["Johannes", "Kiesel"]],
-    "booktitle": "12th Workshop on Argument Mining (ArgMining 2025) at ACL",
-    "doi": "10.18653/v1/2025.argmining-1.22",
-    "editor": [["Elena", "Chistova"], ["Philipp", "Cimiano"], ["Shohreh", "Haddadan"], ["Gabriella", "Lapesa"], ["Ramon", "Ruiz-Dolz"]],
-    "month": "jul",
-    "pages": "228--242",
-    "publisher": "Association for Computational Linguistics",
-    "site": "Vienna, Austria",
-    "title": "Segmentation of Argumentative Texts by Key Statements for Argument Mining from the Web",
+    "pages": "179--191",
+    "publisher": "ACM",
+    "site": "Vancouver, British Columbia, Canada",
+    "title": "Checklists for Computational Reproducibility in Social Sciences: Insights from Literature and Survey Evaluation",
     "year": 2025
   },
   {
@@ -82,18 +70,44 @@
     "year": 2025
   },
   {
-    "id": "momeni:2025a",
+    "id": "zelch:2025a",
     "category": "InProceedings",
-    "author": [["Fakhri", "Momeni"], ["Muhammad Taimoor", "Khan"], ["Johannes", "Kiesel"], ["Tony", "Ross-Hellauer"]],
-    "booktitle": "3rd ACM Conference for Reproducibility and Replicability (REP 2025)",
-    "doi": "10.1145/3736731.3746161",
-    "editor": [["Thomas", "Pasquier"], ["Ashish", "Gehani"], ["Khalid", "Belhajjame"]],
+    "author": [["Ines", "Zelch"], ["Matthias", "Hagen"], ["Benno", "Stein"], ["Johannes", "Kiesel"]],
+    "booktitle": "12th Workshop on Argument Mining (ArgMining 2025) at ACL",
+    "doi": "10.18653/v1/2025.argmining-1.22",
+    "editor": [["Elena", "Chistova"], ["Philipp", "Cimiano"], ["Shohreh", "Haddadan"], ["Gabriella", "Lapesa"], ["Ramon", "Ruiz-Dolz"]],
     "month": "jul",
-    "pages": "179--191",
-    "publisher": "ACM",
-    "site": "Vancouver, British Columbia, Canada",
-    "title": "Checklists for Computational Reproducibility in Social Sciences: Insights from Literature and Survey Evaluation",
+    "pages": "228--242",
+    "publisher": "Association for Computational Linguistics",
+    "site": "Vienna, Austria",
+    "title": "Segmentation of Argumentative Texts by Key Statements for Argument Mining from the Web",
     "year": 2025
+  },
+  {
+    "id": "kanadan:2025",
+    "category": "InProceedings",
+    "author": [["Midhun", "Kanadan"], ["Johannes", "Kiesel"], ["Maximilian", "Heinrich"], ["Benno", "Stein"]],
+    "booktitle": "12th Workshop on Argument Mining (ArgMining 2025) at ACL",
+    "editor": [["Elena", "Chistova"], ["Philipp", "Cimiano"], ["Shohreh", "Haddadan"], ["Gabriella", "Lapesa"], ["Ramon", "Ruiz-Dolz"]],
+    "month": "jul",
+    "publisher": "Association for Computational Linguistics",
+    "site": "Wien, Austria",
+    "title": "Webis at CQs-Gen 2025: Prompting and Reranking for Critical Questions",
+    "year": 2025
+  },
+  {
+    "id": "kiesel:2024c",
+    "category": "InProceedings",
+    "address": "Berlin Heidelberg New York",
+    "author": [["Johannes", "Kiesel"], ["Marcel", "Gohsen"], ["Nailia", "Mirzakhmedova"], ["Matthias", "Hagen"], ["Benno", "Stein"]],
+    "booktitle": "Experimental IR Meets Multilinguality, Multimodality, and Interaction. 15th International Conference of the CLEF Initiative (CLEF 2024)",
+    "editor": [["Lorraine", "Goeuriot"], ["Philippe", "Mulhem"], ["Georges", "Qu\u00e9not"], ["Didier", "Schwab"], ["Giorgio Maria Di", "Nunzio"], ["Laure", "Soulier"], ["Petra", "Galuscakova"], ["Alba Garcia Seco", "Herrera"], ["Guglielmo", "Faggioli"], ["Nicola", "Ferro"]],
+    "month": "sep",
+    "publisher": "Springer",
+    "series": "Lecture Notes in Computer Science",
+    "site": "Grenoble, France",
+    "title": "Who Will Evaluate the Evaluators? Exploring the Gen-IR User Simulation Space",
+    "year": 2024
   },
   {
     "id": "kiesel:2024d",
@@ -111,31 +125,6 @@
     "year": 2024
   },
   {
-    "id": "kiesel:2024c",
-    "category": "InProceedings",
-    "address": "Berlin Heidelberg New York",
-    "author": [["Johannes", "Kiesel"], ["Marcel", "Gohsen"], ["Nailia", "Mirzakhmedova"], ["Matthias", "Hagen"], ["Benno", "Stein"]],
-    "booktitle": "Experimental IR Meets Multilinguality, Multimodality, and Interaction. 15th International Conference of the CLEF Initiative (CLEF 2024)",
-    "editor": [["Lorraine", "Goeuriot"], ["Philippe", "Mulhem"], ["Georges", "Qu\u00e9not"], ["Didier", "Schwab"], ["Giorgio Maria Di", "Nunzio"], ["Laure", "Soulier"], ["Petra", "Galuscakova"], ["Alba Garcia Seco", "Herrera"], ["Guglielmo", "Faggioli"], ["Nicola", "Ferro"]],
-    "month": "sep",
-    "publisher": "Springer",
-    "series": "Lecture Notes in Computer Science",
-    "site": "Grenoble, France",
-    "title": "Who Will Evaluate the Evaluators? Exploring the Gen-IR User Simulation Space",
-    "year": 2024
-  },
-  {
-    "id": "gienapp:2024a",
-    "category": "InProceedings",
-    "author": [["Lukas", "Gienapp"], ["Harrisen", "Scells"], ["Niklas", "Deckers"], ["Janek", "Bevendorff"], ["Shuai", "Wang"], ["Johannes", "Kiesel"], ["Shahbaz", "Syed"], ["Maik", "Fr\u00f6be"], ["Guido", "Zuccon"], ["Benno", "Stein"], ["Matthias", "Hagen"], ["Martin", "Potthast"]],
-    "booktitle": "47th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2023)",
-    "month": "jul",
-    "publisher": "ACM",
-    "site": "Washington D.C., USA",
-    "title": "On the Evaluation of Generated Text SERPs",
-    "year": 2024
-  },
-  {
     "id": "tost:2024",
     "category": "InProceedings",
     "author": [["Jordi", "Tost"], ["Marcel", "Gohsen"], ["Britta", "Schulte"], ["Fidel", "Thomet"], ["Mattis", "Kuhn"], ["Johannes", "Kiesel"], ["Benno", "Stein"], ["Eva", "Hornecker"]],
@@ -150,6 +139,17 @@
     "year": 2024
   },
   {
+    "id": "gienapp:2024a",
+    "category": "InProceedings",
+    "author": [["Lukas", "Gienapp"], ["Harrisen", "Scells"], ["Niklas", "Deckers"], ["Janek", "Bevendorff"], ["Shuai", "Wang"], ["Johannes", "Kiesel"], ["Shahbaz", "Syed"], ["Maik", "Fr\u00f6be"], ["Guido", "Zuccon"], ["Benno", "Stein"], ["Matthias", "Hagen"], ["Martin", "Potthast"]],
+    "booktitle": "47th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2023)",
+    "month": "jul",
+    "publisher": "ACM",
+    "site": "Washington D.C., USA",
+    "title": "On the Evaluation of Generated Text SERPs",
+    "year": 2024
+  },
+  {
     "id": "mirzakhmedova:2024a",
     "category": "InProceedings",
     "author": [["Nailia", "Mirzakhmedova"], ["Johannes", "Kiesel"], ["Milad", "Alshomary"], ["Maximilian", "Heinrich"], ["Nicolas", "Handke"], ["Xiaoni", "Cai"], ["Valentin", "Barriere"], ["Doratossadat", "Dastgheib"], ["Omid", "Ghahroodi"], ["Mohammad Ali", "Sadraei"], ["Ehsaneddin", "Asgari"], ["Lea", "Kawaletz"], ["Henning", "Wachsmuth"], ["Benno", "Stein"]],
@@ -159,6 +159,18 @@
     "publisher": "International Committee on Computational Linguistics",
     "site": "Torino, Italy",
     "title": "The Touch\u00e923-ValueEval Dataset for Identifying Human Values behind Arguments",
+    "year": 2024
+  },
+  {
+    "id": "kiesel:2024a",
+    "category": "InProceedings",
+    "author": [["Johannes", "Kiesel"], ["Marcel", "Gohsen"], ["Nailia", "Mirzakhmedova"], ["Matthias", "Hagen"], ["Benno", "Stein"]],
+    "booktitle": "Advances in Information Retrieval. 46th European Conference on IR Research (ECIR 2024)",
+    "month": "mar",
+    "publisher": "Springer",
+    "series": "Lecture Notes in Computer Science",
+    "site": "Glasgow, Scotland",
+    "title": "Simulating Follow-up Questions in Conversational Search",
     "year": 2024
   },
   {
@@ -177,16 +189,15 @@
     "year": 2024
   },
   {
-    "id": "kiesel:2024a",
+    "id": "mirzakhmedova:2023b",
     "category": "InProceedings",
-    "author": [["Johannes", "Kiesel"], ["Marcel", "Gohsen"], ["Nailia", "Mirzakhmedova"], ["Matthias", "Hagen"], ["Benno", "Stein"]],
-    "booktitle": "Advances in Information Retrieval. 46th European Conference on IR Research (ECIR 2024)",
-    "month": "mar",
-    "publisher": "Springer",
-    "series": "Lecture Notes in Computer Science",
-    "site": "Glasgow, Scotland",
-    "title": "Simulating Follow-up Questions in Conversational Search",
-    "year": 2024
+    "author": [["Nailia", "Mirzakhmedova"], ["Johannes", "Kiesel"], ["Khalid", "Al-Khatib"], ["Benno", "Stein"]],
+    "booktitle": "Findings of the Association for Computational Linguistics: EMNLP 2023",
+    "month": "dec",
+    "publisher": "Association for Computational Linguistics",
+    "site": "Singapore",
+    "title": "Unveiling the Power of Argument Arrangement in Online Persuasive Discussions",
+    "year": 2023
   },
   {
     "id": "torky:2023",
@@ -198,17 +209,6 @@
     "publisher": "Association for Computational Linguistics",
     "site": "Singapore",
     "title": "Webis @ ImageArg 2023: Embedding-based Stance and Persuasiveness Classification",
-    "year": 2023
-  },
-  {
-    "id": "mirzakhmedova:2023b",
-    "category": "InProceedings",
-    "author": [["Nailia", "Mirzakhmedova"], ["Johannes", "Kiesel"], ["Khalid", "Al-Khatib"], ["Benno", "Stein"]],
-    "booktitle": "Findings of the Association for Computational Linguistics: EMNLP 2023",
-    "month": "dec",
-    "publisher": "Association for Computational Linguistics",
-    "site": "Singapore",
-    "title": "Unveiling the Power of Argument Arrangement in Online Persuasive Discussions",
     "year": 2023
   },
   {
@@ -226,16 +226,15 @@
     "year": 2023
   },
   {
-    "id": "kiesel:2023a",
+    "id": "carnot:2023",
     "category": "InProceedings",
-    "address": "Toronto, Canada",
-    "author": [["Johannes", "Kiesel"], ["Milad", "Alshomary"], ["Nailia", "Mirzakhmedova"], ["Maximilian", "Heinrich"], ["Nicolas", "Handke"], ["Henning", "Wachsmuth"], ["Benno", "Stein"]],
-    "booktitle": "17th International Workshop on Semantic Evaluation (SemEval 2023)",
-    "doi": "10.18653/v1/2023.semeval-1.313",
+    "author": [["Miriam Louise", "Carnot"], ["Lorenz", "Heinemann"], [" Jan", "Braker"], ["Tobias", "Schreieder"], ["Johannes", "Kiesel"], ["Maik", "Fr\u00f6be"], ["Martin", "Potthast"], ["Benno", "Stein"]],
+    "booktitle": "46th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2023)",
+    "doi": "10.1145/3539618.3591917",
     "month": "jul",
-    "pages": "2287--2303",
-    "publisher": "Association for Computational Linguistics",
-    "title": "SemEval-2023 Task 4: ValueEval: Identification of Human Values behind Arguments",
+    "publisher": "ACM",
+    "site": "Taipei, Taiwan",
+    "title": "On Stance Detection in Image Retrieval for Argumentation",
     "year": 2023
   },
   {
@@ -252,15 +251,16 @@
     "year": 2023
   },
   {
-    "id": "carnot:2023",
+    "id": "kiesel:2023a",
     "category": "InProceedings",
-    "author": [["Miriam Louise", "Carnot"], ["Lorenz", "Heinemann"], [" Jan", "Braker"], ["Tobias", "Schreieder"], ["Johannes", "Kiesel"], ["Maik", "Fr\u00f6be"], ["Martin", "Potthast"], ["Benno", "Stein"]],
-    "booktitle": "46th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2023)",
-    "doi": "10.1145/3539618.3591917",
+    "address": "Toronto, Canada",
+    "author": [["Johannes", "Kiesel"], ["Milad", "Alshomary"], ["Nailia", "Mirzakhmedova"], ["Maximilian", "Heinrich"], ["Nicolas", "Handke"], ["Henning", "Wachsmuth"], ["Benno", "Stein"]],
+    "booktitle": "17th International Workshop on Semantic Evaluation (SemEval 2023)",
+    "doi": "10.18653/v1/2023.semeval-1.313",
     "month": "jul",
-    "publisher": "ACM",
-    "site": "Taipei, Taiwan",
-    "title": "On Stance Detection in Image Retrieval for Argumentation",
+    "pages": "2287--2303",
+    "publisher": "Association for Computational Linguistics",
+    "title": "SemEval-2023 Task 4: ValueEval: Identification of Human Values behind Arguments",
     "year": 2023
   },
   {
@@ -273,18 +273,6 @@
     "publisher": "Association for Computational Linguistics",
     "site": "Dubrovnik, Croatia",
     "title": "Topic Ontologies for Arguments",
-    "year": 2023
-  },
-  {
-    "id": "deckers:2023a",
-    "category": "InProceedings",
-    "author": [["Niklas", "Deckers"], ["Maik", "Fr\u00f6be"], ["Johannes", "Kiesel"], ["Gianluca", "Pandolfo"], ["Christopher", "Schr\u00f6der"], ["Benno", "Stein"], ["Martin", "Potthast"]],
-    "booktitle": "ACM SIGIR Conference on Human Information Interaction and Retrieval (CHIIR 2023)",
-    "doi": "10.1145/3576840.3578327",
-    "month": "mar",
-    "publisher": "ACM",
-    "site": "Austin, TX, USA",
-    "title": "The Infinite Index: Information Retrieval on Generative Text-To-Image Models",
     "year": 2023
   },
   {
@@ -303,19 +291,16 @@
     "year": 2023
   },
   {
-    "id": "elstner:2022",
+    "id": "deckers:2023a",
     "category": "InProceedings",
-    "address": "Berlin Heidelberg New York",
-    "author": [["Theresa", "Elstner"], ["Johannes", "Kiesel"], ["Lars", "Meyer"], ["Max", "Martius"], ["Sebastian", "Schmidt"], ["Benno", "Stein"], ["Martin", "Potthast"]],
-    "booktitle": "26th International Conference on Theory and Practice of Digital Libraries (TPDL 2022)",
-    "doi": "10.1007/978-3-031-16802-4_34",
-    "editor": [["Gianmaria", "Silvello"], ["Oscar", "Corcho"], ["Paolo", "Manghi"], ["Giorgio Maria Di", "Nunzio"], ["Koraljka", "Golub"], ["Nicola", "Ferro"], ["Antonella", "Poggi"]],
-    "month": "sep",
-    "pages": "365--371",
-    "publisher": "Springer",
-    "site": "Padua",
-    "title": "Visual Web Archive Quality Assessment",
-    "year": 2022
+    "author": [["Niklas", "Deckers"], ["Maik", "Fr\u00f6be"], ["Johannes", "Kiesel"], ["Gianluca", "Pandolfo"], ["Christopher", "Schr\u00f6der"], ["Benno", "Stein"], ["Martin", "Potthast"]],
+    "booktitle": "ACM SIGIR Conference on Human Information Interaction and Retrieval (CHIIR 2023)",
+    "doi": "10.1145/3576840.3578327",
+    "month": "mar",
+    "publisher": "ACM",
+    "site": "Austin, TX, USA",
+    "title": "The Infinite Index: Information Retrieval on Generative Text-To-Image Models",
+    "year": 2023
   },
   {
     "id": "bondarenko:2022f",
@@ -330,6 +315,21 @@
     "series": "Lecture Notes in Computer Science",
     "site": "Bologna, Italy",
     "title": "Overview of Touch\u00e9 2022: Argument Retrieval",
+    "year": 2022
+  },
+  {
+    "id": "elstner:2022",
+    "category": "InProceedings",
+    "address": "Berlin Heidelberg New York",
+    "author": [["Theresa", "Elstner"], ["Johannes", "Kiesel"], ["Lars", "Meyer"], ["Max", "Martius"], ["Sebastian", "Schmidt"], ["Benno", "Stein"], ["Martin", "Potthast"]],
+    "booktitle": "26th International Conference on Theory and Practice of Digital Libraries (TPDL 2022)",
+    "doi": "10.1007/978-3-031-16802-4_34",
+    "editor": [["Gianmaria", "Silvello"], ["Oscar", "Corcho"], ["Paolo", "Manghi"], ["Giorgio Maria Di", "Nunzio"], ["Koraljka", "Golub"], ["Nicola", "Ferro"], ["Antonella", "Poggi"]],
+    "month": "sep",
+    "pages": "365--371",
+    "publisher": "Springer",
+    "site": "Padua",
+    "title": "Visual Web Archive Quality Assessment",
     "year": 2022
   },
   {
@@ -385,20 +385,6 @@
     "year": 2022
   },
   {
-    "id": "bondarenko:2021f",
-    "category": "InProceedings",
-    "author": [["Alexander", "Bondarenko"], ["Maik", "Fr\u00f6be"], ["Marcel", "Gohsen"], ["Sebastian", "G\u00fcnther"], ["Johannes", "Kiesel"], ["Jakob", "Schwerter"], ["Shahbaz", "Syed"], ["Michael", "V\u00f6lske"], ["Martin", "Potthast"], ["Benno", "Stein"], ["Matthias", "Hagen"]],
-    "booktitle": "30th International Text Retrieval Conference (TREC 2021)",
-    "editor": [["Ellen M.}", "Voorhees"], ["Angela", "Ellis"]],
-    "month": "nov",
-    "numpages": 6,
-    "publisher": "National Institute of Standards and Technology (NIST)",
-    "series": "NIST Special Publication",
-    "site": "Gaithersburg, Maryland, USA",
-    "title": "Webis at TREC 2021: Deep Learning, Health Misinformation, and Podcasts Tracks",
-    "year": 2021
-  },
-  {
     "id": "kiesel:2021e",
     "category": "InProceedings",
     "author": [["Johannes", "Kiesel"], ["Nico", "Reichenbach"], ["Benno", "Stein"], ["Martin", "Potthast"]],
@@ -411,6 +397,20 @@
     "site": "Punta Cana, Dominican Republic",
     "title": "Image Retrieval for Arguments Using Stance-Aware Query Expansion",
     "todo": "pages, url, doi, slides, video",
+    "year": 2021
+  },
+  {
+    "id": "bondarenko:2021f",
+    "category": "InProceedings",
+    "author": [["Alexander", "Bondarenko"], ["Maik", "Fr\u00f6be"], ["Marcel", "Gohsen"], ["Sebastian", "G\u00fcnther"], ["Johannes", "Kiesel"], ["Jakob", "Schwerter"], ["Shahbaz", "Syed"], ["Michael", "V\u00f6lske"], ["Martin", "Potthast"], ["Benno", "Stein"], ["Matthias", "Hagen"]],
+    "booktitle": "30th International Text Retrieval Conference (TREC 2021)",
+    "editor": [["Ellen M.}", "Voorhees"], ["Angela", "Ellis"]],
+    "month": "nov",
+    "numpages": 6,
+    "publisher": "National Institute of Standards and Technology (NIST)",
+    "series": "NIST Special Publication",
+    "site": "Gaithersburg, Maryland, USA",
+    "title": "Webis at TREC 2021: Deep Learning, Health Misinformation, and Podcasts Tracks",
     "year": 2021
   },
   {
@@ -539,20 +539,17 @@
     "year": 2020
   },
   {
-    "id": "kiesel:2020b",
+    "id": "voelske:2020b",
     "category": "InProceedings",
-    "author": [["Johannes", "Kiesel"], ["Florian", "Kneist"], ["Lars", "Meyer"], ["Kristof", "Komlossy"], ["Benno", "Stein"], ["Martin", "Potthast"]],
-    "booktitle": "29th ACM International Conference on Information and Knowledge Management (CIKM 2020)",
-    "codeurl": "https://github.com/webis-de/CIKM-20",
-    "dataurl": "https://webis.de/data#webis-webseg-20",
-    "doi": "10.1145/3340531.3412782",
-    "editor": [["Mathieu", "d'Aquin"], ["Stefan", "Dietze"], ["Claudia", "Hauff"], ["Edward", "Curry"], ["Philippe", "Cudr\u00e9-Mauroux"]],
+    "author": [["Michael", "V\u00f6lske"], ["Janek", "Bevendorff"], ["Johannes", "Kiesel"], ["Benno", "Stein"], ["Maik", "Fr\u00f6be"], ["Matthias", "Hagen"], ["Martin", "Potthast"]],
+    "booktitle": "2nd International Symposium on Open Search Technology (OSSYM 2020)",
+    "doi": "10.5281/zenodo.5025374",
+    "editor": [["Andreas", "Wagner"], ["Christian", "Guetl"], ["Michael", "Granitzer"], ["Stefan", "Voigt"]],
     "month": "oct",
-    "pages": "3047--3054",
-    "publisher": "ACM",
-    "site": "virtual event, Ireland",
-    "title": "Web Page Segmentation Revisited: Evaluation Framework and Dataset",
-    "videourl": "https://youtu.be/TfaS0I2oMBI",
+    "numpages": 1,
+    "publisher": "International Open Search Symposium",
+    "site": "CERN, Geneva, Switzerland",
+    "title": "Web Archive Analytics: Infrastructure & Applications @ Webis (extended abstract)",
     "year": 2020
   },
   {
@@ -570,17 +567,20 @@
     "year": 2020
   },
   {
-    "id": "voelske:2020b",
+    "id": "kiesel:2020b",
     "category": "InProceedings",
-    "author": [["Michael", "V\u00f6lske"], ["Janek", "Bevendorff"], ["Johannes", "Kiesel"], ["Benno", "Stein"], ["Maik", "Fr\u00f6be"], ["Matthias", "Hagen"], ["Martin", "Potthast"]],
-    "booktitle": "2nd International Symposium on Open Search Technology (OSSYM 2020)",
-    "doi": "10.5281/zenodo.5025374",
-    "editor": [["Andreas", "Wagner"], ["Christian", "Guetl"], ["Michael", "Granitzer"], ["Stefan", "Voigt"]],
+    "author": [["Johannes", "Kiesel"], ["Florian", "Kneist"], ["Lars", "Meyer"], ["Kristof", "Komlossy"], ["Benno", "Stein"], ["Martin", "Potthast"]],
+    "booktitle": "29th ACM International Conference on Information and Knowledge Management (CIKM 2020)",
+    "codeurl": "https://github.com/webis-de/CIKM-20",
+    "dataurl": "https://webis.de/data#webis-webseg-20",
+    "doi": "10.1145/3340531.3412782",
+    "editor": [["Mathieu", "d'Aquin"], ["Stefan", "Dietze"], ["Claudia", "Hauff"], ["Edward", "Curry"], ["Philippe", "Cudr\u00e9-Mauroux"]],
     "month": "oct",
-    "numpages": 1,
-    "publisher": "International Open Search Symposium",
-    "site": "CERN, Geneva, Switzerland",
-    "title": "Web Archive Analytics: Infrastructure & Applications @ Webis (extended abstract)",
+    "pages": "3047--3054",
+    "publisher": "ACM",
+    "site": "virtual event, Ireland",
+    "title": "Web Page Segmentation Revisited: Evaluation Framework and Dataset",
+    "videourl": "https://youtu.be/TfaS0I2oMBI",
     "year": 2020
   },
   {
@@ -634,22 +634,6 @@
     "year": 2019
   },
   {
-    "id": "kiesel:2019c",
-    "category": "InProceedings",
-    "author": [["Johannes", "Kiesel"], ["Maria", "Mestre"], ["Rishabh", "Shukla"], ["Emmanuel", "Vincent"], ["Payam", "Adineh"], ["David", "Corney"], ["Benno", "Stein"], ["Martin", "Potthast"]],
-    "booktitle": "13th International Workshop on Semantic Evaluation (SemEval 2019)",
-    "dataurl": "https://webis.de/data#pan-semeval-hyperpartisan-news-detection-19",
-    "doi": "10.18653/v1/S19-2145",
-    "eventurl": "https://webis.de/events.html#pan-2019-at-semeval",
-    "month": "jun",
-    "pages": "829--839",
-    "publisher": "Association for Computational Linguistics",
-    "site": "Minneapolis",
-    "title": "SemEval-2019 Task 4: Hyperpartisan News Detection",
-    "videourl": "https://youtu.be/e-9MvqHMh6I",
-    "year": 2019
-  },
-  {
     "id": "kiesel:2019b",
     "category": "InProceedings",
     "annote": "acceptance rate: collect from here once updated: https://www.jcdl.org/past_conferences.php",
@@ -664,6 +648,22 @@
     "publisher": "ACM",
     "site": "Urbana-Champaign",
     "title": "A Dataset for Content Error Detection in Web Archives",
+    "year": 2019
+  },
+  {
+    "id": "kiesel:2019c",
+    "category": "InProceedings",
+    "author": [["Johannes", "Kiesel"], ["Maria", "Mestre"], ["Rishabh", "Shukla"], ["Emmanuel", "Vincent"], ["Payam", "Adineh"], ["David", "Corney"], ["Benno", "Stein"], ["Martin", "Potthast"]],
+    "booktitle": "13th International Workshop on Semantic Evaluation (SemEval 2019)",
+    "dataurl": "https://webis.de/data#pan-semeval-hyperpartisan-news-detection-19",
+    "doi": "10.18653/v1/S19-2145",
+    "eventurl": "https://webis.de/events.html#pan-2019-at-semeval",
+    "month": "jun",
+    "pages": "829--839",
+    "publisher": "Association for Computational Linguistics",
+    "site": "Minneapolis",
+    "title": "SemEval-2019 Task 4: Hyperpartisan News Detection",
+    "videourl": "https://youtu.be/e-9MvqHMh6I",
     "year": 2019
   },
   {
@@ -716,20 +716,6 @@
     "year": 2018
   },
   {
-    "id": "kiesel:2018a",
-    "category": "InProceedings",
-    "annote": "acceptance rate: 0.30 (98/327) short papers",
-    "author": [["Johannes", "Kiesel"], ["Arefeh", "Bahrami"], ["Benno", "Stein"], ["Avishek", "Anand"], ["Matthias", "Hagen"]],
-    "booktitle": "41st International ACM Conference on Research and Development in Information Retrieval (SIGIR 2018)",
-    "doi": "10.1145/3209978.3210160",
-    "month": "jul",
-    "pages": "1257--1260",
-    "publisher": "ACM",
-    "site": "Ann Arbor, MI",
-    "title": "Toward Voice Query Clarification",
-    "year": 2018
-  },
-  {
     "id": "potthast:2018f",
     "category": "InProceedings",
     "annote": "acceptance rate: 0.25 (258/1018)",
@@ -749,6 +735,20 @@
     "year": 2018
   },
   {
+    "id": "kiesel:2018a",
+    "category": "InProceedings",
+    "annote": "acceptance rate: 0.30 (98/327) short papers",
+    "author": [["Johannes", "Kiesel"], ["Arefeh", "Bahrami"], ["Benno", "Stein"], ["Avishek", "Anand"], ["Matthias", "Hagen"]],
+    "booktitle": "41st International ACM Conference on Research and Development in Information Retrieval (SIGIR 2018)",
+    "doi": "10.1145/3209978.3210160",
+    "month": "jul",
+    "pages": "1257--1260",
+    "publisher": "ACM",
+    "site": "Ann Arbor, MI",
+    "title": "Toward Voice Query Clarification",
+    "year": 2018
+  },
+  {
     "id": "hagen:2017f",
     "category": "InProceedings",
     "author": [["Matthias", "Hagen"], ["Yamen", "Ajjour"], ["Johannes", "Kiesel"], ["Payam", "Adineh"], ["Benno", "Stein"]],
@@ -760,21 +760,6 @@
     "series": "NIST Special Publication",
     "site": "Gaithersburg, Maryland, USA",
     "title": "Webis at TREC 2017: Open Search and Core Tracks",
-    "year": 2017
-  },
-  {
-    "id": "ajjour:2017",
-    "category": "InProceedings",
-    "author": [["Yamen", "Ajjour"], ["Wei-Fan", "Chen"], ["Johannes", "Kiesel"], ["Henning", "Wachsmuth"], ["Benno", "Stein"]],
-    "booktitle": "4th Workshop on Argument Mining (ArgMining 2017) at EMNLP",
-    "codeurl": "https://github.com/webis-de/ARGMINING-17",
-    "doi": "10.18653/v1/W17-5115",
-    "editor": [["Kevin", "Ashley"], ["Claire", "Cardie"], ["Nancy", "Green"], ["Iryna", "Gurevych"], ["Ivan", "Habernal"], ["Diane", "Litman"], ["Georgios", "Petasis"], ["Chris", "Reed"], ["Noam", "Slonim"], ["Vern", "Walker"]],
-    "month": "sep",
-    "pages": "118--128",
-    "publisher": "Association for Computational Linguistics",
-    "site": "Copenhagen, Denmark",
-    "title": "Unit Segmentation of Argumentative Texts",
     "year": 2017
   },
   {
@@ -791,6 +776,21 @@
     "site": "Dublin, Ireland",
     "title": "Webis at the CLEF 2017 Dynamic Search Lab",
     "volume": "1866",
+    "year": 2017
+  },
+  {
+    "id": "ajjour:2017",
+    "category": "InProceedings",
+    "author": [["Yamen", "Ajjour"], ["Wei-Fan", "Chen"], ["Johannes", "Kiesel"], ["Henning", "Wachsmuth"], ["Benno", "Stein"]],
+    "booktitle": "4th Workshop on Argument Mining (ArgMining 2017) at EMNLP",
+    "codeurl": "https://github.com/webis-de/ARGMINING-17",
+    "doi": "10.18653/v1/W17-5115",
+    "editor": [["Kevin", "Ashley"], ["Claire", "Cardie"], ["Nancy", "Green"], ["Iryna", "Gurevych"], ["Ivan", "Habernal"], ["Diane", "Litman"], ["Georgios", "Petasis"], ["Chris", "Reed"], ["Noam", "Slonim"], ["Vern", "Walker"]],
+    "month": "sep",
+    "pages": "118--128",
+    "publisher": "Association for Computational Linguistics",
+    "site": "Copenhagen, Denmark",
+    "title": "Unit Segmentation of Argumentative Texts",
     "year": 2017
   },
   {
