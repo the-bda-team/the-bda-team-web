@@ -2,67 +2,66 @@
   {
     "id": "kiesel",
     "category": "Teamlead",
-    "title": "Dr.",
-    "name": ["Johannes", "Kiesel"],
     "email": "Johannes.Kiesel@gesis.org",
+    "name": ["Johannes", "Kiesel"],
     "orcid": "0000-0002-1617-6508",
-    "url": "https://kiesels.de/johannes",
-    "topics": ["Conversational AI", "Computational Argumentation", "Human Values", "Methods Hub", "User Simulation"]
+    "title": "Dr.",
+    "topics": ["Conversational AI", "Computational Argumentation", "Human Values", "Methods Hub", "User Simulation"],
+    "url": "https://kiesels.de/johannes"
   },
   {
     "id": "chang",
     "category": "Staff",
-    "name": ["Po-Chun", "Chang"],
     "email": "Po-Chun.Chang@gesis.org",
-    "years": "2025 - today",
-    "topics": ["Methods Hub"]
+    "name": ["Po-Chun", "Chang"],
+    "topics": ["Methods Hub"],
+    "years": "2025 - today"
   },
   {
     "id": "khan",
     "category": "Staff",
-    "title": "Dr.",
-    "name": ["Muhammad Taimoor", "Khan"],
     "email": "Taimoor.Khan@gesis.org",
+    "name": ["Muhammad Taimoor", "Khan"],
+    "title": "Dr.",
     "years": "2025 - today"
   },
   {
     "id": "linzbach",
     "category": "Staff",
-    "name": ["Stephan", "Linzbach"],
     "email": "Stephan.Linzbach@gesis.org",
+    "name": ["Stephan", "Linzbach"],
     "years": "2025 - today"
   },
   {
     "id": "momeni",
     "category": "Staff",
-    "title": "Dr.",
-    "name": ["Fakhri", "Momeni"],
     "email": "Fakhri.Momeni@gesis.org",
+    "name": ["Fakhri", "Momeni"],
+    "title": "Dr.",
     "years": "2025 - today"
   },
   {
     "id": "muench",
     "category": "Staff",
-    "title": "Dr.",
-    "name": ["Felix Viktor", "Münch"],
     "email": "Felix.Muench@gesis.org",
+    "name": ["Felix Viktor", "M\u00fcnch"],
+    "title": "Dr.",
     "years": "2025 - today"
   },
   {
     "id": "rieger",
     "category": "Staff",
-    "title": "Dr.",
-    "name": ["Alisa", "Rieger"],
     "email": "Alisa.Rieger@gesis.org",
+    "name": ["Alisa", "Rieger"],
+    "title": "Dr.",
     "years": "2025 - today"
   },
   {
     "id": "yu",
     "category": "Staff",
-    "title": "Dr.",
-    "name": ["Ran", "Yu"],
     "email": "Ran.Yu@gesis.org",
+    "name": ["Ran", "Yu"],
+    "title": "Dr.",
     "years": "2025 - today"
   }
 ]
-
