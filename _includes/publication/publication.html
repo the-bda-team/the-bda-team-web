@@ -1,0 +1,98 @@
+{%- comment %}
+Parameters:
+  - publication. A single publication
+
+Based on ACM Reference Formats (2023, July 11)
+https://www.acm.org/publications/authors/reference-formatting
+{% endcomment -%}
+
+<div>
+<span class="reference" data-id="{{ include.publication.id }}"
+{%- if include.publication.address %} data-address="{{ include.publication.address }}"{% endif %}
+{%- if include.publication.author %} data-author="[{% for author in include.publication.author %}{% if forloop.first == false %},{% endif %}[&quot;{{author[0]}}&quot;,&quot;{{author[1]}}&quot;]{% endfor %}]"{% endif %}
+{%- if include.publication.appurl %} data-appurl="{{ include.publication.appurl }}"{% endif %}
+{%- if include.publication.arxivurl %} data-arxivurl="{{ include.publication.arxivurl }}"{% endif %}
+{%- if include.publication.awardurl %} data-awardurl="{{ include.publication.awardurl }}"{% endif %}
+{%- if include.publication.booktitle %} data-booktitle="{{ include.publication.booktitle }}"{% endif %}
+{%- if include.publication.category %} data-category="{{ include.publication.category }}"{% endif %}
+{%- if include.publication.codeurl %} data-codeurl="{{ include.publication.codeurl }}"{% endif %}
+{%- if include.publication.dataurl %} data-dataurl="{{ include.publication.dataurl }}"{% endif %}
+{%- if include.publication.doi %} data-doi="{{ include.publication.doi }}"{% endif %}
+{%- if include.publication.editor %} data-editor="[{% for editor in include.publication.editor %}{% if forloop.first == false %},{% endif %}[&quot;{{editor[0]}}&quot;,&quot;{{editor[1]}}&quot;]{% endfor %}]"{% endif %}
+{%- if include.publication.eventurl %} data-eventurl="{{ include.publication.eventurl }}"{% endif %}
+{%- if include.publication.isbn %} data-isbn="{{ include.publication.isbn }}"{% endif %}
+{%- if include.publication.issn %} data-issn="{{ include.publication.issn }}"{% endif %}
+{%- if include.publication.journal %} data-journal="{{ include.publication.journal }}"{% endif %}
+{%- if include.publication.month %} data-month="{{ include.publication.month }}"{% endif %}
+{%- if include.publication.number %} data-number="{{ include.publication.number }}"{% endif %}
+{%- if include.publication.numpages %} data-numpages="{{ include.publication.numpages }}"{% endif %}
+{%- if include.publication.organization %} data-organization="{{ include.publication.organization }}"{% endif %}
+{%- if include.publication.pages %} data-pages="{{ include.publication.pages }}"{% endif %}
+{%- if include.publication.publisher %} data-publisher="{{ include.publication.publisher }}"{% endif %}
+{%- if include.publication.school %} data-school="{{ include.publication.school }}"{% endif %}
+{%- if include.publication.series %} data-series="{{ include.publication.series }}"{% endif %}
+{%- if include.publication.site %} data-site="{{ include.publication.site }}"{% endif %}
+{%- if include.publication.title %} data-title="{{ include.publication.title }}"{% endif %}
+{%- if include.publication.todo %} data-todo="{{ include.publication.todo }}"{% endif %}
+{%- if include.publication.videourl %} data-videourl="{{ include.publication.videourl }}"{% endif %}
+{%- if include.publication.volume %} data-volume="{{ include.publication.volume }}"{% endif %}
+{%- if include.publication.year %} data-year="{{ include.publication.year }}"{% endif -%}
+>
+{%- if include.publication.category == "InProceedings" %}
+{% include publication/people.html people=include.publication.author %}.
+{{ include.publication.year }}.
+{{ include.publication.title }}.
+In <i>{{ include.publication.booktitle }}</i>, {{ site.months[include.publication.month] }}, {{ include.publication.year }}{% if include.publication.site %}, {{ include.publication.site }}{% endif %}.
+{%- if include.publication.publisher %} {{ include.publication.publisher }}{% if include.publication.address %}, {{ include.publication.address }}{% endif %}{% if include.publication.pages %},{% else %}.{% endif %}{% endif %}{% if include.publication.pages %} {{ include.publication.pages | replace: "--", "–" }}.{% endif %}
+{%- else -%}
+{{ include.publication -}}
+{%- endif %}
+</span>
+<span class="links">
+<button type="button" aria-expanded="false" aria-controls="{{ publication.id }}.bibtex">bib</button>
+{%- if include.publication.doi %}
+<a href="https://doi.org/{{ include.publication.doi }}">doi</a>{% endif %}
+</span>
+<div id="{{ publication.id }}.bibtex" class="bibtex" aria-hidden="true"><span class="element-actions" data-target="{{ publication.id }}.bibtex"><button type="button" class="icon" data-action="copy" title="Copy">{% include icon/copy.svg %}</button></span>@{{ include.publication.category }}{% raw %}{{% endraw %}{{ include.publication.id }},
+  {%- if include.publication.address %}
+  address = {% raw %}{{% endraw %}{{ include.publication.address }}{% raw %}}{% endraw %},{% endif -%}
+  {%- if include.publication.author %}
+  author = {% raw %}{{% endraw %}{% for person in include.publication.author %}{% if forloop.first == false %} and {% endif %}{{ person[0] }} {% if person[1] contains " " %}{% raw %}{{% endraw %}{% endif %}{{ person[1] }}{% if person[1] contains " " %}{% raw %}}{% endraw %}{% endif %}{% endfor %}{% raw %}}{% endraw %},{% endif -%}
+  {%- if include.publication.booktitle %}
+  booktitle = {% raw %}{{% endraw %}{{ include.publication.booktitle }}{% raw %}}{% endraw %},{% endif -%}
+  {%- if include.publication.doi %}
+  doi = {% raw %}{{% endraw %}{{ include.publication.doi }}{% raw %}}{% endraw %},{% endif -%}
+  {%- if include.publication.editor %}
+  editor = {% raw %}{{% endraw %}{% for person in include.publication.editor %}{% if forloop.first == false %} and {% endif %}{{ person[0] }} {% if person[1] contains " " %}{% raw %}{{% endraw %}{% endif %}{{ person[1] }}{% if person[1] contains " " %}{% raw %}}{% endraw %}{% endif %}{% endfor %}{% raw %}}{% endraw %},{% endif -%}
+  {%- if include.publication.isbn %}
+  isbn = {% raw %}{{% endraw %}{{ include.publication.isbn }}{% raw %}}{% endraw %},{% endif -%}
+  {%- if include.publication.issn %}
+  issn = {% raw %}{{% endraw %}{{ include.publication.issn }}{% raw %}}{% endraw %},{% endif -%}
+  {%- if include.publication.journal %}
+  journal = {% raw %}{{% endraw %}{{ include.publication.journal }}{% raw %}}{% endraw %},{% endif -%}
+  {%- if include.publication.month %}
+  month = {{ include.publication.month }},{% endif -%}
+  {%- if include.publication.number %}
+  number = {% raw %}{{% endraw %}{{ include.publication.number }}{% raw %}}{% endraw %},{% endif -%}
+  {%- if include.publication.numpages %}
+  numpages = {% raw %}{{% endraw %}{{ include.publication.numpages }}{% raw %}}{% endraw %},{% endif -%}
+  {%- if include.publication.organization %}
+  organization = {% raw %}{{% endraw %}{{ include.publication.organization }}{% raw %}}{% endraw %},{% endif -%}
+  {%- if include.publication.pages %}
+  pages = {% raw %}{{% endraw %}{{ include.publication.pages }}{% raw %}}{% endraw %},{% endif -%}
+  {%- if include.publication.publisher %}
+  publisher = {% raw %}{{% endraw %}{{ include.publication.publisher }}{% raw %}}{% endraw %},{% endif -%}
+  {%- if include.publication.school %}
+  school = {% raw %}{{% endraw %}{{ include.publication.school }}{% raw %}}{% endraw %},{% endif -%}
+  {%- if include.publication.series %}
+  series = {% raw %}{{% endraw %}{{ include.publication.series }}{% raw %}}{% endraw %},{% endif -%}
+  {%- if include.publication.site %}
+  site = {% raw %}{{% endraw %}{{ include.publication.site }}{% raw %}}{% endraw %},{% endif -%}
+  {%- if include.publication.title %}
+  title = {% raw %}{{% endraw %}{{ include.publication.title }}{% raw %}}{% endraw %},{% endif -%}
+  {%- if include.publication.volume %}
+  volume = {% raw %}{{% endraw %}{{ include.publication.volume }}{% raw %}}{% endraw %},{% endif %}
+  year = {{ include.publication.year }}
+{% raw %}}{% endraw %}
+</div>
+</div>

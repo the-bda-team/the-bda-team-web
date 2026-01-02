@@ -1,0 +1,15 @@
+{%- comment %}
+Parameters:
+  - people. A list of people
+
+Based on ACM Reference Formats (2023, July 11)
+https://www.acm.org/publications/authors/reference-formatting
+{% endcomment -%}
+
+{% if include.people.size > 20 -%}
+{{ include.people[0][0] }} {{ include.people[0][1] }} et al
+{%- else -%}
+{% for person in include.people -%}
+{% if forloop.first == false %}{% if include.people.size > 2 %},{% endif %} {% if forloop.last == true %}and {% endif %}{% endif %}{{ person[0] }} {{ person[1] }}
+{%- endfor -%}
+{%- endif -%}

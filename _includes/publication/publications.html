@@ -1,0 +1,14 @@
+{%- comment %}
+Parameters:
+  - publications. List of publications, sorted by year
+{% endcomment -%}
+
+{% assign publicationsByYear = include.publications | group_by: "year" %}
+{% for publicationsOfYear in publicationsByYear %}
+<h2 id="{{ publicationsOfYear.name }}">{{ publicationsOfYear.name }}</h2>
+<ul class="entries publications">
+{%- for publication in publicationsOfYear.items %}
+<li id="{{ publication.id }}">{% include publication/publication.html publication=publication %}</li>
+{%- endfor %}
+</ul>
+{% endfor %}

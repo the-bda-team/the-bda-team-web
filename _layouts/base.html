@@ -30,11 +30,11 @@
 {% if page.breadcrumbs %}
 <ul class="breadcrumbs">
 <li><a href="{{ '/' | relative_url }}">the-bda.team</a></li>
-{% assign path = "" %}
-{% for breadcrumb in page.breadcrumbs %}
-{% assign path = path | append: "/" | append: breadcrumb %}
+{% assign path = "" -%}
+{% for breadcrumb in page.breadcrumbs -%}
+{% assign path = path | append: "/" | append: breadcrumb -%}
 <li>› <a href="{{ path | relative_url }}">{{ breadcrumb }}</a></li>
-{% endfor %}
+{%- endfor %}
 </ul>
 {% endif %}
 
@@ -48,6 +48,7 @@ Footer
 </div>
 </footer>
 
+<script src="{{ '/assets/js/base.js' | relative_url }}?{{site.time | date: '%s'}}"></script>
 </body>
 </html>
 

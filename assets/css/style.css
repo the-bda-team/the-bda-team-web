@@ -11,7 +11,8 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video,
+button {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -41,6 +42,9 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+button {
+  background: none;
 }
 
 /* Loading Fonts */
@@ -97,9 +101,9 @@ table {
   --space-default: 5px;
 }
 html, body {
-  height: 100%;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
+  height: 100%;
 }
 body {
   display: flex;
@@ -107,8 +111,8 @@ body {
 }
 .content {
   max-width: 800px;
-  width: 100%;
   padding: var(--space-default);
+  width: 100%;
 }
 nav, main, footer {
   display: flex;
@@ -136,9 +140,9 @@ nav .links a {
   margin-left: calc(4 * var(--space-default));
 }
 h1, h2 {
-  margin-top: calc(6 * var(--space-default));
-  margin-bottom: calc(2 * var(--space-default));
   color: var(--color-headline-font);
+  margin-bottom: calc(2 * var(--space-default));
+  margin-top: calc(6 * var(--space-default));
 }
 h1 {
   font-size: 2rem;
@@ -146,12 +150,22 @@ h1 {
 h2 {
   font-size: 1.5rem;
 }
-a {
+i {
+  font-style: italic;
+}
+a, .links > button {
+  background: none;
+  border: none;
   color: var(--color-link-font) !important;
+  cursor: pointer;
+  padding: 0px;
   text-decoration: none;
 }
-a:hover {
+a:hover, .links > button:hover {
   text-decoration: underline;
+}
+[aria-hidden="true"] {
+  display: none !important;
 }
 
 /* Breadcrumbs */
@@ -179,9 +193,9 @@ a:hover {
 
 .entries > li {
   border-top: 1px solid var(--color-separator-line);
-  padding: calc(2 * var(--space-default));
   display: flex;
   gap: calc(4 * var(--space-default));
+  padding: calc(2 * var(--space-default));
 }
 .entries > li:target {
   background-color: var(--color-selected) !important;
@@ -200,16 +214,49 @@ a:hover {
   margin-top: calc(2 * var(--space-default));
 }
 
-/* Logos */
-
-a.logo > svg {
-  width: 2em;
-  fill: var(--color-grayed-out-font);
+.links a::before, .links button::before, .links a::after, .links button::after {
+  color: black;
 }
-a.logo:hover {
+.links a::before, .links button::before {
+  content: "[";
+}
+.links a::after, .links button::after {
+  content: "]";
+}
+
+/* Icon buttons */
+
+a.icon, button.icon {
+  cursor: pointer;
+  display: inline-block;
+  fill: var(--color-dark-grayed-out-font);
+  opacity: 0.5;
+  width: 2rem;
+}
+a.icon:hover, button.icon:hover {
+  opacity: 1.0;
   text-decoration: none;
 }
-a.logo:hover > svg {
-  fill: var(--color-dark-grayed-out-font);
+
+/* Element action buttons */
+
+.element-actions {
+  position: absolute;
+  top: var(--space-default);
+  right: var(--space-default);
+}
+.element-actions button.icon {
+  width: 1.5rem;
+}
+
+/* Publications */
+
+.bibtex {
+  background-color: var(--color-background);
+  font-family: monospace, monospace;
+  margin-top: var(--space-default);
+  padding: var(--space-default);
+  position: relative;
+  white-space: preserve;
 }
 

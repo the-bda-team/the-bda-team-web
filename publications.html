@@ -7,14 +7,5 @@ breadcrumbs: [ "publications" ]
 
 <h1>Publications</h1>
 
-{% assign publicationsByYear = site.data.publications | group_by: "year" %}
-{% for publicationsOfYear in publicationsByYear %}
-<h2 id="{{ publicationsOfYear.name }}">{{ publicationsOfYear.name }}</h2>
-
-<ul class="entries publications">
-{% for publication in publicationsOfYear.items %}
-<li>{{ publication }}</li>
-{% endfor %}
-</ul>
-{% endfor %}
+{% include publication/publications.html publications=site.data.publications %}
 
