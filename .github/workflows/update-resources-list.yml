@@ -12,8 +12,8 @@ jobs:
     - uses: actions/checkout@v3
     - name: Set up AWS CLI and JQ
       run: |
-        sudo apt-get update
-        sudo apt-get install -y awscli jq
+        sudo apt-get install -y jq
+        sudo snap install aws-cli --classic
     - name: Configure AWS credentials for R2
       run: |
         aws configure set aws_access_key_id ${{ secrets.R2_ACCESS_KEY_ID }}
