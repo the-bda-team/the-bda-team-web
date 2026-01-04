@@ -150,6 +150,9 @@ h1 {
 h2 {
   font-size: 1.5rem;
 }
+p {
+  margin-bottom: var(--space-default);
+}
 i {
   font-style: italic;
 }
@@ -181,6 +184,12 @@ a:hover, .resources > button:hover {
 }
 .breadcrumbs li a {
   color: var(--color-headline-font) !important;
+}
+
+/* Footer */
+
+footer .content {
+  text-align: right;
 }
 
 /* Filter */
