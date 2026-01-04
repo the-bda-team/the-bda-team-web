@@ -42,6 +42,16 @@
           "minimum": 0,
           "maximum": 2999
         },
+        "keywords": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
         "doi": {
           "type": "string",
           "pattern": "^10\\.\\d{4,9}/[-._;()/:a-zA-Z0-9]+$"
@@ -92,12 +102,9 @@
           "type": "string",
           "format": "uri"
         },
-        "arxivurl": {
+        "preprinturl": {
           "type": "string",
           "format": "uri"
-        },
-        "arxivpassword": {
-          "type": "string"
         },
         "annote": {
           "type": "string"

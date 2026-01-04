@@ -6,20 +6,19 @@ Based on ACM Reference Formats (2023, July 11)
 https://www.acm.org/publications/authors/reference-formatting
 {% endcomment -%}
 
-<div>
-<span class="reference" data-id="{{ include.publication.id }}"
+<li id="{{ include.publication.id }}"class="entry" data-id="{{ include.publication.id }}"
 {%- if include.publication.address %} data-address="{{ include.publication.address }}"{% endif %}
-{%- if include.publication.author %} data-author="[{% for author in include.publication.author %}{% if forloop.first == false %},{% endif %}[&quot;{{author[0]}}&quot;,&quot;{{author[1]}}&quot;]{% endfor %}]"{% endif %}
+{%- if include.publication.author %} data-author="{% for author in include.publication.author %}{% if forloop.first == false %},{% endif %}{{ author[0] }} {{ author[1] }}{% endfor %}"{% endif %}
 {%- if include.publication.appurl %} data-appurl="{{ include.publication.appurl }}"{% endif %}
-{%- if include.publication.arxivurl %} data-arxivurl="{{ include.publication.arxivurl }}"{% endif %}
 {%- if include.publication.awardurl %} data-awardurl="{{ include.publication.awardurl }}"{% endif %}
 {%- if include.publication.booktitle %} data-booktitle="{{ include.publication.booktitle }}"{% endif %}
 {%- if include.publication.category %} data-category="{{ include.publication.category }}"{% endif %}
 {%- if include.publication.codeurl %} data-codeurl="{{ include.publication.codeurl }}"{% endif %}
 {%- if include.publication.dataurl %} data-dataurl="{{ include.publication.dataurl }}"{% endif %}
 {%- if include.publication.doi %} data-doi="{{ include.publication.doi }}"{% endif %}
-{%- if include.publication.editor %} data-editor="[{% for editor in include.publication.editor %}{% if forloop.first == false %},{% endif %}[&quot;{{editor[0]}}&quot;,&quot;{{editor[1]}}&quot;]{% endfor %}]"{% endif %}
+{%- if include.publication.editor %} data-editor="{% for editor in include.publication.editor %}{% if forloop.first == false %},{% endif %}{{ editor[0] }} {{ editor[1] }}{% endfor %}"{% endif %}
 {%- if include.publication.eventurl %} data-eventurl="{{ include.publication.eventurl }}"{% endif %}
+{%- if include.publication.keywords %} data-keywords="{% for keyword in include.publication.keywords %}{% if forloop.first == false %},{% endif %}{{ keyword }}{% endfor %}"{% endif %}
 {%- if include.publication.isbn %} data-isbn="{{ include.publication.isbn }}"{% endif %}
 {%- if include.publication.issn %} data-issn="{{ include.publication.issn }}"{% endif %}
 {%- if include.publication.journal %} data-journal="{{ include.publication.journal }}"{% endif %}
@@ -28,30 +27,60 @@ https://www.acm.org/publications/authors/reference-formatting
 {%- if include.publication.numpages %} data-numpages="{{ include.publication.numpages }}"{% endif %}
 {%- if include.publication.organization %} data-organization="{{ include.publication.organization }}"{% endif %}
 {%- if include.publication.pages %} data-pages="{{ include.publication.pages }}"{% endif %}
+{%- if include.publication.preprinturl %} data-preprinturl="{{ include.publication.preprinturl }}"{% endif %}
 {%- if include.publication.publisher %} data-publisher="{{ include.publication.publisher }}"{% endif %}
 {%- if include.publication.school %} data-school="{{ include.publication.school }}"{% endif %}
 {%- if include.publication.series %} data-series="{{ include.publication.series }}"{% endif %}
 {%- if include.publication.site %} data-site="{{ include.publication.site }}"{% endif %}
 {%- if include.publication.title %} data-title="{{ include.publication.title }}"{% endif %}
 {%- if include.publication.todo %} data-todo="{{ include.publication.todo }}"{% endif %}
+{%- if include.publication.url %} data-url="{{ include.publication.url }}"{% endif %}
 {%- if include.publication.videourl %} data-videourl="{{ include.publication.videourl }}"{% endif %}
 {%- if include.publication.volume %} data-volume="{{ include.publication.volume }}"{% endif %}
 {%- if include.publication.year %} data-year="{{ include.publication.year }}"{% endif -%}
 >
+<div>
+<span class="reference">
 {%- if include.publication.category == "InProceedings" %}
-{% include publication/people.html people=include.publication.author %}.
-{{ include.publication.year }}.
-{{ include.publication.title }}.
-In <i>{{ include.publication.booktitle }}</i>, {{ site.months[include.publication.month] }}, {{ include.publication.year }}{% if include.publication.site %}, {{ include.publication.site }}{% endif %}.
-{%- if include.publication.publisher %} {{ include.publication.publisher }}{% if include.publication.address %}, {{ include.publication.address }}{% endif %}{% if include.publication.pages %},{% else %}.{% endif %}{% endif %}{% if include.publication.pages %} {{ include.publication.pages | replace: "--", "–" }}.{% endif %}
+  {% include publication/people.html people=include.publication.author %}.
+  {{ include.publication.year }}.
+  {% if include.publication.url %}<a href="{{ include.publication.url }}">{% endif %}{{ include.publication.title }}{% if include.publication.url %}</a>{% endif %}.
+  In <i>{{ include.publication.booktitle }}</i>, {{ site.months[include.publication.month] }}, {{ include.publication.year }}{% if include.publication.site %}, {{ include.publication.site }}{% endif %}.
+  {%- if include.publication.publisher %} {{ include.publication.publisher }}{% if include.publication.address %}, {{ include.publication.address }}{% endif %}{% if include.publication.pages %},{% else %}.{% endif %}{% endif %}{% if include.publication.pages %} {{ include.publication.pages | replace: "--", "–" }}.{% endif %}
+{%- elsif include.publication.category == "Article" -%}
+  {% include publication/people.html people=include.publication.author %}.
+  {{ include.publication.year }}.
+  {% if include.publication.url %}<a href="{{ include.publication.url }}">{% endif %}{{ include.publication.title }}{% if include.publication.url %}</a>{% endif %}.
+  <i>{{ include.publication.journal }}</i>
+  {% if include.publication.volume %}{% if include.publication.number %}{{ include.publication.volume }}, {{ include.publication.number }}{% else %}{{ include.publication.volume }}{% endif %}{% elsif include.publication.number %}{{ include.publication.number }}{% endif %}
+  ({{ site.months[include.publication.month] }} {{ include.publication.year }})
+  {%- if include.publication.pages %}, {{ include.publication.pages | replace: "--", "–" }}{% elsif include.publication.numpages %}, {{ include.publication.numpages }} pages{% endif %}.
+{%- elsif include.publication.category == "PhDThesis" -%}
+  {% include publication/people.html people=include.publication.author %}.
+  {{ include.publication.year }}.
+  <i>{% if include.publication.url %}<a href="{{ include.publication.url }}">{% endif %}{{ include.publication.title }}{% if include.publication.url %}</a>{% endif %}</i>.
+  Ph.D. Dissertation.
+  {{ include.publication.school }}.
 {%- else -%}
 {{ include.publication -}}
 {%- endif %}
 </span>
-<span class="links">
+<span class="resources">
+{%- if include.publication.awardurl %}
+<a href="{{ include.publication.awardurl }}">award</a>{% endif %}
 <button type="button" aria-expanded="false" aria-controls="{{ publication.id }}.bibtex">bib</button>
+{%- if include.publication.codeurl %}
+<a href="{{ include.publication.codeurl }}">code</a>{% endif %}
+{%- if include.publication.dataurl %}
+<a href="{{ include.publication.dataurl }}">data</a>{% endif %}
 {%- if include.publication.doi %}
 <a href="https://doi.org/{{ include.publication.doi }}">doi</a>{% endif %}
+{%- if include.publication.eventurl %}
+<a href="{{ include.publication.eventurl }}">event</a>{% endif %}
+{%- if include.publication.preprinturl %}
+<a href="{{ include.publication.preprinturl }}">preprint</a>{% endif %}
+{%- if include.publication.videourl %}
+<a href="{{ include.publication.videourl }}">video</a>{% endif %}
 </span>
 <div id="{{ publication.id }}.bibtex" class="bibtex" aria-hidden="true"><span class="element-actions" data-target="{{ publication.id }}.bibtex"><button type="button" class="icon" data-action="copy" title="Copy">{% include icon/copy.svg %}</button></span>@{{ include.publication.category }}{% raw %}{{% endraw %}{{ include.publication.id }},
   {%- if include.publication.address %}
@@ -90,9 +119,12 @@ In <i>{{ include.publication.booktitle }}</i>, {{ site.months[include.publicatio
   site = {% raw %}{{% endraw %}{{ include.publication.site }}{% raw %}}{% endraw %},{% endif -%}
   {%- if include.publication.title %}
   title = {% raw %}{{% endraw %}{{ include.publication.title }}{% raw %}}{% endraw %},{% endif -%}
+  {%- if include.publication.url %}
+  url = {% raw %}{{% endraw %}{{ include.publication.url }}{% raw %}}{% endraw %},{% endif -%}
   {%- if include.publication.volume %}
   volume = {% raw %}{{% endraw %}{{ include.publication.volume }}{% raw %}}{% endraw %},{% endif %}
   year = {{ include.publication.year }}
 {% raw %}}{% endraw %}
 </div>
 </div>
+</li>

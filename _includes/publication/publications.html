@@ -8,7 +8,7 @@ Parameters:
 <h2 id="{{ publicationsOfYear.name }}">{{ publicationsOfYear.name }}</h2>
 <ul class="entries publications">
 {%- for publication in publicationsOfYear.items %}
-<li id="{{ publication.id }}">{% include publication/publication.html publication=publication %}</li>
+{% include publication/publication.html publication=publication %}
 {%- endfor %}
 </ul>
 {% endfor %}

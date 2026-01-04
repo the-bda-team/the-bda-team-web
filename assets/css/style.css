@@ -153,7 +153,10 @@ h2 {
 i {
   font-style: italic;
 }
-a, .links > button {
+input {
+  padding: var(--space-default);
+}
+a, .resources > button {
   background: none;
   border: none;
   color: var(--color-link-font) !important;
@@ -161,7 +164,7 @@ a, .links > button {
   padding: 0px;
   text-decoration: none;
 }
-a:hover, .links > button:hover {
+a:hover, .resources > button:hover {
   text-decoration: underline;
 }
 [aria-hidden="true"] {
@@ -178,6 +181,13 @@ a:hover, .links > button:hover {
 }
 .breadcrumbs li a {
   color: var(--color-headline-font) !important;
+}
+
+/* Filter */
+
+input.filter {
+  width: 100%;
+  max-width: 35rem;
 }
 
 /* Table of Contents */
@@ -214,19 +224,19 @@ a:hover, .links > button:hover {
   margin-top: calc(2 * var(--space-default));
 }
 
-.links a::before, .links button::before, .links a::after, .links button::after {
+.resources a::before, .resources button::before, .resources a::after, .resources button::after {
   color: black;
 }
-.links a::before, .links button::before {
+.resources a::before, .resources button::before {
   content: "[";
 }
-.links a::after, .links button::after {
+.resources a::after, .resources button::after {
   content: "]";
 }
 
 /* Icon buttons */
 
-a.icon, button.icon {
+a.icon svg, button.icon svg {
   cursor: pointer;
   display: inline-block;
   fill: var(--color-dark-grayed-out-font);
@@ -234,8 +244,10 @@ a.icon, button.icon {
   width: 2rem;
 }
 a.icon:hover, button.icon:hover {
-  opacity: 1.0;
   text-decoration: none;
+}
+a.icon:hover svg, button.icon:hover svg {
+  opacity: 1.0;
 }
 
 /* Element action buttons */
@@ -244,8 +256,9 @@ a.icon:hover, button.icon:hover {
   position: absolute;
   top: var(--space-default);
   right: var(--space-default);
+  background-color: inherit;
 }
-.element-actions button.icon {
+.element-actions button.icon svg {
   width: 1.5rem;
 }
 
