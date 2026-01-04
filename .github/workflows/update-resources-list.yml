@@ -10,9 +10,8 @@ jobs:
       contents: write
     steps:
     - uses: actions/checkout@v3
-    - name: Set up AWS CLI and JQ
+    - name: Set up AWS CLI
       run: |
-        sudo apt-get install -y jq
         sudo snap install aws-cli --classic
     - name: Configure AWS credentials for R2
       run: |
@@ -30,7 +29,7 @@ jobs:
     - name: Commit back changes
       uses: stefanzweifel/git-auto-commit-action@v7
       with:
-        commit_message: Automated Reformatting
+        commit_message: Update resources
         file_pattern: '_data/downloads-bda-team.json'
 
   deploy:
