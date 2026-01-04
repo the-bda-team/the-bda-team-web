@@ -98,11 +98,19 @@
           "type": "string",
           "format": "uri"
         },
-        "videourl": {
+        "preprinturl": {
           "type": "string",
           "format": "uri"
         },
-        "preprinturl": {
+        "posterurl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "slidesurl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "videourl": {
           "type": "string",
           "format": "uri"
         },
