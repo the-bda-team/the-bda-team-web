@@ -1,0 +1,58 @@
+name: update-resources-list
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up AWS CLI and JQ
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y awscli jq
+    - name: Configure AWS credentials for R2
+      run: |
+        aws configure set aws_access_key_id ${{ secrets.R2_ACCESS_KEY_ID }}
+        aws configure set aws_secret_access_key ${{ secrets.R2_SECRET_ACCESS_KEY }}
+        aws configure set region auto
+    - name: List R2 bucket objects
+      run: |
+        aws s3api list-objects-v2 \
+          --bucket "${{ secrets.R2_BUCKET_NAME }}" \
+          --endpoint-url "https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com" \
+          --output json \
+          | jq -c '[.Contents[].Key | select(.|endswith(".pdf"))]' \
+          > _data/downloads-bda-team.json
+    - name: Commit back changes
+      uses: stefanzweifel/git-auto-commit-action@v7
+      with:
+        commit_message: Automated Reformatting
+        file_pattern: '_data/downloads-bda-team.json'
+
+  deploy:
+    needs: update
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.2'
+        bundler-cache: true
+    - name: Install dependencies
+      run: bundle install
+    - name: Build Jekyll
+      run: bundle exec jekyll build
+    - name: Deploy to Cloudflare Pages
+      uses: cloudflare/wrangler-action@v3
+      with:
+        apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        command: pages deploy ./_site --project-name=web
+        gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
