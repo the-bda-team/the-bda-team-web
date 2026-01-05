@@ -6,6 +6,10 @@ Based on ACM Reference Formats (2023, July 11)
 https://www.acm.org/publications/authors/reference-formatting
 {% endcomment -%}
 
+{%- assign url = nil -%}
+{%- assign posterurl = nil -%}
+{%- assign slidesurl = nil -%}
+
 {%- assign pdf = include.publication.id | replace: ":", "_" | append: ".pdf" -%}
 {%- if include.publications.url -%}
   {%- assign url = include.publications.url -%}
