@@ -250,6 +250,7 @@ a.icon svg, button.icon svg {
   display: inline-block;
   fill: var(--color-dark-grayed-out-font);
   opacity: 0.5;
+  vertical-align: middle;
   width: 2rem;
 }
 a.icon:hover, button.icon:hover {

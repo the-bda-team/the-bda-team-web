@@ -35,7 +35,7 @@ title: The BDA Team
 Email: <a href="mailto:{{ person.email }}" class="email">{{ person.email }}</a>
 <br>
 {%- if person.orcid %}
-<a href="https://orcid.org/{{ person.orcid }}" class="icon">{% include icon/orcid.svg %}</a>
+<a href="https://orcid.org/{{ person.orcid }}" class="icon">{%- include icon/orcid.svg -%}</a>
 {% endif -%}
 <div class="description">
 {% if person.topics %}

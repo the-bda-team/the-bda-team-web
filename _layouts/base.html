@@ -43,7 +43,9 @@
 
 <footer>
 <div class="content">
-&copy; {{ site.time | date: "%Y" }} <a href="{{ '/' | relative_url }}">The BDA Team</a> - <a href="{{ '/legal' | relative_url }}">Impressum</a>
+&copy; {{ site.time | date: "%Y" }} <a href="{{ '/' | relative_url }}">The BDA Team</a>
+- {% capture githubicon -%}{%- include icon/github.svg -%}{%- endcapture -%}<a class="icon" href="https://github.com/the-bda-team">{{ githubicon | strip_newlines }}</a>
+- <a href="{{ '/legal' | relative_url }}">Impressum</a>
 </div>
 </footer>
 
