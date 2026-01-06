@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://the-bda.team/_schemas/events.json",
+  "type": "array",
+  "items": {
+    "$ref": "#/$defs/Event"
+  },
+  "$defs": {
+    "Event": {
+      "type": "object",
+      "required": ["id", "category", "name", "description", "people", "year"],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string",
+          "enum": ["Conferences and Workshops", "Invited Talks", "Shared Tasks", "Teaching"]
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "people": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "year": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2999
+        },
+        "month": {
+          "type": "string",
+          "enum": ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"]
+        },
+        "keywords": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "host": {
+          "type": "string"
+        },
+        "hosturl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "site": {
+          "type": "string"
+        },
+        "slidesurl": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

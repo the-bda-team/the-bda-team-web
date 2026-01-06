@@ -1,0 +1,81 @@
+[
+  {
+    "id": "scai2024",
+    "category": "Conferences and Workshops",
+    "name": "SCAI 2024",
+    "description": "8th Workshop on Search-Oriented Conversational Artificial Intelligence (SCAI 2024), held in conjunction with the 9th ACM SIGIR Conference on Human Information Interaction and Retrieval (CHIIR 2024), co-organized by Alexander Frummet, Andrea Papenmeier, Maik Fröbe, and Johannes Kiesel.",
+    "people": ["kiesel"],
+    "year": 2024,
+    "url": "https://scai.info/scai-2024/",
+    "host": "CHIIR 2024",
+    "hosturl": "https://chiir2024.github.io/",
+    "site": "Sheffield, United Kingdom"
+  },
+  {
+    "id": "eteach2024-keynote",
+    "category": "Invited Talks",
+    "name": "Understanding to Stay in Control: Using, Assessing, and Mastering AI",
+    "description": "Keynote of Benno Stein and Johannes Kiesel",
+    "people": ["kiesel"],
+    "year": 2024,
+    "month": "nov",
+    "host": "Jahrestagung des eTeach-Netzwerks Thüringen 2024",
+    "hosturl": "https://indico.rz.uni-jena.de/event/133/overview",
+    "site": "Jena, Germany"
+  },
+  {
+    "id": "disinfo2023-kiesel",
+    "category": "Invited Talks",
+    "name": "Open Web Search And its Use to Find Arguments Against Populist Claims",
+    "description": "Invited Talk of Johannes Kiesel",
+    "people": ["kiesel"],
+    "year": 2023,
+    "month": "sep",
+    "host": "JRC DISINFO Workshop 2023",
+    "site": "Brussels, Belgium"
+  },
+  {
+    "id": "bauhaus2024-ai-seminar",
+    "category": "Teaching",
+    "name": "Using AI in Everyday Life at the University",
+    "description": "Training seminar in 2024 at the Bauhaus-Universität Weimar by Benno Stein, Johannes Kiesel, and Marcel Gohsen",
+    "people": ["kiesel"],
+    "year": 2024,
+    "month": "nov",
+    "site": "Weimar, Germany"
+  },
+  {
+    "id": "kinderuni-weimar2024-stein",
+    "category": "Teaching",
+    "name": "Wie lernen Computer?",
+    "description": "Lecture at the Kinderuni Weimar by Benno Stein and Johannes Kiesel",
+    "people": ["kiesel"],
+    "year": 2024,
+    "month": "nov",
+    "host": "Kinderuni Weimar 2024/25",
+    "hosturl": "https://www.kinderuni-weimar.de/",
+    "site": "Weimar, Germany"
+  },
+  {
+    "id": "studienstiftung2018",
+    "category": "Teaching",
+    "name": "Setting the News Straight Through Technology",
+    "description": "Workshop on Fake News detection technology, organized by Matthias Hagen, Johannes Kiesel, and Martin Potthast",
+    "people": ["kiesel"],
+    "year": 2018,
+    "month": "aug",
+    "host": "Studienstiftung des deutschen Volkes Akademie Greifswald 2018",
+    "site": "Greifswald, Germany"
+  },
+  {
+    "id": "scai2021-qrecc",
+    "category": "Shared Tasks",
+    "name": "SCAI QReCC Shared Task 2021",
+    "description": "The task is to answer a series of contextually-dependent questions like they may occur in natural human-to-human conversations",
+    "people": ["kiesel"],
+    "year": 2021,
+    "url": "https://scai.info/scai-qrecc-2021/",
+    "host": "SCAI 2021",
+    "hosturl": "https://scai.info/scai-2021/"
+  }
+]

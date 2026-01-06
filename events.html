@@ -1,0 +1,31 @@
+---
+layout: base
+nav_active: events 
+title: Events of the BDA Team
+---
+
+<h1>Events</h1>
+
+{% assign eventsByCategory = site.data.events | group_by: "category" %}
+<ul class="table-of-contents">
+{% for category in eventsByCategory %}
+<li><a href="#{{ category.name | downcase | replace: ' ', '' }}">{{ category.name }}</a></li>
+{% endfor %}
+</ul>
+
+{% for category in eventsByCategory %}
+<h2 id="{{ category.name | downcase | replace: ' ', '' }}">{{ category.name }}</h2>
+
+<ul class="entries events">
+{% assign events = category.items | sort: "id" %}
+{% for event in events %}
+<li id="{{ event.id }}">
+<div>
+{% if event.url %}<a href="{{ event.url }}">{% endif %}<span class="name">{{ event.name }}</span>{% if event.url %}</a>{% endif -%}
+{% if event.host %} @ {% if event.hosturl %}<a href="{{ event.hosturl }}">{% endif %}<span class="host">{{ event.host }}</span>{% if event.hosturl %}</a>{% endif %}{% endif -%}
+<br>{{ event.description }}.
+</div>
+</li>
+{% endfor %}
+</ul>
+{% endfor %}

@@ -16,6 +16,18 @@ def get_sort_key_default(item):
     return item["id"]
 
 
+event_category_order = {
+    "Conferences and Workshops": "1",
+    "Invited Talks": "2",
+    "Shared Tasks": "3",
+    "Teaching": "4"
+}
+
+
+def get_sort_key_events(item):
+    return f"{event_category_order[item['category']]} {item['id']}"
+
+
 people_category_order = {
     "Teamlead": "1",
     "Staff": "2"
@@ -72,7 +84,10 @@ def dumps_limited(obj, *, max_depth=2, indent=2):
 for filename in sys.argv[1:]:
     get_sort_key = get_sort_key_default
     reverse = False
-    if filename.endswith("people.json"):
+    if filename.endswith("events.json"):
+        get_sort_key = get_sort_key_events
+        print(filename + ": using events sorting")
+    elif filename.endswith("people.json"):
         get_sort_key = get_sort_key_people
         print(filename + ": using people sorting")
     elif filename.endswith("publications.json"):
