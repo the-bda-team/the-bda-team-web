@@ -31,7 +31,7 @@ jobs:
     if: github.ref == 'refs/heads/main'
     steps:
     - uses: actions/checkout@v6
-    - run: git checkout HEAD
+    - run: git checkout HEAD; git pull
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:

@@ -23,6 +23,7 @@
     "email": "Taimoor.Khan@gesis.org",
     "name": ["Muhammad Taimoor", "Khan"],
     "title": "Dr.",
+    "orcid": "0000-0002-6542-9217",
     "years": "2025 - today"
   },
   {
@@ -30,6 +31,7 @@
     "category": "Staff",
     "email": "Stephan.Linzbach@gesis.org",
     "name": ["Stephan", "Linzbach"],
+    "orcid": "0009-0009-6955-2368",
     "years": "2025 - today"
   },
   {
@@ -38,6 +40,7 @@
     "email": "Fakhri.Momeni@gesis.org",
     "name": ["Fakhri", "Momeni"],
     "title": "Dr.",
+    "orcid": "0000-0002-5572-575X",
     "years": "2025 - today"
   },
   {
@@ -46,6 +49,7 @@
     "email": "Felix.Muench@gesis.org",
     "name": ["Felix Viktor", "M\u00fcnch"],
     "title": "Dr.",
+    "orcid": "0000-0001-8808-6790",
     "years": "2025 - today"
   },
   {
@@ -54,6 +58,7 @@
     "email": "Alisa.Rieger@gesis.org",
     "name": ["Alisa", "Rieger"],
     "title": "Dr.",
+    "orcid": "0000-0002-2274-1606",
     "years": "2025 - today"
   },
   {
@@ -62,6 +67,7 @@
     "email": "Ran.Yu@gesis.org",
     "name": ["Ran", "Yu"],
     "title": "Dr.",
+    "orcid": "0000-0002-1619-3164",
     "years": "2025 - today"
   }
 ]
