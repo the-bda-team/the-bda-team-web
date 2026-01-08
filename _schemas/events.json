@@ -59,6 +59,26 @@
         "site": {
           "type": "string"
         },
+        "codeurl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "dataurl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "videourl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "paperurl": {
+          "type": "string",
+          "format": "uri"
+        },
+        "posterurl": {
+          "type": "string",
+          "format": "uri"
+        },
         "slidesurl": {
           "type": "string",
           "format": "uri"

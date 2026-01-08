@@ -9,7 +9,7 @@ title: Events of the BDA Team
 {% assign eventsByCategory = site.data.events | group_by: "category" %}
 <ul class="table-of-contents">
 {% for category in eventsByCategory %}
-<li><a href="#{{ category.name | downcase | replace: ' ', '' }}">{{ category.name }}</a></li>
+<li><a href="#{{ category.name | downcase | replace: ' ', '-' }}">{{ category.name }}</a></li>
 {% endfor %}
 </ul>
 

@@ -7,6 +7,14 @@ Parameters:
 {%- assign slidesurl = nil -%}
 
 {%- assign pdf = include.publication.id | replace: ":", "_" | append: ".pdf" -%}
+{%- if include.event.paperurl -%}
+  {%- assign paperurl = include.event.paperurl -%}
+{%- else -%}
+  {%- assign path = "events/papers/" | append: pdf -%}
+  {%- if site.data.downloads-bda-team contains path -%}
+    {%- assign paperurl = "https://downloads.the-bda.team/" | append: path -%}
+  {%- endif -%}
+{%- endif -%}
 {%- if include.event.posterurl -%}
   {%- assign posterurl = include.event.posterurl -%}
 {%- else -%}
@@ -25,23 +33,41 @@ Parameters:
 {%- endif -%}
 
 <li id="{{ include.event.id }}" class="entry" data-id="{{ include.event.id }}"
-{%- if include.event.category %} data-category="{{ include.publication.category }}"{% endif %}
-{%- if include.event.description %} data-description="{{ include.publication.description }}"{% endif %}
-{%- if include.event.host %} data-host="{{ include.publication.host }}"{% endif %}
-{%- if include.event.hosturl %} data-hosturl="{{ include.publication.hosturl }}"{% endif %}
+{%- if include.event.category %} data-category="{{ include.event.category }}"{% endif %}
+{%- if include.event.codeurl %} data-url="{{ include.event.codeurl }}"{% endif %}
+{%- if include.event.dataurl %} data-url="{{ include.event.dataurl }}"{% endif %}
+{%- if include.event.description %} data-description="{{ include.event.description }}"{% endif %}
+{%- if include.event.host %} data-host="{{ include.event.host }}"{% endif %}
+{%- if include.event.hosturl %} data-hosturl="{{ include.event.hosturl }}"{% endif %}
 {%- if include.event.keywords %} data-keywords="{% for keyword in include.event.keywords %}{% if forloop.first == false %},{% endif %}{{ keyword }}{% endfor %}"{% endif %}
-{%- if include.event.month %} data-month="{{ include.publication.month }}"{% endif %}
-{%- if include.event.name %} data-name="{{ include.publication.name }}"{% endif %}
+{%- if include.event.month %} data-month="{{ include.event.month }}"{% endif %}
+{%- if include.event.name %} data-name="{{ include.event.name }}"{% endif %}
 {%- if include.event.people %} data-people="{% for person in include.event.people %}{% if forloop.first == false %},{% endif %}{{ person }}{% endfor %}"{% endif %}
+{%- if paperurl %} data-paperurl="{{ paperurl }}"{% endif %}
 {%- if posterurl %} data-posterurl="{{ posterurl }}"{% endif %}
-{%- if include.event.site %} data-site="{{ include.publication.site }}"{% endif %}
+{%- if include.event.site %} data-site="{{ include.event.site }}"{% endif %}
 {%- if slidesurl %} data-slidesurl="{{ slidesurl }}"{% endif %}
-{%- if include.event.url %} data-url="{{ include.publication.url }}"{% endif %}
-{%- if include.event.year %} data-year="{{ include.publication.year }}"{% endif -%}
+{%- if include.event.url %} data-url="{{ include.event.url }}"{% endif %}
+{%- if include.event.videourl %} data-url="{{ include.event.videourl }}"{% endif %}
+{%- if include.event.year %} data-year="{{ include.event.year }}"{% endif -%}
 >
 <div>
 {% if include.event.url %}<a href="{{ include.event.url }}">{% endif %}<span class="name">{{ include.event.name }}</span>{% if include.event.url %}</a>{% endif -%}
 {% if include.event.host %} @ {% if include.event.hosturl %}<a href="{{ include.event.hosturl }}">{% endif %}<span class="host">{{ include.event.host }}</span>{% if include.event.hosturl %}</a>{% endif %}{% endif -%}
-<br>{{ include.event.description }}.
+<br><span class="description">{{ include.event.description }}.</span>
+<span class="resources">
+{%- if include.event.codeurl %}
+<a href="{{ include.event.codeurl }}">code</a>{% endif %}
+{%- if include.event.dataurl %}
+<a href="{{ include.event.dataurl }}">data</a>{% endif %}
+{%- if paperurl %}
+<a href="{{ paperurl }}">paper</a>{% endif %}
+{%- if posterurl %}
+<a href="{{ posterurl }}">poster</a>{% endif %}
+{%- if slidesurl %}
+<a href="{{ slidesurl }}">slides</a>{% endif %}
+{%- if include.event.videourl %}
+<a href="{{ include.event.videourl }}">video</a>{% endif %}
+</span>
 </div>
 </li>

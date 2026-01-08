@@ -44,8 +44,7 @@ for (const entryElement of Array.from(document.querySelectorAll(".entry"))) {
 }
 
 // Init
-
-filterElement.focus();
+if (!window.location.hash) { filterElement.focus(); }
 
 function syncFilterElement() {
   const searchParams = new URL(document.location).searchParams;
