@@ -25,7 +25,8 @@ event_category_order = {
 
 
 def get_sort_key_events(item):
-    return f"{event_category_order[item['category']]} {item['id']}"
+    yearReverse = 9999 - item["year"]
+    return f"{event_category_order[item['category']]} {yearReverse} {item['id']}"
 
 
 people_category_order = {
