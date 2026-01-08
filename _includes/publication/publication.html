@@ -36,7 +36,7 @@ https://www.acm.org/publications/authors/reference-formatting
   {%- endif -%}
 {%- endif -%}
 
-<li id="{{ include.publication.id }}"class="entry" data-id="{{ include.publication.id }}"
+<li id="{{ include.publication.id }}" class="entry" data-id="{{ include.publication.id }}"
 {%- if include.publication.address %} data-address="{{ include.publication.address }}"{% endif %}
 {%- if include.publication.author %} data-author="{% for author in include.publication.author %}{% if forloop.first == false %},{% endif %}{{ author[0] }} {{ author[1] }}{% endfor %}"{% endif %}
 {%- if include.publication.appurl %} data-appurl="{{ include.publication.appurl }}"{% endif %}

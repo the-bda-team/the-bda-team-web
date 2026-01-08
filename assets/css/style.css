@@ -126,6 +126,9 @@ nav, footer {
   color: var(--color-background-font);
   padding: var(--space-default);
 }
+footer {
+  margin-top: calc(4 * var(--space-default));
+}
 nav a, footer a {
   color: var(--color-background-font) !important;
 }

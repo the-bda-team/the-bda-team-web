@@ -1,0 +1,12 @@
+{%- comment %}
+Parameters:
+  - event. A single event 
+{% endcomment -%}
+
+<li id="{{ include.event.id }}" class="entry" data-id="{{ include.event.id }}">
+<div>
+{% if include.event.url %}<a href="{{ include.event.url }}">{% endif %}<span class="name">{{ include.event.name }}</span>{% if include.event.url %}</a>{% endif -%}
+{% if include.event.host %} @ {% if include.event.hosturl %}<a href="{{ include.event.hosturl }}">{% endif %}<span class="host">{{ include.event.host }}</span>{% if include.event.hosturl %}</a>{% endif %}{% endif -%}
+<br>{{ include.event.description }}.
+</div>
+</li>

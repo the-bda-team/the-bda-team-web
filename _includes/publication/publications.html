@@ -1,12 +1,13 @@
 {%- comment %}
 Parameters:
-  - publications. List of publications, sorted by year
+  - publications. List of publications, ordered by time
+  - headings. Tag for year headings, if any
 {% endcomment -%}
 
 {% assign publicationsByYear = include.publications | group_by: "year" %}
 {% for publicationsOfYear in publicationsByYear %}
-<h2 id="{{ publicationsOfYear.name }}">{{ publicationsOfYear.name }}</h2>
-<ul class="entries publications">
+{% if include.headings %}<{{ include.headings }} id="year{{ publicationsOfYear.name }}">{{ publicationsOfYear.name }}</{{ include.headings }}>{% endif %}
+<ul class="entries publications"{% if include.headings %} data-headings="year{{ publicationsOfYear.name }}"{% endif %}>
 {%- for publication in publicationsOfYear.items %}
 {% include publication/publication.html publication=publication %}
 {%- endfor %}

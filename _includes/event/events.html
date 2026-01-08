@@ -1,0 +1,14 @@
+{%- comment %}
+Parameters:
+  - events. List of events, ordered by time
+  - headings. Tag for category headings, if any
+{% endcomment -%}
+
+{% for category in eventsByCategory %}
+{% if include.headings %}<{{ include.headings }} id="{{ category.name | downcase | replace: ' ', '-' }}">{{ category.name }}</{{ include.headings }}>{% endif %}
+<ul class="entries events"{% if include.headings %} data-headings="{{ category.name | downcase | replace: ' ', '-' }}"{% endif %}>
+{%- for event in category.items %}
+{% include event/event.html event=event %}
+{%- endfor %}
+</ul>
+{% endfor %}

@@ -145,12 +145,14 @@ function filterEntriesMatchingQuery(queryWords) {
   } else {
     let matchedCategories = 0;
     for (const entriesElement of Array.from(document.querySelectorAll(".entries"))) {
-      const headingElement = entriesElement.previousElementSibling;
       let matches = 0;
       for (const entryElement of Array.from(entriesElement.querySelectorAll(".entry"))) {
         matches += filterThisElement(entryElement, elementMatchQuery(entryElement, queryWords));
       }
-      matchedCategories += filterThisElement(headingElement, matches > 0);
+      if (entriesElement.hasAttribute("data-headings")) {
+        filterThisElement(document.getElementById(entriesElement.getAttribute("data-headings")), matches > 0);
+      }
+      if (matches > 0) { matchedCategories += 1; }
     }
 
     if (matchedCategories === 0) {
