@@ -11,24 +11,24 @@ https://www.acm.org/publications/authors/reference-formatting
 {%- assign slidesurl = nil -%}
 
 {%- assign pdf = include.publication.id | replace: ":", "_" | append: ".pdf" -%}
-{%- if include.publications.url -%}
-  {%- assign url = include.publications.url -%}
+{%- if include.publication.url -%}
+  {%- assign url = include.publication.url -%}
 {%- else -%}
   {%- assign path = "publications/papers/" | append: pdf -%}
   {%- if site.data.downloads-bda-team contains path -%}
     {%- assign url = "https://downloads.the-bda.team/" | append: path -%}
   {%- endif -%}
 {%- endif -%}
-{%- if include.publications.posterurl -%}
-  {%- assign posterurl = include.publications.posterurl -%}
+{%- if include.publication.posterurl -%}
+  {%- assign posterurl = include.publication.posterurl -%}
 {%- else -%}
   {%- assign path = "publications/posters/" | append: pdf -%}
   {%- if site.data.downloads-bda-team contains path -%}
     {%- assign posterurl = "https://downloads.the-bda.team/" | append: path -%}
   {%- endif -%}
 {%- endif -%}
-{%- if include.publications.slidesurl -%}
-  {%- assign slidesurl = include.publications.slidesurl -%}
+{%- if include.publication.slidesurl -%}
+  {%- assign slidesurl = include.publication.slidesurl -%}
 {%- else -%}
   {%- assign path = "publications/slides/" | append: pdf -%}
   {%- if site.data.downloads-bda-team contains path -%}

@@ -3,7 +3,42 @@ Parameters:
   - event. A single event 
 {% endcomment -%}
 
-<li id="{{ include.event.id }}" class="entry" data-id="{{ include.event.id }}">
+{%- assign posterurl = nil -%}
+{%- assign slidesurl = nil -%}
+
+{%- assign pdf = include.publication.id | replace: ":", "_" | append: ".pdf" -%}
+{%- if include.event.posterurl -%}
+  {%- assign posterurl = include.event.posterurl -%}
+{%- else -%}
+  {%- assign path = "events/posters/" | append: pdf -%}
+  {%- if site.data.downloads-bda-team contains path -%}
+    {%- assign posterurl = "https://downloads.the-bda.team/" | append: path -%}
+  {%- endif -%}
+{%- endif -%}
+{%- if include.event.slidesurl -%}
+  {%- assign slidesurl = include.event.slidesurl -%}
+{%- else -%}
+  {%- assign path = "events/slides/" | append: pdf -%}
+  {%- if site.data.downloads-bda-team contains path -%}
+    {%- assign slidesurl = "https://downloads.the-bda.team/" | append: path -%}
+  {%- endif -%}
+{%- endif -%}
+
+<li id="{{ include.event.id }}" class="entry" data-id="{{ include.event.id }}"
+{%- if include.event.category %} data-category="{{ include.publication.category }}"{% endif %}
+{%- if include.event.description %} data-description="{{ include.publication.description }}"{% endif %}
+{%- if include.event.host %} data-host="{{ include.publication.host }}"{% endif %}
+{%- if include.event.hosturl %} data-hosturl="{{ include.publication.hosturl }}"{% endif %}
+{%- if include.event.keywords %} data-keywords="{% for keyword in include.event.keywords %}{% if forloop.first == false %},{% endif %}{{ keyword }}{% endfor %}"{% endif %}
+{%- if include.event.month %} data-month="{{ include.publication.month }}"{% endif %}
+{%- if include.event.name %} data-name="{{ include.publication.name }}"{% endif %}
+{%- if include.event.people %} data-people="{% for person in include.event.people %}{% if forloop.first == false %},{% endif %}{{ person }}{% endfor %}"{% endif %}
+{%- if posterurl %} data-posterurl="{{ posterurl }}"{% endif %}
+{%- if include.event.site %} data-site="{{ include.publication.site }}"{% endif %}
+{%- if slidesurl %} data-slidesurl="{{ slidesurl }}"{% endif %}
+{%- if include.event.url %} data-url="{{ include.publication.url }}"{% endif %}
+{%- if include.event.year %} data-year="{{ include.publication.year }}"{% endif -%}
+>
 <div>
 {% if include.event.url %}<a href="{{ include.event.url }}">{% endif %}<span class="name">{{ include.event.name }}</span>{% if include.event.url %}</a>{% endif -%}
 {% if include.event.host %} @ {% if include.event.hosturl %}<a href="{{ include.event.hosturl }}">{% endif %}<span class="host">{{ include.event.host }}</span>{% if include.event.hosturl %}</a>{% endif %}{% endif -%}
