@@ -32,7 +32,7 @@ function normalize(value, protectCommata = false, protectQueryModifiers = false)
 for (const entryElement of Array.from(document.querySelectorAll(".entry"))) {
   const attributes = entryElement.dataset;
   for (const attribute in attributes) {
-    if (attribute === "author" || attribute === "editor" || attribute === "keywords") {
+    if (attribute === "author" || attribute === "editor" || attribute === "keywords" || attribute === "people") {
       attributes[attribute] = normalize(attributes[attribute], protectCommata = true, protectQueryModifiers = false);
     } else {
       attributes[attribute] = normalize(attributes[attribute]);

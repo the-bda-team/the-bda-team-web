@@ -42,7 +42,7 @@ Parameters:
 {%- if include.event.keywords %} data-keywords="{% for keyword in include.event.keywords %}{% if forloop.first == false %},{% endif %}{{ keyword }}{% endfor %}"{% endif %}
 {%- if include.event.month %} data-month="{{ include.event.month }}"{% endif %}
 {%- if include.event.name %} data-name="{{ include.event.name }}"{% endif %}
-{%- if include.event.people %} data-people="{% for person in include.event.people %}{% if forloop.first == false %},{% endif %}{{ person }}{% endfor %}"{% endif %}
+{%- if include.event.people %} data-people="{% for person in include.event.people %}{% if forloop.first == false %},{% endif %}{{ person }},{% assign persondata = site.data.people | where: "id", person | first %}{{ persondata.name[0] }} {{ persondata.name[1] }}{% endfor %}"{% endif %}
 {%- if paperurl %} data-paperurl="{{ paperurl }}"{% endif %}
 {%- if posterurl %} data-posterurl="{{ posterurl }}"{% endif %}
 {%- if include.event.site %} data-site="{{ include.event.site }}"{% endif %}

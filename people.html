@@ -21,6 +21,7 @@ title: People of the BDA Team
 {% endfor -%}
 {% endfor -%}
 {% assign authors = authors | split: "|" | uniq -%}
+{% assign events = site.data.events | map: "people" | uniq | join: "," %}
 
 {% for category in peopleByCategory %}
 <h2 id="{{ category.name | downcase | replace: ' ', '' }}">{{ category.name }}</h2>
@@ -51,7 +52,9 @@ Topics:
 </div>
 <span class="resources">
 {%- assign authorString = person.name | join: "," -%}
-{%- if authors contains authorString %}<a href="{{ '/publications' | relative_url }}?q={{ person.name[0] | append: ' ' | append: person.name[1] | replace: ' ', '+' | urlencode }}">publications</a>{%- endif -%}
+{%- if authors contains authorString %}<a href="{{ '/publications' | relative_url }}?q=author:{{ person.name[0] | append: ' ' | append: person.name[1] | replace: ' ', '%2B' | urlencode }}">publications</a>{%- endif -%}
+{%- if events contains person.id %}
+<a href="{{ '/events' | relative_url }}?q=people:{{ person.name[0] | append: ' ' | append: person.name[1] | replace: ' ', '%2B' | urlencode }}">events</a>{%- endif -%}
 </span>
 </div>
 </li>
