@@ -42,6 +42,21 @@
     "year": 2025
   },
   {
+    "id": "kiesel:2025b",
+    "category": "InProceedings",
+    "address": "Berlin Heidelberg New York",
+    "author": [["Johannes", "Kiesel"], ["\u00c7a\u011fr\u0131", "\u00c7\u00f6ltekin"], ["Marcel", "Gohsen"], ["Sebastian", "Heineking"], ["Maximilian", "Heinrich"], ["Maik", "Fr\u00f6be"], ["Tim", "Hagen"], ["Mohammad", "Aliannejadi"], ["Sharat", "Anand"], ["Toma\u017e", "Erjavec"], ["Matthias", "Hagen"], ["Maty\u00e1\u0161", "Kopp"], ["Nikola", "Ljube\u0161i\u0107"], ["Katja", "Meden"], ["Nailia", "Mirzakhmedova"], ["Vaidas", "Morkevi\u010dius"], ["Harrisen", "Scells"], ["Moritz", "Wolter"], ["Ines", "Zelch"], ["Martin", "Potthast"], ["Benno", "Stein"]],
+    "booktitle": "Experimental IR Meets Multilinguality, Multimodality, and Interaction. 16th International Conference of the CLEF Association (CLEF 2025)",
+    "editor": [["Jorge", "Carrillo-de-Albornoz"], ["Julio", "Gonzalo"], ["Laura", "Plaza"], ["Alba Garc\u00eda Seco", "Herrera"], ["Josiane", "Mothe"], ["Florina", "Piroi"], ["Paolo", "Rosso"], ["Damiano", "Spina"], ["Guglielmo", "Faggioli"], ["Nicola", "Ferro"]],
+    "month": "sep",
+    "numpages": 24,
+    "publisher": "Springer",
+    "series": "Lecture Notes in Computer Science",
+    "site": "Madrid, Spain",
+    "title": "Overview of Touch\u00e9 2025: Argumentation Systems",
+    "year": 2025
+  },
+  {
     "id": "kanadan:2025",
     "category": "InProceedings",
     "author": [["Midhun", "Kanadan"], ["Johannes", "Kiesel"], ["Maximilian", "Heinrich"], ["Benno", "Stein"]],
@@ -93,21 +108,6 @@
     "publisher": "ACM",
     "site": "Vancouver, British Columbia, Canada",
     "title": "Checklists for Computational Reproducibility in Social Sciences: Insights from Literature and Survey Evaluation",
-    "year": 2025
-  },
-  {
-    "id": "kiesel:2025b",
-    "category": "InProceedings",
-    "address": "Berlin Heidelberg New York",
-    "author": [["Johannes", "Kiesel"], ["\u00c7a\u011fr\u0131", "\u00c7\u00f6ltekin"], ["Marcel", "Gohsen"], ["Sebastian", "Heineking"], ["Maximilian", "Heinrich"], ["Maik", "Fr\u00f6be"], ["Tim", "Hagen"], ["Mohammad", "Aliannejadi"], ["Sharat", "Anand"], ["Toma\u017e", "Erjavec"], ["Matthias", "Hagen"], ["Maty\u00e1\u0161", "Kopp"], ["Nikola", "Ljube\u0161i\u0107"], ["Katja", "Meden"], ["Nailia", "Mirzakhmedova"], ["Vaidas", "Morkevi\u010dius"], ["Harrisen", "Scells"], ["Moritz", "Wolter"], ["Ines", "Zelch"], ["Martin", "Potthast"], ["Benno", "Stein"]],
-    "booktitle": "Experimental IR Meets Multilinguality, Multimodality, and Interaction. 16th International Conference of the CLEF Association (CLEF 2025)",
-    "editor": [["Jorge", "Carrillo-de-Albornoz"], ["Julio", "Gonzalo"], ["Laura", "Plaza"], ["Alba Garc\u00eda Seco", "Herrera"], ["Josiane", "Mothe"], ["Florina", "Piroi"], ["Paolo", "Rosso"], ["Damiano", "Spina"], ["Guglielmo", "Faggioli"], ["Nicola", "Ferro"]],
-    "month": "sep",
-    "numpages": 24,
-    "publisher": "Springer",
-    "series": "Lecture Notes in Computer Science",
-    "site": "Madrid, Spain",
-    "title": "Overview of Touch\u00e9 2025: Argumentation Systems",
     "year": 2025
   },
   {
