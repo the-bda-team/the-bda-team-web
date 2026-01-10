@@ -212,15 +212,17 @@
     "year": 2023
   },
   {
-    "id": "bondarenko:2023b",
+    "id": "bondarenko:2023c",
     "category": "InProceedings",
     "address": "Berlin Heidelberg New York",
     "author": [["Alexander", "Bondarenko"], ["Maik", "Fr\u00f6be"], ["Johannes", "Kiesel"], ["Ferdinand", "Schlatt"], ["Valentin", "Barriere"], ["Brian", "Ravenet"], ["L\u00e9o", "Hemamou"], ["Simon", "Luck"], ["Jan Heinrich", "Reimer"], ["Benno", "Stein"], ["Martin", "Potthast"], ["Matthias", "Hagen"]],
     "booktitle": "Experimental IR Meets Multilinguality, Multimodality, and Interaction. 14th International Conference of the CLEF Association (CLEF 2023)",
+    "doi": "10.1007/978-3-031-42448-9_31",
     "editor": [["Avi", "Arampatzis"], ["Evangelos", "Kanoulas"], ["Theodora", "Tsikrika"], ["Stefanos", "Vrochidis"], ["Anastasia", "Giachanou"], ["Dan", "Li"], ["Mohammad", "Aliannejadi"], ["Michalis", "Vlachos"], ["Guglielmo", "Faggioli"], ["Nicola", "Ferro"]],
     "month": "sep",
     "publisher": "Springer",
     "series": "Lecture Notes in Computer Science",
+    "volume": "14163",
     "site": "Thessaloniki, Greece",
     "title": "Overview of Touch\u00e9 2023: Argument and Causal Retrieval",
     "year": 2023
@@ -318,16 +320,18 @@
     "year": 2022
   },
   {
-    "id": "bondarenko:2022f",
+    "id": "bondarenko:2022e",
     "category": "InProceedings",
     "address": "Berlin Heidelberg New York",
     "author": [["Alexander", "Bondarenko"], ["Maik", "Fr\u00f6be"], ["Johannes", "Kiesel"], ["Shahbaz", "Syed"], ["Timon", "Gurcke"], ["Meriem", "Beloucif"], ["Alexander", "Panchenko"], ["Chris", "Biemann"], ["Benno", "Stein"], ["Henning", "Wachsmuth"], ["Martin", "Potthast"], ["Matthias", "Hagen"]],
     "booktitle": "Experimental IR Meets Multilinguality, Multimodality, and Interaction. 13th International Conference of the CLEF Association (CLEF 2022)",
+    "doi": "10.1007/978-3-031-13643-6_21",
     "editor": [["Alberto", "Barr\u00f3n-Cede\u00f1o"], ["Giovanni Da San", "Martino"], ["Mirko Degli", "Esposti"], ["Fabrizio", "Sebastiani"], ["Craig", "Macdonald"], ["Gabriella", "Pasi"], ["Allan", "Hanbury"], ["Martin", "Potthast"], ["Guglielmo", "Faggioli"], ["Nicola", "Ferro"]],
     "month": "sep",
     "numpages": 29,
     "publisher": "Springer",
     "series": "Lecture Notes in Computer Science",
+    "volume": "13390",
     "site": "Bologna, Italy",
     "title": "Overview of Touch\u00e9 2022: Argument Retrieval",
     "year": 2022
