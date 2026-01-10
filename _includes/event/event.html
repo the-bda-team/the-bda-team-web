@@ -45,7 +45,7 @@ Parameters:
 <div>
 {% if include.event.url %}<a href="{{ include.event.url }}">{% endif %}<span class="name">{{ include.event.name }}</span>{% if include.event.url %}</a>{% endif -%}
 {% if include.event.host %} @ {% if include.event.hosturl %}<a href="{{ include.event.hosturl }}">{% endif %}<span class="host">{{ include.event.host }}</span>{% if include.event.hosturl %}</a>{% endif %}{% endif -%}
-<br><span class="description">{{ include.event.description }}.</span>
+<br><span class="category">{{ include.event.category }}</span>. <span class="description">{{ include.event.description }}.</span> <span class="site">{{ include.event.site }}.</span>
 <span class="resources">
 {%- if include.event.codeurl %}
 <a href="{{ include.event.codeurl }}">code</a>{% endif %}

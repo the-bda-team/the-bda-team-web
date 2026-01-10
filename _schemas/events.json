@@ -8,10 +8,10 @@
   "$defs": {
     "Event": {
       "type": "object",
-      "required": ["id", "category", "description", "host", "name", "people", "year"],
+      "required": ["id", "category", "description", "host", "name", "people", "site", "year"],
       "properties": {
         "id": { "type": "string" },
-        "category": { "type": "string", "enum": ["Conferences and Workshops", "Invited Talks", "Shared Tasks", "Teaching"] },
+        "category": { "type": "string", "enum": ["Conference", "Invited Talk", "Shared Task", "Teaching", "Workshop"] },
         "codeurl": { "type": "string", "format": "uri" },
         "dataurl": { "type": "string", "format": "uri" },
         "description": { "type": "string" },
