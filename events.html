@@ -7,13 +7,6 @@ breadcrumbs: [ "events" ]
 
 <h1>Events</h1>
 
-{% assign eventsByCategory = site.data.events | group_by: "category" %}
-<ul class="table-of-contents">
-{% for category in eventsByCategory %}
-<li><a href="#{{ category.name | downcase | replace: ' ', '-' }}">{{ category.name }}</a></li>
-{% endfor %}
-</ul>
-
 <input type="text" class="filter" placeholder="Type here to filter&hellip;">
 <div id="filtered-all-message" aria-hidden="true">None of our events match your filter</div>
 

@@ -1,42 +1,6 @@
 [
   {
-    "id": "scai2024",
-    "category": "Conferences and Workshops",
-    "description": "8th Workshop on Search-Oriented Conversational Artificial Intelligence (SCAI 2024), held in conjunction with the 9th ACM SIGIR Conference on Human Information Interaction and Retrieval (CHIIR 2024), co-organized by Alexander Frummet, Andrea Papenmeier, Maik Fr\u00f6be, and Johannes Kiesel",
-    "host": "CHIIR 2024",
-    "hosturl": "https://chiir2024.github.io/",
-    "keywords": ["conversational search"],
-    "name": "SCAI 2024",
-    "people": ["kiesel"],
-    "site": "Sheffield, United Kingdom",
-    "url": "https://scai.info/scai-2024/",
-    "year": 2024
-  },
-  {
-    "id": "eteach2024-keynote",
-    "category": "Invited Talks",
-    "description": "Keynote of Benno Stein and Johannes Kiesel",
-    "host": "Jahrestagung des eTeach-Netzwerks Th\u00fcringen 2024",
-    "hosturl": "https://indico.rz.uni-jena.de/event/133/overview",
-    "month": "nov",
-    "name": "Understanding to Stay in Control: Using, Assessing, and Mastering AI",
-    "people": ["kiesel"],
-    "site": "Jena, Germany",
-    "year": 2024
-  },
-  {
-    "id": "disinfo2023-kiesel",
-    "category": "Invited Talks",
-    "description": "Invited Talk of Johannes Kiesel",
-    "host": "JRC DISINFO Workshop 2023",
-    "month": "sep",
-    "name": "Open Web Search And its Use to Find Arguments Against Populist Claims",
-    "people": ["kiesel"],
-    "site": "Brussels, Belgium",
-    "year": 2023
-  },
-  {
-    "id": "clef26-fallacy-detection",
+    "id": "clef2026-touche-fallacy-detection",
     "category": "Shared Tasks",
     "description": "The task is to determine if and in which way an argument is fallacious",
     "host": "Touch\u00e9/CLEF 2026",
@@ -47,32 +11,6 @@
     "people": ["kiesel"],
     "url": "https://touche.webis.de/clef26/touche26-web/fallacy-detection.html",
     "year": 2026
-  },
-  {
-    "id": "clef25-image-retrieval-generation-for-arguments",
-    "category": "Shared Tasks",
-    "description": "The task is to retrieve or generate images that help to convey central aspects of claims",
-    "host": "Touch\u00e9/CLEF 2025",
-    "hosturl": "https://clef2025.clef-initiative.eu/",
-    "keywords": ["computational argumentation"],
-    "month": "sep",
-    "name": "Image Retrieval/Generation for Arguments",
-    "people": ["kiesel"],
-    "url": "https://touche.webis.de/clef25/touche25-web/image-retrieval-for-arguments.html",
-    "year": 2025
-  },
-  {
-    "id": "clef25-retrieval-augmented-debating",
-    "category": "Shared Tasks",
-    "description": "The task is to build conversational agents that argue against a debate partner and to evaluate such systems automatically",
-    "host": "Touch\u00e9/CLEF 2025",
-    "hosturl": "https://clef2025.clef-initiative.eu/",
-    "keywords": ["computational argumentation", "conversational search", "user simulation"],
-    "month": "sep",
-    "name": "Retrieval-Augmented Debating",
-    "people": ["kiesel"],
-    "url": "https://touche.webis.de/clef25/touche25-web/retrieval-augmented-debating.html",
-    "year": 2025
   },
   {
     "id": "trec2025-ikat",
@@ -88,7 +26,81 @@
     "year": 2025
   },
   {
-    "id": "clef24-human-value-detection",
+    "id": "clef2025-touche-image-retrieval-generation-for-arguments",
+    "category": "Shared Tasks",
+    "description": "The task is to retrieve or generate images that help to convey central aspects of claims",
+    "host": "Touch\u00e9/CLEF 2025",
+    "hosturl": "https://clef2025.clef-initiative.eu/",
+    "keywords": ["computational argumentation"],
+    "month": "sep",
+    "name": "Image Retrieval/Generation for Arguments",
+    "people": ["kiesel"],
+    "url": "https://touche.webis.de/clef25/touche25-web/image-retrieval-for-arguments.html",
+    "year": 2025
+  },
+  {
+    "id": "clef2025-touche-retrieval-augmented-debating",
+    "category": "Shared Tasks",
+    "description": "The task is to build conversational agents that argue against a debate partner and to evaluate such systems automatically",
+    "host": "Touch\u00e9/CLEF 2025",
+    "hosturl": "https://clef2025.clef-initiative.eu/",
+    "keywords": ["computational argumentation", "conversational search", "user simulation"],
+    "month": "sep",
+    "name": "Retrieval-Augmented Debating",
+    "people": ["kiesel"],
+    "url": "https://touche.webis.de/clef25/touche25-web/retrieval-augmented-debating.html",
+    "year": 2025
+  },
+  {
+    "id": "scai2024",
+    "category": "Conferences and Workshops",
+    "description": "8th Workshop on Search-Oriented Conversational Artificial Intelligence (SCAI 2024), held in conjunction with the 9th ACM SIGIR Conference on Human Information Interaction and Retrieval (CHIIR 2024), co-organized by Alexander Frummet, Andrea Papenmeier, Maik Fr\u00f6be, and Johannes Kiesel",
+    "host": "CHIIR 2024",
+    "hosturl": "https://chiir2024.github.io/",
+    "keywords": ["conversational search"],
+    "name": "SCAI 2024",
+    "people": ["kiesel"],
+    "site": "Sheffield, United Kingdom",
+    "url": "https://scai.info/scai-2024/",
+    "year": 2024
+  },
+  {
+    "id": "bauhaus2024-ai-seminar",
+    "category": "Teaching",
+    "description": "Training seminar in 2024 by Benno Stein, Johannes Kiesel, and Marcel Gohsen",
+    "host": "Bauhaus-Universit\u00e4t Weimar",
+    "month": "nov",
+    "name": "Using AI in Everyday Life at the University",
+    "people": ["kiesel"],
+    "site": "Weimar, Germany",
+    "year": 2024
+  },
+  {
+    "id": "eteach2024-keynote",
+    "category": "Invited Talks",
+    "description": "Keynote of Benno Stein and Johannes Kiesel",
+    "host": "Jahrestagung des eTeach-Netzwerks Th\u00fcringen 2024",
+    "hosturl": "https://indico.rz.uni-jena.de/event/133/overview",
+    "month": "nov",
+    "name": "Understanding to Stay in Control: Using, Assessing, and Mastering AI",
+    "people": ["kiesel"],
+    "site": "Jena, Germany",
+    "year": 2024
+  },
+  {
+    "id": "kinderuni-weimar2024-stein",
+    "category": "Teaching",
+    "description": "Lecture at the Kinderuni Weimar by Benno Stein and Johannes Kiesel",
+    "host": "Kinderuni Weimar 2024/25",
+    "hosturl": "https://www.kinderuni-weimar.de/",
+    "month": "nov",
+    "name": "Wie lernen Computer?",
+    "people": ["kiesel"],
+    "site": "Weimar, Germany",
+    "year": 2024
+  },
+  {
+    "id": "clef2024-touche-human-value-detection",
     "category": "Shared Tasks",
     "description": "The task is to detect the prevalent human values in texts and the value valence",
     "host": "Touch\u00e9/CLEF 2024",
@@ -101,7 +113,7 @@
     "year": 2024
   },
   {
-    "id": "clef24-image-retrieval-generation-for-arguments",
+    "id": "clef2024-touche-image-retrieval-generation-for-arguments",
     "category": "Shared Tasks",
     "description": "The task is to retrieve or generate images per topic and stance that show support for that stance",
     "host": "Touch\u00e9/CLEF 2024",
@@ -114,7 +126,7 @@
     "year": 2024
   },
   {
-    "id": "clef23-image-retrieval-for-arguments",
+    "id": "clef2023-touche-image-retrieval-for-arguments",
     "category": "Shared Tasks",
     "description": "The task is to retrieve images per topic and stance that show support for that stance",
     "host": "Touch\u00e9/CLEF 2023",
@@ -127,7 +139,18 @@
     "year": 2023
   },
   {
-    "id": "semeval2023-human-value-detection",
+    "id": "disinfo2023-kiesel",
+    "category": "Invited Talks",
+    "description": "Invited Talk of Johannes Kiesel",
+    "host": "JRC DISINFO Workshop 2023",
+    "month": "sep",
+    "name": "Open Web Search And its Use to Find Arguments Against Populist Claims",
+    "people": ["kiesel"],
+    "site": "Brussels, Belgium",
+    "year": 2023
+  },
+  {
+    "id": "semeval2023-touche-human-value-detection",
     "category": "Shared Tasks",
     "description": "The task is to detect the prevalent human values in arguments",
     "host": "Touch\u00e9/SemEval 2023",
@@ -141,7 +164,7 @@
     "year": 2023
   },
   {
-    "id": "clef22-image-retrieval-for-arguments",
+    "id": "clef2022-touche-image-retrieval-for-arguments",
     "category": "Shared Tasks",
     "description": "The task is to retrieve images per topic and stance that show support for that stance",
     "host": "Touch\u00e9/CLEF 2022",
@@ -167,7 +190,7 @@
     "year": 2021
   },
   {
-    "id": "semeval2019-hyperpartisan-news-detection",
+    "id": "semeval2019-pan-hyperpartisan-news-detection",
     "category": "Shared Tasks",
     "description": "The task is to decide whether news articles follow hyperpartisan argumentation, i.e., whether it exhibits blind, prejudiced, or unreasoning allegiance to one party, faction, cause, or person",
     "host": "PAN/SemEval 2019",
@@ -178,29 +201,6 @@
     "url": "https://pan.webis.de/semeval19/semeval19-web",
     "videourl": "https://youtu.be/e-9MvqHMh6I",
     "year": 2019
-  },
-  {
-    "id": "bauhaus2024-ai-seminar",
-    "category": "Teaching",
-    "description": "Training seminar in 2024 by Benno Stein, Johannes Kiesel, and Marcel Gohsen",
-    "host": "Bauhaus-Universit\u00e4t Weimar",
-    "month": "nov",
-    "name": "Using AI in Everyday Life at the University",
-    "people": ["kiesel"],
-    "site": "Weimar, Germany",
-    "year": 2024
-  },
-  {
-    "id": "kinderuni-weimar2024-stein",
-    "category": "Teaching",
-    "description": "Lecture at the Kinderuni Weimar by Benno Stein and Johannes Kiesel",
-    "host": "Kinderuni Weimar 2024/25",
-    "hosturl": "https://www.kinderuni-weimar.de/",
-    "month": "nov",
-    "name": "Wie lernen Computer?",
-    "people": ["kiesel"],
-    "site": "Weimar, Germany",
-    "year": 2024
   },
   {
     "id": "studienstiftung2018",
