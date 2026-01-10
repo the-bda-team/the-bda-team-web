@@ -21,6 +21,7 @@
         "month": { "$ref": "_schemas/base.json#/$defs/Month" },
         "name": { "type": "string" },
         "people": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "publications": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
         "posterurl": { "type": "string", "format": "uri" },
         "site": { "type": "string" },
         "slidesurl": { "type": "string", "format": "uri" },

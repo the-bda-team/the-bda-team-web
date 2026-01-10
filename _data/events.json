@@ -51,6 +51,7 @@
     "month": "sep",
     "name": "Touch\u00e9",
     "people": ["kiesel"],
+    "publications": ["kiesel:2025b"],
     "site": "Madrid, Spain",
     "url": "https://touche.webis.de/clef25/touche25-web/index.html",
     "year": 2025
@@ -152,6 +153,7 @@
     "month": "sep",
     "name": "Touch\u00e9",
     "people": ["kiesel"],
+    "publications": ["kiesel:2024d"],
     "site": "Grenoble, France",
     "url": "https://touche.webis.de/clef24/touche24-web/index.html",
     "year": 2024
@@ -194,6 +196,7 @@
     "month": "sep",
     "name": "Touch\u00e9",
     "people": ["kiesel"],
+    "publications": ["bondarenko:2023c"],
     "site": "Thessaloniki, Greece",
     "url": "https://touche.webis.de/clef23/touche23-web/index.html",
     "year": 2023
@@ -233,6 +236,7 @@
     "month": "jul",
     "name": "ValueEval",
     "people": ["kiesel"],
+    "publications": ["kiesel:2023a"],
     "site": "Toronto, Canada",
     "url": "https://touche.webis.de/semeval23/touche23-web/index.html",
     "videourl": "https://youtu.be/ZAQ4LELCCY4",
@@ -248,6 +252,7 @@
     "month": "sep",
     "name": "Touch\u00e9",
     "people": ["kiesel"],
+    "publications": ["bondarenko:2022e"],
     "site": "Bologna, Italy",
     "url": "https://touche.webis.de/clef22/touche22-web/index.html",
     "year": 2022
@@ -289,6 +294,7 @@
     "month": "jun",
     "name": "Hyperpartisan News Detection",
     "people": ["kiesel"],
+    "publications": ["kiesel:2019c"],
     "site": "Minneapolis, USA",
     "url": "https://pan.webis.de/semeval19/semeval19-web",
     "videourl": "https://youtu.be/e-9MvqHMh6I",
