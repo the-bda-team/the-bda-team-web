@@ -36,6 +36,14 @@ https://www.acm.org/publications/authors/reference-formatting
   {%- endif -%}
 {%- endif -%}
 
+{%- assign events = "" -%}
+{%- for event in site.data.events -%}
+  {%- if event.publications contains include.publication.id -%}
+    {%- if events != "" %}{% assign events = events | append: "," %}{% endif -%}
+    {%- assign events = events | append: event.id -%}
+  {%- endif -%}
+{%- endfor -%}
+
 <li id="{{ include.publication.id }}" class="entry" data-id="{{ include.publication.id }}"
 {%- if include.publication.address %} data-address="{{ include.publication.address }}"{% endif %}
 {%- if include.publication.author %} data-author="{% for author in include.publication.author %}{% if forloop.first == false %},{% endif %}{{ author[0] }} {{ author[1] }}{% endfor %}"{% endif %}
@@ -47,7 +55,7 @@ https://www.acm.org/publications/authors/reference-formatting
 {%- if include.publication.dataurl %} data-dataurl="{{ include.publication.dataurl }}"{% endif %}
 {%- if include.publication.doi %} data-doi="{{ include.publication.doi }}"{% endif %}
 {%- if include.publication.editor %} data-editor="{% for editor in include.publication.editor %}{% if forloop.first == false %},{% endif %}{{ editor[0] }} {{ editor[1] }}{% endfor %}"{% endif %}
-{%- if include.publication.eventurl %} data-eventurl="{{ include.publication.eventurl }}"{% endif %}
+{%- if events != "" %} data-events="{{ events }}"{% endif %}
 {%- if include.publication.keywords %} data-keywords="{% for keyword in include.publication.keywords %}{% if forloop.first == false %},{% endif %}{{ keyword }}{% endfor %}"{% endif %}
 {%- if include.publication.isbn %} data-isbn="{{ include.publication.isbn }}"{% endif %}
 {%- if include.publication.issn %} data-issn="{{ include.publication.issn }}"{% endif %}
@@ -107,8 +115,8 @@ https://www.acm.org/publications/authors/reference-formatting
 <a href="{{ include.publication.dataurl }}">data</a>{% endif %}
 {%- if include.publication.doi %}
 <a href="https://doi.org/{{ include.publication.doi }}">doi</a>{% endif %}
-{%- if include.publication.eventurl %}
-<a href="{{ include.publication.eventurl }}">event</a>{% endif %}
+{%- if events != "" %}
+<a href="{{ '/events' | relative_url }}?q=publications:{{ include.publication.id | replace: ":", "" | urlencode }}">events</a>{% endif %}
 {%- if posterurl %}
 <a href="{{ posterurl }}">poster</a>{% endif %}
 {%- if include.publication.preprinturl %}

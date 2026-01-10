@@ -66,6 +66,7 @@
     "month": "sep",
     "name": "Image Retrieval/Generation for Arguments",
     "people": ["kiesel"],
+    "publications": ["kiesel:2025b"],
     "site": "Madrid, Spain",
     "url": "https://touche.webis.de/clef25/touche25-web/image-retrieval-for-arguments.html",
     "year": 2025
@@ -80,6 +81,7 @@
     "month": "sep",
     "name": "Retrieval-Augmented Debating",
     "people": ["kiesel"],
+    "publications": ["kiesel:2025b"],
     "site": "Madrid, Spain",
     "url": "https://touche.webis.de/clef25/touche25-web/retrieval-augmented-debating.html",
     "year": 2025
@@ -93,6 +95,7 @@
     "keywords": ["conversational search"],
     "name": "SCAI 2024",
     "people": ["kiesel"],
+    "publications": ["frummet:2024a"],
     "site": "Sheffield, United Kingdom",
     "url": "https://scai.info/scai-2024/",
     "year": 2024
@@ -168,6 +171,7 @@
     "month": "sep",
     "name": "ValueEval",
     "people": ["kiesel"],
+    "publications": ["kiesel:2024d"],
     "site": "Grenoble, France",
     "url": "https://touche.webis.de/clef24/touche24-web/human-value-detection.html",
     "year": 2024
@@ -182,6 +186,7 @@
     "month": "sep",
     "name": "Image Retrieval/Generation for Arguments",
     "people": ["kiesel"],
+    "publications": ["kiesel:2024d"],
     "site": "Grenoble, France",
     "url": "https://touche.webis.de/clef24/touche24-web/image-retrieval-for-arguments.html",
     "year": 2024
@@ -211,6 +216,7 @@
     "month": "sep",
     "name": "Image Retrieval for Arguments",
     "people": ["kiesel"],
+    "publications": ["bondarenko:2023c"],
     "site": "Thessaloniki, Greece",
     "url": "https://touche.webis.de/clef23/touche23-web/image-retrieval-for-arguments.html",
     "year": 2023
@@ -267,6 +273,7 @@
     "month": "sep",
     "name": "Image Retrieval for Arguments",
     "people": ["kiesel"],
+    "publications": ["bondarenko:2022e"],
     "site": "Bologna, Italy",
     "url": "https://touche.webis.de/clef22/touche22-web/image-retrieval-for-arguments.html",
     "year": 2022
@@ -281,6 +288,7 @@
     "month": "oct",
     "name": "SCAI QReCC Shared Task 2021",
     "people": ["kiesel"],
+    "publications": ["vakulenko:2022"],
     "site": "Online",
     "url": "https://scai.info/scai-qrecc-2021/",
     "year": 2021

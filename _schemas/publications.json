@@ -20,7 +20,6 @@
         "codeurl": { "type": "string", "format": "uri" },
         "dataurl": { "type": "string", "format": "uri" },
         "doi": { "$ref": "_schemas/base.json#/$defs/DOI" },
-        "eventurl": { "type": "string", "format": "uri" },
         "isbn": { "type": "string", "oneOf": [ { "pattern": "^(\\d-?){9}-[\\dX]$" }, { "pattern": "^(97[89])-(\\d-?){10}$" } ] },
         "issn": { "type": "string", "format": "^\\d{4}-\\d{3}[\\dX]$" },
         "keywords": { "type": "array", "items": { "type": "string" } },

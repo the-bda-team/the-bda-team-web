@@ -2,10 +2,13 @@ const filterElement = document.querySelector(".filter");
 if (filterElement !== null) {
 // IF FILTER FIELD PRESENT
 
+// Settings
+const historyNewStateThresholdMs = 1000;
+const listAttributes = ["author", "editor", "keywords", "people", "publications"];
+
 // Global variables
 
 const filteredAllMessageElement = document.getElementById("filtered-all-message");
-const historyNewStateThresholdMs = 1000;
 let lastHistoryChangeMs = new Date().getTime();
 
 // Normalization
@@ -32,7 +35,7 @@ function normalize(value, protectCommata = false, protectQueryModifiers = false)
 for (const entryElement of Array.from(document.querySelectorAll(".entry"))) {
   const attributes = entryElement.dataset;
   for (const attribute in attributes) {
-    if (attribute === "author" || attribute === "editor" || attribute === "keywords" || attribute === "people") {
+    if (listAttributes.includes(attribute)) {
       attributes[attribute] = normalize(attributes[attribute], protectCommata = true, protectQueryModifiers = false);
     } else {
       attributes[attribute] = normalize(attributes[attribute]);

@@ -177,7 +177,7 @@
     "year": 2024
   },
   {
-    "id": "frummet:2024",
+    "id": "frummet:2024a",
     "category": "InProceedings",
     "author": [["Alexander", "Frummet"], ["Andrea", "Papenmeier"], ["Maik", "Fr\u00f6be"], ["Johannes", "Kiesel"]],
     "booktitle": "9th ACM SIGIR Conference on Human Information Interaction and Retrieval (CHIIR 2024)",
@@ -256,7 +256,7 @@
     "year": 2023
   },
   {
-    "id": "bevendorff:2023b",
+    "id": "bevendorff:2023c",
     "category": "InProceedings",
     "author": [["Janek", "Bevendorff"], ["Sanket", "Gupta"], ["Johannes", "Kiesel"], ["Benno", "Stein"]],
     "booktitle": "46th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2023)",
@@ -281,7 +281,7 @@
     "year": 2023
   },
   {
-    "id": "ajjour:2023",
+    "id": "ajjour:2023a",
     "category": "InProceedings",
     "author": [["Yamen", "Ajjour"], ["Johannes", "Kiesel"], ["Benno", "Stein"], ["Martin", "Potthast"]],
     "booktitle": "17th Conference of the European Chapter of the Association for Computational Linguistics (EACL 2023)",
@@ -658,7 +658,6 @@
     "booktitle": "13th International Workshop on Semantic Evaluation (SemEval 2019)",
     "dataurl": "https://webis.de/data.html#pan-semeval-hyperpartisan-news-detection-19",
     "doi": "10.18653/v1/S19-2145",
-    "eventurl": "https://webis.de/events.html#pan-2019-at-semeval",
     "month": "jun",
     "pages": "829--839",
     "publisher": "Association for Computational Linguistics",
@@ -939,7 +938,6 @@
     "author": [["Martin", "Potthast"], ["Tim", "Gollub"], ["Matthias", "Hagen"], ["Martin", "Tippmann"], ["Johannes", "Kiesel"], ["Paolo", "Rosso"], ["Efstathios", "Stamatatos"], ["Benno", "Stein"]],
     "booktitle": "Working Notes Papers of the CLEF 2013 Evaluation Labs",
     "editor": [["Pamela", "Forner"], ["Roberto", "Navigli"], ["Dan", "Tufis"]],
-    "eventurl": "https://webis.de/events.html#pan-2013-at-clef",
     "isbn": "978-88-904810-3-1",
     "issn": "2038-4963",
     "month": "sep",
@@ -950,13 +948,12 @@
     "year": 2013
   },
   {
-    "id": "potthast:2012d",
+    "id": "potthast:2012c",
     "category": "InProceedings",
     "annote": "technical report, not peer-reviewed",
     "author": [["Martin", "Potthast"], ["Tim", "Gollub"], ["Matthias", "Hagen"], ["Jan", "Gra\u00dfegger"], ["Johannes", "Kiesel"], ["Maximilian", "Michel"], ["Arnd", "Oberl\u00e4nder"], ["Martin", "Tippmann"], ["Alberto", "Barr\u00f3n-Cede\u00f1o"], ["Parth", "Gupta"], ["Paolo", "Rosso"], ["Benno", "Stein"]],
     "booktitle": "Working Notes Papers of the CLEF 2012 Evaluation Labs",
     "editor": [["Pamela", "Forner"], ["Jussi", "Karlgren"], ["Christa", "Womser-Hacker"]],
-    "eventurl": "https://webis.de/events.html#pan-2012-at-clef",
     "isbn": "978-88-904810-3-1",
     "issn": "2038-4963",
     "month": "sep",
