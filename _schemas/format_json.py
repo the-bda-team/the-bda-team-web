@@ -101,7 +101,6 @@ for filename in sys.argv[1:]:
     else:
         print(filename + ": using default sorting")
 
-    data = None
     with open(filename) as file:
         data_list = json.load(file)
     data_list = [dict(sorted(item.items(), key=get_attribute_sort_key)) for item in data_list]

@@ -14,4 +14,12 @@ repos:
       id: check-jsonschema
       files: ^_data/publications.json$
       args: ["--base-uri", ".", "--schemafile", "_schemas/publications.json"]
+- repo: local
+  hooks:
+    - name: check-keys
+      id: check-keys
+      language: python
+      entry: python3 _schemas/check_keys.py
+      files: ^_data/.*.json$
+
 
