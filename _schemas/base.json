@@ -1,0 +1,11 @@
+
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://the-bda.team/_schemas/base.json",
+  "$defs": {
+    "DOI": { "type": "string", "pattern": "^10\\.\\d{4,9}/[-._;()/:a-zA-Z0-9]+$" },
+    "PersonName": { "type": "array", "items": { "type": "string" }, "minItems": 2, "maxItems": 2 },
+    "Month": { "type": "string", "enum": ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"] },
+    "Year": { "type": "integer", "minimum": 0, "maximum": 2999 }
+  }
+}

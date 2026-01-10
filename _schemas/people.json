@@ -8,50 +8,17 @@
   "$defs": {
     "Person": {
       "type": "object",
-      "required": ["id", "category", "name", "email"],
+      "required": ["id", "category", "email", "name"],
       "properties": {
-        "id": {
-          "type": "string"
-        },
-        "category": {
-          "type": "string",
-          "enum": ["Teamlead", "Staff"]
-        },
-        "title": {
-          "type": "string",
-          "enum": ["Dr.", "Prof."]
-        },
-        "name": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "minItems": 2,
-          "maxItems": 2
-        },
-        "email": {
-          "type": "string",
-          "format": "email"
-        },
-        "orcid": {
-          "type": "string",
-          "pattern": "^[0-9X]{4}-[0-9X]{4}-[0-9X]{4}-[0-9X]{4}$"
-        },
-        "url": {
-          "type": "string",
-          "format": "uri"
-        },
-        "years": {
-          "type": "string",
-          "pattern": "^[1-9][0-9]{3} - ([1-9][0-9]{3}|today)$"
-        },
-        "topics": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "minItems": 1
-        }
+        "id": { "type": "string" },
+        "category": { "type": "string", "enum": ["Teamlead", "Staff"] },
+        "email": { "type": "string", "format": "email" },
+        "name": { "$ref": "_schemas/base.json#/$defs/PersonName" },
+        "orcid": { "type": "string", "pattern": "^[0-9X]{4}-[0-9X]{4}-[0-9X]{4}-[0-9X]{4}$" },
+        "title": { "type": "string", "enum": ["Dr.", "Prof."] },
+        "topics": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "url": { "type": "string", "format": "uri" },
+        "years": { "type": "string", "pattern": "^[1-9][0-9]{3} - ([1-9][0-9]{3}|today)$" }
       },
       "additionalProperties": false
     }

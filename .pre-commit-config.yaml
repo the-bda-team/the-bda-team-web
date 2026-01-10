@@ -5,13 +5,13 @@ repos:
     - name: check-jsonschema-events
       id: check-jsonschema
       files: ^_data/events.json$
-      args: ["--schemafile", "_schemas/events.json"]
+      args: ["--base-uri", ".", "--schemafile", "_schemas/events.json"]
     - name: check-jsonschema-people
       id: check-jsonschema
       files: ^_data/people.json$
-      args: ["--schemafile", "_schemas/people.json"]
+      args: ["--base-uri", ".", "--schemafile", "_schemas/people.json"]
     - name: check-jsonschema-publications
       id: check-jsonschema
       files: ^_data/publications.json$
-      args: ["--schemafile", "_schemas/publications.json"]
+      args: ["--base-uri", ".", "--schemafile", "_schemas/publications.json"]
 

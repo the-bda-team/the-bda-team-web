@@ -182,7 +182,8 @@
   {
     "id": "bauhaus2024-ai-seminar",
     "category": "Teaching",
-    "description": "Training seminar in 2024 at the Bauhaus-Universit\u00e4t Weimar by Benno Stein, Johannes Kiesel, and Marcel Gohsen",
+    "description": "Training seminar in 2024 by Benno Stein, Johannes Kiesel, and Marcel Gohsen",
+    "host": "Bauhaus-Universit\u00e4t Weimar",
     "month": "nov",
     "name": "Using AI in Everyday Life at the University",
     "people": ["kiesel"],

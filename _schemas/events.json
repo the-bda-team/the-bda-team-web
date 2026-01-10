@@ -8,81 +8,25 @@
   "$defs": {
     "Event": {
       "type": "object",
-      "required": ["id", "category", "name", "description", "people", "year"],
+      "required": ["id", "category", "description", "host", "name", "people", "year"],
       "properties": {
-        "id": {
-          "type": "string"
-        },
-        "category": {
-          "type": "string",
-          "enum": ["Conferences and Workshops", "Invited Talks", "Shared Tasks", "Teaching"]
-        },
-        "name": {
-          "type": "string"
-        },
-        "description": {
-          "type": "string"
-        },
-        "people": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "minItems": 1
-        },
-        "year": {
-          "type": "integer",
-          "minimum": 0,
-          "maximum": 2999
-        },
-        "month": {
-          "type": "string",
-          "enum": ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"]
-        },
-        "keywords": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "url": {
-          "type": "string",
-          "format": "uri"
-        },
-        "host": {
-          "type": "string"
-        },
-        "hosturl": {
-          "type": "string",
-          "format": "uri"
-        },
-        "site": {
-          "type": "string"
-        },
-        "codeurl": {
-          "type": "string",
-          "format": "uri"
-        },
-        "dataurl": {
-          "type": "string",
-          "format": "uri"
-        },
-        "videourl": {
-          "type": "string",
-          "format": "uri"
-        },
-        "paperurl": {
-          "type": "string",
-          "format": "uri"
-        },
-        "posterurl": {
-          "type": "string",
-          "format": "uri"
-        },
-        "slidesurl": {
-          "type": "string",
-          "format": "uri"
-        }
+        "id": { "type": "string" },
+        "category": { "type": "string", "enum": ["Conferences and Workshops", "Invited Talks", "Shared Tasks", "Teaching"] },
+        "codeurl": { "type": "string", "format": "uri" },
+        "dataurl": { "type": "string", "format": "uri" },
+        "description": { "type": "string" },
+        "host": { "type": "string" },
+        "hosturl": { "type": "string", "format": "uri" },
+        "keywords": { "type": "array", "items": { "type": "string" } },
+        "month": { "$ref": "_schemas/base.json#/$defs/Month" },
+        "name": { "type": "string" },
+        "people": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "posterurl": { "type": "string", "format": "uri" },
+        "site": { "type": "string" },
+        "slidesurl": { "type": "string", "format": "uri" },
+        "url": { "type": "string", "format": "uri" },
+        "videourl": { "type": "string", "format": "uri" },
+        "year": { "$ref": "_schemas/base.json#/$defs/Year" }
       },
       "additionalProperties": false
     }

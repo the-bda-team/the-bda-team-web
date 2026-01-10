@@ -8,209 +8,70 @@
   "$defs": {
     "Publication": {
       "type": "object",
-      "required": ["id", "category", "title", "author", "month", "year"],
+      "required": ["id", "category", "author", "title", "month", "year"],
       "properties": {
-        "id": {
-          "type": "string",
-          "pattern": "^[a-z][a-z-]*[a-z]:[12][0-9]{3}[a-z]?$"
-        },
-        "category": {
-          "type": "string",
-          "enum": ["InProceedings", "Article", "PhDThesis"]
-        },
-        "title": {
-          "type": "string"
-        },
-        "author": {
-          "type": "array",
-          "items": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "minItems": 2,
-            "maxItems": 2
-          },
-          "minItems": 1
-        },
-        "month": {
-          "type": "string",
-          "enum": ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"]
-        },
-        "year": {
-          "type": "integer",
-          "minimum": 0,
-          "maximum": 2999
-        },
-        "keywords": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "url": {
-          "type": "string",
-          "format": "uri"
-        },
-        "doi": {
-          "type": "string",
-          "pattern": "^10\\.\\d{4,9}/[-._;()/:a-zA-Z0-9]+$"
-        },
-        "isbn": {
-          "type": "string",
-          "oneOf": [
-            { "pattern": "^(\\d-?){9}-[\\dX]$" },
-            { "pattern": "^(97[89])-(\\d-?){10}$" }
-          ]
-        },
-        "issn": {
-          "type": "string",
-          "format": "^\\d{4}-\\d{3}[\\dX]$"
-        },
-        "pages": {
-          "type": "string",
-          "pattern": "^[1-9][0-9]*--[1-9][0-9]*$"
-        },
-        "numpages": {
-          "type": "integer",
-          "minimum": 1
-        },
-        "address": {
-          "type": "string"
-        },
-        "appurl": {
-          "type": "string",
-          "format": "uri"
-        },
-        "awardurl": {
-          "type": "string",
-          "format": "uri"
-        },
-        "codeurl": {
-          "type": "string",
-          "format": "uri"
-        },
-        "dataurl": {
-          "type": "string",
-          "format": "uri"
-        },
-        "eventurl": {
-          "type": "string",
-          "format": "uri"
-        },
-        "preprinturl": {
-          "type": "string",
-          "format": "uri"
-        },
-        "posterurl": {
-          "type": "string",
-          "format": "uri"
-        },
-        "slidesurl": {
-          "type": "string",
-          "format": "uri"
-        },
-        "videourl": {
-          "type": "string",
-          "format": "uri"
-        },
-        "annote": {
-          "type": "string"
-        },
-        "todo": {
-          "type": "string"
-        }
+        "id": { "type": "string", "pattern": "^[a-z][a-z-]*[a-z]:[12][0-9]{3}[a-z]?$" },
+        "category": { "type": "string", "enum": ["InProceedings", "Article", "PhDThesis"] },
+        "address": { "type": "string" },
+        "annote": { "type": "string" },
+        "appurl": { "type": "string", "format": "uri" },
+        "author": { "type": "array", "items": { "$ref": "_schemas/base.json#/$defs/PersonName" }, "minItems": 1 },
+        "awardurl": { "type": "string", "format": "uri" },
+        "codeurl": { "type": "string", "format": "uri" },
+        "dataurl": { "type": "string", "format": "uri" },
+        "doi": { "$ref": "_schemas/base.json#/$defs/DOI" },
+        "eventurl": { "type": "string", "format": "uri" },
+        "isbn": { "type": "string", "oneOf": [ { "pattern": "^(\\d-?){9}-[\\dX]$" }, { "pattern": "^(97[89])-(\\d-?){10}$" } ] },
+        "issn": { "type": "string", "format": "^\\d{4}-\\d{3}[\\dX]$" },
+        "keywords": { "type": "array", "items": { "type": "string" } },
+        "month": { "$ref": "_schemas/base.json#/$defs/Month" },
+        "numpages": { "type": "integer", "minimum": 1 },
+        "pages": { "type": "string", "pattern": "^[1-9][0-9]*--[1-9][0-9]*$" },
+        "posterurl": { "type": "string", "format": "uri" },
+        "preprinturl": { "type": "string", "format": "uri" },
+        "slidesurl": { "type": "string", "format": "uri" },
+        "title": { "type": "string" },
+        "todo": { "type": "string" },
+        "url": { "type": "string", "format": "uri" },
+        "videourl": { "type": "string", "format": "uri" },
+        "year": { "$ref": "_schemas/base.json#/$defs/Year" }
       },
       "allOf": [
         {
-          "if": {
-            "properties": { "category": { "const": "InProceedings" } }
-          },
+          "if": { "properties": { "category": { "const": "InProceedings" } } },
           "then": {
             "required": [ "booktitle" ],
             "properties": {
-              "booktitle": {
-                "type": "string"
-              },
-              "editor": {
-                "type": "array",
-                "items": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  },
-                  "minItems": 2,
-                  "maxItems": 2
-                },
-                "minItems": 1
-              },
-              "volume": {
-                "type": "string"
-              },
-              "number": {
-                "type": "integer",
-                "minimum": 1
-              },
-              "series": {
-                "type": "string"
-              },
-              "organization": {
-                "type": "string"
-              },
-              "publisher": {
-                "type": "string"
-              },
-              "site": {
-                "type": "string"
-              }
+              "booktitle": { "type": "string" },
+              "editor": { "type": "array", "items": { "$ref": "_schemas/base.json#/$defs/PersonName" }, "minItems": 1 },
+              "number": { "type": "integer", "minimum": 1 },
+              "organization": { "type": "string" },
+              "publisher": { "type": "string" },
+              "series": { "type": "string" },
+              "site": { "type": "string" },
+              "volume": { "type": "string" }
             }
           }
         },
         {
-          "if": {
-            "properties": { "category": { "const": "Article" } }
-          },
+          "if": { "properties": { "category": { "const": "Article" } } },
           "then": {
             "required": [ "journal" ],
             "properties": {
-              "journal": {
-                "type": "string"
-              },
-              "editor": {
-                "type": "array",
-                "items": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  },
-                  "minItems": 2,
-                  "maxItems": 2
-                },
-                "minItems": 1
-              },
-              "volume": {
-                "type": "string"
-              },
-              "number": {
-                "type": "integer",
-                "minimum": 1
-              },
-              "publisher": {
-                "type": "string"
-              }
+              "editor": { "type": "array", "items": { "$ref": "_schemas/base.json#/$defs/PersonName" }, "minItems": 1 },
+              "journal": { "type": "string" },
+              "number": { "type": "integer", "minimum": 1 },
+              "publisher": { "type": "string" },
+              "volume": { "type": "string" }
             }
           }
         },
         {
-          "if": {
-            "properties": { "category": { "const": "PhDThesis" } }
-          },
+          "if": { "properties": { "category": { "const": "PhDThesis" } } },
           "then": {
             "required": [ "school" ],
             "properties": {
-              "school": {
-                "type": "string"
-              }
+              "school": { "type": "string" }
             }
           }
         }
