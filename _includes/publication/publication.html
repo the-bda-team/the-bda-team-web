@@ -81,6 +81,7 @@ https://www.acm.org/publications/authors/reference-formatting
 >
 <div>
 <span class="reference">
+{{ dummy }}
 {%- if include.publication.category == "InProceedings" %}
   {% include publication/people.html people=include.publication.author %}.
   {{ include.publication.year }}.
@@ -128,21 +129,21 @@ https://www.acm.org/publications/authors/reference-formatting
 </span>
 <div id="{{ publication.id }}.bibtex" class="bibtex" aria-hidden="true"><span class="element-actions" data-target="{{ publication.id }}.bibtex"><button type="button" class="icon" data-action="copy" title="Copy">{% include icon/copy.svg %}</button></span>@{{ include.publication.category }}{% raw %}{{% endraw %}{{ include.publication.id }},
   {%- if include.publication.address %}
-  address = {% raw %}{{% endraw %}{{ include.publication.address }}{% raw %}}{% endraw %},{% endif -%}
+  address = {% raw %}{{% endraw %}{{ include.publication.address | unicode_to_latex }}{% raw %}}{% endraw %},{% endif -%}
   {%- if include.publication.author %}
-  author = {% raw %}{{% endraw %}{% for person in include.publication.author %}{% if forloop.first == false %} and {% endif %}{{ person[0] }} {% if person[1] contains " " %}{% raw %}{{% endraw %}{% endif %}{{ person[1] }}{% if person[1] contains " " %}{% raw %}}{% endraw %}{% endif %}{% endfor %}{% raw %}}{% endraw %},{% endif -%}
+  author = {% raw %}{{% endraw %}{% for person in include.publication.author %}{% if forloop.first == false %} and {% endif %}{{ person[0] | unicode_to_latex }} {% if person[1] contains " " %}{% raw %}{{% endraw %}{% endif %}{{ person[1] | unicode_to_latex }}{% if person[1] contains " " %}{% raw %}}{% endraw %}{% endif %}{% endfor %}{% raw %}}{% endraw %},{% endif -%}
   {%- if include.publication.booktitle %}
-  booktitle = {% raw %}{{% endraw %}{{ include.publication.booktitle }}{% raw %}}{% endraw %},{% endif -%}
+  booktitle = {% raw %}{{% endraw %}{{ include.publication.booktitle | unicode_to_latex }}{% raw %}}{% endraw %},{% endif -%}
   {%- if include.publication.doi %}
   doi = {% raw %}{{% endraw %}{{ include.publication.doi }}{% raw %}}{% endraw %},{% endif -%}
   {%- if include.publication.editor %}
-  editor = {% raw %}{{% endraw %}{% for person in include.publication.editor %}{% if forloop.first == false %} and {% endif %}{{ person[0] }} {% if person[1] contains " " %}{% raw %}{{% endraw %}{% endif %}{{ person[1] }}{% if person[1] contains " " %}{% raw %}}{% endraw %}{% endif %}{% endfor %}{% raw %}}{% endraw %},{% endif -%}
+  editor = {% raw %}{{% endraw %}{% for person in include.publication.editor %}{% if forloop.first == false %} and {% endif %}{{ person[0] | unicode_to_latex }} {% if person[1] contains " " %}{% raw %}{{% endraw %}{% endif %}{{ person[1] | unicode_to_latex }}{% if person[1] contains " " %}{% raw %}}{% endraw %}{% endif %}{% endfor %}{% raw %}}{% endraw %},{% endif -%}
   {%- if include.publication.isbn %}
   isbn = {% raw %}{{% endraw %}{{ include.publication.isbn }}{% raw %}}{% endraw %},{% endif -%}
   {%- if include.publication.issn %}
   issn = {% raw %}{{% endraw %}{{ include.publication.issn }}{% raw %}}{% endraw %},{% endif -%}
   {%- if include.publication.journal %}
-  journal = {% raw %}{{% endraw %}{{ include.publication.journal }}{% raw %}}{% endraw %},{% endif -%}
+  journal = {% raw %}{{% endraw %}{{ include.publication.journal | unicode_to_latex }}{% raw %}}{% endraw %},{% endif -%}
   {%- if include.publication.month %}
   month = {{ include.publication.month }},{% endif -%}
   {%- if include.publication.number %}
@@ -150,23 +151,23 @@ https://www.acm.org/publications/authors/reference-formatting
   {%- if include.publication.numpages %}
   numpages = {% raw %}{{% endraw %}{{ include.publication.numpages }}{% raw %}}{% endraw %},{% endif -%}
   {%- if include.publication.organization %}
-  organization = {% raw %}{{% endraw %}{{ include.publication.organization }}{% raw %}}{% endraw %},{% endif -%}
+  organization = {% raw %}{{% endraw %}{{ include.publication.organization | unicode_to_latex }}{% raw %}}{% endraw %},{% endif -%}
   {%- if include.publication.pages %}
   pages = {% raw %}{{% endraw %}{{ include.publication.pages }}{% raw %}}{% endraw %},{% endif -%}
   {%- if include.publication.publisher %}
-  publisher = {% raw %}{{% endraw %}{{ include.publication.publisher }}{% raw %}}{% endraw %},{% endif -%}
+  publisher = {% raw %}{{% endraw %}{{ include.publication.publisher | unicode_to_latex }}{% raw %}}{% endraw %},{% endif -%}
   {%- if include.publication.school %}
-  school = {% raw %}{{% endraw %}{{ include.publication.school }}{% raw %}}{% endraw %},{% endif -%}
+  school = {% raw %}{{% endraw %}{{ include.publication.school | unicode_to_latex }}{% raw %}}{% endraw %},{% endif -%}
   {%- if include.publication.series %}
-  series = {% raw %}{{% endraw %}{{ include.publication.series }}{% raw %}}{% endraw %},{% endif -%}
+  series = {% raw %}{{% endraw %}{{ include.publication.series | unicode_to_latex }}{% raw %}}{% endraw %},{% endif -%}
   {%- if include.publication.site %}
-  site = {% raw %}{{% endraw %}{{ include.publication.site }}{% raw %}}{% endraw %},{% endif -%}
+  site = {% raw %}{{% endraw %}{{ include.publication.site | unicode_to_latex }}{% raw %}}{% endraw %},{% endif -%}
   {%- if include.publication.title %}
-  title = {% raw %}{{% endraw %}{{ include.publication.title }}{% raw %}}{% endraw %},{% endif -%}
+  title = {% raw %}{{% endraw %}{{ include.publication.title | unicode_to_latex }}{% raw %}}{% endraw %},{% endif -%}
   {%- if url %}
   url = {% raw %}{{% endraw %}{{ url }}{% raw %}}{% endraw %},{% endif -%}
   {%- if include.publication.volume %}
-  volume = {% raw %}{{% endraw %}{{ include.publication.volume }}{% raw %}}{% endraw %},{% endif %}
+  volume = {% raw %}{{% endraw %}{{ include.publication.volume | unicode_to_latex }}{% raw %}}{% endraw %},{% endif %}
   year = {{ include.publication.year }}
 {% raw %}}{% endraw %}
 </div>

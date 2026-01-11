@@ -11,6 +11,9 @@ exclude:
   - Gemfile.lock
   - _schemas/
 
+liquid:
+  error_mode: strict
+
 months:
   jan: January
   feb: February
