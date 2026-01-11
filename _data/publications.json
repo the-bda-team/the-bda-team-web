@@ -55,6 +55,7 @@
     "series": "Lecture Notes in Computer Science",
     "site": "Madrid, Spain",
     "title": "Overview of ImageCLEF 2025: Multimedia Retrieval in Medical, Social Media and Content Recommendation Applications",
+    "versions": [ { "name": "ecir abstract", "url": "https://doi.org/10.1007/978-3-031-88720-8_60" } ],
     "year": 2025
   },
   {
@@ -71,6 +72,7 @@
     "series": "Lecture Notes in Computer Science",
     "site": "Madrid, Spain",
     "title": "Overview of Touch\u00e9 2025: Argumentation Systems",
+    "versions": [ { "name": "clef worknotes", "url": "https://ceur-ws.org/Vol-4038/paper_378.pdf" }, { "name": "ecir abstract", "url": "https://doi.org/10.1007/978-3-031-88720-8_67" } ],
     "year": 2025
   },
   {
@@ -142,6 +144,7 @@
     "site": "Grenoble, France",
     "title": "Overview of the ImageCLEF 2024: Multimedia Retrieval in Medical Applications",
     "volume": "14959",
+    "versions": [ { "name": "ecir abstract", "url": "https://doi.org/10.1007/978-3-031-56072-9_6" } ],
     "year": 2024
   },
   {
@@ -159,6 +162,7 @@
     "site": "Grenoble, France",
     "title": "Overview of Touch\u00e9 2024: Argumentation Systems",
     "volume": "14959",
+    "versions": [ { "name": "clef worknotes", "url": "https://ceur-ws.org/Vol-3740/paper-322.pdf" }, { "name": "ecir abstract", "url": "https://doi.org/10.1007/978-3-031-56069-9_64" } ],
     "year": 2024
   },
   {
@@ -275,6 +279,7 @@
     "series": "Lecture Notes in Computer Science",
     "site": "Thessaloniki, Greece",
     "title": "Overview of Touch\u00e9 2023: Argument and Causal Retrieval",
+    "versions": [ { "name": "clef worknotes", "url": "https://ceur-ws.org/Vol-3497/paper-259.pdf" }, { "name": "ecir abstract", "url": "https://doi.org/10.1007/978-3-031-28241-6_61" } ],
     "volume": "14163",
     "year": 2023
   },
@@ -384,6 +389,7 @@
     "series": "Lecture Notes in Computer Science",
     "site": "Bologna, Italy",
     "title": "Overview of Touch\u00e9 2022: Argument Retrieval",
+    "versions": [ { "name": "clef worknotes", "url": "https://ceur-ws.org/Vol-3180/paper-247.pdf" }, { "name": "ecir abstract", "url": "https://doi.org/10.1007/978-3-030-99739-7_43" } ],
     "volume": "13390",
     "year": 2022
   },

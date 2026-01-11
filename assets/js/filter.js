@@ -4,7 +4,7 @@ if (filterElement !== null) {
 
 // Settings
 const historyNewStateThresholdMs = 1000;
-const listAttributes = ["author", "editor", "keywords", "people", "publications"];
+const listAttributes = ["author", "editor", "keywords", "people", "publications", "versions"];
 
 // Global variables
 

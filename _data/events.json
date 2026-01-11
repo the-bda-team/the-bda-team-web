@@ -66,7 +66,7 @@
     "month": "sep",
     "name": "Image Retrieval/Generation for Arguments",
     "people": ["kiesel"],
-    "publications": ["kiesel:2025b"],
+    "publications": ["ionescu:2025", "kiesel:2025b"],
     "site": "Madrid, Spain",
     "url": "https://touche.webis.de/clef25/touche25-web/image-retrieval-for-arguments.html",
     "year": 2025
@@ -186,7 +186,7 @@
     "month": "sep",
     "name": "Image Retrieval/Generation for Arguments",
     "people": ["kiesel"],
-    "publications": ["kiesel:2024d"],
+    "publications": ["ionescu:2024b", "kiesel:2024d"],
     "site": "Grenoble, France",
     "url": "https://touche.webis.de/clef24/touche24-web/image-retrieval-for-arguments.html",
     "year": 2024

@@ -32,6 +32,7 @@
         "title": { "type": "string" },
         "todo": { "type": "string" },
         "url": { "type": "string", "format": "uri" },
+        "versions": { "type": "array", "items": { "type": "object", "required": ["name", "url"], "properties": { "name": { "type": "string" }, "url": { "type": "string", "format": "uri" } } } },
         "videourl": { "type": "string", "format": "uri" },
         "year": { "$ref": "_schemas/base.json#/$defs/Year" }
       },

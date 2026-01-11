@@ -75,6 +75,7 @@ https://www.acm.org/publications/authors/reference-formatting
 {%- if include.publication.title %} data-title="{{ include.publication.title }}"{% endif %}
 {%- if include.publication.todo %} data-todo="{{ include.publication.todo }}"{% endif %}
 {%- if url %} data-url="{{ url }}"{% endif %}
+{%- if include.publication.versions %} data-versions="{% for version in include.publication.versions %}{% if forloop.first == false %},{% endif %}{{ version.name }} {{ version.url }}{% endfor %}"{% endif %}
 {%- if include.publication.videourl %} data-videourl="{{ include.publication.videourl }}"{% endif %}
 {%- if include.publication.volume %} data-volume="{{ include.publication.volume }}"{% endif %}
 {%- if include.publication.year %} data-year="{{ include.publication.year }}"{% endif -%}
@@ -124,6 +125,11 @@ https://www.acm.org/publications/authors/reference-formatting
 <a href="{{ include.publication.preprinturl }}">preprint</a>{% endif %}
 {%- if slidesurl %}
 <a href="{{ slidesurl }}">slides</a>{% endif %}
+{%- if include.publication.versions -%}
+{%- for version in include.publication.versions %}
+<a href="{{ version.url }}">version {{ version.name }}</a>
+{%- endfor -%}
+{%- endif %}
 {%- if include.publication.videourl %}
 <a href="{{ include.publication.videourl }}">video</a>{% endif %}
 </span>
