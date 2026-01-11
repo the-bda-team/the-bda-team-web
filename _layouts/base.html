@@ -34,7 +34,7 @@
 {% for breadcrumb in page.breadcrumbs -%}
 {% assign path = path | append: "/" | append: breadcrumb -%}
 <li>› <a href="{{ path | relative_url }}">{{ breadcrumb }}</a></li>
-{%- endfor %}
+{% endfor %}
 </ul>
 {% endif %}
 

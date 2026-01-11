@@ -1,0 +1,8 @@
+---
+layout: base
+---
+{% assign person = site.data.people | where: "id", page.id | first %}
+
+<h1>{% if person.title %}{{ person.title }} {% endif -%}{{ person.name[0] }} {{ person.name[1] }}</h1>
+{{ content }}
+
