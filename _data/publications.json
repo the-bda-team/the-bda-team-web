@@ -42,6 +42,22 @@
     "year": 2025
   },
   {
+    "id": "ionescu:2025",
+    "category": "InProceedings",
+    "address": "Berlin Heidelberg New York",
+    "author": [["Bogdan", "Ionescu"], ["Henning", "M\u00fcller"], ["Dan-Cristian", "Stanciu"], ["Alexandra-Georgiana", "Andrei"], ["Ahmedkhan", "Radzhabov"], ["Yuri", "Prokopchuk"], ["Liviu-Daniel", "\u015etefan"], ["Mihai Gabriel", "Constantin"], ["Mihai", "Dogariu"], ["Vassili", "Kovalev"], ["Hendrik", "Damm"], ["Johannes", "R\u00fcckert"], ["Asma Ben", "Abacha"], ["Alba", "Garc\u00eda Seco de Herrera"], ["Christoph M.", "Friedrich"], ["Louise", "Bloch"], ["Raphael", "Br\u00fcngel"], ["Ahmad", "Idrissi-Yaghir"], ["Henning", "Sch\u00e4fer"], ["Cynthia Sabrina", "Schmidt"], ["Tabea M. G.", "Pakull"], ["Benjamin", "Bracke"], ["Obioma", "Pelka"], ["Bahad\u0131r", "Ery\u0131lmaz"], ["Helmut", "Becker"], ["Wen-Wai", "Yim"], ["Noel", "Codella"], ["Roberto Andres", "Novoa"], ["Josep", "Malvehy"], ["Dimitar", "Dimitrov"], ["Rocktim Jyoti", "Das"], ["Zhuohan", "Xie"], ["Ming Shan", "Hee"], ["Preslav", "Nakov"], ["Ivan", "Koychev"], ["Steven A.", "Hicks"], ["Sushant", "Gautam"], ["Michael A.", "Riegler"], ["Vajira", "Thambawita"], ["P\u00e5l", "Halvorsen"], ["Diandra", "Fabre"], ["C\u00e9cile", "Macaire"], ["Benjamin", "Lecouteux"], ["Didier", "Schwab"], ["Martin", "Potthast"], ["Maximilian", "Heinrich"], ["Johannes", "Kiesel"], ["Moritz", "Wolter"], ["Sharat", "Anand"], ["Benno", "Stein"]],
+    "booktitle": "Experimental IR Meets Multilinguality, Multimodality, and Interaction. 16th International Conference of the CLEF Association (CLEF 2025)",
+    "doi": "10.1007/978-3-032-04354-2_17",
+    "editor": [["Jorge", "Carrillo-de-Albornoz"], ["Julio", "Gonzalo"], ["Laura", "Plaza"], ["Alba", "Garc\u00eda Seco de Herrera"], ["Josiane", "Mothe"], ["Florina", "Piroi"], ["Paolo", "Rosso"], ["Damiano", "Spina"], ["Guglielmo", "Faggioli"], ["Nicola", "Ferro"]],
+    "month": "sep",
+    "pages": "290--314",
+    "publisher": "Springer",
+    "series": "Lecture Notes in Computer Science",
+    "site": "Madrid, Spain",
+    "title": "Overview of ImageCLEF 2025: Multimedia Retrieval in Medical, Social Media and Content Recommendation Applications",
+    "year": 2025
+  },
+  {
     "id": "kiesel:2025b",
     "category": "InProceedings",
     "address": "Berlin Heidelberg New York",
@@ -55,22 +71,6 @@
     "series": "Lecture Notes in Computer Science",
     "site": "Madrid, Spain",
     "title": "Overview of Touch\u00e9 2025: Argumentation Systems",
-    "year": 2025
-  },
-  {
-    "id": "ionescu:2025",
-    "category": "InProceedings",
-    "address": "Berlin Heidelberg New York",
-    "author": [["Bogdan", "Ionescu"], ["Henning", "M\u00FCller"], ["Dan-Cristian", "Stanciu"], ["Alexandra-Georgiana", "Andrei"], ["Ahmedkhan", "Radzhabov"], ["Yuri", "Prokopchuk"], ["Liviu-Daniel", "\u015Etefan"], ["Mihai Gabriel", "Constantin"], ["Mihai", "Dogariu"], ["Vassili", "Kovalev"], ["Hendrik", "Damm"], ["Johannes", "R\u00FCckert"], ["Asma Ben", "Abacha"], ["Alba", "Garc\u00eda Seco de Herrera"], ["Christoph M.", "Friedrich"], ["Louise", "Bloch"], ["Raphael", "Br\u00FCngel"], ["Ahmad", "Idrissi-Yaghir"], ["Henning", "Sch\u00E4fer"], ["Cynthia Sabrina", "Schmidt"], ["Tabea M. G.", "Pakull"], ["Benjamin", "Bracke"], ["Obioma", "Pelka"], ["Bahad\u0131r", "Ery\u0131lmaz"], ["Helmut", "Becker"], ["Wen-Wai", "Yim"], ["Noel", "Codella"], ["Roberto Andres", "Novoa"], ["Josep", "Malvehy"], ["Dimitar", "Dimitrov"], ["Rocktim Jyoti", "Das"], ["Zhuohan", "Xie"], ["Ming Shan", "Hee"], ["Preslav", "Nakov"], ["Ivan", "Koychev"], ["Steven A.", "Hicks"], ["Sushant", "Gautam"], ["Michael A.", "Riegler"], ["Vajira", "Thambawita"], ["P\u00E5l", "Halvorsen"], ["Diandra", "Fabre"], ["C\u00E9cile", "Macaire"], ["Benjamin", "Lecouteux"], ["Didier", "Schwab"], ["Martin", "Potthast"], ["Maximilian", "Heinrich"], ["Johannes", "Kiesel"], ["Moritz", "Wolter"], ["Sharat", "Anand"], ["Benno", "Stein"]],
-    "booktitle": "Experimental IR Meets Multilinguality, Multimodality, and Interaction. 16th International Conference of the CLEF Association (CLEF 2025)",
-    "doi": "10.1007/978-3-032-04354-2_17",
-    "editor": [["Jorge", "Carrillo-de-Albornoz"], ["Julio", "Gonzalo"], ["Laura", "Plaza"], ["Alba", "Garc\u00eda Seco de Herrera"], ["Josiane", "Mothe"], ["Florina", "Piroi"], ["Paolo", "Rosso"], ["Damiano", "Spina"], ["Guglielmo", "Faggioli"], ["Nicola", "Ferro"]],
-    "month": "sep",
-    "pages": "290--314",
-    "publisher": "Springer",
-    "series": "Lecture Notes in Computer Science",
-    "site": "Madrid, Spain",
-    "title": "Overview of ImageCLEF 2025: Multimedia Retrieval in Medical, Social Media and Content Recommendation Applications",
     "year": 2025
   },
   {
@@ -128,23 +128,6 @@
     "year": 2025
   },
   {
-    "id": "kiesel:2024d",
-    "category": "InProceedings",
-    "address": "Berlin Heidelberg New York",
-    "author": [["Johannes", "Kiesel"], ["\u00c7a\u011fr\u0131", "\u00c7\u00f6ltekin"], ["Maximilian", "Heinrich"], ["Maik", "Fr\u00f6be"], ["Milad", "Alshomary"], ["Bertrand De", "Longueville"], ["Toma\u017e", "Erjavec"], ["Nicolas", "Handke"], ["Maty\u00e1\u0161", "Kopp"], ["Nikola", "Ljube\u0161i\u0107"], ["Katja", "Meden"], ["Nailia", "Mirzakhmedova"], ["Vaidas", "Morkevi\u010dius"], ["Theresa", "Reitis-M\u00fcnstermann"], ["Mario", "Scharfbillig"], ["Nicolas", "Stefanovitch"], ["Henning", "Wachsmuth"], ["Martin", "Potthast"], ["Benno", "Stein"]],
-    "booktitle": "Experimental IR Meets Multilinguality, Multimodality, and Interaction. 15th International Conference of the CLEF Association (CLEF 2024)",
-    "doi": "10.1007/978-3-031-71908-0_14",
-    "editor": [["Lorraine", "Goeuriot"], ["Philippe", "Mulhem"], ["Georges", "Qu\u00e9not"], ["Didier", "Schwab"], ["Giorgio Maria Di", "Nunzio"], ["Laure", "Soulier"], ["Petra", "Galuscakova"], ["Alba", "Garc\u00eda Seco de Herrera"], ["Guglielmo", "Faggioli"], ["Nicola", "Ferro"]],
-    "month": "sep",
-    "pages": "308--332",
-    "publisher": "Springer",
-    "series": "Lecture Notes in Computer Science",
-    "site": "Grenoble, France",
-    "title": "Overview of Touch\u00e9 2024: Argumentation Systems",
-    "volume": "14959",
-    "year": 2024
-  },
-  {
     "id": "ionescu:2024b",
     "category": "InProceedings",
     "address": "Berlin Heidelberg New York",
@@ -158,6 +141,23 @@
     "series": "Lecture Notes in Computer Science",
     "site": "Grenoble, France",
     "title": "Overview of the ImageCLEF 2024: Multimedia Retrieval in Medical Applications",
+    "volume": "14959",
+    "year": 2024
+  },
+  {
+    "id": "kiesel:2024d",
+    "category": "InProceedings",
+    "address": "Berlin Heidelberg New York",
+    "author": [["Johannes", "Kiesel"], ["\u00c7a\u011fr\u0131", "\u00c7\u00f6ltekin"], ["Maximilian", "Heinrich"], ["Maik", "Fr\u00f6be"], ["Milad", "Alshomary"], ["Bertrand De", "Longueville"], ["Toma\u017e", "Erjavec"], ["Nicolas", "Handke"], ["Maty\u00e1\u0161", "Kopp"], ["Nikola", "Ljube\u0161i\u0107"], ["Katja", "Meden"], ["Nailia", "Mirzakhmedova"], ["Vaidas", "Morkevi\u010dius"], ["Theresa", "Reitis-M\u00fcnstermann"], ["Mario", "Scharfbillig"], ["Nicolas", "Stefanovitch"], ["Henning", "Wachsmuth"], ["Martin", "Potthast"], ["Benno", "Stein"]],
+    "booktitle": "Experimental IR Meets Multilinguality, Multimodality, and Interaction. 15th International Conference of the CLEF Association (CLEF 2024)",
+    "doi": "10.1007/978-3-031-71908-0_14",
+    "editor": [["Lorraine", "Goeuriot"], ["Philippe", "Mulhem"], ["Georges", "Qu\u00e9not"], ["Didier", "Schwab"], ["Giorgio Maria Di", "Nunzio"], ["Laure", "Soulier"], ["Petra", "Galuscakova"], ["Alba", "Garc\u00eda Seco de Herrera"], ["Guglielmo", "Faggioli"], ["Nicola", "Ferro"]],
+    "month": "sep",
+    "pages": "308--332",
+    "publisher": "Springer",
+    "series": "Lecture Notes in Computer Science",
+    "site": "Grenoble, France",
+    "title": "Overview of Touch\u00e9 2024: Argumentation Systems",
     "volume": "14959",
     "year": 2024
   },
