@@ -6,7 +6,7 @@ Parameters:
 
 {% assign eventsByYear = include.events | group_by: "year" %}
 {% for eventsOfYear in eventsByYear %}
-{% if include.headings %}<{{ include.headings }} id="year{{ eventsOfYear.name }}">{{ eventsOfYear.name }}</{{ include.headings }}>{% endif %}
+{% if include.headings %}<{{ include.headings }} id="year{{ eventsOfYear.name }}">{{ eventsOfYear.name }}<a class="back-to-top" href="#" title="To top">^</a></{{ include.headings }}>{% endif %}
 <ul class="entries events"{% if include.headings %} data-headings="year{{ eventsOfYear.name }}"{% endif %}>
 {%- for event in eventsOfYear.items %}
 {% include event/event.html event=event %}

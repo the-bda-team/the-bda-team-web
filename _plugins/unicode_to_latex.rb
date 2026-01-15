@@ -1,3 +1,4 @@
+# Created by ChatGPT
 module Jekyll
   module UnicodeToLatexFilter
     MAP = {

@@ -14,18 +14,11 @@ breadcrumbs: ["people"]
 {% endfor %}
 </ul>
 
-{% assign authors = "" -%}
-{% for publication in site.data.publications -%}
-{% for author in publication.author -%}
-{% assign authorString = author | join: "," -%}
-{% assign authors = authors | append: "|" | append: authorString -%}
-{% endfor -%}
-{% endfor -%}
-{% assign authors = authors | split: "|" | uniq -%}
-{% assign events = site.data.events | map: "people" | uniq | join: "," %}
+{% assign publications_people = site.data.publications | unique_authors %}
+{% assign event_people = site.data.events | map: "people" | uniq %}
 
 {% for category in peopleByCategory %}
-<h2 id="{{ category.name | downcase | replace: ' ', '' }}">{{ category.name }}</h2>
+<h2 id="{{ category.name | downcase | replace: ' ', '' }}">{{ category.name }}<a class="back-to-top" href="#" title="To top">^</a></h2>
 
 <ul class="entries people">
 {% assign people = category.items | sort: "id" %}
@@ -52,9 +45,9 @@ Topics:
 {% endif -%}
 </div>
 <span class="resources">
-{%- assign authorString = person.name | join: "," -%}
-{%- if authors contains authorString %}<a href="{{ '/publications' | relative_url }}?q=author:{{ person.name[0] | append: ' ' | append: person.name[1] | replace: ' ', '%2B' | urlencode }}">publications</a>{%- endif -%}
-{%- if events contains person.id %}
+{%- assign authorString = person.name | join: "_" -%}
+{%- if publications_people contains authorString %}<a href="{{ '/publications' | relative_url }}?q=author:{{ person.name[0] | append: ' ' | append: person.name[1] | replace: ' ', '%2B' | urlencode }}">publications</a>{%- endif -%}
+{%- if event_people contains person.id %}
 <a href="{{ '/events' | relative_url }}?q=people:{{ person.name[0] | append: ' ' | append: person.name[1] | replace: ' ', '%2B' | urlencode }}">events</a>{%- endif -%}
 </span>
 </div>

@@ -6,7 +6,7 @@ Parameters:
 
 {% assign publicationsByYear = include.publications | group_by: "year" %}
 {% for publicationsOfYear in publicationsByYear %}
-{% if include.headings %}<{{ include.headings }} id="year{{ publicationsOfYear.name }}">{{ publicationsOfYear.name }}</{{ include.headings }}>{% endif %}
+{% if include.headings %}<{{ include.headings }} id="year{{ publicationsOfYear.name }}">{{ publicationsOfYear.name }}<a class="back-to-top" href="#" title="To top">^</a></{{ include.headings }}>{% endif %}
 <ul class="entries publications"{% if include.headings %} data-headings="year{{ publicationsOfYear.name }}"{% endif %}>
 {%- for publication in publicationsOfYear.items %}
 {% include publication/publication.html publication=publication %}

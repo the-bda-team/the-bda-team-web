@@ -142,16 +142,21 @@ nav .content {
 nav .links a {
   margin-left: calc(4 * var(--space-default));
 }
-h1, h2 {
+h1, h2, h3 {
   color: var(--color-headline-font);
   margin-bottom: calc(2 * var(--space-default));
   margin-top: calc(6 * var(--space-default));
+  display: flex;
+  justify-content: space-between;
 }
 h1 {
   font-size: 2rem;
 }
 h2 {
   font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.25rem;
 }
 p {
   margin-bottom: var(--space-default);
