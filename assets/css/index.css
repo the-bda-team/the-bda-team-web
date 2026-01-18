@@ -1,0 +1,20 @@
+main {
+  background-image: url("/assets/img/banner.webp");
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+main .content p {
+  background-color: #fffd;
+  margin-left: auto;
+  min-width: 200px;
+  padding: calc(2 * var(--space-default));
+  width: 30%;
+}
