@@ -1,8 +1,37 @@
 ---
 layout: base
 ---
-{% assign person = site.data.people | where: "id", page.id | first %}
+{%- assign person_id = page.name | remove: ".html" -%}
+{%- assign person = site.data.people | where: "id", person_id | first -%}
+
+{%- assign publications_people = site.data.publications | unique_authors %}
+{%- assign authorString = person.name | join: "_" -%}
 
 <h1>{% if person.title %}{{ person.title }} {% endif -%}{{ person.name[0] }} {{ person.name[1] }}</h1>
+
+<ul class="entries people">
+<li id="{{ person.id }}">
+<div class="entry-image"><img src="/assets/img/people/{{ person.id }}.jpg"></div>
+<div class="entry-body">
+{% if person.title %}<span class="title">{{ person.title }}</span> {% endif -%}
+<span class="name">{{ person.name[0] }} {{ person.name[1] }}</span>
+</div>
+</li>
+</ul>
+
+<ul class="table-of-contents">
+{%- if publications_people contains authorString %}
+<li><a href="#publications">Publications</a></li>{% endif %}
+</ul>
+
 {{ content }}
 
+{%- if publications_people contains authorString %}
+<details id="publications" class="section" open><summary><h2>Publications</h2></summary>
+
+{% include publication/publications.html publications=site.data.publications headings="h3" by=person_id %}
+</details>
+{% endif %}
+
+
+{% assign event_people = site.data.events | map: "people" | uniq %}

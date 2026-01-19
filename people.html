@@ -20,16 +20,25 @@ breadcrumbs: ["people"]
 {% for category in peopleByCategory %}
 <h2 id="{{ category.name | downcase | replace: ' ', '' }}">{{ category.name }}<a class="back-to-top" href="#" title="To top">^</a></h2>
 
+
 <ul class="entries people">
 {% assign people = category.items | sort: "id" %}
 {% for person in people %}
+{% assign url = person.url %}
+{% unless url %}
+{% assign target_path = "people/" | append: person.id | append: ".html" %}
+{% assign target_path_exists = site.html_pages | find: "path", target_path %}
+{% if target_path_exists %}
+{% assign url = "/people/" | append: person.id | relative_url %}
+{% endif %}
+{% endunless %}
 <li id="{{ person.id }}">
 <div class="entry-image"><img src="/assets/img/people/{{ person.id }}.jpg"></div>
 <div class="entry-body">
-{% if person.url %}<a href="{{ person.url }}">{% endif -%}
+{% if url %}<a href="{{ url }}">{% endif -%}
 {% if person.title %}<span class="title">{{ person.title }}</span> {% endif -%}
 <span class="name">{{ person.name[0] }} {{ person.name[1] }}</span>
-{%- if person.url %}</a>{% endif -%}
+{%- if url %}</a>{% endif -%}
 {% if person.years %} <span class="years">[{{ person.years | replace: '-', '&ndash;'}}]</span>{% endif -%}
 <br>
 Email: <a href="mailto:{{ person.email }}" class="email">{{ person.email }}</a>

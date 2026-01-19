@@ -1,7 +1,11 @@
+{%- if page.dir == "/people/" -%}
+{%- assign person_id = page.name | remove: ".html" -%}
+{%- assign person = site.data.people | where: "id", person_id | first -%}
+{%- endif -%}
 <!doctype html>
 <html lang="en">
 <head>
-<title>{{ page.title }}</title>
+<title>{% if person_id %}{{ person.name[0] }} {{ person.name[1] }}{% else %}{{ page.title }}{% endif %}</title>
 <meta charset="utf-8">
 <meta name="description" content="{{ page.description }}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,7 +22,7 @@
 <div class="content">
 <div class="home"><a href="{{ '/' | relative_url }}"{% if page.nav_active == "index" %} class="selected"{% endif %}>BDA</a></div>
 <div class="links">
-<a href="{{ '/people' | relative_url }}"{% if page.nav_active == "people" %} class="selected"{% endif %}>People</a>
+<a href="{{ '/people' | relative_url }}"{% if page.nav_active == "people" or person_id  %} class="selected"{% endif %}>People</a>
 <a href="{{ '/publications' | relative_url }}"{% if page.nav_active == "publications" %} class="selected"{% endif %}>Publications</a>
 <a href="{{ '/events' | relative_url }}"{% if page.nav_active == "events" %} class="selected"{% endif %}>Events</a>
 </div>
@@ -27,14 +31,19 @@
 
 <main>
 <div class="content">
-{% if page.breadcrumbs %}
+{% if page.breadcrumbs or person_id %}
 <ul class="breadcrumbs">
 <li><a href="{{ '/' | relative_url }}">the-bda.team</a></li>
 {% assign path = "" -%}
+{%- if page.breadcrumbs -%}
 {% for breadcrumb in page.breadcrumbs -%}
 {% assign path = path | append: "/" | append: breadcrumb -%}
 <li>› <a href="{{ path | relative_url }}">{{ breadcrumb }}</a></li>
-{% endfor %}
+{%- endfor -%}
+{%- else -%}
+<li>› <a href="{{ '/people' | relative_url }}">people</a></li>
+<li>› <a href="{{ '/people/' | append: person_id | relative_url }}">{{ person.name[0] | downcase }} {{ person.name[1] | downcase }}</a></li>
+{%- endif %}
 </ul>
 {% endif %}
 

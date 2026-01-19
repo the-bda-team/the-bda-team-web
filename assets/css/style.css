@@ -214,6 +214,26 @@ input.filter {
   list-style: url("data:image/svg+xml;utf8,<svg  xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 10'> <polyline fill='none' stroke='%23000' stroke-width='1.03' points='16 7 10 13 4 7'></polyline></svg>") inside;
 }
 
+/* Foldable Sections */
+
+details.section > summary {
+  list-style: none;
+  cursor: pointer;
+}
+details.section > summary:hover > h2 {
+  color: black;
+}
+details.section > summary > h2 {
+  display: inline-block;
+}
+details.section > summary > h2::after {
+  content: "►";
+  padding-left: calc(2 * var(--space-default));
+}
+details.section[open] > summary > h2::after {
+  content: "▼";
+}
+
 /* Entries */
 
 .entries > li {
