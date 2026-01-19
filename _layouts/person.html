@@ -26,6 +26,9 @@ layout: base
 
 {{ content }}
 
+<input type="text" class="filter" placeholder="Type here to filter&hellip;">
+<div id="filtered-all-message" aria-hidden="true">Nothing matches your filter</div>
+
 {%- if publications_people contains authorString %}
 <details id="publications" class="section" open><summary><h2>Publications</h2></summary>
 
