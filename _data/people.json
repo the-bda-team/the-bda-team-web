@@ -18,6 +18,14 @@
     "years": "2025 - today"
   },
   {
+    "id": "hirak",
+    "category": "Staff",
+    "email": "vitalii.hirak@hhu.de",
+    "name": ["Vitalii", "Hirak"],
+    "orcid": "0009-0008-8456-5629",
+    "years": "2025 - today"
+  },
+  {
     "id": "khan",
     "category": "Staff",
     "email": "Taimoor.Khan@gesis.org",

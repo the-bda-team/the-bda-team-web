@@ -8,8 +8,8 @@ Parameters:
 {% if include.by -%}{%- assign person = site.data.people | where: "id", include.by | first -%}{%- endif -%}
 {%- assign publicationsByYear = include.publications | publications_by: person | group_by: "year" %}
 {% for publicationsOfYear in publicationsByYear %}
-{% if include.headings %}<{{ include.headings }} id="year{{ publicationsOfYear.name }}">{{ publicationsOfYear.name }}<a class="back-to-top" href="#" title="To top">^</a></{{ include.headings }}>{% endif %}
-<ul class="entries publications"{% if include.headings %} data-headings="year{{ publicationsOfYear.name }}"{% endif %}>
+{% if include.headings %}<{{ include.headings }} id="publications-year{{ publicationsOfYear.name }}">{{ publicationsOfYear.name }}<a class="back-to-top" href="#" title="To top">^</a></{{ include.headings }}>{% endif %}
+<ul class="entries publications"{% if include.headings %} data-headings="publications-year{{ publicationsOfYear.name }}"{% endif %}>
 {%- for publication in publicationsOfYear.items %}
 {% include publication/publication.html publication=publication %}
 {%- endfor %}

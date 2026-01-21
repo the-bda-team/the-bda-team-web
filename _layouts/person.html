@@ -6,6 +6,7 @@ layout: base
 
 {%- assign publications_people = site.data.publications | unique_authors %}
 {%- assign authorString = person.name | join: "_" -%}
+{%- assign event_people = site.data.events | map: "people" | uniq -%}
 
 <h1>{% if person.title %}{{ person.title }} {% endif -%}{{ person.name[0] }} {{ person.name[1] }}</h1>
 
@@ -13,18 +14,24 @@ layout: base
 <li id="{{ person.id }}">
 <div class="entry-image"><img src="/assets/img/people/{{ person.id }}.jpg"></div>
 <div class="entry-body">
-{% if person.title %}<span class="title">{{ person.title }}</span> {% endif -%}
-<span class="name">{{ person.name[0] }} {{ person.name[1] }}</span>
+Email: <a href="mailto:{{ person.email }}" class="email">{{ person.email }}</a>
+<br>
+{%- if person.orcid %}
+<a href="https://orcid.org/{{ person.orcid }}" class="icon">{%- include icon/orcid.svg -%}</a>
+{% endif -%}
+<div class="description">
+{% if person.topics %}
+Topics:
+{%- for topic in person.topics %}{% if forloop.first == false %}, {% endif %}
+<span class="topic">{{ topic }}</span>{% endfor %}
+{% endif -%}
 </div>
 </li>
 </ul>
 
-<ul class="table-of-contents">
-{%- if publications_people contains authorString %}
-<li><a href="#publications">Publications</a></li>{% endif %}
-</ul>
-
+<div class="cv">
 {{ content }}
+</div>
 
 <input type="text" class="filter" placeholder="Type here to filter&hellip;">
 <div id="filtered-all-message" aria-hidden="true">Nothing matches your filter</div>
@@ -33,6 +40,13 @@ layout: base
 <details id="publications" class="section" open><summary><h2>Publications</h2></summary>
 
 {% include publication/publications.html publications=site.data.publications headings="h3" by=person_id %}
+</details>
+{% endif %}
+
+{%- if event_people contains person_id %}
+<details id="events" class="section" open><summary><h2>Events</h2></summary>
+
+{% include event/events.html events=site.data.events headings="h3" by=person_id %}
 </details>
 {% endif %}
 

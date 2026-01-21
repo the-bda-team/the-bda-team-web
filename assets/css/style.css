@@ -216,14 +216,20 @@ input.filter {
 
 /* Foldable Sections */
 
+details.section {
+  border-left: 1px solid black;
+  padding-left: var(--space-default);
+}
 details.section > summary {
   list-style: none;
   cursor: pointer;
+  margin-top: calc(6 * var(--space-default));
 }
 details.section > summary:hover > h2 {
   color: black;
 }
 details.section > summary > h2 {
+  margin-top: 0;
   display: inline-block;
 }
 details.section > summary > h2::after {
@@ -292,6 +298,11 @@ a.icon:hover svg, button.icon:hover svg {
 }
 .element-actions button.icon svg {
   width: 1.5rem;
+}
+
+/* People CV */
+.cv {
+  margin-bottom: calc(6 * var(--space-default));
 }
 
 /* Publications */

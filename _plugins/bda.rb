@@ -7,6 +7,14 @@ module Jekyll
         .map { | author | author[0] + "_" + author[1] }
     end
 
+    def resources_by(input, person_id)
+      if person_id.nil?
+        return input
+      else
+        return input.select{ | resource | resource["people"].include?(person_id) }
+      end
+    end
+
     def publications_by(input, person)
       if person.nil?
         return input
