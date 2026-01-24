@@ -29,7 +29,8 @@ def get_sort_key_time(item):
 
 people_category_order = {
     "Teamlead": "1",
-    "Staff": "2"
+    "Staff": "2",
+    "Former Staff": "3"
 }
 
 

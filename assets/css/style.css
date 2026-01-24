@@ -97,7 +97,7 @@ button {
   --color-grayed-out-font: #666;
   --color-dark-grayed-out-font: #444;
   --color-link-font: rgb(6, 69, 173);
-  --color-separator-line: #888;
+  --color-line: #DDD;
   --space-default: 5px;
 }
 html, body {
@@ -217,7 +217,7 @@ input.filter {
 /* Foldable Sections */
 
 details.section {
-  border-left: 1px solid black;
+  border-left: 1px solid var(--color-line);
   padding-left: var(--space-default);
 }
 details.section > summary {

@@ -11,7 +11,8 @@
       "required": ["id", "category", "email", "name"],
       "properties": {
         "id": { "type": "string" },
-        "category": { "type": "string", "enum": ["Teamlead", "Staff"] },
+        "category": { "type": "string", "enum": ["Teamlead", "Former Staff", "Staff"] },
+        "affiliation": { "type": "string" },
         "email": { "type": "string", "format": "email" },
         "name": { "$ref": "_schemas/base.json#/$defs/PersonName" },
         "orcid": { "type": "string", "pattern": "^[0-9X]{4}-[0-9X]{4}-[0-9X]{4}-[0-9X]{4}$" },

@@ -41,7 +41,9 @@ breadcrumbs: ["people"]
 {%- if url %}</a>{% endif -%}
 {% if person.years %} <span class="years">[{{ person.years | replace: '-', '&ndash;'}}]</span>{% endif -%}
 <br>
-Email: <a href="mailto:{{ person.email }}" class="email">{{ person.email }}</a>
+{% if person.affiliation %}
+<span class="affiliation">{{ person.affiliation }}</span><br>{% endif -%}
+<a href="mailto:{{ person.email }}" class="email">{{ person.email }}</a>
 <br>
 {%- if person.orcid %}
 <a href="https://orcid.org/{{ person.orcid }}" class="icon">{%- include icon/orcid.svg -%}</a>
