@@ -26,8 +26,6 @@ Parameters:
 
 <li id="{{ include.event.id }}" class="entry" data-id="{{ include.event.id }}"
 {%- if include.event.category %} data-category="{{ include.event.category }}"{% endif %}
-{%- if include.event.codeurl %} data-url="{{ include.event.codeurl }}"{% endif %}
-{%- if include.event.dataurl %} data-url="{{ include.event.dataurl }}"{% endif %}
 {%- if include.event.description %} data-description="{{ include.event.description }}"{% endif %}
 {%- if include.event.host %} data-host="{{ include.event.host }}"{% endif %}
 {%- if include.event.hosturl %} data-hosturl="{{ include.event.hosturl }}"{% endif %}
@@ -48,8 +46,6 @@ Parameters:
 {% if include.event.host %} @ {% if include.event.hosturl %}<a href="{{ include.event.hosturl }}">{% endif %}<span class="host">{{ include.event.host }}</span>{% if include.event.hosturl %}</a>{% endif %}{% endif -%}
 <br><span class="category">{{ include.event.category }}</span>. <span class="description">{{ include.event.description }}.</span> <span class="site">{{ include.event.site }}.</span>
 <span class="resources">
-{%- if include.event.codeurl %}
-<a href="{{ include.event.codeurl }}">code</a>{% endif %}
 {%- if include.event.dataurl %}
 <a href="{{ include.event.dataurl }}">data</a>{% endif %}
 {%- if posterurl %}

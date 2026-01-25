@@ -1,0 +1,11 @@
+{%- comment %}
+Parameters:
+  - datasets. List of datasets, ordered by time
+  - by. Print only data by this person (leave nil for all data)
+{% endcomment -%}
+
+<ul class="entries events"{% if include.headings %} data-headings="events-year{{ eventsOfYear.name }}"{% endif %}>
+{% for data in include.data %}
+{% include data/dataset.html dataset=dataset %}
+{%- endfor %}
+</ul>

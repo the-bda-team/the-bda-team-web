@@ -1,0 +1,46 @@
+{%- comment %}
+Parameters:
+  - person. The person to display
+  - personal. Whether the page is the personal page of that person
+{% endcomment -%}
+
+{% assign url = person.url -%}
+{% unless url -%}
+{% assign target_path = "people/" | append: person.id | append: ".html" -%}
+{% assign target_path_exists = site.html_pages | find: "path", target_path -%}
+{% if target_path_exists -%}
+{% assign url = "/people/" | append: person.id | relative_url -%}
+{% endif -%}
+{% endunless -%}
+
+<div class="entry-image"><img src="/assets/img/people/{{ person.id }}.jpg"></div>
+<div class="entry-body">
+{%- if include.personal == false %}
+{% if url %}<a href="{{ url }}">{% endif -%}
+{% if include.person.title %}<span class="title">{{ include.person.title }}</span> {% endif -%}
+<span class="name">{{ include.person.name[0] }} {{ include.person.name[1] }}</span>
+{%- if url %}</a>{% endif -%}
+{% if include.person.years %} <span class="years">[{{ include.person.years | replace: '-', '&ndash;'}}]</span>{% endif -%}
+<br>{% endif %}
+{% if include.person.affiliation %}
+<span class="affiliation">{{ include.person.affiliation }}</span><br>{% endif -%}
+<a href="mailto:{{ include.person.email }}" class="email">{{ include.person.email }}</a>
+<br>
+{%- if include.person.orcid %}
+<a href="https://orcid.org/{{ include.person.orcid }}" class="icon">{%- include icon/orcid.svg -%}</a>
+{% endif -%}
+<div class="description">
+{% if include.person.topics %}
+Topics:
+{%- for topic in include.person.topics %}{% if forloop.first == false %}, {% endif %}
+<span class="topic">{{ topic }}</span>{% endfor %}
+{% endif -%}
+</div>
+{%- if include.personal == false %}
+<span class="resources">
+{%- assign authorString = include.person.name | join: "_" -%}
+{%- if publications_people contains authorString %}<a href="{{ '/publications' | relative_url }}?q=author:{{ include.person.name[0] | append: ' ' | append: include.person.name[1] | replace: ' ', '%2B' | urlencode }}">publications</a>{%- endif -%}
+{%- if event_people contains include.person.id %}
+<a href="{{ '/events' | relative_url }}?q=people:{{ include.person.name[0] | append: ' ' | append: include.person.name[1] | replace: ' ', '%2B' | urlencode }}">events</a>{%- endif -%}
+</span>{% endif %}
+</div>

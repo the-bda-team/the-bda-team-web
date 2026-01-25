@@ -2,21 +2,12 @@
   {
     "id": "kiesel",
     "category": "Teamlead",
-    "affiliation": "GESIS – Leibniz Institute for  the Social Sciences, Cologne",
+    "affiliation": "GESIS \u2013 Leibniz Institute for  the Social Sciences, Cologne",
     "email": "Johannes.Kiesel@gesis.org",
     "name": ["Johannes", "Kiesel"],
     "orcid": "0000-0002-1617-6508",
     "title": "Dr.",
     "topics": ["Conversational AI", "Computational Argumentation", "Human Values", "Methods Hub", "User Simulation"]
-  },
-  {
-    "id": "chang",
-    "category": "Former Staff",
-    "email": "Po-Chun.Chang@gesis.org",
-    "name": ["Po-Chun", "Chang"],
-    "orcid": "0009-0002-9371-8582",
-    "topics": ["Methods Hub"],
-    "years": "2025 - 2026"
   },
   {
     "id": "hirak",
@@ -30,7 +21,7 @@
   {
     "id": "khan",
     "category": "Staff",
-    "affiliation": "GESIS – Leibniz Institute for  the Social Sciences, Cologne",
+    "affiliation": "GESIS \u2013 Leibniz Institute for  the Social Sciences, Cologne",
     "email": "Taimoor.Khan@gesis.org",
     "name": ["Muhammad Taimoor", "Khan"],
     "orcid": "0000-0002-6542-9217",
@@ -40,7 +31,7 @@
   {
     "id": "linzbach",
     "category": "Staff",
-    "affiliation": "GESIS – Leibniz Institute for  the Social Sciences, Cologne",
+    "affiliation": "GESIS \u2013 Leibniz Institute for  the Social Sciences, Cologne",
     "email": "Stephan.Linzbach@gesis.org",
     "name": ["Stephan", "Linzbach"],
     "orcid": "0009-0009-6955-2368",
@@ -49,7 +40,7 @@
   {
     "id": "momeni",
     "category": "Staff",
-    "affiliation": "GESIS – Leibniz Institute for  the Social Sciences, Cologne",
+    "affiliation": "GESIS \u2013 Leibniz Institute for  the Social Sciences, Cologne",
     "email": "Fakhri.Momeni@gesis.org",
     "name": ["Fakhri", "Momeni"],
     "orcid": "0000-0002-5572-575X",
@@ -59,7 +50,7 @@
   {
     "id": "muench",
     "category": "Staff",
-    "affiliation": "GESIS – Leibniz Institute for  the Social Sciences, Cologne",
+    "affiliation": "GESIS \u2013 Leibniz Institute for  the Social Sciences, Cologne",
     "email": "Felix.Muench@gesis.org",
     "name": ["Felix Viktor", "M\u00fcnch"],
     "orcid": "0000-0001-8808-6790",
@@ -69,7 +60,7 @@
   {
     "id": "rieger",
     "category": "Staff",
-    "affiliation": "GESIS – Leibniz Institute for  the Social Sciences, Cologne",
+    "affiliation": "GESIS \u2013 Leibniz Institute for  the Social Sciences, Cologne",
     "email": "Alisa.Rieger@gesis.org",
     "name": ["Alisa", "Rieger"],
     "orcid": "0000-0002-2274-1606",
@@ -79,11 +70,20 @@
   {
     "id": "yu",
     "category": "Staff",
-    "affiliation": "GESIS – Leibniz Institute for  the Social Sciences, Cologne",
+    "affiliation": "GESIS \u2013 Leibniz Institute for  the Social Sciences, Cologne",
     "email": "Ran.Yu@gesis.org",
     "name": ["Ran", "Yu"],
     "orcid": "0000-0002-1619-3164",
     "title": "Dr.",
     "years": "2025 - today"
+  },
+  {
+    "id": "chang",
+    "category": "Former Staff",
+    "email": "Po-Chun.Chang@gesis.org",
+    "name": ["Po-Chun", "Chang"],
+    "orcid": "0009-0002-9371-8582",
+    "topics": ["Methods Hub"],
+    "years": "2025 - 2026"
   }
 ]

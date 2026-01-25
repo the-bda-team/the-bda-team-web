@@ -1,0 +1,16 @@
+---
+layout: base
+nav_active: data
+title: Data of the BDA Team
+breadcrumbs: [ "data" ]
+---
+
+<h1>Data</h1>
+
+<div class="filter">
+<input type="text" placeholder="Type here to filter&hellip;">
+<div id="filtered-all-message" aria-hidden="true">None of our data matches your filter</div>
+</div>
+
+{% include data/datasets.html datasets=site.data.datasets %}
+

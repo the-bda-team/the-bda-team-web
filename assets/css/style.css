@@ -157,7 +157,7 @@ h3 {
   font-size: 1.25rem;
 }
 p {
-  margin-bottom: var(--space-default);
+  margin-bottom: calc(2 * var(--space-default));
 }
 i {
   font-style: italic;
@@ -200,7 +200,10 @@ footer .content {
 
 /* Filter */
 
-input.filter {
+.filter {
+  margin-bottom: calc(4 * var(--space-default));
+}
+.filter input {
   width: 95%;
   max-width: 35rem;
 }
@@ -219,11 +222,11 @@ input.filter {
 details.section {
   border-left: 1px solid var(--color-line);
   padding-left: var(--space-default);
+  margin-bottom: calc(6 * var(--space-default));
 }
 details.section > summary {
   list-style: none;
   cursor: pointer;
-  margin-top: calc(6 * var(--space-default));
 }
 details.section > summary:hover > h2 {
   color: black;
@@ -242,7 +245,7 @@ details.section[open] > summary > h2::after {
 
 /* Entries */
 
-.entries > li {
+.entries > li, .entry {
   display: flex;
   gap: calc(4 * var(--space-default));
   padding: calc(2 * var(--space-default));

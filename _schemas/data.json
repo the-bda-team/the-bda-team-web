@@ -1,33 +1,28 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://the-bda.team/_schemas/events.json",
+  "$id": "https://the-bda.team/_schemas/data.json",
   "type": "array",
   "items": {
-    "$ref": "#/$defs/Event"
+    "$ref": "#/$defs/Data"
   },
   "$defs": {
-    "Event": {
+    "Data": {
       "type": "object",
-      "required": ["id", "category", "description", "host", "name", "people", "site", "year"],
+      "required": ["id", "description", "name", "people", "url", "year"],
       "properties": {
         "id": { "type": "string" },
-        "category": { "type": "string", "enum": ["Conference", "Invited Talk", "Shared Task", "Teaching", "Workshop"] },
         "description": { "type": "string" },
-        "host": { "type": "string" },
-        "hosturl": { "type": "string", "format": "uri" },
+        "events": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
         "keywords": { "type": "array", "items": { "type": "string" } },
         "month": { "$ref": "_schemas/base.json#/$defs/Month" },
         "name": { "type": "string" },
         "people": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
         "publications": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
-        "posterurl": { "type": "string", "format": "uri" },
-        "site": { "type": "string" },
-        "slidesurl": { "type": "string", "format": "uri" },
         "url": { "type": "string", "format": "uri" },
-        "videourl": { "type": "string", "format": "uri" },
         "year": { "$ref": "_schemas/base.json#/$defs/Year" }
       },
       "additionalProperties": false
     }
   }
 }
+

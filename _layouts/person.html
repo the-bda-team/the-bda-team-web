@@ -10,31 +10,22 @@ layout: base
 
 <h1>{% if person.title %}{{ person.title }} {% endif -%}{{ person.name[0] }} {{ person.name[1] }}</h1>
 
-<ul class="entries people">
-<li id="{{ person.id }}">
-<div class="entry-image"><img src="/assets/img/people/{{ person.id }}.jpg"></div>
-<div class="entry-body">
-Email: <a href="mailto:{{ person.email }}" class="email">{{ person.email }}</a>
-<br>
-{%- if person.orcid %}
-<a href="https://orcid.org/{{ person.orcid }}" class="icon">{%- include icon/orcid.svg -%}</a>
-{% endif -%}
-<div class="description">
-{% if person.topics %}
-Topics:
-{%- for topic in person.topics %}{% if forloop.first == false %}, {% endif %}
-<span class="topic">{{ topic }}</span>{% endfor %}
-{% endif -%}
+<div class="entry">
+{% include person/person.html person=person personal=true %}
 </div>
-</li>
-</ul>
 
 <div class="cv">
 {{ content }}
 </div>
 
-<input type="text" class="filter" placeholder="Type here to filter&hellip;">
+<div class="filter">
+<input type="text" placeholder="Type here to filter the records below&hellip;"><br>
+<span class="resources">
+{%- if publications_people contains authorString %}<a href="#publications">publications</a> {% endif -%}
+{%- if event_people contains person_id %}<a href="#events">events</a> {% endif -%}
+</span>
 <div id="filtered-all-message" aria-hidden="true">Nothing matches your filter</div>
+</div>
 
 {%- if publications_people contains authorString %}
 <details id="publications" class="section" open><summary><h2>Publications</h2></summary>

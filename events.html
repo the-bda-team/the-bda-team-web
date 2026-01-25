@@ -7,8 +7,10 @@ breadcrumbs: [ "events" ]
 
 <h1>Events</h1>
 
-<input type="text" class="filter" placeholder="Type here to filter&hellip;">
+<div class="filter">
+<input type="text" placeholder="Type here to filter&hellip;">
 <div id="filtered-all-message" aria-hidden="true">None of our events match your filter</div>
+</div>
 
 {% include event/events.html events=site.data.events headings="h3" %}
 

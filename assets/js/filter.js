@@ -1,4 +1,4 @@
-const filterElement = document.querySelector(".filter");
+const filterElement = document.querySelector(".filter input");
 if (filterElement !== null) {
 // IF FILTER FIELD PRESENT
 
