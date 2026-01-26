@@ -2,6 +2,10 @@ repos:
 - repo: https://github.com/python-jsonschema/check-jsonschema
   rev: 0.36.0
   hooks:
+    - name: check-jsonschema-data
+      id: check-jsonschema
+      files: ^_data/data.json$
+      args: ["--base-uri", ".", "--schemafile", "_schemas/data.json"]
     - name: check-jsonschema-events
       id: check-jsonschema
       files: ^_data/events.json$
