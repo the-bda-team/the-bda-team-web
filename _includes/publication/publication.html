@@ -36,6 +36,14 @@ https://www.acm.org/publications/authors/reference-formatting
   {%- endif -%}
 {%- endif -%}
 
+{%- assign datasets = "" -%}
+{%- for dataset in site.data.data -%}
+  {%- if dataset.publications contains include.publication.id -%}
+    {%- if datasets != "" %}{% assign datasets = datasets | append: "," %}{% endif -%}
+    {%- assign datasets = datasets | append: dataset.id -%}
+  {%- endif -%}
+{%- endfor -%}
+
 {%- assign events = "" -%}
 {%- for event in site.data.events -%}
   {%- if event.publications contains include.publication.id -%}
@@ -52,6 +60,7 @@ https://www.acm.org/publications/authors/reference-formatting
 {%- if include.publication.booktitle %} data-booktitle="{{ include.publication.booktitle }}"{% endif %}
 {%- if include.publication.category %} data-category="{{ include.publication.category }}"{% endif %}
 {%- if include.publication.codeurl %} data-codeurl="{{ include.publication.codeurl }}"{% endif %}
+{%- if datasets != "" %} data-data="{{ datasets }}"{% endif %}
 {%- if include.publication.dataurl %} data-dataurl="{{ include.publication.dataurl }}"{% endif %}
 {%- if include.publication.doi %} data-doi="{{ include.publication.doi }}"{% endif %}
 {%- if include.publication.editor %} data-editor="{% for editor in include.publication.editor %}{% if forloop.first == false %},{% endif %}{{ editor[0] }} {{ editor[1] }}{% endfor %}"{% endif %}
@@ -114,7 +123,9 @@ https://www.acm.org/publications/authors/reference-formatting
 {%- if include.publication.codeurl %}
 <a href="{{ include.publication.codeurl }}">code</a>{% endif %}
 {%- if include.publication.dataurl %}
-<a href="{{ include.publication.dataurl }}">data</a>{% endif %}
+<a href="{{ include.publication.dataurl }}">dataTODO</a>{% endif %}
+{%- if datasets != "" %}
+<a href="{{ '/data' | relative_url }}?q=publications:{{ include.publication.id | replace: ":", "" | urlencode }}">data</a>{% endif %}
 {%- if include.publication.doi %}
 <a href="https://doi.org/{{ include.publication.doi }}">doi</a>{% endif %}
 {%- if events != "" %}

@@ -259,7 +259,7 @@ details.section[open] > summary > h2::after {
 .entry-body > .name {
   margin-right: calc(2 * var(--space-default));
 }
-.entry-body > .years {
+.entries .years {
   color: var(--color-grayed-out-font);
   white-space: nowrap;
 }

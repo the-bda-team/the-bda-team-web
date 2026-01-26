@@ -20,7 +20,7 @@ Parameters:
 {% if include.person.title %}<span class="title">{{ include.person.title }}</span> {% endif -%}
 <span class="name">{{ include.person.name[0] }} {{ include.person.name[1] }}</span>
 {%- if url %}</a>{% endif -%}
-{% if include.person.years %} <span class="years">[{{ include.person.years | replace: '-', '&ndash;'}}]</span>{% endif -%}
+{% if include.person.years %} <span class="years">[{{ include.person.years | replace: '-', '&ndash;' }}]</span>{% endif -%}
 <br>{% endif %}
 {% if include.person.affiliation %}
 <span class="affiliation">{{ include.person.affiliation }}</span><br>{% endif -%}

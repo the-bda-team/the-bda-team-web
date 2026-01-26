@@ -4,3 +4,29 @@ Parameters:
 {% endcomment -%}
 
 
+<li id="{{ include.dataset.id }}" class="entry" data-id="{{ include.dataset.id }}"
+
+{%- if include.dataset.events != "" %} data-events="{{ include.dataset.events }}"{% endif %}
+{%- if include.dataset.description %} data-description="{{ include.dataset.description }}"{% endif %}
+{%- if include.dataset.doi %} data-doi="{{ include.dataset.doi }}"{% endif %}
+{%- if include.dataset.keywords %} data-keywords="{% for keyword in include.dataset.keywords %}{% if forloop.first == false %},{% endif %}{{ keyword }}{% endfor %}"{% endif %}
+{%- if include.dataset.month %} data-month="{{ include.dataset.month }}"{% endif %}
+{%- if include.dataset.name %} data-name="{{ include.dataset.name }}"{% endif %}
+{%- if include.dataset.people %} data-people="{% for person in include.dataset.people %}{% if forloop.first == false %},{% endif %}{{ person }},{% assign persondata = site.data.people | where: "id", person | first %}{{ persondata.name[0] }} {{ persondata.name[1] }}{% endfor %}"{% endif %}
+{%- if include.dataset.publications %} data-publications="{% for publication in include.dataset.publications %}{% if forloop.first == false %},{% endif %}{{ publication }}{% endfor %}"{% endif %}
+{%- if include.dataset.url %} data-url="{{ include.dataset.url }}"{% endif %}
+{%- if include.dataset.year %} data-year="{{ include.dataset.year }}"{% endif -%}
+>
+<div>
+{% if include.dataset.url %}<a href="{{ include.dataset.url }}">{% endif %}<span class="name">{{ include.dataset.name }}</span>{% if include.dataset.url %}</a>{% endif -%}
+<br><span class="description">{{ include.dataset.description }}.</span>
+<span class="resources">
+{%- if include.dataset.doi %}
+<a href="https://doi.org/{{ include.dataset.doi }}">doi</a>{% endif %}
+{%- if include.dataset.events %}
+<a href="{{ '/events' | relative_url }}?q=data:{{ include.dataset.id | urlencode }}">events</a>{% endif %}
+{%- if include.dataset.publications %}
+<a href="{{ '/publications' | relative_url }}?q=data:{{ include.dataset.id | urlencode }}">publications</a>{% endif %}
+</span>
+</div>
+</li>

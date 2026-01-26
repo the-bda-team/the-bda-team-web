@@ -1,11 +1,17 @@
 {%- comment %}
 Parameters:
   - datasets. List of datasets, ordered by time
+  - headings. Tag for year headings, if any
   - by. Print only data by this person (leave nil for all data)
 {% endcomment -%}
 
-<ul class="entries events"{% if include.headings %} data-headings="events-year{{ eventsOfYear.name }}"{% endif %}>
-{% for data in include.data %}
+{% assign datasetsByYear = include.datasets | resources_by: include.by | group_by: "year" %}
+{% for datasetsOfYear in datasetsByYear %}
+{% if include.headings %}<{{ include.headings }} id="data-year{{ datasetsOfYear.name }}">{{ datasetsOfYear.name }}<a class="back-to-top" href="#" title="To top">^</a></{{ include.headings }}>{% endif %}
+<ul class="entries data"{% if include.headings %} data-headings="data-year{{ datasetsOfYear.name }}""{% endif %}>
+{% for dataset in datasetsOfYear.items %}
 {% include data/dataset.html dataset=dataset %}
 {%- endfor %}
 </ul>
+{% endfor %}
+

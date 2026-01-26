@@ -81,7 +81,10 @@ def dumps_limited(obj, *, max_depth=2, indent=2):
 
 for filename in sys.argv[1:]:
     get_sort_key = get_sort_key_default
-    if filename.endswith("events.json"):
+    if filename.endswith("data.json"):
+        get_sort_key = get_sort_key_time
+        print(filename + ": using time sorting")
+    elif filename.endswith("events.json"):
         get_sort_key = get_sort_key_time
         print(filename + ": using time sorting")
     elif filename.endswith("people.json"):

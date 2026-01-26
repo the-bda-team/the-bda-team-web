@@ -12,6 +12,7 @@
       "properties": {
         "id": { "type": "string" },
         "description": { "type": "string" },
+        "doi": { "$ref": "_schemas/base.json#/$defs/DOI" },
         "events": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
         "keywords": { "type": "array", "items": { "type": "string" } },
         "month": { "$ref": "_schemas/base.json#/$defs/Month" },
