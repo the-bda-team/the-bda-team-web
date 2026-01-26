@@ -77,11 +77,11 @@
   {
     "id": "webis-topic-ontologies-23",
     "description": "About 9,000,000 argument units from 45 corpora with topics labels",
-    "doi": "https://zenodo.org/records/5180409",
+    "doi": "10.5281/zenodo.5180409",
     "month": "may",
     "name": "Webis-Topic-Ontologies",
     "people": ["kiesel"],
-    "url": "https://zenodo.org/records/5180409",
+    "url": "https://doi.org/10.5281/zenodo.5180409",
     "year": 2023
   },
   {
