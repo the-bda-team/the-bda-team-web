@@ -30,7 +30,7 @@
     "month": "apr",
     "name": "Touch\u00e925-Image-Retrieval-and-Generation-for-Arguments",
     "people": ["kiesel"],
-    "publications": ["kiesel:2025b","ionescu:2025"],
+    "publications": ["kiesel:2025b", "ionescu:2025"],
     "url": "https://doi.org/10.5281/zenodo.14258397",
     "year": 2025
   },
@@ -42,7 +42,7 @@
     "month": "feb",
     "name": "Touch\u00e924-Image-Retrieval-and-Generation-for-Arguments",
     "people": ["kiesel"],
-    "publications": ["kiesel:2024d","ionescu:2024b"],
+    "publications": ["kiesel:2024d", "ionescu:2024b"],
     "url": "https://doi.org/10.5281/zenodo.10696055",
     "year": 2024
   },
@@ -100,7 +100,7 @@
     "month": "jan",
     "name": "Touch\u00e923-ValueEval",
     "people": ["kiesel"],
-    "publications": ["kiesel:2023a","mirzakhmedova:2024a"],
+    "publications": ["kiesel:2023a", "mirzakhmedova:2024a"],
     "url": "https://doi.org/10.5281/zenodo.6814563",
     "year": 2023
   },
@@ -156,7 +156,7 @@
     "month": "jun",
     "name": "Touch\u00e922-Image-Retrieval-for-Arguments",
     "people": ["kiesel"],
-    "publications": ["bondarenko:2022e","carnot:2023"],
+    "publications": ["bondarenko:2022e", "carnot:2023"],
     "url": "https://doi.org/10.5281/zenodo.6786948",
     "year": 2022
   },
@@ -223,7 +223,7 @@
     "month": "jan",
     "name": "Webis-WebSeg-20-Algorithm-Segmentations",
     "people": ["kiesel"],
-    "publications":["kiesel:2021a"],
+    "publications": ["kiesel:2021a"],
     "url": "https://doi.org/10.5281/zenodo.4146889",
     "year": 2021
   },
@@ -302,7 +302,7 @@
     "month": "feb",
     "name": "BuzzFeed-Webis Fake News Corpus 16",
     "people": ["kiesel"],
-    "publications":["potthast:2018f"],
+    "publications": ["potthast:2018f"],
     "url": "https://doi.org/10.5281/zenodo.1181813",
     "year": 2018
   },
