@@ -91,7 +91,6 @@ https://www.acm.org/publications/authors/reference-formatting
 >
 <div>
 <span class="reference">
-{{ dummy }}
 {%- if include.publication.category == "InProceedings" %}
   {% include publication/people.html people=include.publication.author %}.
   {{ include.publication.year }}.
@@ -122,8 +121,7 @@ https://www.acm.org/publications/authors/reference-formatting
 <button type="button" aria-expanded="false" aria-controls="{{ publication.id }}.bibtex">bib</button>
 {%- if include.publication.codeurl %}
 <a href="{{ include.publication.codeurl }}">code</a>{% endif %}
-{%- if include.publication.dataurl %}
-<a href="{{ include.publication.dataurl }}">dataTODO</a>{% endif %}
+<button type="button" id="{{ include.publication.id }}-copy" data-action="copy" data-action-success="✓" data-action-failure="❌" data-target="{{ include.publication.id }}-copy" data-content="{{ page.url | absolute_url }}#{{ include.publication.id }}">copyurl</button>
 {%- if datasets != "" %}
 <a href="{{ '/data' | relative_url }}?q=publications:{{ include.publication.id | replace: ":", "" | urlencode }}">data</a>{% endif %}
 {%- if include.publication.doi %}
