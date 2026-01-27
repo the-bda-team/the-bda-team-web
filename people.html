@@ -14,9 +14,6 @@ breadcrumbs: ["people"]
 {% endfor %}
 </ul>
 
-{% assign publications_people = site.data.publications | unique_authors %}
-{% assign event_people = site.data.events | map: "people" | uniq %}
-
 {% for category in peopleByCategory %}
 <h2 id="{{ category.name | downcase | replace: ' ', '' }}">{{ category.name }}<a class="back-to-top" href="#" title="To top">^</a></h2>
 

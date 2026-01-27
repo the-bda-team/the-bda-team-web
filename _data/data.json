@@ -6,6 +6,7 @@
     "month": "jan",
     "name": "Webis Newsreader Voice Clones 2026",
     "people": ["kiesel"],
+    "publications": ["gohsen:2026a"],
     "url": "https://doi.org/10.5281/zenodo.18254602",
     "year": 2026
   },
@@ -17,6 +18,7 @@
     "month": "may",
     "name": "Touch\u00e925-Retrieval-Augmented-Debate-Claims",
     "people": ["kiesel"],
+    "publications": ["kiesel:2025b"],
     "url": "https://doi.org/10.5281/zenodo.14989642",
     "year": 2025
   },
@@ -28,6 +30,7 @@
     "month": "apr",
     "name": "Touch\u00e925-Image-Retrieval-and-Generation-for-Arguments",
     "people": ["kiesel"],
+    "publications": ["kiesel:2025b","ionescu:2025"],
     "url": "https://doi.org/10.5281/zenodo.14258397",
     "year": 2025
   },
@@ -39,6 +42,7 @@
     "month": "feb",
     "name": "Touch\u00e924-Image-Retrieval-and-Generation-for-Arguments",
     "people": ["kiesel"],
+    "publications": ["kiesel:2024d","ionescu:2024b"],
     "url": "https://doi.org/10.5281/zenodo.10696055",
     "year": 2024
   },
@@ -50,6 +54,7 @@
     "month": "feb",
     "name": "Touch\u00e924-ValueEval",
     "people": ["kiesel"],
+    "publications": ["kiesel:2024d"],
     "url": "https://doi.org/10.5281/zenodo.10396293",
     "year": 2024
   },
@@ -60,6 +65,7 @@
     "month": "feb",
     "name": "Webis-Follow-Up-Questions-24",
     "people": ["kiesel"],
+    "publications": ["kiesel:2024a"],
     "url": "https://doi.org/10.5281/zenodo.10623105",
     "year": 2024
   },
@@ -71,6 +77,7 @@
     "month": "sep",
     "name": "Touch\u00e923-Image-Retrieval-for-Arguments",
     "people": ["kiesel"],
+    "publications": ["bondarenko:2023c"],
     "url": "https://doi.org/10.5281/zenodo.7497994",
     "year": 2023
   },
@@ -81,6 +88,7 @@
     "month": "may",
     "name": "Webis-Topic-Ontologies",
     "people": ["kiesel"],
+    "publications": ["ajjour:2023a"],
     "url": "https://doi.org/10.5281/zenodo.5180409",
     "year": 2023
   },
@@ -92,6 +100,7 @@
     "month": "jan",
     "name": "Touch\u00e923-ValueEval",
     "people": ["kiesel"],
+    "publications": ["kiesel:2023a","mirzakhmedova:2024a"],
     "url": "https://doi.org/10.5281/zenodo.6814563",
     "year": 2023
   },
@@ -102,6 +111,7 @@
     "month": "jan",
     "name": "Webis-Generated-Game-Art-23",
     "people": ["kiesel"],
+    "publications": ["deckers:2023a"],
     "url": "https://doi.org/10.5281/zenodo.7221434",
     "year": 2023
   },
@@ -112,6 +122,7 @@
     "month": "jan",
     "name": "Webis-Nudged-Questions-23",
     "people": ["kiesel"],
+    "publications": ["gohsen:2023a"],
     "url": "https://doi.org/10.5281/zenodo.7226309",
     "year": 2023
   },
@@ -122,6 +133,7 @@
     "month": "jul",
     "name": "Webis-ArgValues-22",
     "people": ["kiesel"],
+    "publications": ["kiesel:2022b"],
     "url": "https://doi.org/10.5281/zenodo.5657249",
     "year": 2022
   },
@@ -132,6 +144,7 @@
     "month": "jul",
     "name": "Webis-Web-Archive-Quality-22",
     "people": ["kiesel"],
+    "publications": ["elstner:2022"],
     "url": "https://doi.org/10.5281/zenodo.6881334",
     "year": 2022
   },
@@ -143,6 +156,7 @@
     "month": "jun",
     "name": "Touch\u00e922-Image-Retrieval-for-Arguments",
     "people": ["kiesel"],
+    "publications": ["bondarenko:2022e","carnot:2023"],
     "url": "https://doi.org/10.5281/zenodo.6786948",
     "year": 2022
   },
@@ -154,6 +168,7 @@
     "month": "dec",
     "name": "SCAI-QReCC-21",
     "people": ["kiesel"],
+    "publications": ["vakulenko:2022"],
     "url": "https://doi.org/10.5281/zenodo.5749472",
     "year": 2021
   },
@@ -164,6 +179,7 @@
     "month": "oct",
     "name": "Webis-Exhibition-Questions-21",
     "people": ["kiesel"],
+    "publications": ["kiesel:2022a"],
     "url": "https://doi.org/10.5281/zenodo.5601978",
     "year": 2021
   },
@@ -174,6 +190,7 @@
     "month": "aug",
     "name": "Webis-ArgImages-21",
     "people": ["kiesel"],
+    "publications": ["kiesel:2021e"],
     "url": "https://doi.org/10.5281/zenodo.5202934",
     "year": 2021
   },
@@ -184,6 +201,7 @@
     "month": "aug",
     "name": "Webis-Conversational-Query-Reformulations-21",
     "people": ["kiesel"],
+    "publications": ["kiesel:2021d"],
     "url": "https://doi.org/10.5281/zenodo.5031960",
     "year": 2021
   },
@@ -194,6 +212,7 @@
     "month": "jan",
     "name": "Webis-SCSmeta-21",
     "people": ["kiesel"],
+    "publications": ["kiesel:2021c"],
     "url": "https://doi.org/10.5281/zenodo.4108195",
     "year": 2021
   },
@@ -204,6 +223,7 @@
     "month": "jan",
     "name": "Webis-WebSeg-20-Algorithm-Segmentations",
     "people": ["kiesel"],
+    "publications":["kiesel:2021a"],
     "url": "https://doi.org/10.5281/zenodo.4146889",
     "year": 2021
   },
@@ -214,6 +234,7 @@
     "month": "oct",
     "name": "Webis-EditorialSum-20",
     "people": ["kiesel"],
+    "publications": ["syed:2020a"],
     "url": "https://doi.org/10.5281/zenodo.4105765",
     "year": 2020
   },
@@ -224,6 +245,7 @@
     "month": "jun",
     "name": "Webis-WebSeg-20",
     "people": ["kiesel"],
+    "publications": ["kiesel:2020b"],
     "url": "https://doi.org/10.5281/zenodo.3354902",
     "year": 2020
   },
@@ -234,6 +256,7 @@
     "month": "jan",
     "name": "Webis-Voice-based-and-Conversational-Argument-Search-20",
     "people": ["kiesel"],
+    "publications": ["kiesel:2020a"],
     "url": "https://doi.org/10.5281/zenodo.3490947",
     "year": 2020
   },
@@ -256,6 +279,7 @@
     "month": "apr",
     "name": "Webis-Web-Errors-19",
     "people": ["kiesel"],
+    "publications": ["kiesel:2019b"],
     "url": "https://doi.org/10.5281/zenodo.2549837",
     "year": 2019
   },
@@ -267,6 +291,7 @@
     "month": "nov",
     "name": "PAN-SemEval-Hyperpartisan-News-Detection-19",
     "people": ["kiesel"],
+    "publications": ["kiesel:2019c"],
     "url": "https://doi.org/10.5281/zenodo.1489920",
     "year": 2018
   },
@@ -277,6 +302,7 @@
     "month": "feb",
     "name": "BuzzFeed-Webis Fake News Corpus 16",
     "people": ["kiesel"],
+    "publications":["potthast:2018f"],
     "url": "https://doi.org/10.5281/zenodo.1181813",
     "year": 2018
   },
@@ -287,6 +313,7 @@
     "month": "oct",
     "name": "Webis-Web-Archive-17",
     "people": ["kiesel"],
+    "publications": ["kiesel:2018c"],
     "url": "https://doi.org/10.5281/zenodo.1002203",
     "year": 2017
   },
@@ -297,6 +324,7 @@
     "month": "mar",
     "name": "Webis-Mnemonics-17",
     "people": ["kiesel"],
+    "publications": ["kiesel:2017a"],
     "url": "https://doi.org/10.5281/zenodo.3254443",
     "year": 2017
   },
@@ -307,6 +335,7 @@
     "month": "feb",
     "name": "Webis-Simple-Sentences-17",
     "people": ["kiesel"],
+    "publications": ["kiesel:2017a"],
     "url": "https://doi.org/10.5281/zenodo.205950",
     "year": 2017
   },
@@ -317,6 +346,7 @@
     "month": "dec",
     "name": "Webis-Editorials-16",
     "people": ["kiesel"],
+    "publications": ["alkhatib:2016b"],
     "url": "https://doi.org/10.5281/zenodo.3254405",
     "year": 2016
   }

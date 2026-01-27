@@ -18,7 +18,6 @@
         "author": { "type": "array", "items": { "$ref": "_schemas/base.json#/$defs/PersonName" }, "minItems": 1 },
         "awardurl": { "type": "string", "format": "uri" },
         "codeurl": { "type": "string", "format": "uri" },
-        "dataurl": { "type": "string", "format": "uri" },
         "doi": { "$ref": "_schemas/base.json#/$defs/DOI" },
         "isbn": { "type": "string", "oneOf": [ { "pattern": "^(\\d-?){9}-[\\dX]$" }, { "pattern": "^(97[89])-(\\d-?){10}$" } ] },
         "issn": { "type": "string", "format": "^\\d{4}-\\d{3}[\\dX]$" },

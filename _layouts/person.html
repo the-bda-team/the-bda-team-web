@@ -6,6 +6,7 @@ layout: base
 
 {%- assign publications_people = site.data.publications | unique_authors %}
 {%- assign authorString = person.name | join: "_" -%}
+{%- assign data_people = site.data.data | map: "people" | uniq -%}
 {%- assign event_people = site.data.events | map: "people" | uniq -%}
 
 <h1>{% if person.title %}{{ person.title }} {% endif -%}{{ person.name[0] }} {{ person.name[1] }}</h1>
@@ -20,10 +21,11 @@ layout: base
 
 <div class="filter">
 <input type="text" placeholder="Type here to filter the records below&hellip;"><br>
-<span class="resources">
-{%- if publications_people contains authorString %}<a href="#publications">publications</a> {% endif -%}
-{%- if event_people contains person_id %}<a href="#events">events</a> {% endif -%}
-</span>
+<ul class="table-of-contents">
+{%- if publications_people contains authorString %}<li><a href="#publications">publications</a></li>{% endif -%}
+{%- if data_people contains person_id %}<li><a href="#data">data</a></li>{% endif -%}
+{%- if event_people contains person_id %}<li><a href="#events">events</a></li>{% endif -%}
+</ul>
 <div id="filtered-all-message" aria-hidden="true">Nothing matches your filter</div>
 </div>
 
@@ -31,6 +33,13 @@ layout: base
 <details id="publications" class="section" open><summary><h2>Publications</h2></summary>
 
 {% include publication/publications.html publications=site.data.publications headings="h3" by=person_id %}
+</details>
+{% endif %}
+
+{%- if data_people contains person_id %}
+<details id="data" class="section" open><summary><h2>Data</h2></summary>
+
+{% include data/datasets.html datasets=site.data.data headings="h3" by=person_id %}
 </details>
 {% endif %}
 
