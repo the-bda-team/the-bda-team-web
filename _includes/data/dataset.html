@@ -4,7 +4,7 @@ Parameters:
 {% endcomment -%}
 
 
-<li id="{{ include.dataset.id }}" class="entry" data-id="{{ include.dataset.id }}"
+<li id="{{ include.dataset.id }}" class="entry" data-entry-type="data" data-id="{{ include.dataset.id }}"
 
 {%- if include.dataset.events != "" %} data-events="{{ include.dataset.events }}"{% endif %}
 {%- if include.dataset.description %} data-description="{{ include.dataset.description }}"{% endif %}

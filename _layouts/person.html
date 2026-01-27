@@ -22,9 +22,9 @@ layout: base
 <div class="filter">
 <input type="text" placeholder="Type here to filter the records below&hellip;"><br>
 <ul class="table-of-contents">
-{%- if publications_people contains authorString %}<li><a href="#publications">publications</a></li>{% endif -%}
-{%- if data_people contains person_id %}<li><a href="#data">data</a></li>{% endif -%}
-{%- if event_people contains person_id %}<li><a href="#events">events</a></li>{% endif -%}
+{%- if publications_people contains authorString %}<li><a href="#publications">publications</a> (<span data-entry-counter="publications"></span>)</li>{% endif -%}
+{%- if data_people contains person_id %}<li><a href="#data">data</a> (<span data-entry-counter="data"></span>)</li>{% endif -%}
+{%- if event_people contains person_id %}<li><a href="#events">events</a> (<span data-entry-counter="events"></span>)</li>{% endif -%}
 </ul>
 <div id="filtered-all-message" aria-hidden="true">Nothing matches your filter</div>
 </div>

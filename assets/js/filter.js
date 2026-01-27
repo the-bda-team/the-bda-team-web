@@ -9,6 +9,7 @@ const listAttributes = ["author", "editor", "keywords", "people", "publications"
 // Global variables
 
 const filteredAllMessageElement = document.getElementById("filtered-all-message");
+const entryTypeCounterElements = Array.from(document.querySelectorAll("[data-entry-counter]"));
 let lastHistoryChangeMs = new Date().getTime();
 
 // Normalization
@@ -163,7 +164,23 @@ function filterEntriesMatchingQuery(queryWords) {
       filteredAllMessageElement.setAttribute("aria-hidden", "true");
     }
   }
+
+  updateCounterElements();
 }
+
+// Counter elements
+
+function updateCounterElements() {
+  if (entryTypeCounterElements.length > 0) {
+    const visibleEntryElements = Array.from(document.querySelectorAll("li.entry:not(.filtered-out)"))
+      .map(element => element.getAttribute("data-entry-type"))
+      .reduce((acc, curr) => (acc[curr] = (acc[curr] || 0) + 1, acc), {});
+    for (const entryTypeCounterElement of entryTypeCounterElements) {
+      entryTypeCounterElement.textContent = visibleEntryElements[entryTypeCounterElement.getAttribute("data-entry-counter")] || 0;
+    }
+  }
+}
+updateCounterElements();
 
 // Query handling
 
