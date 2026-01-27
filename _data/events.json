@@ -1,5 +1,32 @@
 [
   {
+    "id": "websci26-method-sharing-retreat",
+    "category": "Tutorial",
+    "description": "Learn how to submit to Methods Hub using your own method",
+    "host": "WebSci 2026",
+    "hosturl": "https://websci26.org/",
+    "keywords": ["methods hub"],
+    "month": "may",
+    "name": "Method Sharing Retreat (MESHARE)",
+    "people": ["khan", "kiesel", "linzbach", "momeni", "muench", "yu"],
+    "site": "Braunschweig, Germany",
+    "year": 2026
+  },
+  {
+    "id": "smad2026-gesis-methods-hub-social-media-datasprint",
+    "category": "Workshop",
+    "description": "Collaboratively explore social media datasets",
+    "host": "SMAD 2026",
+    "hosturl": "https://www.dnb.de/EN/Professionell/Sammeln/Sammlung_Websites/SMAD2026/SocialMediaAccessDays.html",
+    "keywords": ["methods hub"],
+    "month": "mar",
+    "name": "GESIS Methods Hub Social Media Datasprint",
+    "people": ["kiesel", "muench"],
+    "site": "Frankfurt am Main, Germany",
+    "url": "https://methodshub.gesis.org/community/smad26-datasprint/",
+    "year": 2026
+  },
+  {
     "id": "clef2026-touche",
     "category": "Workshop",
     "description": "Lab hosting four shared tasks on argumentation systems",

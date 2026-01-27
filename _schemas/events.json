@@ -11,7 +11,7 @@
       "required": ["id", "category", "description", "host", "name", "people", "site", "year"],
       "properties": {
         "id": { "type": "string" },
-        "category": { "type": "string", "enum": ["Conference", "Invited Talk", "Shared Task", "Teaching", "Workshop"] },
+        "category": { "type": "string", "enum": ["Conference", "Invited Talk", "Shared Task", "Teaching", "Tutorial", "Workshop"] },
         "description": { "type": "string" },
         "host": { "type": "string" },
         "hosturl": { "type": "string", "format": "uri" },
