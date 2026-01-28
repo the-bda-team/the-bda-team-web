@@ -57,7 +57,7 @@
   {
     "id": "trec2025-ikat",
     "category": "Shared Task",
-    "description": "Build conversational agents that respond to users' immerdiate queries but adapt their responses based on the cumulative context of the interaction",
+    "description": "Build conversational agents that respond to users' immediate queries but adapt their responses based on the cumulative context of the interaction",
     "host": "TREC 2025",
     "hosturl": "https://trec.nist.gov/",
     "keywords": ["conversational search", "user simulation"],
