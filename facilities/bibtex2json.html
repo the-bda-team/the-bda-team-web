@@ -54,7 +54,7 @@ document.getElementById("convert").onclick = () => {
     }
 
     const out = {
-      id: e.EntryKey || "",
+      id: e.EntryKey.toLowerCase().replace("20",":20") || "",
       category,
       title: e.Fields.title || "",
       year: e.Fields.year ? parseInt(e.Fields.year, 10) : null,
