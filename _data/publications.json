@@ -1,216 +1,4 @@
 [
-
-
-  {
-    "id": "tong:2024",
-    "category": "Article",
-    "author": [
-      [
-        "Xu",
-        "Tong"
-      ],
-      [
-        "Nina",
-        "Smirnova"
-      ],
-      [
-        "Sharmila",
-        "Upadhyaya"
-      ],
-      [
-        "Ran",
-        "Yu"
-      ],
-      [
-        "Chao",
-        "Sun"
-      ],
-      [
-        "Jack",
-        "Culbert"
-      ],
-      [
-        "Wolfgang",
-        "Otto"
-      ],
-      [
-        "Philipp",
-        "Mayr"
-      ]
-    ],
-    "journal": "CoRR",
-    "doi": "10.48550/arXiv.2408.13501",
-    "month": "aug",
-    "title": "Utilizing Large Language Models for Named Entity Recognition in Traditional Chinese Medicine against COVID-19 Literature: Comparative Study",
-    "year": 2024
-  },
-  {
-    "id": "hoppe:2025",
-    "category": "InProceedings",
-    "author": [
-      [
-        "Anett",
-        "Hoppe"
-      ],
-      [
-        "Ran",
-        "Yu"
-      ],
-      [
-        "Jiqun",
-        "Liu"
-      ],
-      [
-        "Nilavra",
-        "Bhattacharya"
-      ]
-    ],
-    "doi": "10.1145/3701551.3705709",
-    "month": "mar",
-    "pages": "1116--1117",
-    "title": "IWILDS'25: The 5th International Workshop on Investigating Learning During Web Search",
-    "year": 2025,
-    "booktitle": "WSDM '25: Proceedings of the Eighteenth ACM International Conference on Web Search and Data Mining",
-    "editor": [
-      [
-        "Wolfgang",
-        "Nejdl"
-      ],
-      [
-        "Sören",
-        "Auer"
-      ],
-      [
-        "Oliver",
-        "Karras"
-      ],
-      [
-        "Meeyoung",
-        "Cha"
-      ],
-      [
-        "Marie-Francine",
-        "Moens"
-      ],
-      [
-        "Marc",
-        "Najork"
-      ]
-    ],
-    "publisher": "ACM, New York"
-  },
-  {
-    "id": "yu:2019",
-    "category": "InProceedings",
-    "author": [
-      [
-        "Ran",
-        "Yu"
-      ],
-      [
-        "Mathieu",
-        "d'Aquin"
-      ],
-      [
-        "Dragan",
-        "Gasevic"
-      ],
-      [
-        "Joachim",
-        "Kimmerle"
-      ],
-      [
-        "Eelco",
-        "Herder"
-      ],
-      [
-        "Ralph",
-        "Ewerth"
-      ]
-    ],
-    "doi": "10.1145/3328413.3329404",
-    "month": "jun",
-    "pages": "15--16",
-    "title": "LILE2019: 8th International Workshop on Learning and Education with Web Data",
-    "year": 2019,
-    "booktitle": "WebSci '19: Companion Publication of the 10th ACM Conference on Web Science",
-    "editor": [
-      [
-        "Paolo",
-        "Boldi"
-      ],
-      [
-        "Brooke Foucault",
-        "Welles"
-      ],
-      [
-        "Katharina",
-        "Kinder-Kurlanda"
-      ],
-      [
-        "Christo",
-        "Wilson"
-      ],
-      [
-        "Isabella",
-        "Peters"
-      ],
-      [
-        "Wagner",
-        "Meira"
-      ]
-    ],
-    "publisher": "ACM, New York"
-  },
-  {
-    "id": "ewerth:2019",
-    "category": "InProceedings",
-    "author": [
-      [
-        "Ewerth",
-        "Ralph"
-      ],
-      [
-        "Dietze",
-        "Stefan"
-      ],
-      [
-        "Hoppe",
-        "Anett"
-      ],
-      [
-        "Yu",
-        "Ran"
-      ]
-    ],
-    "doi": "10.1145/3343031.3350553",
-    "isbn": "978-1450368896",
-    "month": "jan",
-    "pages": "2724--2725",
-    "title": "SALMM'19: First International Workshop on Search as Learning with Multimedia Information (SALMM 2019)",
-    "year": 2019,
-    "booktitle": "27th ACM International Conference on Multimedia (MM 2019)",
-    "publisher": "ACM",
-    "series": "MM '19"
-  },
-  {
-    "id": "yu:2020",
-    "category": "PhDThesis",
-    "author": [
-      [
-        "Ran",
-        "Yu"
-      ]
-    ],
-    "month": "mar",
-    "title": "Improving Knowledge Accessibility on the Web – from Knowledge Base Augmentation to Search as Learning",
-    "year": 2020,
-    "school": "Heinrich-Heine-Universität, Düsseldorf, Germany"
-  },
-
-
-
-
   {
     "id": "kiesel:2026a",
     "category": "InProceedings",
@@ -359,8 +147,8 @@
     "author": [["Alisa", "Rieger"], ["Stefan", "Dietze"], ["Ran", "Yu"]],
     "booktitle": "RobustIR@SIGIR25: The First Workshop on Robust Information Retrieval",
     "month": "jul",
-    "title": "A Research Vision for Web Search on Emerging Topics",
     "preprinturl": "https://arxiv.org/abs/2509.10212",
+    "title": "A Research Vision for Web Search on Emerging Topics",
     "year": 2025
   },
   {
@@ -374,6 +162,19 @@
     "pages": "482--494",
     "publisher": "Springer, Singapore",
     "title": "VISOR: VIsual Seizure Onset Detection PeRsonalized for Epilepsy Patients",
+    "year": 2025
+  },
+  {
+    "id": "hoppe:2025",
+    "category": "InProceedings",
+    "author": [["Anett", "Hoppe"], ["Ran", "Yu"], ["Jiqun", "Liu"], ["Nilavra", "Bhattacharya"]],
+    "booktitle": "WSDM '25: Proceedings of the Eighteenth ACM International Conference on Web Search and Data Mining",
+    "doi": "10.1145/3701551.3705709",
+    "editor": [["Wolfgang", "Nejdl"], ["S\u00f6ren", "Auer"], ["Oliver", "Karras"], ["Meeyoung", "Cha"], ["Marie-Francine", "Moens"], ["Marc", "Najork"]],
+    "month": "mar",
+    "pages": "1116--1117",
+    "publisher": "ACM, New York",
+    "title": "IWILDS'25: The 5th International Workshop on Investigating Learning During Web Search",
     "year": 2025
   },
   {
@@ -436,6 +237,16 @@
     "series": "Lecture Notes in Computer Science",
     "site": "Grenoble, France",
     "title": "Who Will Evaluate the Evaluators? Exploring the Gen-IR User Simulation Space",
+    "year": 2024
+  },
+  {
+    "id": "tong:2024",
+    "category": "Article",
+    "author": [["Xu", "Tong"], ["Nina", "Smirnova"], ["Sharmila", "Upadhyaya"], ["Ran", "Yu"], ["Chao", "Sun"], ["Jack", "Culbert"], ["Wolfgang", "Otto"], ["Philipp", "Mayr"]],
+    "doi": "10.48550/arXiv.2408.13501",
+    "journal": "CoRR",
+    "month": "aug",
+    "title": "Utilizing Large Language Models for Named Entity Recognition in Traditional Chinese Medicine against COVID-19 Literature: Comparative Study",
     "year": 2024
   },
   {
@@ -955,9 +766,9 @@
     "editor": [["Mathieu", "d'Aquin"], ["Stefan", "Dietze"]],
     "month": "sep",
     "pages": "2991--2998",
+    "preprinturl": "https://arxiv.org/pdf/2006.14492v4.pdf",
     "publisher": "ACM, New York",
     "title": "TweetsCOV19",
-    "preprinturl": "https://arxiv.org/pdf/2006.14492v4.pdf",
     "year": 2020
   },
   {
@@ -977,16 +788,25 @@
     "year": 2020
   },
   {
+    "id": "yu:2020",
+    "category": "PhDThesis",
+    "author": [["Ran", "Yu"]],
+    "month": "mar",
+    "school": "Heinrich-Heine-Universit\u00e4t, D\u00fcsseldorf, Germany",
+    "title": "Improving Knowledge Accessibility on the Web \u2013 from Knowledge Base Augmentation to Search as Learning",
+    "year": 2020
+  },
+  {
     "id": "ewerth:2019",
     "category": "InProceedings",
     "author": [["Ralph", "Ewerth"], ["Stefan", "Dietze"], ["Anett", "Hoppe"], ["Ran", "Yu"]],
     "booktitle": "27th ACM International Conference on Multimedia (MM 2019)",
+    "doi": "10.1145/3343031.3350553",
     "editor": [["Laurent", "Amsaleg"], ["Benoit", "Huet"], ["Martha", "Larson"], ["Guillaume", "Gravier"], ["Hayley", "Hung"], ["Chong-Wah", "Ngo"], ["Wei Tsang", "Ooi"]],
     "month": "oct",
     "pages": "2724--2725",
     "publisher": "ACM, New York",
     "title": "SALMM'19 - First International Workshop on Search as Learning with Multimedia Information",
-    "doi": "10.1145/3343031.3350553",
     "year": 2019
   },
   {
@@ -1086,6 +906,19 @@
     "year": 2019
   },
   {
+    "id": "yu:2019",
+    "category": "InProceedings",
+    "author": [["Ran", "Yu"], ["Mathieu", "d'Aquin"], ["Dragan", "Gasevic"], ["Joachim", "Kimmerle"], ["Eelco", "Herder"], ["Ralph", "Ewerth"]],
+    "booktitle": "WebSci '19: Companion Publication of the 10th ACM Conference on Web Science",
+    "doi": "10.1145/3328413.3329404",
+    "editor": [["Paolo", "Boldi"], ["Brooke Foucault", "Welles"], ["Katharina", "Kinder-Kurlanda"], ["Christo", "Wilson"], ["Isabella", "Peters"], ["Wagner", "Meira"]],
+    "month": "jun",
+    "pages": "15--16",
+    "publisher": "ACM, New York",
+    "title": "LILE2019: 8th International Workshop on Learning and Education with Web Data",
+    "year": 2019
+  },
+  {
     "id": "kiesel:2019a",
     "category": "InProceedings",
     "annote": "acceptance rate: 0.49 (23/47)",
@@ -1107,6 +940,20 @@
     "booktitle": "18th International Semantic Web Conference (ISWC19)",
     "month": "jan",
     "title": "KnowMore \u2013 Knowledge Base Augmentation with Structured Web Markup",
+    "year": 2019
+  },
+  {
+    "id": "ewerth:2019",
+    "category": "InProceedings",
+    "author": [["Ewerth", "Ralph"], ["Dietze", "Stefan"], ["Hoppe", "Anett"], ["Yu", "Ran"]],
+    "booktitle": "27th ACM International Conference on Multimedia (MM 2019)",
+    "doi": "10.1145/3343031.3350553",
+    "isbn": "978-1450368896",
+    "month": "jan",
+    "pages": "2724--2725",
+    "publisher": "ACM",
+    "series": "MM '19",
+    "title": "SALMM'19: First International Workshop on Search as Learning with Multimedia Information (SALMM 2019)",
     "year": 2019
   },
   {
@@ -1182,9 +1029,9 @@
     "editor": [["Kevyn", "Collins-Thompson"], ["Qiaozhu", "Mei"], ["Brian", "Davison"], ["Yiqun", "Liu"], ["Emine", "Yilmaz"]],
     "month": "jun",
     "pages": "75--84",
+    "preprinturl": "http://arxiv.org/abs/1805.00823",
     "publisher": "ACM, New York",
     "title": "Predicting User Knowledge Gain in Informational Search Sessions",
-    "preprinturl": "http://arxiv.org/abs/1805.00823",
     "year": 2018
   },
   {
