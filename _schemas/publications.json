@@ -11,7 +11,7 @@
       "required": ["id", "category", "author", "title", "month", "year"],
       "properties": {
         "id": { "type": "string", "pattern": "^[a-z][a-z-]*[a-z]:[12][0-9]{3}[a-z]?$" },
-        "category": { "type": "string", "enum": ["InProceedings", "Article", "PhDThesis"] },
+        "category": { "type": "string", "enum": ["Article", "InProceedings", "PhDThesis"] },
         "address": { "type": "string" },
         "annote": { "type": "string" },
         "appurl": { "type": "string", "format": "uri" },
@@ -37,6 +37,19 @@
       },
       "allOf": [
         {
+          "if": { "properties": { "category": { "const": "Article" } } },
+          "then": {
+            "required": [ "journal" ],
+            "properties": {
+              "editor": { "type": "array", "items": { "$ref": "_schemas/base.json#/$defs/PersonName" }, "minItems": 1 },
+              "journal": { "type": "string" },
+              "number": { "type": "integer", "minimum": 1 },
+              "publisher": { "type": "string" },
+              "volume": { "type": "string" }
+            }
+          }
+        },
+        {
           "if": { "properties": { "category": { "const": "InProceedings" } } },
           "then": {
             "required": [ "booktitle" ],
@@ -48,19 +61,6 @@
               "publisher": { "type": "string" },
               "series": { "type": "string" },
               "site": { "type": "string" },
-              "volume": { "type": "string" }
-            }
-          }
-        },
-        {
-          "if": { "properties": { "category": { "const": "Article" } } },
-          "then": {
-            "required": [ "journal" ],
-            "properties": {
-              "editor": { "type": "array", "items": { "$ref": "_schemas/base.json#/$defs/PersonName" }, "minItems": 1 },
-              "journal": { "type": "string" },
-              "number": { "type": "integer", "minimum": 1 },
-              "publisher": { "type": "string" },
               "volume": { "type": "string" }
             }
           }
