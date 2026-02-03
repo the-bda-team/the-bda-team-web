@@ -1,5 +1,803 @@
 [
   {
+    "id": "rieger:2025",
+    "category": "InProceedings",
+    "author": [
+      [
+        "Alisa",
+        "Rieger"
+      ],
+      [
+        "Stefan",
+        "Dietze"
+      ],
+      [
+        "Ran",
+        "Yu"
+      ]
+    ],
+    "month": "jul",
+    "title": "A Research Vision for Web Search on Emerging Topics",
+    "url": "https://arxiv.org/abs/2509.10212",
+    "year": 2025,
+    "booktitle": "RobustIR@SIGIR25: The First Workshop on Robust Information Retrieval"
+  },
+  {
+    "id": "kumar:2025",
+    "category": "InProceedings",
+    "author": [
+      [
+        "Uttam",
+        "Kumar"
+      ],
+      [
+        "Ran",
+        "Yu"
+      ],
+      [
+        "Elena",
+        "Demidova"
+      ]
+    ],
+    "doi": "10.1007/978-981-96-8173-0_38",
+    "month": "jun",
+    "pages": "482--494",
+    "title": "VISOR: VIsual Seizure Onset Detection PeRsonalized for Epilepsy Patients",
+    "year": 2025,
+    "booktitle": "Advances in Knowledge Discovery and Data Mining",
+    "editor": [
+      [
+        "Xintao",
+        "Wu"
+      ],
+      [
+        "Myra",
+        "Spiliopoulou"
+      ],
+      [
+        "Can",
+        "Wang"
+      ],
+      [
+        "Vipin",
+        "Kumar"
+      ],
+      [
+        "Longbing",
+        "Cao"
+      ],
+      [
+        "Yanqiu",
+        "Wu"
+      ],
+      [
+        "Yu",
+        "Yao"
+      ],
+      [
+        "Zhangkai",
+        "Wu"
+      ]
+    ],
+    "publisher": "Springer, Singapore"
+  },
+  {
+    "id": "tang:2021",
+    "category": "InProceedings",
+    "author": [
+      [
+        "Rui",
+        "Tang"
+      ],
+      [
+        "Ran",
+        "Yu"
+      ],
+      [
+        "Markus",
+        "Rokicki"
+      ],
+      [
+        "Ralph",
+        "Ewerth"
+      ],
+      [
+        "Stefan",
+        "Dietze"
+      ]
+    ],
+    "month": "dec",
+    "title": "Domain-Specific Modeling of User Knowledge in Informational Search Sessions",
+    "year": 2021,
+    "booktitle": "2nd International Workshop on Investigating Learning During Web Search, collocated with CIKM2021."  },
+  {
+    "id": "otto:2021",
+    "category": "InProceedings",
+    "author": [
+      [
+        "Christian",
+        "Otto"
+      ],
+      [
+        "Ran",
+        "Yu"
+      ],
+      [
+        "Georg",
+        "Pardi"
+      ],
+      [
+        "Johannes von",
+        "Hoyer"
+      ],
+      [
+        "Markus",
+        "Rokicki"
+      ],
+      [
+        "Anett",
+        "Hoppe"
+      ],
+      [
+        "Peter",
+        "Holtz"
+      ],
+      [
+        "Yvonne",
+        "Kammerer"
+      ],
+      [
+        "Stefan",
+        "Dietze"
+      ],
+      [
+        "Ralph",
+        "Ewerth"
+      ]
+    ],
+    "doi": "10.1007/978-3-030-78292-4_26",
+    "month": "jun",
+    "pages": "318--330",
+    "title": "Predicting knowledge gain during web search based on multimedia resource consumption",
+    "year": 2021,
+    "booktitle": "Artificial Intelligence in Education: AIED 2021",
+    "editor": [
+      [
+        "Ido",
+        "Roll"
+      ],
+      [
+        "Danielle",
+        "McNamara"
+      ],
+      [
+        "Sergey",
+        "Sosnovsky"
+      ],
+      [
+        "Rose",
+        "Luckin"
+      ],
+      [
+        "Vania",
+        "Dimitrova"
+      ]
+    ],
+    "publisher": "Springer, Cham"
+  },
+  {
+    "id": "dimitrov:2020",
+    "category": "InProceedings",
+    "author": [
+      [
+        "Dimitar",
+        "Dimitrov"
+      ],
+      [
+        "Erdal",
+        "Baran"
+      ],
+      [
+        "Pavlos",
+        "Fafalios"
+      ],
+      [
+        "Ran",
+        "Yu"
+      ],
+      [
+        "Xiaofei",
+        "Zhu"
+      ],
+      [
+        "Matthäus",
+        "Zloch"
+      ],
+      [
+        "Stefan",
+        "Dietze"
+      ]
+    ],
+    "doi": "10.1145/3340531.3412765",
+    "month": "sep",
+    "pages": "2991--2998",
+    "title": "TweetsCOV19",
+    "url": "https://arxiv.org/pdf/2006.14492v4.pdf",
+    "year": 2020,
+    "booktitle": "CIKM '20: Proceedings of the 29th ACM international conference on information & knowledge management",
+    "editor": [
+      [
+        "Mathieu",
+        "d'Aquin"
+      ],
+      [
+        "Stefan",
+        "Dietze"
+      ]
+    ],
+    "publisher": "ACM, New York"
+  },
+  {
+    "id": "yu:2019a",
+    "category": "InProceedings",
+    "author": [
+      [
+        "Ran",
+        "Yu"
+      ],
+      [
+        "Ujwal",
+        "Gadiraju"
+      ],
+      [
+        "Besnik",
+        "Fetahu"
+      ],
+      [
+        "Oliver",
+        "Lehmberg"
+      ],
+      [
+        "Dominique",
+        "Ritze"
+      ],
+      [
+        "Stefan",
+        "Dietze"
+      ]
+    ],
+    "month": "jan",
+    "title": "KnowMore – Knowledge Base Augmentation with Structured Web Markup",
+    "year": 2019,
+    "booktitle": "18th International Semantic Web Conference (ISWC19)"
+  },
+  {
+    "id": "yu:2019c",
+    "category": "InProceedings",
+    "author": [
+      [
+        "Ran",
+        "Yu"
+      ]
+    ],
+    "month": "oct",
+    "pages": "15--16",
+    "title": "Mining Machine-Readable Knowledge from Structured Web Markup",
+    "year": 2019,
+    "booktitle": "Joint Proceedings of the 6th International Workshop on Dataset PROFlLing and Search & the 1st Workshop on Semantic Explainability co-located with the 18th International Semantic Web Conference (ISWC 2019)",
+    "editor": [
+      [
+        "Elena",
+        "Demidova"
+      ],
+      [
+        "Stefan",
+        "Dietze"
+      ],
+      [
+        "John",
+        "Breslin"
+      ],
+      [
+        "Simon",
+        "Gottschalk"
+      ],
+      [
+        "Philipp",
+        "Cimiano"
+      ],
+      [
+        "Basil",
+        "Ell"
+      ],
+      [
+        "Agnieszka",
+        "Lawrynowicz"
+      ],
+      [
+        "Laura",
+        "Moss"
+      ],
+      [
+        "Axel-Cyrille Ngonga",
+        "Ngomo"
+      ]
+    ],
+    "publisher": "RWTH, Aachen"
+  },
+  {
+    "id": "ewerth:2019",
+    "category": "InProceedings",
+    "author": [
+      [
+        "Ralph",
+        "Ewerth"
+      ],
+      [
+        "Stefan",
+        "Dietze"
+      ],
+      [
+        "Anett",
+        "Hoppe"
+      ],
+      [
+        "Ran",
+        "Yu"
+      ]
+    ],
+    "month": "oct",
+    "pages": "2724--2725",
+    "title": "SALMM'19 - First International Workshop on Search as Learning with Multimedia Information",
+    "url": "https://doi.org/10.1145/3343031.3350553",
+    "year": 2019,
+    "booktitle": "27th ACM International Conference on Multimedia (MM 2019)",
+    "editor": [
+      [
+        "Laurent",
+        "Amsaleg"
+      ],
+      [
+        "Benoit",
+        "Huet"
+      ],
+      [
+        "Martha",
+        "Larson"
+      ],
+      [
+        "Guillaume",
+        "Gravier"
+      ],
+      [
+        "Hayley",
+        "Hung"
+      ],
+      [
+        "Chong-Wah",
+        "Ngo"
+      ],
+      [
+        "Wei Tsang",
+        "Ooi"
+      ]
+    ],
+    "publisher": "ACM, New York"
+  },
+  {
+    "id": "davari:2019",
+    "category": "InProceedings",
+    "author": [
+      [
+        "Masoud",
+        "Davari"
+      ],
+      [
+        "Ran",
+        "Yu"
+      ],
+      [
+        "Stefan",
+        "Dietze"
+      ]
+    ],
+    "month": "jul",
+    "title": "Understanding the Influence of Topic Familiarity on SearchBehavior in Digital Libraries",
+    "url": "https://ears2019.github.io/Davari-EARS2019.pdf",
+    "year": 2019,
+    "booktitle": "SIGIR 2019 Workshop on ExplainAble Recommendation and Search (EARS’19)",
+    "publisher": "ACM, New York"
+  },
+  {
+    "id": "gadiraju:2018",
+    "category": "InProceedings",
+    "author": [
+      [
+        "Ujwal",
+        "Gadiraju"
+      ],
+      [
+        "Ran",
+        "Yu"
+      ],
+      [
+        "Stefan",
+        "Dietze"
+      ],
+      [
+        "Peter",
+        "Holtz"
+      ]
+    ],
+    "doi": "10.1145/3176349.3176381",
+    "month": "mar",
+    "pages": "2--11",
+    "title": "Analyzing Knowledge Gain of Users in Informational Search Sessions on the Web",
+    "year": 2018,
+    "booktitle": "2018 Conference on Human Information Interaction & Retrieval (CHIIR 2018)",
+    "editor": [
+      [
+        "Chirag",
+        "Shah"
+      ],
+      [
+        "Nicholas J.",
+        "Belkin"
+      ],
+      [
+        "Katriina",
+        "Byström"
+      ],
+      [
+        "Jeff",
+        "Huang"
+      ],
+      [
+        "Falk",
+        "Scholer"
+      ]
+    ],
+    "publisher": "ACM, New York"
+  },
+  {
+    "id": "hoppe:2018",
+    "category": "InProceedings",
+    "author": [
+      [
+        "Anett",
+        "Hoppe"
+      ],
+      [
+        "Peter",
+        "Holtz"
+      ],
+      [
+        "Yvonne",
+        "Kammerer"
+      ],
+      [
+        "Ran",
+        "Yu"
+      ],
+      [
+        "Stefan",
+        "Dietze"
+      ],
+      [
+        "Ralph",
+        "Ewerth"
+      ]
+    ],
+    "month": "may",
+    "title": "Current Challenges for Studying Search as Learning Processes",
+    "year": 2018,
+    "booktitle": "7th Workshop on Learning & Education with Web Data (LILE2018)",
+    "editor": [
+      [
+        "Stefan",
+        "Dietze"
+      ],
+      [
+        "Mathieu",
+        "d'Aquin"
+      ],
+      [
+        "Dragan",
+        "Gasevic"
+      ],
+      [
+        "Eelco",
+        "Herder"
+      ],
+      [
+        "Joachim",
+        "Kimmerle"
+      ]
+    ]
+  },
+  {
+    "id": "yu:2018a",
+    "category": "InProceedings",
+    "author": [
+      [
+        "Ran",
+        "Yu"
+      ],
+      [
+        "Ujwal",
+        "Gadiraju"
+      ],
+      [
+        "Stefan",
+        "Dietze"
+      ]
+    ],
+    "month": "may",
+    "title": "Detecting, Understanding and Supporting Everyday Learning in Web Search",
+    "year": 2018,
+    "booktitle": "7th Workshop on Learning & Education with Web Data (LILE2018), in conjunction with ACM Web Science 2018 (WebSci18)",
+    "editor": [
+      [
+        "Stefan",
+        "Dietze"
+      ],
+      [
+        "Mathieu",
+        "d'Aquin"
+      ],
+      [
+        "Dragan",
+        "Gasevic"
+      ],
+      [
+        "Eelco",
+        "Herder"
+      ],
+      [
+        "Joachim",
+        "Kimmerle"
+      ]
+    ]
+  },
+  {
+    "id": "yu:2018b",
+    "category": "InProceedings",
+    "author": [
+      [
+        "Ran",
+        "Yu"
+      ],
+      [
+        "Ujwal",
+        "Gadiraju"
+      ],
+      [
+        "Peter",
+        "Holtz"
+      ],
+      [
+        "Markus",
+        "Rokicki"
+      ],
+      [
+        "Philipp",
+        "Kemkes"
+      ],
+      [
+        "Stefan",
+        "Dietze"
+      ]
+    ],
+    "doi": "10.1145/3209978.3210064",
+    "month": "jun",
+    "pages": "75--84",
+    "title": "Predicting User Knowledge Gain in Informational Search Sessions",
+    "url": "http://arxiv.org/abs/1805.00823",
+    "year": 2018,
+    "booktitle": "41st International ACM SIGIR Conference on Research & Development in Information Retrieval (SIGIR 2018)",
+    "editor": [
+      [
+        "Kevyn",
+        "Collins-Thompson"
+      ],
+      [
+        "Qiaozhu",
+        "Mei"
+      ],
+      [
+        "Brian",
+        "Davison"
+      ],
+      [
+        "Yiqun",
+        "Liu"
+      ],
+      [
+        "Emine",
+        "Yilmaz"
+      ]
+    ],
+    "publisher": "ACM, New York"
+  },
+  {
+    "id": "yu:2025",
+    "category": "Article",
+    "author": [
+      [
+        "Ran",
+        "Yu"
+      ],
+      [
+        "Jiqun",
+        "Liu"
+      ]
+    ],
+    "doi": "10.1145/3769733.3769735",
+    "month": "oct",
+    "title": "Chat as Learning in Interactive Information Retrieval and Generation",
+    "year": 2025,
+    "journal": "SIGIR Forum",
+    "volume": "1",
+    "number": 59
+  },
+  {
+    "id": "zhu:2025",
+    "category": "Article",
+    "author": [
+      [
+        "Xiaofei",
+        "Zhu"
+      ],
+      [
+        "Lele",
+        "Duan"
+      ],
+      [
+        "Stefan",
+        "Dietze"
+      ],
+      [
+        "Ran",
+        "Yu"
+      ]
+    ],
+    "doi": "10.1016/j.knosys.2024.112919",
+    "month": "jan",
+    "title": "TJMN: Target-enhanced joint meta network with contrastive learning for cross-domain recommendation",
+    "year": 2025,
+    "journal": "Knowledge-Based Systems",
+    "volume": "15 February 2025",
+    "number": 310
+  },
+  {
+    "id": "von-hoyer:2022",
+    "category": "Article",
+    "author": [
+      [
+        "Johannes",
+        "von Hoyer"
+      ],
+      [
+        "Anett",
+        "Hoppe"
+      ],
+      [
+        "Yvonne",
+        "Kammerer"
+      ],
+      [
+        "Christian",
+        "Otto"
+      ],
+      [
+        "Georg",
+        "Pardi"
+      ],
+      [
+        "Markus",
+        "Rokicki"
+      ],
+      [
+        "Ran",
+        "Yu"
+      ],
+      [
+        "Stefan",
+        "Dietze"
+      ],
+      [
+        "Ralph",
+        "Ewerth"
+      ],
+      [
+        "Peter",
+        "Holtz"
+      ]
+    ],
+    "doi": "10.3389/fpsyg.2022.827748",
+    "month": "mar",
+    "title": "The SAL Spaceship: Towards a comprehensive model of psychological and technological facets of search as learning (SAL)",
+    "year": 2022,
+    "journal": "Frontiers in Psychology, Section Human-Media Interaction",
+    "volume": "15 March 2022",
+    "number": 13
+  },
+  {
+    "id": "yu:2021",
+    "category": "Article",
+    "author": [
+      [
+        "Ran",
+        "Yu"
+      ],
+      [
+        "Rui",
+        "Tang"
+      ],
+      [
+        "Markus",
+        "Rokicki"
+      ],
+      [
+        "Ujwal",
+        "Gadiraju"
+      ],
+      [
+        "Stefan",
+        "Dietze"
+      ]
+    ],
+    "doi": "10.1007/s10791-021-09391-7",
+    "month": "mar",
+    "title": "Topic-independent modeling of user knowledge in informational search sessions",
+    "url": "https://link.springer.com/article/10.1007/s10791-021-09391-7",
+    "year": 2021,
+    "journal": "Information Retrieval Journal",
+    "volume": "24",
+    "number": 2021
+  },
+  {
+    "id": "yu:2019",
+    "category": "Article",
+    "author": [
+      [
+        "Ran",
+        "Yu"
+      ],
+      [
+        "Ujwal",
+        "Gadiraju"
+      ],
+      [
+        "Besnik",
+        "Fetahu"
+      ],
+      [
+        "Oliver",
+        "Lehmberg"
+      ],
+      [
+        "Dominique",
+        "Ritze"
+      ],
+      [
+        "Stefan",
+        "Dietze"
+      ]
+    ],
+    "doi": "10.3233/SW-180304",
+    "month": "aug",
+    "title": "KnowMore – Knowledge Base Augmentation with Structured Web Markup",
+    "url": "http://www.semantic-web-journal.net/content/knowmore-knowledge-base-augmentation-structured-web-markup-1",
+    "year": 2019,
+    "journal": "Semantic Web Journal",
+    "volume": "10",
+    "number": 2019
+  },
+
+
+
+  {
     "id": "kiesel:2026a",
     "category": "InProceedings",
     "address": "Cham, Switzerland",

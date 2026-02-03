@@ -1,11 +1,10 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>BibTeX to BDA Publications JSON</title>
-
-  <!-- bib2json from CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/bib2json@0.0.1/Parser.min.js"></script>
+<meta charset="utf-8">
+<title>BibTeX to BDA Publications JSON</title>
+<script src="https://cdn.jsdelivr.net/npm/bib2json@0.0.1/Parser.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@json-editor/json-editor@latest/dist/jsoneditor.min.js"></script>
 </head>
 <body>
 
@@ -13,9 +12,50 @@
 <br><br>
 <button id="convert">Convert to JSON</button>
 
+<div id="editor_holder"></div>
+
+<button id="submit">Get JSON from Form</button>
+<button id="fill">Fill Form with Sample Data</button>
+
 <pre id="output"></pre>
 
 <script>
+let editor = null;
+
+Promise.all([
+  fetch("https://raw.githubusercontent.com/the-bda-team/the-bda-team-web/refs/heads/main/_schemas/publications.json"),
+  fetch("https://raw.githubusercontent.com/the-bda-team/the-bda-team-web/refs/heads/main/_schemas/base.json")
+]).then(async ([publicationRes, baseRes]) => {
+  const publicationSchema = await publicationRes.json();
+  const baseSchema = await baseRes.json();
+
+  // 1. Initialize the Editor
+  const element = document.getElementById('editor_holder');
+  editor = new JSONEditor(element, {
+    ajax: true,
+    schema: publicationSchema,
+    refs: {
+      "_schemas/base.json": baseSchema
+    },
+    disable_collapse: true,
+    disable_edit_json: true,
+    disable_properties: true
+  });
+});
+
+// 2. Function to get JSON object (Submit)
+document.getElementById('submit').addEventListener('click', () => {
+  const errors = editor.validate();
+  if (errors.length) {
+    console.log("Validation Errors:", errors);
+  } else {
+    const data = editor.getValue();
+    console.log("Created JSON:", data);
+    alert(JSON.stringify(data, null, 2));
+  }
+});
+
+
 document.getElementById("convert").onclick = () => {
   const input = document.getElementById("bibtex").value.trim();
   if (!input) {
@@ -93,8 +133,7 @@ document.getElementById("convert").onclick = () => {
     results.push(out);
   }
 
-  document.getElementById("output").textContent =
-    JSON.stringify(results, null, 2).replace(/^./, "").replace(/.$/, "");
+  editor.setValue(results);
 };
 
 function parseAuthors(authorField) {
