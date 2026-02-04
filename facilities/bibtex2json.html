@@ -5,6 +5,81 @@
 <title>BibTeX to BDA Publications JSON</title>
 <script src="https://cdn.jsdelivr.net/npm/bib2json@0.0.1/Parser.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@json-editor/json-editor@latest/dist/jsoneditor.min.js"></script>
+<script> // Bibtex
+const categories = {
+  "article": "Article",
+  "inproceedings": "InProceedings",
+  "phdthesis": "PhDThesis"
+}
+
+const bibtexFieldParsers = {
+  "author": (value) => {
+    return value
+      .split(/\s+and\s+/i)
+      .map(name => {
+        name = name.trim();
+        // Handle "Last, First"
+        if (name.includes(",")) {
+          return name.split(",").map(s => s.trim());
+        }
+        // Handle "First Last"
+        const parts = name.split(/\s+/);
+        return [
+          parts.slice(0, -1).join(" "),
+          parts.slice(-1)[0]
+        ];
+      });
+  },
+  "pages": (value) => {
+    return value.replace(/-/g, "--");
+  }
+}
+
+
+function bibtex2json(bibtex, logElement) {
+  const entries = BibtexParser(bibtex).entries;
+  const idCounts = {};
+  const results = [];
+
+  for (const e of entries) {
+    const category = categories[e.EntryType.toLowerCase()];
+    if (!category) {
+      logElement.textContent += "\nIgnoring unknown entry type '" + e.EntryType + "'";
+      continue;
+    }
+
+    const schema = JSON.parse(JSON.stringify(schemas["publication"]["$defs"]["Publication"]["properties"]));
+    delete schema["id"];
+    delete schema["category"];
+    Object.assign(
+      schema,
+      schemas["publication"]["$defs"]["Publication"]["allOf"]
+        .find(condition => (condition["if"]["properties"]["category"]["const"] == category))["then"]["properties"]
+    );
+
+    let id = bibtexFieldParsers["author"](e.Fields.author)[0][1].toLowerCase().replace(/[^a-z]/g, "") + ":" + e.Fields.year;
+    if (!idCounts[id]) { idCounts[id] = 0; }
+    idCounts[id] += 1;
+    id += String.fromCharCode(96 + idCounts[id]);
+    const data = { id, category };
+
+    for (const key of Object.keys(e.Fields)) {
+      const normalizedKey = key.toLowerCase();
+      if (schema[normalizedKey]) {
+        let value = e.Fields[key];
+        if (bibtexFieldParsers[normalizedKey]) {
+          value = bibtexFieldParsers[normalizedKey](value);
+        }
+        data[normalizedKey] = value;
+      }
+    }
+    console.log(data);
+    results.push(data);
+  }
+
+  editor.setValue(results);
+};
+</script>
 </head>
 <body>
 
@@ -15,153 +90,46 @@
 <div id="editor_holder"></div>
 
 <button id="submit">Get JSON from Form</button>
-<button id="fill">Fill Form with Sample Data</button>
 
 <pre id="output"></pre>
 
 <script>
+const schemas = {};
 let editor = null;
+document.getElementById("convert").addEventListener("click", () => {
+  bibtex2json(document.getElementById("bibtex").value, document.getElementById("output"));
+});
 
 Promise.all([
   fetch("https://raw.githubusercontent.com/the-bda-team/the-bda-team-web/refs/heads/main/_schemas/publications.json"),
   fetch("https://raw.githubusercontent.com/the-bda-team/the-bda-team-web/refs/heads/main/_schemas/base.json")
-]).then(async ([publicationRes, baseRes]) => {
-  const publicationSchema = await publicationRes.json();
-  const baseSchema = await baseRes.json();
+]).then(async ([publicationResponse, baseResponse]) => {
+  schemas["publication"] = await publicationResponse.json();
+  schemas["base"] = await baseResponse.json();
 
   // 1. Initialize the Editor
   const element = document.getElementById('editor_holder');
   editor = new JSONEditor(element, {
-    ajax: true,
-    schema: publicationSchema,
+    schema: schemas["publication"],
     refs: {
-      "_schemas/base.json": baseSchema
+      "_schemas/base.json": schemas["base"]
     },
-    disable_collapse: true,
-    disable_edit_json: true,
-    disable_properties: true
+    display_required_only: true
   });
 });
 
 // 2. Function to get JSON object (Submit)
 document.getElementById('submit').addEventListener('click', () => {
   const errors = editor.validate();
+  editor.showValidationErrors();
   if (errors.length) {
-    console.log("Validation Errors:", errors);
+    document.getElementById("output").textContent = JSON.stringify(errors, null, 2);
   } else {
     const data = editor.getValue();
-    console.log("Created JSON:", data);
-    alert(JSON.stringify(data, null, 2));
+    document.getElementById("output").textContent = JSON.stringify(data, null, 2);
   }
 });
 
-
-document.getElementById("convert").onclick = () => {
-  const input = document.getElementById("bibtex").value.trim();
-  if (!input) {
-    alert("Paste a BibTeX string first!");
-    return;
-  }
-
-  let entries;
-  try {
-    entries = BibtexParser(input).entries;
-  } catch (e) {
-    console.error(e);
-    alert("BibTeX parsing failed.");
-    return;
-  }
-
-  console.log(entries)
-  const results = [];
-
-  for (const e of entries) {
-    let category;
-
-    switch (e.EntryType.toLowerCase()) {
-      case "inproceedings":
-        category = "InProceedings";
-        break;
-      case "article":
-        category = "Article";
-        break;
-      case "phdthesis":
-        category = "PhDThesis";
-        break;
-      default:
-        console.warn("Unsupported BibTeX type:", e.EntryType);
-        continue;
-    }
-
-    const out = {
-      id: e.EntryKey.toLowerCase().replace("20",":20") || "",
-      category,
-      title: e.Fields.title || "",
-      year: e.Fields.year ? parseInt(e.Fields.year, 10) : null,
-      month: (e.Fields.month) ? e.Fields.month.substring(0, 3).toLowerCase() : null,
-      author: parseAuthors(e.Fields.author || "")
-    };
-
-    // Common optional fields
-    if (e.Fields.doi)  out.doi = e.Fields.doi;
-    if (e.Fields.url)  out.url = e.Fields.url;
-    if (e.Fields.isbn) out.isbn = e.Fields.isbn;
-    if (e.Fields.issn) out.issn = e.Fields.issn;
-
-    // Type-specific mappings
-    if (category === "InProceedings") {
-      if (e.Fields.booktitle) out.booktitle = e.Fields.booktitle;
-      if (e.Fields.editor) out.editor = parseAuthors(e.Fields.editor);
-      if (e.Fields.publisher) out.publisher = e.Fields.publisher;
-      if (e.Fields.organization) out.organization = e.Fields.organization;
-      if (e.Fields.series) out.series = e.Fields.series;
-      if (e.Fields.volume) out.volume = e.Fields.volume;
-      if (e.Fields.pages) out.pages = normalizePages(e.Fields.pages);
-    }
-
-    if (category === "Article") {
-      if (e.Fields.journal) out.journal = e.Fields.journal;
-      if (e.Fields.volume) out.volume = e.Fields.volume;
-      if (e.Fields.number) out.number = parseInt(e.Fields.number, 10);
-      if (e.Fields.publisher) out.publisher = e.Fields.publisher;
-    }
-
-    if (category === "PhDThesis") {
-      if (e.Fields.school) out.school = e.Fields.school;
-    }
-
-    results.push(out);
-  }
-
-  editor.setValue(results);
-};
-
-function parseAuthors(authorField) {
-  if (!authorField) return [];
-
-  return authorField
-    .split(/\s+and\s+/i)
-    .map(name => {
-      name = name.trim();
-
-      // Handle "Last, First"
-      if (name.includes(",")) {
-        return name.split(",").map(s => s.trim());
-      }
-
-      // Handle "First Last"
-      const parts = name.split(/\s+/);
-      return [
-        parts.slice(0, -1).join(" "),
-        parts.slice(-1)[0]
-      ];
-    });
-}
-
-function normalizePages(pages) {
-  // BibTeX schema expects double dash
-  return pages.replace(/-/g, "--");
-}
 </script>
 
 </body>
