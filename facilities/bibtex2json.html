@@ -6,12 +6,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bib2json@0.0.1/Parser.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@json-editor/json-editor@latest/dist/jsoneditor.min.js"></script>
 <script> // Bibtex
-const categories = {
-  "article": "Article",
-  "inproceedings": "InProceedings",
-  "phdthesis": "PhDThesis"
-}
-
 const bibtexFieldParsers = {
   "author": (value) => {
     return value
@@ -37,6 +31,11 @@ const bibtexFieldParsers = {
 
 
 function bibtex2json(bibtex, logElement) {
+  const categories = Object.fromEntries(
+    schemas["publication"]["$defs"]["Publication"]["properties"]["category"]["enum"].map(
+      category => [category.toLowerCase(), category]
+    )
+  );
   const entries = BibtexParser(bibtex).entries;
   const idCounts = {};
   const results = [];
