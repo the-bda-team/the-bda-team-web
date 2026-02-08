@@ -60,9 +60,11 @@ https://www.acm.org/publications/authors/reference-formatting
 {%- if include.publication.booktitle %} data-booktitle="{{ include.publication.booktitle }}"{% endif %}
 {%- if include.publication.category %} data-category="{{ include.publication.category }}"{% endif %}
 {%- if include.publication.codeurl %} data-codeurl="{{ include.publication.codeurl }}"{% endif %}
+{%- if include.publication.chapter %} data-chapter="{{ include.publication.chapter }}"{% endif %}
 {%- if datasets != "" %} data-data="{{ datasets }}"{% endif %}
 {%- if include.publication.dataurl %} data-dataurl="{{ include.publication.dataurl }}"{% endif %}
 {%- if include.publication.doi %} data-doi="{{ include.publication.doi }}"{% endif %}
+{%- if include.publication.edition %} data-edition="{{ include.publication.edition }}"{% endif %}
 {%- if include.publication.editor %} data-editor="{% for editor in include.publication.editor %}{% if forloop.first == false %},{% endif %}{{ editor[0] }} {{ editor[1] }}{% endfor %}"{% endif %}
 {%- if events != "" %} data-events="{{ events }}"{% endif %}
 {%- if include.publication.keywords %} data-keywords="{% for keyword in include.publication.keywords %}{% if forloop.first == false %},{% endif %}{{ keyword }}{% endfor %}"{% endif %}
@@ -74,6 +76,7 @@ https://www.acm.org/publications/authors/reference-formatting
 {%- if include.publication.numpages %} data-numpages="{{ include.publication.numpages }}"{% endif %}
 {%- if include.publication.organization %} data-organization="{{ include.publication.organization }}"{% endif %}
 {%- if include.publication.pages %} data-pages="{{ include.publication.pages }}"{% endif %}
+data-people="{%- if include.publication.author %}{% for author in include.publication.author %}{% if forloop.first == false %},{% endif %}{{ author[1] }},{{ author[0] }} {{ author[1] }}{% endfor %}{% else %}{% for editor in include.publication.editor %}{% if forloop.first == false %},{% endif %}{{ editor[1] }},{{ editor[0] }} {{ editor[1] }}{% endfor %}{% endif %}"
 {%- if posterurl %} data-posterurl="{{ posterurl }}"{% endif %}
 {%- if include.publication.preprinturl %} data-preprinturl="{{ include.publication.preprinturl }}"{% endif %}
 {%- if include.publication.publisher %} data-publisher="{{ include.publication.publisher }}"{% endif %}

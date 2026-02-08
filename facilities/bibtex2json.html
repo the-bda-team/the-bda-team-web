@@ -121,6 +121,12 @@ Promise.all([
 });
 
 // 2. Function to get JSON object (Submit)
+function isEmpty(element) {
+  if (!element) { return true; }
+  if (Array.isArray(element) && element.every(isEmpty)) { return true; }
+  return false;
+}
+
 document.getElementById('submit').addEventListener('click', () => {
   const errors = editor.validate();
   editor.showValidationErrors();
@@ -128,6 +134,11 @@ document.getElementById('submit').addEventListener('click', () => {
     document.getElementById("output").textContent = JSON.stringify(errors, null, 2);
   } else {
     const data = editor.getValue();
+    for (const item of data) {
+      for (const attribute of Object.keys(item)) {
+        if (isEmpty(item[attribute])) { delete item[attribute]; }
+      }
+    }
     document.getElementById("output").textContent = JSON.stringify(data, null, 2);
   }
 });
