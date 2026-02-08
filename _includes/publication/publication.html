@@ -91,13 +91,7 @@ https://www.acm.org/publications/authors/reference-formatting
 >
 <div>
 <span class="reference">
-{%- if include.publication.category == "InProceedings" %}
-  {% include publication/people.html people=include.publication.author %}.
-  {{ include.publication.year }}.
-  {% if url %}<a href="{{ url }}">{% endif %}{{ include.publication.title }}{% if url %}</a>{% endif %}.
-  In <i>{{ include.publication.booktitle }}</i>, {{ site.months[include.publication.month] }}, {{ include.publication.year }}{% if include.publication.site %}, {{ include.publication.site }}{% endif %}.
-  {%- if include.publication.publisher %} {{ include.publication.publisher }}{% if include.publication.address %}, {{ include.publication.address }}{% endif %}{% if include.publication.pages %},{% else %}.{% endif %}{% endif %}{% if include.publication.pages %} {{ include.publication.pages | replace: "--", "–" }}.{% endif %}
-{%- elsif include.publication.category == "Article" -%}
+{%- if include.publication.category == "Article" -%}
   {% include publication/people.html people=include.publication.author %}.
   {{ include.publication.year }}.
   {% if url %}<a href="{{ url }}">{% endif %}{{ include.publication.title }}{% if url %}</a>{% endif %}.
@@ -105,12 +99,25 @@ https://www.acm.org/publications/authors/reference-formatting
   {% if include.publication.volume %}{% if include.publication.number %}{{ include.publication.volume }}, {{ include.publication.number }}{% else %}{{ include.publication.volume }}{% endif %}{% elsif include.publication.number %}{{ include.publication.number }}{% endif %}
   ({{ site.months[include.publication.month] }} {{ include.publication.year }})
   {%- if include.publication.pages %}, {{ include.publication.pages | replace: "--", "–" }}{% elsif include.publication.numpages %}, {{ include.publication.numpages }} pages{% endif %}.
+{%- elsif include.publication.category == "InProceedings" or include.publication.category == "InCollection" %}
+  {% include publication/people.html people=include.publication.author %}.
+  {{ include.publication.year }}.
+  {% if url %}<a href="{{ url }}">{% endif %}{{ include.publication.title }}{% if url %}</a>{% endif %}.
+  In <i>{{ include.publication.booktitle }}</i>, {{ site.months[include.publication.month] }}, {{ include.publication.year }}{% if include.publication.site %}, {{ include.publication.site }}{% endif %}.
+  {%- if include.publication.publisher %} {{ include.publication.publisher }}{% if include.publication.address %}, {{ include.publication.address }}{% endif %}{% if include.publication.pages %},{% else %}.{% endif %}{% endif %}{% if include.publication.pages %} {{ include.publication.pages | replace: "--", "–" }}.{% endif %}
 {%- elsif include.publication.category == "PhDThesis" -%}
   {% include publication/people.html people=include.publication.author %}.
   {{ include.publication.year }}.
   <i>{% if url %}<a href="{{ url }}">{% endif %}{{ include.publication.title }}{% if url %}</a>{% endif %}</i>.
   Ph.D. Dissertation.
   {{ include.publication.school }}.
+{%- elsif include.publication.category == "Proceedings" -%}
+  {% include publication/people.html people=include.publication.editor %}, editors.
+  {{ include.publication.year }}.
+  <i>{% if url %}<a href="{{ url }}">{% endif %}{{ include.publication.title }}{% if url %}</a>{% endif %}</i>.
+  {{ site.months[include.publication.month] }}, {{ include.publication.year }}{% if include.publication.site %}, {{ include.publication.site }}{% endif %}.
+  {% if include.publication.series %}{{ include.publication.series }}{% if include.publication.volume %}{% if include.publication.number %}{{ include.publication.volume }}, {{ include.publication.number }}{% else %}{{ include.publication.volume }}{% endif %}{% elsif include.publication.number %}{{ include.publication.number }}{% endif %}.{% endif %}
+  {%- if include.publication.publisher %} {{ include.publication.publisher }}{% if include.publication.address %}, {{ include.publication.address }}{% endif %}.{% endif %}
 {%- else -%}
 {{ include.publication -}}
 {%- endif %}

@@ -6,24 +6,27 @@
 <script src="https://cdn.jsdelivr.net/npm/bib2json@0.0.1/Parser.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@json-editor/json-editor@latest/dist/jsoneditor.min.js"></script>
 <script> // Bibtex
+const parsePeople = (value) => {
+  return value
+    .split(/\s+and\s+/i)
+    .map(name => {
+      name = name.trim();
+      // Handle "Last, First"
+      if (name.includes(",")) {
+        return name.split(",").map(s => s.trim());
+      }
+      // Handle "First Last"
+      const parts = name.split(/\s+/);
+      return [
+        parts.slice(0, -1).join(" "),
+        parts.slice(-1)[0]
+      ];
+    });
+}
+
 const bibtexFieldParsers = {
-  "author": (value) => {
-    return value
-      .split(/\s+and\s+/i)
-      .map(name => {
-        name = name.trim();
-        // Handle "Last, First"
-        if (name.includes(",")) {
-          return name.split(",").map(s => s.trim());
-        }
-        // Handle "First Last"
-        const parts = name.split(/\s+/);
-        return [
-          parts.slice(0, -1).join(" "),
-          parts.slice(-1)[0]
-        ];
-      });
-  },
+  "author": parsePeople,
+  "editors": parsePeople,
   "pages": (value) => {
     return value.replace(/-/g, "--");
   }
@@ -56,7 +59,7 @@ function bibtex2json(bibtex, logElement) {
         .find(condition => (condition["if"]["properties"]["category"]["const"] == category))["then"]["properties"]
     );
 
-    let id = bibtexFieldParsers["author"](e.Fields.author)[0][1].toLowerCase().replace(/[^a-z]/g, "") + ":" + e.Fields.year;
+    let id = parsePeople(e.Fields.author || e.Fields.editor)[0][1].toLowerCase().replace(/[^a-z]/g, "") + ":" + e.Fields.year;
     if (!idCounts[id]) { idCounts[id] = 0; }
     idCounts[id] += 1;
     id += String.fromCharCode(96 + idCounts[id]);

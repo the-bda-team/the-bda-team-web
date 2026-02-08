@@ -8,14 +8,13 @@
   "$defs": {
     "Publication": {
       "type": "object",
-      "required": ["id", "category", "author", "title", "month", "year"],
+      "required": ["id", "category", "title", "month", "year"],
       "properties": {
         "id": { "type": "string", "pattern": "^[a-z][a-z-]*[a-z]:[12][0-9]{3}[a-z]?$" },
-        "category": { "type": "string", "enum": ["Article", "InProceedings", "PhDThesis"] },
+        "category": { "type": "string", "enum": [ "Article", "InCollection", "InProceedings", "PhDThesis", "Proceedings" ] },
         "address": { "type": "string" },
         "annote": { "type": "string" },
         "appurl": { "type": "string", "format": "uri" },
-        "author": { "type": "array", "items": { "$ref": "_schemas/base.json#/$defs/PersonName" }, "minItems": 1 },
         "awardurl": { "type": "string", "format": "uri" },
         "codeurl": { "type": "string", "format": "uri" },
         "doi": { "$ref": "_schemas/base.json#/$defs/DOI" },
@@ -39,8 +38,9 @@
         {
           "if": { "properties": { "category": { "const": "Article" } } },
           "then": {
-            "required": [ "journal" ],
+            "required": [ "author", "journal" ],
             "properties": {
+              "author": { "type": "array", "items": { "$ref": "_schemas/base.json#/$defs/PersonName" }, "minItems": 1 },
               "editor": { "type": "array", "items": { "$ref": "_schemas/base.json#/$defs/PersonName" }, "minItems": 1 },
               "journal": { "type": "string" },
               "number": { "type": "integer", "minimum": 1 },
@@ -50,10 +50,30 @@
           }
         },
         {
+          "if": { "properties": { "category": { "const": "InCollection" } } },
+          "then": {
+            "required": [ "author", "booktitle" ],
+            "properties": {
+              "author": { "type": "array", "items": { "$ref": "_schemas/base.json#/$defs/PersonName" }, "minItems": 1 },
+              "booktitle": { "type": "string" },
+              "chapter": { "type": "string" },
+              "edition": { "type": "string" },
+              "editor": { "type": "array", "items": { "$ref": "_schemas/base.json#/$defs/PersonName" }, "minItems": 1 },
+              "number": { "type": "integer", "minimum": 1 },
+              "organization": { "type": "string" },
+              "publisher": { "type": "string" },
+              "series": { "type": "string" },
+              "site": { "type": "string" },
+              "volume": { "type": "string" }
+            }
+          }
+        },
+        {
           "if": { "properties": { "category": { "const": "InProceedings" } } },
           "then": {
-            "required": [ "booktitle" ],
+            "required": [ "author", "booktitle" ],
             "properties": {
+              "author": { "type": "array", "items": { "$ref": "_schemas/base.json#/$defs/PersonName" }, "minItems": 1 },
               "booktitle": { "type": "string" },
               "editor": { "type": "array", "items": { "$ref": "_schemas/base.json#/$defs/PersonName" }, "minItems": 1 },
               "number": { "type": "integer", "minimum": 1 },
@@ -68,9 +88,25 @@
         {
           "if": { "properties": { "category": { "const": "PhDThesis" } } },
           "then": {
-            "required": [ "school" ],
+            "required": [ "author", "school" ],
             "properties": {
+              "author": { "type": "array", "items": { "$ref": "_schemas/base.json#/$defs/PersonName" }, "minItems": 1 },
               "school": { "type": "string" }
+            }
+          }
+        },
+        {
+          "if": { "properties": { "category": { "const": "Proceedings" } } },
+          "then": {
+            "required": [ "editor" ],
+            "properties": {
+              "editor": { "type": "array", "items": { "$ref": "_schemas/base.json#/$defs/PersonName" }, "minItems": 1 },
+              "number": { "type": "integer", "minimum": 1 },
+              "organization": { "type": "string" },
+              "publisher": { "type": "string" },
+              "series": { "type": "string" },
+              "site": { "type": "string" },
+              "volume": { "type": "string" }
             }
           }
         }
