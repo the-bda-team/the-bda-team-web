@@ -1,4 +1,556 @@
 [
+{
+    "id": "momeni:2025b",
+    "category": "Article",
+    "month": "jun",
+    "title": "Linking Data Citation to Repository Visibility: An Empirical Study",
+    "year": 2025,
+    "author": [
+      [
+        "Fakhri",
+        "Momeni"
+      ],
+      [
+        "Janete Saldanha",
+        "Bach"
+      ],
+      [
+        "Brigitte",
+        "Mathiak"
+      ],
+      [
+        "Peter",
+        "Mutschke"
+      ]
+    ],
+    "journal": "CoRR",
+    "doi": "10.48550/ARXIV.2506.09530",
+    "volume": "abs/2506.09530"
+  },
+  {
+    "id": "momeni:2023a",
+    "category": "Article",
+    "month": "oct",
+    "title": "Investigating the Contribution of Author- and Publication-Specific Features to Scholars' h-index Prediction",
+    "year": 2023,
+    "author": [
+      [
+        "Fakhri",
+        "Momeni"
+      ],
+      [
+        "Philipp",
+        "Mayr"
+      ],
+      [
+        "Stefan",
+        "Dietze"
+      ]
+    ],
+    "journal": "EPJ Data Science",
+    "volume": "12",
+    "doi": "10.1140/EPJDS/S13688-023-00421-6",
+    "number": 45
+  },
+  {
+    "id": "momeni:2023b",
+    "category": "Article",
+    "month": "may",
+    "title": "Which Factors are Associated with Open Access Publishing? A Springer Nature Case Study",
+    "year": 2023,
+    "author": [
+      [
+        "Fakhri",
+        "Momeni"
+      ],
+      [
+        "Stefan",
+        "Dietze"
+      ],
+      [
+        "Philipp",
+        "Mayr"
+      ],
+      [
+        "Kristin",
+        "Biesenbender"
+      ],
+      [
+        "Isabella",
+        "Peters"
+      ]
+    ],
+    "journal": "Quantitative Science Studies",
+    "volume": "4",
+    "number": 2,
+    "pages": "353--371",
+    "doi": "10.1162/QSS_A_00253",
+    "preprinturl": "https://doi.org/10.48550/arXiv.2208.08221"
+  },
+  {
+    "id": "siegers:2023a",
+    "category": "InProceedings",
+    "month": "sep",
+    "title": "Linked Open Research Data for Social Science A Concept Registry for Granular Data Documentation",
+    "year": 2023,
+    "author": [
+      [
+        "Pascal",
+        "Siegers"
+      ],
+      [
+        "Antonia",
+        "May"
+      ],
+      [
+        "Claudia",
+        "Saalbach"
+      ],
+      [
+        "Jana",
+        "Nebelin"
+      ],
+      [
+        "Dagmar",
+        "Kern"
+      ],
+      [
+        "Andreas",
+        "Daniel"
+      ],
+      [
+        "Benjamin",
+        "Zapilko"
+      ],
+      [
+        "Fakhri",
+        "Momeni"
+      ],
+      [
+        "Knut",
+        "Wenzig"
+      ],
+      [
+        "Jan",
+        "Goebel"
+      ]
+    ],
+    "editor": [
+      [
+        "York",
+        "Sure-Vetter"
+      ],
+      [
+        "Carole A.",
+        "Goble"
+      ]
+    ],
+    "booktitle": "1st Conference on Research Data Infrastructure - Connecting Communities (CoRDI 2023)",
+    "publisher": "TIB Open Publishing",
+    "doi": "10.52825/CORDI.V1I.300"
+  },
+  {
+    "id": "momeni:2022a",
+    "category": "Article",
+    "month": "may",
+    "title": "The Many Facets of Academic Mobility and its Impact on Scholars' Career",
+    "year": 2022,
+    "author": [
+      [
+        "Fakhri",
+        "Momeni"
+      ],
+      [
+        "Fariba",
+        "Karimi"
+      ],
+      [
+        "Philipp",
+        "Mayr"
+      ],
+      [
+        "Isabella",
+        "Peters"
+      ],
+      [
+        "Stefan",
+        "Dietze"
+      ]
+    ],
+    "journal": "Journal of Informetrics",
+    "doi": "10.1016/J.JOI.2022.101280",
+    "volume": "16",
+    "number": 2,
+    "preprinturl": "https://doi.org/10.48550/arXiv.2203.06995"
+  },
+  {
+    "id": "momeni:2021a",
+    "category": "Article",
+    "month": "apr",
+    "title": "What Happens When a Journal Converts to Open Access? A Bibliometric Analysis",
+    "year": 2021,
+    "author": [
+      [
+        "Fakhri",
+        "Momeni"
+      ],
+      [
+        "Philipp",
+        "Mayr"
+      ],
+      [
+        "Nicholas",
+        "Fraser"
+      ],
+      [
+        "Isabella",
+        "Peters"
+      ]
+    ],
+    "journal": "Scientometrics",
+    "volume": "126",
+    "doi": "10.1007/S11192-021-03972-5",
+    "number": 12,
+    "pages": "9811--9827",
+    "preprinturl": "https://arxiv.org/abs/2103.14522"
+  },
+  {
+    "id": "fraser:2020a",
+    "category": "Article",
+    "month": "jun",
+    "title": "The Relationship Between bioRxiv Preprints, Citations and Altmetrics",
+    "year": 2020,
+    "author": [
+      [
+        "Nicholas",
+        "Fraser"
+      ],
+      [
+        "Fakhri",
+        "Momeni"
+      ],
+      [
+        "Philipp",
+        "Mayr"
+      ],
+      [
+        "Isabella",
+        "Peters"
+      ]
+    ],
+    "journal": "Quantitative Science Studies",
+    "volume": "1",
+    "doi": "10.1162/QSS_A_00043",
+    "number": 2,
+    "pages": "618--638"
+  },
+  {
+    "id": "karimi:2019a",
+    "category": "Article",
+    "month": "jun",
+    "title": "Analyzing the Network Structure and Gender Differences Among the Members of the Networked Knowledge Organization Systems (NKOS) Community",
+    "year": 2019,
+    "author": [
+      [
+        "Fariba",
+        "Karimi"
+      ],
+      [
+        "Philipp",
+        "Mayr"
+      ],
+      [
+        "Fakhri",
+        "Momeni"
+      ]
+    ],
+    "journal": "International Journal on Digital Libraries",
+    "volume": "20",
+    "doi": "10.1007/S00799-018-0243-0",
+    "number": 3,
+    "pages": "231--239",
+    "preprinturl": "http://arxiv.org/abs/1803.04225"
+  },
+  {
+    "id": "fraser:2019a",
+    "category": "InProceedings",
+    "month": "sep",
+    "title": "Examining the Citation and Altmetric Advantage of bioRxiv Preprints",
+    "year": 2019,
+    "author": [
+      [
+        "Nicholas",
+        "Fraser"
+      ],
+      [
+        "Fakhri",
+        "Momeni"
+      ],
+      [
+        "Philipp",
+        "Mayr"
+      ],
+      [
+        "Isabella",
+        "Peters"
+      ]
+    ],
+    "editor": [
+      [
+        "Giuseppe",
+        "Catalano"
+      ],
+      [
+        "Cinzia",
+        "Daraio"
+      ],
+      [
+        "Martina",
+        "Gregori"
+      ],
+      [
+        "Henk F.",
+        "Moed"
+      ],
+      [
+        "Giancarlo",
+        "Ruocco"
+      ]
+    ],
+    "booktitle": "17th International Conference on Scientometrics and Informetrics (ISSI 2019)",
+    "pages": "667--672",
+    "publisher": "ISSI Society"
+  },
+  {
+    "id": "momeni:2019a",
+    "category": "InProceedings",
+    "month": "sep",
+    "title": "From Closed to Open Access: A Case Study of Flipped Journals",
+    "year": 2019,
+    "author": [
+      [
+        "Fakhri",
+        "Momeni"
+      ],
+      [
+        "Nicholas",
+        "Fraser"
+      ],
+      [
+        "Isabella",
+        "Peters"
+      ],
+      [
+        "Philipp",
+        "Mayr"
+      ]
+    ],
+    "editor": [
+      [
+        "Giuseppe",
+        "Catalano"
+      ],
+      [
+        "Cinzia",
+        "Daraio"
+      ],
+      [
+        "Martina",
+        "Gregori"
+      ],
+      [
+        "Henk F.",
+        "Moed"
+      ],
+      [
+        "Giancarlo",
+        "Ruocco"
+      ]
+    ],
+    "booktitle": "17th International Conference on Scientometrics and Informetrics (ISSI 2019)",
+    "pages": "1270--1275",
+    "publisher": "ISSI Society",
+    "preprinturl": "http://arxiv.org/abs/1903.11682"
+  },
+  {
+    "id": "krmer:2017a",
+    "category": "Article",
+    "month": "mar",
+    "title": "Coverage of Author Identifiers in Web of Science and Scopus",
+    "year": 2017,
+    "author": [
+      [
+        "Thomas",
+        "Krämer"
+      ],
+      [
+        "Fakhri",
+        "Momeni"
+      ],
+      [
+        "Philipp",
+        "Mayr"
+      ]
+    ],
+    "journal": "CoRR",
+    "volume": "abs/1703.01319",
+    "doi": "10.48550/arXiv.1703.01319"
+  },
+  {
+    "id": "momeni:2016a",
+    "category": "InProceedings",
+    "month": "sep",
+    "title": "Analyzing the Research Output Presented at European Networked Knowledge Organization Systems Workshops (2000-2015)",
+    "year": 2016,
+    "author": [
+      [
+        "Fakhri",
+        "Momeni"
+      ],
+      [
+        "Philipp",
+        "Mayr"
+      ]
+    ],
+    "editor": [
+      [
+        "Philipp",
+        "Mayr"
+      ],
+      [
+        "Douglas",
+        "Tudhope"
+      ],
+      [
+        "Koraljka",
+        "Golub"
+      ],
+      [
+        "Christian",
+        "Wartena"
+      ],
+      [
+        "Ernesto William De",
+        "Luca"
+      ]
+    ],
+    "booktitle": "15th European Networked Knowledge Organization Systems Workshop (NKOS 2016) co-located with the 20th International Conference on Theory and Practice of Digital Libraries 2016 (TPDL 2016)",
+    "pages": "7--14",
+    "publisher": "CEUR-WS.org",
+    "volume": "1676",
+    "url": "https://ceur-ws.org/Vol-1676/paper1.pdf",
+    "series": "CEUR Workshop Proceedings"
+  },
+  {
+    "id": "momeni:2016b",
+    "category": "InProceedings",
+    "month": "sep",
+    "title": "Evaluating Co-authorship Networks in Author Name Disambiguation for Common Names",
+    "year": 2016,
+    "author": [
+      [
+        "Fakhri",
+        "Momeni"
+      ],
+      [
+        "Philipp",
+        "Mayr"
+      ]
+    ],
+    "editor": [
+      [
+        "Norbert",
+        "Fuhr"
+      ],
+      [
+        "László",
+        "Kovács"
+      ],
+      [
+        "Thomas",
+        "Risse"
+      ],
+      [
+        "Wolfgang",
+        "Nejdl"
+      ]
+    ],
+    "booktitle": "Research and Advanced Technology for Digital Libraries - 20th International Conference on Theory and Practice of Digital Libraries (TPDL 2016)",
+    "pages": "386--391",
+    "publisher": "Springer",
+    "volume": "9819",
+    "series": "Lecture Notes in Computer Science",
+    "doi": "10.1007/978-3-319-43997-6_31",
+    "preprinturl": "http://arxiv.org/abs/1606.03857"
+  },
+  {
+    "id": "momeni:2016c",
+    "category": "InProceedings",
+    "month": "jun",
+    "title": "Using Co-authorship Networks for Author Name Disambiguation",
+    "year": 2016,
+    "author": [
+      [
+        "Fakhri",
+        "Momeni"
+      ],
+      [
+        "Philipp",
+        "Mayr"
+      ]
+    ],
+    "editor": [
+      [
+        "Nabil R.",
+        "Adam"
+      ],
+      [
+        "Lillian (Boots)",
+        "Cassel"
+      ],
+      [
+        "Yelena",
+        "Yesha"
+      ],
+      [
+        "Richard",
+        "Furuta"
+      ],
+      [
+        "Michele C.",
+        "Weigle"
+      ]
+    ],
+    "booktitle": "16th ACM/IEEE-CS on Joint Conference on Digital Libraries (JCDL 2016)",
+    "pages": "261--262",
+    "publisher": "ACM",
+    "doi": "10.1145/2910896.2925461"
+  },
+  {
+    "id": "mayr:2016a",
+    "category": "Article",
+    "month": "jan",
+    "title": "Opening Scholarly Communication in Social Sciences: Supporting Open Peer Review with Fidus Writer",
+    "year": 2016,
+    "author": [
+      [
+        "Philipp",
+        "Mayr"
+      ],
+      [
+        "Fakhri",
+        "Momeni"
+      ],
+      [
+        "Christoph",
+        "Lange"
+      ]
+    ],
+    "journal": "CoRR",
+    "volume": "abs/1601.02927",
+    "doi": "10.48550/arXiv.1601.02927"
+  },
+
   {
     "id": "kiesel:2026a",
     "category": "InProceedings",
