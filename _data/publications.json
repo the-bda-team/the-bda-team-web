@@ -129,7 +129,7 @@
     "year": 2025
   },
   {
-    "id": "momeni:2025b",
+    "id": "momeni:2025c",
     "category": "InProceedings",
     "author": [["Fakhri", "Momeni"], ["Muhammad Taimoor", "Khan"], ["Johannes", "Kiesel"], ["Tony", "Ross-Hellauer"]],
     "booktitle": "3rd ACM Conference for Reproducibility and Replicability (REP 2025)",
@@ -153,7 +153,7 @@
     "year": 2025
   },
   {
-    "id": "momeni:2025a",
+    "id": "momeni:2025b",
     "category": "InProceedings",
     "author": [["Fakhri", "Momeni"], ["Janete Saldanha", "Bach"], ["Brigitte", "Mathiak"], ["Peter", "Mutschke"]],
     "booktitle": "20th International Conference on Scientometrics and Informetrics (ISSI 2025)",
@@ -179,6 +179,17 @@
     "series": "Lecture Notes in Computer Science",
     "title": "VISOR: VIsual Seizure Onset Detection PeRsonalized for Epilepsy Patients",
     "volume": "15871",
+    "year": 2025
+  },
+  {
+    "id": "momeni:2025a",
+    "category": "Article",
+    "author": [["Fakhri", "Momeni"], ["Janete Saldanha", "Bach"], ["Brigitte", "Mathiak"], ["Peter", "Mutschke"]],
+    "doi": "10.48550/ARXIV.2506.09530",
+    "journal": "CoRR",
+    "month": "jun",
+    "title": "Linking Data Citation to Repository Visibility: An Empirical Study",
+    "volume": "abs/2506.09530",
     "year": 2025
   },
   {
