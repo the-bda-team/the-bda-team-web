@@ -258,8 +258,8 @@ details.section[open] > summary > h2::after {
 .entry-image > img {
   width: 105px;
 }
-.entry-body > .name {
-  margin-right: calc(2 * var(--space-default));
+.entry-body > .years {
+  margin-left: calc(2 * var(--space-default));
 }
 .entries .years {
   color: var(--color-grayed-out-font);

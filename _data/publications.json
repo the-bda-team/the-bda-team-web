@@ -1,4 +1,85 @@
 [
+{
+    "id": "alishiba:2024a",
+    "category": "InCollection",
+    "month": "dec",
+    "title": "WorldKG: World-Scale Completion of Geographic Information",
+    "year": 2024,
+    "author": [
+      [
+        "Dsouza",
+        "Alishiba"
+      ],
+      [
+        "Tempelmeier",
+        "Nicolas"
+      ],
+      [
+        "Gottschalk",
+        "Simon"
+      ],
+      [
+        "Yu",
+        "Ran"
+      ],
+      [
+        "Demidova",
+        "Elena"
+      ]
+    ],
+    "booktitle": "Volunteered Geographic Information: Interpretation, Visualization and Social Context",
+    "pages": "3--19",
+    "editor": [
+      [
+        "Burghardt",
+        "Dirk"
+      ],
+      [
+        "Demidova",
+        "Elena"
+      ],
+      [
+        "Keim",
+        "Daniel A."
+      ]
+    ],
+    "publisher": "Springer Nature Switzerland",
+    "address": "Cham",
+    "isbn": "978-3-031-35374-1",
+    "doi": "10.1007/978-3-031-35374-1_1"
+  },
+{
+    "id": "pracheta:2016a",
+    "category": "InProceedings",
+    "month": "apr",
+    "title": "Analysing structured scholarly data embedded in web pages",
+    "year": 2016,
+    "author": [
+      [
+        "Pracheta",
+        "Sahoo"
+      ],
+      [
+        "Ujwal",
+        "Gadiraju"
+      ],
+      [
+        "Ran",
+        "Yu"
+      ],
+      [
+        "Sriparna",
+        "Saha"
+      ],
+      [
+        "Stefan",
+        "Dietze"
+      ]
+    ],
+    "booktitle": "International Workshop on Semantic, Analytics, Visualization",
+    "pages": "90--100",
+    "organization": "Springer"
+  },
   {
     "id": "kiesel:2026a",
     "category": "InProceedings",
@@ -1014,12 +1095,17 @@
     "year": 2022
   },
   {
-    "id": "tang:2021",
+    "id": "tang:2021a",
     "category": "InProceedings",
     "author": [["Rui", "Tang"], ["Ran", "Yu"], ["Markus", "Rokicki"], ["Ralph", "Ewerth"], ["Stefan", "Dietze"]],
-    "booktitle": "2nd International Workshop on Investigating Learning During Web Search, collocated with CIKM2021.",
-    "month": "dec",
+    "booktitle": "2nd International Workshop on Investigating Learning During Web Search",
+    "month": "nov",
     "title": "Domain-Specific Modeling of User Knowledge in Informational Search Sessions",
+    "editor": [["Gao", "Cong"], ["Maya", "Ramanath"]],
+    "publisher": "CEUR-WS.org",
+    "series": "CEUR Workshop Proceedings",
+    "url": "https://ceur-ws.org/Vol-3052/paper8.pdf",
+    "volume": "3052",
     "year": 2021
   },
   {
@@ -1092,20 +1178,6 @@
     "year": 2021
   },
   {
-    "id": "tang:2021a",
-    "category": "InProceedings",
-    "author": [["Rui", "Tang"], ["Ran", "Yu"], ["Markus", "Rokicki"], ["Ralph", "Ewerth"], ["Stefan", "Dietze"]],
-    "booktitle": "Proceedings of the CIKM 2021 Workshops co-located with 30th ACM International Conference on Information and Knowledge Management (CIKM 2021), Gold Coast, Queensland, Australia, November 1-5, 2021",
-    "editor": [["Gao", "Cong"], ["Maya", "Ramanath"]],
-    "month": "nov",
-    "publisher": "CEUR-WS.org",
-    "series": "CEUR Workshop Proceedings",
-    "title": "Domain-Specific Modeling of User Knowledge in Informational Search Sessions",
-    "url": "https://ceur-ws.org/Vol-3052/paper8.pdf",
-    "volume": "3052",
-    "year": 2021
-  },
-  {
     "id": "zhu:2021a",
     "category": "Article",
     "author": [["Xiaofei", "Zhu"], ["Jie", "Wu"], ["Ling", "Zhu"], ["Jiafeng", "Guo"], ["Ran", "Yu"], ["Katarina", "Boland"], ["Stefan", "Dietze"]],
@@ -1113,7 +1185,7 @@
     "journal": "Neurocomputing",
     "month": "nov",
     "pages": "141--150",
-    "title": "Exploring user historical semantic and sentiment preference for microblog sentiment classification",
+    "title": "Exploring User Historical Semantic and Sentiment Preference for Microblog Sentiment Classification",
     "volume": "464",
     "year": 2021
   },
@@ -1378,7 +1450,7 @@
     "year": 2020
   },
   {
-    "id": "dimitrov:2020",
+    "id": "dimitrov:2020a",
     "category": "InProceedings",
     "author": [["Dimitar", "Dimitrov"], ["Erdal", "Baran"], ["Pavlos", "Fafalios"], ["Ran", "Yu"], ["Xiaofei", "Zhu"], ["Matth\u00e4us", "Zloch"], ["Stefan", "Dietze"]],
     "booktitle": "29th ACM international conference on information & knowledge management (CIKM 2020)",
@@ -1541,7 +1613,7 @@
     "id": "davari:2019",
     "category": "InProceedings",
     "author": [["Masoud", "Davari"], ["Ran", "Yu"], ["Stefan", "Dietze"]],
-    "booktitle": "SIGIR 2019 Workshop on ExplainAble Recommendation and Search (EARS\u201919)",
+    "booktitle": "SIGIR 2019 Workshop on ExplainAble Recommendation and Search (EARS 2019)",
     "month": "jul",
     "publisher": "ACM, New York",
     "title": "Understanding the Influence of Topic Familiarity on SearchBehavior in Digital Libraries",
@@ -1713,7 +1785,7 @@
     "id": "hoppe:2018",
     "category": "InProceedings",
     "author": [["Anett", "Hoppe"], ["Peter", "Holtz"], ["Yvonne", "Kammerer"], ["Ran", "Yu"], ["Stefan", "Dietze"], ["Ralph", "Ewerth"]],
-    "booktitle": "7th Workshop on Learning & Education with Web Data (LILE2018)",
+    "booktitle": "7th Workshop on Learning & Education with Web Data (LILE 2018)",
     "editor": [["Stefan", "Dietze"], ["Mathieu", "d'Aquin"], ["Dragan", "Gasevic"], ["Eelco", "Herder"], ["Joachim", "Kimmerle"]],
     "month": "may",
     "title": "Current Challenges for Studying Search as Learning Processes",
@@ -1723,7 +1795,7 @@
     "id": "yu:2018a",
     "category": "InProceedings",
     "author": [["Ran", "Yu"], ["Ujwal", "Gadiraju"], ["Stefan", "Dietze"]],
-    "booktitle": "7th Workshop on Learning & Education with Web Data (LILE2018), in conjunction with ACM Web Science 2018 (WebSci18)",
+    "booktitle": "7th Workshop on Learning & Education with Web Data (LILE 2018)",
     "editor": [["Stefan", "Dietze"], ["Mathieu", "d'Aquin"], ["Dragan", "Gasevic"], ["Eelco", "Herder"], ["Joachim", "Kimmerle"]],
     "month": "may",
     "preprinturl": "http://arxiv.org/abs/1806.11046",
@@ -1925,7 +1997,7 @@
     "year": 2016
   },
   {
-    "id": "momeni:2016a",
+    "id": "momeni:2016c",
     "category": "InProceedings",
     "author": [["Fakhri", "Momeni"], ["Philipp", "Mayr"]],
     "booktitle": "15th European Networked Knowledge Organization Systems Workshop (NKOS 2016) co-located with the 20th International Conference on Theory and Practice of Digital Libraries 2016 (TPDL 2016)",
@@ -1956,7 +2028,7 @@
     "year": 2016
   },
   {
-    "id": "momeni:2016c",
+    "id": "momeni:2016a",
     "category": "InProceedings",
     "author": [["Fakhri", "Momeni"], ["Philipp", "Mayr"]],
     "booktitle": "16th ACM/IEEE-CS on Joint Conference on Digital Libraries (JCDL 2016)",

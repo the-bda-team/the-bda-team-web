@@ -1,5 +1,15 @@
 [
   {
+    "id": "tweetscov19",
+    "description": "About 41,000,000 tweets from October 2019 to August 2022 on COVID-19",
+    "month": "sep",
+    "name": "TweetsCOV19",
+    "people": ["yu"],
+    "publications": ["dimitrov:2020a"],
+    "url": "https://data.gesis.org/tweetscov19/",
+    "year": 2020
+  },
+  {
     "id": "webis-newsreader-voice-clones-26",
     "description": "32 voice-cloned news clips",
     "doi": "10.5281/zenodo.18254602",
@@ -338,6 +348,16 @@
     "publications": ["kiesel:2017a"],
     "url": "https://doi.org/10.5281/zenodo.205950",
     "year": 2017
+  },
+  {
+    "id": "an-open-testbed-for-author-name-disambiguation-evaluation-16",
+    "description": "About 32,000 publications from about 3,000 different authors with 1,000 different names",
+    "doi": "10.7802/1234",
+    "name": "An Open Testbed for Author Name Disambiguation Evaluation",
+    "people": ["momeni"],
+    "publications": ["momeni:2016a", "momeni:2016b"],
+    "url": "https://search.gesis.org/research_data/SDN-10.7802-1234?doi=10.7802/1234",
+    "year": 2016
   },
   {
     "id": "webis-editorials-16",

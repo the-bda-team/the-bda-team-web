@@ -8,7 +8,7 @@
   "$defs": {
     "Event": {
       "type": "object",
-      "required": ["id", "category", "description", "host", "name", "people", "site", "year"],
+      "required": ["id", "category", "description", "name", "people", "site", "year"],
       "properties": {
         "id": { "type": "string" },
         "category": { "type": "string", "enum": ["Conference", "Invited Talk", "Shared Task", "Teaching", "Tutorial", "Workshop"] },

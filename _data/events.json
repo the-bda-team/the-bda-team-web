@@ -41,6 +41,19 @@
     "year": 2026
   },
   {
+    "id": "r2cass2026",
+    "category": "Workshop",
+    "description": "2nd International Workshop on Social Science Meets Web Data: Reproducible and Reusable Computational Approaches (R2CASS 2026), held in conjunction with the ACM Web Conference (WebConf 2026), co-organized by Fakhri Momeni, Arnim Bleier, Danilo Dessi, and Muhammad Taimoor Khan",
+    "host": "WebConf 2026",
+    "hosturl": "https://www2026.thewebconf.org/",
+    "month": "apr",
+    "name": "R2CASS 2026",
+    "people": ["khan", "momeni"],
+    "site": "Dubai, United Arab Emirates",
+    "url": "https://sites.google.com/view/r2cass/home",
+    "year": 2026
+  },
+  {
     "id": "smad2026-gesis-methods-hub-social-media-datasprint",
     "category": "Workshop",
     "description": "Collaboratively explore social media datasets",
@@ -111,6 +124,44 @@
     "publications": ["kiesel:2025b"],
     "site": "Madrid, Spain",
     "url": "https://touche.webis.de/clef25/touche25-web/retrieval-augmented-debating.html",
+    "year": 2025
+  },
+  {
+    "id": "dgpuk-methoden2025-methods-hub",
+    "category": "Workshop",
+    "description": "Interactive workshop on the Methods Hub held in conjunction with the DGPuK Jahrestagung der Fachgruppe Methoden (Methoden 2025), co-organized by Felix Victor M\u00fcnch, Fakhri Momeni, Muhammad Taimoor Khan, and Chung-hong Chan",
+    "host": "Methoden 2025",
+    "hosturl": "https://www.ostfalia.de/hochschule/fakultaeten/fakultaet-verkehr-sport-tourismus-medien/institute/institut-fuer-oeffentliche-kommunikation/methoden25",
+    "month": "sep",
+    "name": "Methods Hub",
+    "people": ["khan", "momeni", "muench"],
+    "site": "Salzgitter, Germany",
+    "year": 2025
+  },
+  {
+    "id": "methodsnet2025-hands-on-methods-hub",
+    "category": "Tutorial",
+    "description": "Hands-on session on the Methods Hub held at the 2nd MethodsNET Conference (MethodsNET 2025), co-organized by Fakhri Momeni, Felix Victor M\u00fcnch, Chung-hong Chan, and Muhammad Taimoor Khan",
+    "host": "MethodsNET 2025",
+    "hosturl": "https://methodsnet.org/conference/2nd-methodsnet-conference/",
+    "month": "sep",
+    "name": "Hands-on Methods Hub",
+    "people": ["khan", "momeni", "muench"],
+    "site": "Louvain-la-Neuve, Belgium",
+    "url": "https://github.com/taimoorkhan-nlp/MethodsHub-at-MethodsNet2025",
+    "year": 2025
+  },
+  {
+    "id": "r2cass2025",
+    "category": "Workshop",
+    "description": "1st International Workshop on Social Science Meets Web Data: Reproducible and Reusable Computational Approaches (R2CASS 2025), held in conjunction with the International AAAI Conference on Web and Social Media (ICWSM 2025), co-organized by Fakhri Momeni, Muhammad Taimoor Khan, Arnim Bleier, and Tony Ross-Hellauer",
+    "host": "ICWSM 2025",
+    "hosturl": "https://www.icwsm.org/2025/index.html",
+    "month": "jun",
+    "name": "R2CASS 2025",
+    "people": ["khan", "momeni"],
+    "site": "Copenhagen, Denmark",
+    "url": "https://r2cass2025.wordpress.com/",
     "year": 2025
   },
   {
@@ -319,6 +370,17 @@
     "site": "Online",
     "url": "https://scai.info/scai-qrecc-2021/",
     "year": 2021
+  },
+  {
+    "id": "oase2020",
+    "category": "Conference",
+    "description": "Co-rganized by Nicholas Fraser, Philipp Mayr, Fakhri Momeni, and Isabella Peters as part of the BMBF OASE project (Open Access Effects)",
+    "month": "dec",
+    "name": "OASE",
+    "people": ["momeni"],
+    "site": "Online",
+    "url": "https://sites.google.com/view/oase-conference",
+    "year": 2020
   },
   {
     "id": "semeval2019-pan-hyperpartisan-news-detection",

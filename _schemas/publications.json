@@ -11,7 +11,7 @@
       "required": ["id", "category", "title", "month", "year"],
       "properties": {
         "id": { "type": "string", "pattern": "^[a-z][a-z-]*[a-z]:[12][0-9]{3}[a-z]?$" },
-        "category": { "type": "string", "enum": [ "Article", "InCollection", "InProceedings", "PhDThesis", "Proceedings", "TechReport" ] },
+        "category": { "type": "string", "enum": [ "Article", "InBook", "InCollection", "InProceedings", "PhDThesis", "Proceedings", "TechReport" ] },
         "address": { "type": "string" },
         "annote": { "type": "string" },
         "appurl": { "type": "string", "format": "uri" },
