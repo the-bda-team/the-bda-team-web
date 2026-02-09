@@ -68,6 +68,7 @@ https://www.acm.org/publications/authors/reference-formatting
 {%- if include.publication.editor %} data-editor="{% for editor in include.publication.editor %}{% if forloop.first == false %},{% endif %}{{ editor[0] }} {{ editor[1] }}{% endfor %}"{% endif %}
 {%- if events != "" %} data-events="{{ events }}"{% endif %}
 {%- if include.publication.keywords %} data-keywords="{% for keyword in include.publication.keywords %}{% if forloop.first == false %},{% endif %}{{ keyword }}{% endfor %}"{% endif %}
+{%- if include.publication.institution %} data-institution="{{ include.publication.institution }}"{% endif %}
 {%- if include.publication.isbn %} data-isbn="{{ include.publication.isbn }}"{% endif %}
 {%- if include.publication.issn %} data-issn="{{ include.publication.issn }}"{% endif %}
 {%- if include.publication.journal %} data-journal="{{ include.publication.journal }}"{% endif %}
@@ -121,6 +122,12 @@ data-people="{%- if include.publication.author %}{% for author in include.public
   {{ site.months[include.publication.month] }}, {{ include.publication.year }}{% if include.publication.site %}, {{ include.publication.site }}{% endif %}.
   {% if include.publication.series %}{{ include.publication.series }}{% if include.publication.volume %}{% if include.publication.number %} {{ include.publication.volume }}, {{ include.publication.number }}{% else %} {{ include.publication.volume }}{% endif %}{% elsif include.publication.number %} {{ include.publication.number }}{% endif %}.{% endif %}
   {%- if include.publication.publisher %} {{ include.publication.publisher }}{% if include.publication.address %}, {{ include.publication.address }}{% endif %}.{% endif %}
+{%- elsif include.publication.category == "TechReport" -%}
+  {% include publication/people.html people=include.publication.author %}.
+  {{ include.publication.year }}.
+  <i>{% if url %}<a href="{{ url }}">{% endif %}{{ include.publication.title }}{% if url %}</a>{% endif %}</i>.
+  {% if include.publication.number %}Report {{ include.publication.number }}.{% endif %}
+  {%- if include.publication.institution %} {{ include.publication.institution }}{% if include.publication.address %}, {{ include.publication.address }}{% endif %}.{% endif %}
 {%- else -%}
 {{ include.publication -}}
 {%- endif %}
@@ -159,10 +166,14 @@ data-people="{%- if include.publication.author %}{% for author in include.public
   author = {% raw %}{{% endraw %}{% for person in include.publication.author %}{% if forloop.first == false %} and {% endif %}{{ person[0] | unicode_to_latex }} {% if person[1] contains " " %}{% raw %}{{% endraw %}{% endif %}{{ person[1] | unicode_to_latex }}{% if person[1] contains " " %}{% raw %}}{% endraw %}{% endif %}{% endfor %}{% raw %}}{% endraw %},{% endif -%}
   {%- if include.publication.booktitle %}
   booktitle = {% raw %}{{% endraw %}{{ include.publication.booktitle | unicode_to_latex }}{% raw %}}{% endraw %},{% endif -%}
+  {%- if include.publication.chapter %}
+  chapter = {% raw %}{{% endraw %}{{ include.publication.chapter }}{% raw %}}{% endraw %},{% endif -%}
   {%- if include.publication.doi %}
   doi = {% raw %}{{% endraw %}{{ include.publication.doi }}{% raw %}}{% endraw %},{% endif -%}
   {%- if include.publication.editor %}
   editor = {% raw %}{{% endraw %}{% for person in include.publication.editor %}{% if forloop.first == false %} and {% endif %}{{ person[0] | unicode_to_latex }} {% if person[1] contains " " %}{% raw %}{{% endraw %}{% endif %}{{ person[1] | unicode_to_latex }}{% if person[1] contains " " %}{% raw %}}{% endraw %}{% endif %}{% endfor %}{% raw %}}{% endraw %},{% endif -%}
+  {%- if include.publication.institution %}
+  institution = {% raw %}{{% endraw %}{{ include.publication.institution }}{% raw %}}{% endraw %},{% endif -%}
   {%- if include.publication.isbn %}
   isbn = {% raw %}{{% endraw %}{{ include.publication.isbn }}{% raw %}}{% endraw %},{% endif -%}
   {%- if include.publication.issn %}

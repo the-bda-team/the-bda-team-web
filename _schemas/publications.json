@@ -11,7 +11,7 @@
       "required": ["id", "category", "title", "month", "year"],
       "properties": {
         "id": { "type": "string", "pattern": "^[a-z][a-z-]*[a-z]:[12][0-9]{3}[a-z]?$" },
-        "category": { "type": "string", "enum": [ "Article", "InCollection", "InProceedings", "PhDThesis", "Proceedings" ] },
+        "category": { "type": "string", "enum": [ "Article", "InCollection", "InProceedings", "PhDThesis", "Proceedings", "TechReport" ] },
         "address": { "type": "string" },
         "annote": { "type": "string" },
         "appurl": { "type": "string", "format": "uri" },
@@ -107,6 +107,17 @@
               "series": { "type": "string" },
               "site": { "type": "string" },
               "volume": { "type": "string" }
+            }
+          }
+        },
+        {
+          "if": { "properties": { "category": { "const": "TechReport" } } },
+          "then": {
+            "required": [ "author", "institution" ],
+            "properties": {
+              "author": { "type": "array", "items": { "$ref": "_schemas/base.json#/$defs/PersonName" }, "minItems": 1 },
+              "number": { "type": "integer", "minimum": 1 },
+              "institution": { "type": "string" }
             }
           }
         }
