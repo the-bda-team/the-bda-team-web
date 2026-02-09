@@ -42,13 +42,14 @@
     "year": 2025
   },
   {
-    "id": "yu:2025",
+    "id": "yu:2025a",
     "category": "Article",
     "author": [["Ran", "Yu"], ["Jiqun", "Liu"]],
     "doi": "10.1145/3769733.3769735",
     "journal": "SIGIR Forum",
     "month": "oct",
     "number": 59,
+    "numpages": 19,
     "title": "Chat as Learning in Interactive Information Retrieval and Generation",
     "volume": "1",
     "year": 2025
@@ -152,41 +153,42 @@
     "year": 2025
   },
   {
-    "id": "kumar:2025",
+    "id": "kumar:2025a",
     "category": "InProceedings",
-    "author": [["Uttam", "Kumar"], ["Ran", "Yu"], ["Elena", "Demidova"]],
-    "booktitle": "Advances in Knowledge Discovery and Data Mining",
+    "author": [["Uttam", "Kumar"], ["Ran", "Yu"], ["Michael", "Wenzel"], ["Elena", "Demidova"]],
+    "booktitle": "Advances in Knowledge Discovery and Data Mining - 29th Pacific-Asia Conference on Knowledge Discovery and Data Mining (PAKDD 2025)",
     "doi": "10.1007/978-981-96-8173-0_38",
     "editor": [["Xintao", "Wu"], ["Myra", "Spiliopoulou"], ["Can", "Wang"], ["Vipin", "Kumar"], ["Longbing", "Cao"], ["Yanqiu", "Wu"], ["Yu", "Yao"], ["Zhangkai", "Wu"]],
     "month": "jun",
     "pages": "482--494",
-    "publisher": "Springer, Singapore",
+    "publisher": "Springer",
+    "series": "Lecture Notes in Computer Science",
     "title": "VISOR: VIsual Seizure Onset Detection PeRsonalized for Epilepsy Patients",
+    "volume": "15871",
     "year": 2025
   },
   {
-    "id": "hoppe:2025",
+    "id": "hoppe:2025a",
     "category": "InProceedings",
     "author": [["Anett", "Hoppe"], ["Ran", "Yu"], ["Jiqun", "Liu"], ["Nilavra", "Bhattacharya"]],
-    "booktitle": "WSDM '25: Proceedings of the Eighteenth ACM International Conference on Web Search and Data Mining",
+    "booktitle": "Eighteenth ACM International Conference on Web Search and Data Mining (WSDM 2025)",
     "doi": "10.1145/3701551.3705709",
-    "editor": [["Wolfgang", "Nejdl"], ["S\u00f6ren", "Auer"], ["Oliver", "Karras"], ["Meeyoung", "Cha"], ["Marie-Francine", "Moens"], ["Marc", "Najork"]],
+    "editor": [["Wolfgang", "Nejdl"], ["S\u00f6ren", "Auer"], ["Meeyoung", "Cha"], ["Marie-Francine", "Moens"], ["Marc", "Najork"]],
     "month": "mar",
     "pages": "1116--1117",
-    "publisher": "ACM, New York",
+    "publisher": "ACM",
     "title": "IWILDS'25: The 5th International Workshop on Investigating Learning During Web Search",
     "year": 2025
   },
   {
-    "id": "zhu:2025",
+    "id": "zhu:2025a",
     "category": "Article",
     "author": [["Xiaofei", "Zhu"], ["Lele", "Duan"], ["Stefan", "Dietze"], ["Ran", "Yu"]],
     "doi": "10.1016/j.knosys.2024.112919",
     "journal": "Knowledge-Based Systems",
-    "month": "jan",
-    "number": 310,
+    "month": "feb",
     "title": "TJMN: Target-enhanced joint meta network with contrastive learning for cross-domain recommendation",
-    "volume": "15 February 2025",
+    "volume": "310",
     "year": 2025
   },
   {
@@ -275,6 +277,21 @@
     "year": 2024
   },
   {
+    "id": "kumar:2024a",
+    "category": "InProceedings",
+    "author": [["Uttam", "Kumar"], ["Ran", "Yu"], ["Michael", "Wenzel"], ["Elena", "Demidova"]],
+    "booktitle": "Advances in Knowledge Discovery and Data Mining - 28th Pacific-Asia Conference on Knowledge Discovery and Data Mining (PAKDD 2024)",
+    "doi": "10.1007/978-981-97-2238-9_20",
+    "editor": [["De-Nian", "Yang"], ["Xing", "Xie"], ["Vincent S.", "Tseng"], ["Jian", "Pei"], ["Jen-Wei", "Huang"], ["Jerry Chun-Wei", "Lin"]],
+    "month": "may",
+    "pages": "258--270",
+    "publisher": "Springer",
+    "series": "Lecture Notes in Computer Science",
+    "title": "Co-ReaSON: EEG-based Onset Detection of Focal Epileptic Seizures with Multimodal Feature Representations",
+    "volume": "14648",
+    "year": 2024
+  },
+  {
     "id": "mirzakhmedova:2024a",
     "category": "InProceedings",
     "author": [["Nailia", "Mirzakhmedova"], ["Johannes", "Kiesel"], ["Milad", "Alshomary"], ["Maximilian", "Heinrich"], ["Nicolas", "Handke"], ["Xiaoni", "Cai"], ["Valentin", "Barriere"], ["Doratossadat", "Dastgheib"], ["Omid", "Ghahroodi"], ["Mohammad Ali", "Sadraei"], ["Ehsaneddin", "Asgari"], ["Lea", "Kawaletz"], ["Henning", "Wachsmuth"], ["Benno", "Stein"]],
@@ -284,6 +301,21 @@
     "publisher": "International Committee on Computational Linguistics",
     "site": "Torino, Italy",
     "title": "The Touch\u00e923-ValueEval Dataset for Identifying Human Values behind Arguments",
+    "year": 2024
+  },
+  {
+    "id": "dadwal:2024a",
+    "category": "InProceedings",
+    "author": [["Rajjat", "Dadwal"], ["Ran", "Yu"], ["Elena", "Demidova"]],
+    "booktitle": "Advances in Knowledge Discovery and Data Mining - 28th Pacific-Asia Conference on Knowledge Discovery and Data Mining (PAKDD 2024)",
+    "doi": "10.1007/978-981-97-2262-4_29",
+    "editor": [["De-Nian", "Yang"], ["Xing", "Xie"], ["Vincent S.", "Tseng"], ["Jian", "Pei"], ["Jen-Wei", "Huang"], ["Jerry Chun-Wei", "Lin"]],
+    "month": "apr",
+    "pages": "363--375",
+    "publisher": "Springer",
+    "series": "Lecture Notes in Computer Science",
+    "title": "A Multimodal and Multitask Approach for Adaptive Geospatial Region Embeddings",
+    "volume": "14649",
     "year": 2024
   },
   {
@@ -337,6 +369,62 @@
     "year": 2023
   },
   {
+    "id": "gounoue:2023a",
+    "category": "InProceedings",
+    "author": [["Steve", "Gounoue"], ["Ran", "Yu"], ["Elena", "Demidova"]],
+    "booktitle": "31st ACM International Conference on Advances in Geographic Information Systems (SIGSPATIAL 2023)",
+    "doi": "10.1145/3589132.3625653",
+    "editor": [["Matthias", "Renz"], ["Mario A.", "Nascimento"]],
+    "month": "nov",
+    "number": 103,
+    "numpages": 4,
+    "publisher": "ACM",
+    "title": "SCANNER: A Spatio-temporal Correlation and Neighborhood-based Feature Enrichment for Traffic Prediction",
+    "year": 2023
+  },
+  {
+    "id": "dsouza:2023a",
+    "category": "InProceedings",
+    "author": [["Alishiba", "Dsouza"], ["Ran", "Yu"], ["Moritz", "Windoffer"], ["Elena", "Demidova"]],
+    "booktitle": "The Semantic Web - 22nd International Semantic Web Conference (ISWC 2023)",
+    "doi": "10.1007/978-3-031-47240-4_12",
+    "editor": [["Terry R.", "Payne"], ["Valentina", "Presutti"], ["Guilin", "Qi"], ["Mar\u00eda", "Poveda-Villal\u00f3n"], ["Giorgos", "Stoilos"], ["Laura", "Hollink"], ["Zoi", "Kaoudi"], ["Gong", "Cheng"], ["Juanzi", "Li"]],
+    "month": "nov",
+    "pages": "216--233",
+    "publisher": "Springer",
+    "series": "Lecture Notes in Computer Science",
+    "title": "Iterative Geographic Entity Alignment with Cross-Attention",
+    "volume": "14265",
+    "year": 2023
+  },
+  {
+    "id": "mann:2023a",
+    "category": "InProceedings",
+    "author": [["Genivika", "Mann"], ["Alishiba", "Dsouza"], ["Ran", "Yu"], ["Elena", "Demidova"]],
+    "booktitle": "The Semantic Web - 22nd International Semantic Web Conference (ISWC 2023)",
+    "doi": "10.1007/978-3-031-47240-4_10",
+    "editor": [["Terry R.", "Payne"], ["Valentina", "Presutti"], ["Guilin", "Qi"], ["Mar\u00eda", "Poveda-Villal\u00f3n"], ["Giorgos", "Stoilos"], ["Laura", "Hollink"], ["Zoi", "Kaoudi"], ["Gong", "Cheng"], ["Juanzi", "Li"]],
+    "month": "nov",
+    "pages": "179--196",
+    "publisher": "Springer",
+    "series": "Lecture Notes in Computer Science",
+    "title": "Spatial Link Prediction with Spatial and Semantic Embeddings",
+    "volume": "14265",
+    "year": 2023
+  },
+  {
+    "id": "markwald:2023a",
+    "category": "Article",
+    "author": [["Marco", "Markwald"], ["Jiqun", "Liu"], ["Ran", "Yu"]],
+    "doi": "10.1007/S10791-023-09426-1",
+    "journal": "Information Retrieval Journal",
+    "month": "oct",
+    "number": 10,
+    "title": "Constructing and meta-evaluating state-aware evaluation metrics for interactive search systems",
+    "volume": "26",
+    "year": 2023
+  },
+  {
     "id": "bondarenko:2023c",
     "category": "InProceedings",
     "address": "Berlin Heidelberg New York",
@@ -351,6 +439,18 @@
     "title": "Overview of Touch\u00e9 2023: Argument and Causal Retrieval",
     "versions": [{"name": "clef worknotes", "url": "https://ceur-ws.org/Vol-3497/paper-259.pdf"}, {"name": "ecir abstract", "url": "https://doi.org/10.1007/978-3-031-28241-6_61"}],
     "volume": "14163",
+    "year": 2023
+  },
+  {
+    "id": "zgbek:2023a",
+    "category": "Proceedings",
+    "editor": [["\u00d6zlem", "\u00d6zg\u00f6bek"], ["Andreas", "Lommatzsch"], ["Benjamin", "Kille"], ["Peng", "Liu"], ["Edward C.", "Malthouse"], ["Jon Atle", "Gulla"], ["Anett", "Hoppe"], ["Ran", "Yu"], ["Jiqun", "Liu"]],
+    "month": "jul",
+    "publisher": "CEUR-WS.org",
+    "series": "CEUR Workshop Proceedings",
+    "title": "10th International Workshop on News Recommendation and Analytics (INRA 2022) and the 3rd International Workshop on Investigating Learning During Web Search (IWILDS 2022) co-located with 45th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2022)",
+    "url": "https://ceur-ws.org/Vol-3411",
+    "volume": "3411",
     "year": 2023
   },
   {
@@ -407,6 +507,20 @@
     "year": 2023
   },
   {
+    "id": "aboutorab:2023a",
+    "category": "InProceedings",
+    "author": [["Hamed", "Aboutorab"], ["Ran", "Yu"], ["Alishiba", "Dsouza"], ["Morteza", "Saberi"], ["Omar Khadeer", "Hussain"]],
+    "booktitle": "Second International Workshop on Linked Data-driven Resilience Research 2023 co-located with Extended Semantic Web Conference 2023 (ESWC 2023)",
+    "editor": [["Sebastian", "Tramp"], ["Ricardo", "Usbeck"], ["Natanael", "Arndt"], ["Julia", "Holze"], ["S\u00f6ren", "Auer"]],
+    "month": "may",
+    "publisher": "CEUR-WS.org",
+    "series": "CEUR Workshop Proceedings",
+    "title": "A News Recommendation System for Environmental Risk Management",
+    "url": "https://ceur-ws.org/Vol-3401/paper4.pdf",
+    "volume": "3401",
+    "year": 2023
+  },
+  {
     "id": "deckers:2023a",
     "category": "InProceedings",
     "author": [["Niklas", "Deckers"], ["Maik", "Fr\u00f6be"], ["Johannes", "Kiesel"], ["Gianluca", "Pandolfo"], ["Christopher", "Schr\u00f6der"], ["Benno", "Stein"], ["Martin", "Potthast"]],
@@ -432,6 +546,18 @@
     "site": "Austin, TX, USA",
     "title": "Guiding Oral Conversations: How to Nudge Users Towards Asking Questions?",
     "year": 2023
+  },
+  {
+    "id": "symeonidou:2022a",
+    "category": "Proceedings",
+    "editor": [["Danai", "Symeonidou"], ["Ran", "Yu"], ["Davide", "Ceolin"], ["Mar\u00eda", "Poveda-Villal\u00f3n"], ["Davide", "Audrito"], ["Luigi Di", "Caro"], ["Francesca", "Grasso"], ["Roberto", "Nai"], ["Emilio", "Sulis"], ["Fajar J.", "Ekaputra"], ["Oliver", "Kutz"], ["Nicolas", "Troquard"]],
+    "month": "sep",
+    "publisher": "CEUR-WS.org",
+    "series": "CEUR Workshop Proceedings",
+    "title": "Companion Proceedings of the 23rd International Conference on Knowledge Engineering and Knowledge Management (EKAW 2022)",
+    "url": "https://ceur-ws.org/Vol-3256",
+    "volume": "3256",
+    "year": 2022
   },
   {
     "id": "elstner:2022",
@@ -464,6 +590,49 @@
     "title": "Overview of Touch\u00e9 2022: Argument Retrieval",
     "versions": [{"name": "clef worknotes", "url": "https://ceur-ws.org/Vol-3180/paper-247.pdf"}, {"name": "ecir abstract", "url": "https://doi.org/10.1007/978-3-030-99739-7_43"}],
     "volume": "13390",
+    "year": 2022
+  },
+  {
+    "id": "rokicki:2022a",
+    "category": "InProceedings",
+    "author": [["Markus", "Rokicki"], ["Ran", "Yu"], ["Daniel", "Hienert"]],
+    "booktitle": "10th International Workshop on News Recommendation and Analytics (INRA 2022) and the 3rd International Workshop on Investigating Learning During Web Search (IWILDS 2022) co-located with 45th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2022)",
+    "editor": [["\u00d6zlem", "\u00d6zg\u00f6bek"], ["Andreas", "Lommatzsch"], ["Benjamin", "Kille"], ["Peng", "Liu"], ["Edward C.", "Malthouse"], ["Jon Atle", "Gulla"], ["Anett", "Hoppe"], ["Ran", "Yu"], ["Jiqun", "Liu"]],
+    "month": "jul",
+    "pages": "60--68",
+    "publisher": "CEUR-WS.org",
+    "series": "CEUR Workshop Proceedings",
+    "title": "Learning to Rank for Knowledge Gain",
+    "url": "https://ceur-ws.org/Vol-3411/IWILDS-paper2.pdf",
+    "volume": "3411",
+    "year": 2022
+  },
+  {
+    "id": "hoppe:2022b",
+    "category": "InProceedings",
+    "author": [["Anett", "Hoppe"], ["Ran", "Yu"], ["Jiqun", "Liu"]],
+    "booktitle": "45th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2022)",
+    "doi": "10.1145/3477495.3531698",
+    "editor": [["Enrique", "Amig\u00f3"], ["Pablo", "Castells"], ["Julio", "Gonzalo"], ["Ben", "Carterette"], ["J. Shane", "Culpepper"], ["Gabriella", "Kazai"]],
+    "month": "jul",
+    "pages": "3482--3484",
+    "publisher": "ACM",
+    "title": "IWILDS'22 - Third International Workshop on Investigating Learning During Web Search",
+    "year": 2022
+  },
+  {
+    "id": "hoppe:2022a",
+    "category": "InProceedings",
+    "author": [["Anett", "Hoppe"], ["Ran", "Yu"], ["Jiqun", "Liu"]],
+    "booktitle": "Joint Proceedings of the 10th International Workshop on News Recommendation and Analytics (INRA 2022) and the 3rd International Workshop on Investigating Learning During Web Search (IWILDS 2022) co-located with 45th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2022), Madrid, Spain, July 15, 2022",
+    "editor": [["\u00d6zlem", "\u00d6zg\u00f6bek"], ["Andreas", "Lommatzsch"], ["Benjamin", "Kille"], ["Peng", "Liu"], ["Edward C.", "Malthouse"], ["Jon Atle", "Gulla"], ["Anett", "Hoppe"], ["Ran", "Yu"], ["Jiqun", "Liu"]],
+    "month": "jul",
+    "pages": "38--44",
+    "publisher": "CEUR-WS.org",
+    "series": "CEUR Workshop Proceedings",
+    "title": "Preface to IWILDS 2022",
+    "url": "https://ceur-ws.org/Vol-3411/IWILDS-paper0_preface.pdf",
+    "volume": "3411",
     "year": 2022
   },
   {
@@ -519,6 +688,20 @@
     "year": 2022
   },
   {
+    "id": "otto:2022a",
+    "category": "InProceedings",
+    "author": [["Christian", "Otto"], ["Markus", "Rokicki"], ["Georg", "Pardi"], ["Wolfgang", "Gritz"], ["Daniel", "Hienert"], ["Ran", "Yu"], ["Johannes von", "Hoyer"], ["Anett", "Hoppe"], ["Stefan", "Dietze"], ["Peter", "Holtz"], ["Yvonne", "Kammerer"], ["Ralph", "Ewerth"]],
+    "booktitle": "CHIIR '22: ACM SIGIR Conference on Human Information Interaction and Retrieval, Regensburg, Germany, March 14 - 18, 2022",
+    "doi": "10.1145/3498366.3505835",
+    "editor": [["David", "Elsweiler"]],
+    "month": "mar",
+    "pages": "347--352",
+    "preprinturl": "https://arxiv.org/abs/2201.02339",
+    "publisher": "ACM",
+    "title": "SaL-Lightning Dataset: Search and Eye Gaze Behavior, Resource Interactions and Knowledge Gain during Web Search",
+    "year": 2022
+  },
+  {
     "id": "von-hoyer:2022",
     "category": "Article",
     "author": [["Johannes", "von Hoyer"], ["Anett", "Hoppe"], ["Yvonne", "Kammerer"], ["Christian", "Otto"], ["Georg", "Pardi"], ["Markus", "Rokicki"], ["Ran", "Yu"], ["Stefan", "Dietze"], ["Ralph", "Ewerth"], ["Peter", "Holtz"]],
@@ -531,12 +714,78 @@
     "year": 2022
   },
   {
+    "id": "demidova:2022a",
+    "category": "Article",
+    "author": [["Elena", "Demidova"], ["Alishiba", "Dsouza"], ["Simon", "Gottschalk"], ["Nicolas", "Tempelmeier"], ["Ran", "Yu"]],
+    "doi": "10.1145/3522598.3522602",
+    "journal": "SIGWEB Newsletter",
+    "month": "mar",
+    "number": 4,
+    "numpages": 8,
+    "preprinturl": "https://arxiv.org/abs/2302.08823",
+    "title": "Creating Knowledge Graphs for Geographic Data on the Web",
+    "volume": "2022",
+    "year": 2022
+  },
+  {
+    "id": "yu:2022a",
+    "category": "Article",
+    "author": [["Ran", "Yu"], ["", "Limock"], ["Stefan", "Dietze"]],
+    "doi": "10.48550/ARXIV.2207.01256",
+    "journal": "CoRR",
+    "month": "jan",
+    "title": "Still Haven't Found What You're Looking For - Detecting the Intent of Web Search Missions from User Interaction Features",
+    "url": "https://doi.org/10.48550/arXiv.2207.01256",
+    "volume": "abs/2207.01256",
+    "year": 2022
+  },
+  {
     "id": "tang:2021",
     "category": "InProceedings",
     "author": [["Rui", "Tang"], ["Ran", "Yu"], ["Markus", "Rokicki"], ["Ralph", "Ewerth"], ["Stefan", "Dietze"]],
     "booktitle": "2nd International Workshop on Investigating Learning During Web Search, collocated with CIKM2021.",
     "month": "dec",
     "title": "Domain-Specific Modeling of User Knowledge in Informational Search Sessions",
+    "year": 2021
+  },
+  {
+    "id": "dsouza:2021a",
+    "category": "InProceedings",
+    "author": [["Alishiba", "Dsouza"], ["Nicolas", "Tempelmeier"], ["Ran", "Yu"], ["Simon", "Gottschalk"], ["Elena", "Demidova"]],
+    "booktitle": "30th ACM International Conference on Information and Knowledge Management (CIKM 2021)",
+    "doi": "10.1145/3459637.3482023",
+    "editor": [["Gianluca", "Demartini"], ["Guido", "Zuccon"], ["J. Shane", "Culpepper"], ["Zi", "Huang"], ["Hanghang", "Tong"]],
+    "month": "nov",
+    "pages": "4475--4484",
+    "preprinturl": "https://arxiv.org/abs/2109.10036",
+    "publisher": "ACM",
+    "title": "WorldKG: A World-Scale Geographic Knowledge Graph",
+    "year": 2021
+  },
+  {
+    "id": "hoppe:2021a",
+    "category": "InProceedings",
+    "author": [["Anett", "Hoppe"], ["Ran", "Yu"], ["Irina R.", "Brich"], ["Jiqun", "Liu"]],
+    "booktitle": "30th ACM International Conference on Information and Knowledge Management (CIKM 2021)",
+    "doi": "10.1145/3459637.3482034",
+    "editor": [["Gianluca", "Demartini"], ["Guido", "Zuccon"], ["J. Shane", "Culpepper"], ["Zi", "Huang"], ["Hanghang", "Tong"]],
+    "month": "nov",
+    "pages": "4880--4881",
+    "publisher": "ACM",
+    "title": "IWILDS'21: Second International Workshop on Learning During Web Search",
+    "year": 2021
+  },
+  {
+    "id": "liu:2021a",
+    "category": "InProceedings",
+    "author": [["Jiqun", "Liu"], ["Ran", "Yu"]],
+    "booktitle": "30th ACM International Conference on Information and Knowledge Management (CIKM 2021)",
+    "doi": "10.1145/3459637.3482190",
+    "editor": [["Gianluca", "Demartini"], ["Guido", "Zuccon"], ["J. Shane", "Culpepper"], ["Zi", "Huang"], ["Hanghang", "Tong"]],
+    "month": "nov",
+    "pages": "3258--3262",
+    "publisher": "ACM",
+    "title": "State-Aware Meta-Evaluation of Evaluation Metrics in Interactive Information Retrieval",
     "year": 2021
   },
   {
@@ -566,6 +815,32 @@
     "publisher": "Association for Computational Linguistics",
     "site": "Punta Cana, Dominican Republic",
     "title": "Image Retrieval for Arguments Using Stance-Aware Query Expansion",
+    "year": 2021
+  },
+  {
+    "id": "tang:2021a",
+    "category": "InProceedings",
+    "author": [["Rui", "Tang"], ["Ran", "Yu"], ["Markus", "Rokicki"], ["Ralph", "Ewerth"], ["Stefan", "Dietze"]],
+    "booktitle": "Proceedings of the CIKM 2021 Workshops co-located with 30th ACM International Conference on Information and Knowledge Management (CIKM 2021), Gold Coast, Queensland, Australia, November 1-5, 2021",
+    "editor": [["Gao", "Cong"], ["Maya", "Ramanath"]],
+    "month": "nov",
+    "publisher": "CEUR-WS.org",
+    "series": "CEUR Workshop Proceedings",
+    "title": "Domain-Specific Modeling of User Knowledge in Informational Search Sessions",
+    "url": "https://ceur-ws.org/Vol-3052/paper8.pdf",
+    "volume": "3052",
+    "year": 2021
+  },
+  {
+    "id": "zhu:2021a",
+    "category": "Article",
+    "author": [["Xiaofei", "Zhu"], ["Jie", "Wu"], ["Ling", "Zhu"], ["Jiafeng", "Guo"], ["Ran", "Yu"], ["Katarina", "Boland"], ["Stefan", "Dietze"]],
+    "doi": "10.1016/J.NEUCOM.2021.08.089",
+    "journal": "Neurocomputing",
+    "month": "nov",
+    "pages": "141--150",
+    "title": "Exploring user historical semantic and sentiment preference for microblog sentiment classification",
+    "volume": "464",
     "year": 2021
   },
   {
@@ -617,16 +892,19 @@
     "year": 2021
   },
   {
-    "id": "otto:2021",
+    "id": "otto:2021a",
     "category": "InProceedings",
     "author": [["Christian", "Otto"], ["Ran", "Yu"], ["Georg", "Pardi"], ["Johannes von", "Hoyer"], ["Markus", "Rokicki"], ["Anett", "Hoppe"], ["Peter", "Holtz"], ["Yvonne", "Kammerer"], ["Stefan", "Dietze"], ["Ralph", "Ewerth"]],
-    "booktitle": "Artificial Intelligence in Education: AIED 2021",
+    "booktitle": "Artificial Intelligence in Education - 22nd International Conference (AIED 2021)",
     "doi": "10.1007/978-3-030-78292-4_26",
-    "editor": [["Ido", "Roll"], ["Danielle", "McNamara"], ["Sergey", "Sosnovsky"], ["Rose", "Luckin"], ["Vania", "Dimitrova"]],
+    "editor": [["Ido", "Roll"], ["Danielle S.", "McNamara"], ["Sergey A.", "Sosnovsky"], ["Rose", "Luckin"], ["Vania", "Dimitrova"]],
     "month": "jun",
     "pages": "318--330",
-    "publisher": "Springer, Cham",
-    "title": "Predicting knowledge gain during web search based on multimedia resource consumption",
+    "preprinturl": "https://arxiv.org/abs/2106.06244",
+    "publisher": "Springer",
+    "series": "Lecture Notes in Computer Science",
+    "title": "Predicting Knowledge Gain During Web Search Based on Multimedia Resource Consumption",
+    "volume": "12748",
     "year": 2021
   },
   {
@@ -667,14 +945,15 @@
     "year": 2021
   },
   {
-    "id": "yu:2021",
+    "id": "yu:2021a",
     "category": "Article",
     "author": [["Ran", "Yu"], ["Rui", "Tang"], ["Markus", "Rokicki"], ["Ujwal", "Gadiraju"], ["Stefan", "Dietze"]],
-    "doi": "10.1007/s10791-021-09391-7",
+    "doi": "10.1007/S10791-021-09391-7",
     "journal": "Information Retrieval Journal",
     "month": "mar",
-    "number": 2021,
-    "title": "Topic-independent modeling of user knowledge in informational search sessions",
+    "number": 3,
+    "pages": "240--268",
+    "title": "Topic-independent Modeling of User Knowledge in Informational Search Sessions",
     "volume": "24",
     "year": 2021
   },
@@ -761,14 +1040,27 @@
     "id": "dimitrov:2020",
     "category": "InProceedings",
     "author": [["Dimitar", "Dimitrov"], ["Erdal", "Baran"], ["Pavlos", "Fafalios"], ["Ran", "Yu"], ["Xiaofei", "Zhu"], ["Matth\u00e4us", "Zloch"], ["Stefan", "Dietze"]],
-    "booktitle": "CIKM '20: Proceedings of the 29th ACM international conference on information & knowledge management",
+    "booktitle": "29th ACM international conference on information & knowledge management (CIKM 2020)",
     "doi": "10.1145/3340531.3412765",
     "editor": [["Mathieu", "d'Aquin"], ["Stefan", "Dietze"]],
     "month": "sep",
     "pages": "2991--2998",
-    "preprinturl": "https://arxiv.org/pdf/2006.14492v4.pdf",
+    "preprinturl": "https://arxiv.org/abs/2006.14492",
     "publisher": "ACM, New York",
-    "title": "TweetsCOV19",
+    "title": "TweetsCOV19 - A Knowledge Base of Semantically Annotated Tweets about the COVID-19 Pandemic",
+    "year": 2020
+  },
+  {
+    "id": "hoppe:2020a",
+    "category": "InProceedings",
+    "author": [["Anett", "Hoppe"], ["Ran", "Yu"], ["Yvonne", "Kammerer"], ["Ladislao", "Salmer\u00f3n"]],
+    "booktitle": "29th ACM international conference on information & knowledge management (CIKM 2020)",
+    "doi": "10.1145/3340531.3414076",
+    "editor": [["Mathieu", "d'Aquin"], ["Stefan", "Dietze"], ["Claudia", "Hauff"], ["Edward", "Curry"], ["Philippe", "Cudr\u00e9-Mauroux"]],
+    "month": "sep",
+    "pages": "3535--3536",
+    "publisher": "ACM",
+    "title": "IWILDS'20: The 1st International Workshop on Investigating Learning during Web Search",
     "year": 2020
   },
   {
@@ -788,7 +1080,7 @@
     "year": 2020
   },
   {
-    "id": "yu:2020",
+    "id": "yu:2020a",
     "category": "PhDThesis",
     "author": [["Ran", "Yu"]],
     "month": "mar",
@@ -797,15 +1089,15 @@
     "year": 2020
   },
   {
-    "id": "ewerth:2019",
+    "id": "ewerth:2019a",
     "category": "InProceedings",
     "author": [["Ralph", "Ewerth"], ["Stefan", "Dietze"], ["Anett", "Hoppe"], ["Ran", "Yu"]],
     "booktitle": "27th ACM International Conference on Multimedia (MM 2019)",
     "doi": "10.1145/3343031.3350553",
-    "editor": [["Laurent", "Amsaleg"], ["Benoit", "Huet"], ["Martha", "Larson"], ["Guillaume", "Gravier"], ["Hayley", "Hung"], ["Chong-Wah", "Ngo"], ["Wei Tsang", "Ooi"]],
+    "editor": [["Laurent", "Amsaleg"], ["Benoit", "Huet"], ["Martha A.", "Larson"], ["Guillaume", "Gravier"], ["Hayley", "Hung"], ["Chong-Wah", "Ngo"], ["Wei Tsang", "Ooi"]],
     "month": "oct",
     "pages": "2724--2725",
-    "publisher": "ACM, New York",
+    "publisher": "ACM",
     "title": "SALMM'19 - First International Workshop on Search as Learning with Multimedia Information",
     "year": 2019
   },
@@ -839,13 +1131,14 @@
     "year": 2019
   },
   {
-    "id": "yu:2019",
+    "id": "yu:2019b",
     "category": "Article",
     "author": [["Ran", "Yu"], ["Ujwal", "Gadiraju"], ["Besnik", "Fetahu"], ["Oliver", "Lehmberg"], ["Dominique", "Ritze"], ["Stefan", "Dietze"]],
     "doi": "10.3233/SW-180304",
     "journal": "Semantic Web Journal",
     "month": "aug",
-    "number": 2019,
+    "number": 1,
+    "pages": "159--180",
     "title": "KnowMore \u2013 Knowledge Base Augmentation with Structured Web Markup",
     "volume": "10",
     "year": 2019
@@ -906,10 +1199,10 @@
     "year": 2019
   },
   {
-    "id": "yu:2019",
+    "id": "yu:2019a",
     "category": "InProceedings",
     "author": [["Ran", "Yu"], ["Mathieu", "d'Aquin"], ["Dragan", "Gasevic"], ["Joachim", "Kimmerle"], ["Eelco", "Herder"], ["Ralph", "Ewerth"]],
-    "booktitle": "WebSci '19: Companion Publication of the 10th ACM Conference on Web Science",
+    "booktitle": "Companion Publication of the 10th ACM Conference on Web Science (WebSci 2019)",
     "doi": "10.1145/3328413.3329404",
     "editor": [["Paolo", "Boldi"], ["Brooke Foucault", "Welles"], ["Katharina", "Kinder-Kurlanda"], ["Christo", "Wilson"], ["Isabella", "Peters"], ["Wagner", "Meira"]],
     "month": "jun",
@@ -931,29 +1224,6 @@
     "publisher": "ACM",
     "site": "Glasgow, Scotland",
     "title": "Clarifying False Memories in Voice-based Search",
-    "year": 2019
-  },
-  {
-    "id": "yu:2019a",
-    "category": "InProceedings",
-    "author": [["Ran", "Yu"], ["Ujwal", "Gadiraju"], ["Besnik", "Fetahu"], ["Oliver", "Lehmberg"], ["Dominique", "Ritze"], ["Stefan", "Dietze"]],
-    "booktitle": "18th International Semantic Web Conference (ISWC19)",
-    "month": "jan",
-    "title": "KnowMore \u2013 Knowledge Base Augmentation with Structured Web Markup",
-    "year": 2019
-  },
-  {
-    "id": "ewerth:2019",
-    "category": "InProceedings",
-    "author": [["Ewerth", "Ralph"], ["Dietze", "Stefan"], ["Hoppe", "Anett"], ["Yu", "Ran"]],
-    "booktitle": "27th ACM International Conference on Multimedia (MM 2019)",
-    "doi": "10.1145/3343031.3350553",
-    "isbn": "978-1450368896",
-    "month": "jan",
-    "pages": "2724--2725",
-    "publisher": "ACM",
-    "series": "MM '19",
-    "title": "SALMM'19: First International Workshop on Search as Learning with Multimedia Information (SALMM 2019)",
     "year": 2019
   },
   {
@@ -1004,6 +1274,20 @@
     "year": 2018
   },
   {
+    "id": "yu:2018b",
+    "category": "InProceedings",
+    "author": [["Ran", "Yu"], ["Ujwal", "Gadiraju"], ["Peter", "Holtz"], ["Markus", "Rokicki"], ["Philipp", "Kemkes"], ["Stefan", "Dietze"]],
+    "booktitle": "41st International ACM SIGIR Conference on Research & Development in Information Retrieval (SIGIR 2018)",
+    "doi": "10.1145/3209978.3210064",
+    "editor": [["Kevyn", "Collins-Thompson"], ["Qiaozhu", "Mei"], ["Brian", "Davison"], ["Yiqun", "Liu"], ["Emine", "Yilmaz"]],
+    "month": "jul",
+    "pages": "75--84",
+    "preprinturl": "http://arxiv.org/abs/1805.00823",
+    "publisher": "ACM, New York",
+    "title": "Predicting User Knowledge Gain in Informational Search Sessions",
+    "year": 2018
+  },
+  {
     "id": "potthast:2018f",
     "category": "InProceedings",
     "annote": "acceptance rate: 0.25 (258/1018)",
@@ -1018,20 +1302,6 @@
     "site": "Melbourne",
     "title": "A Stylometric Inquiry into Hyperpartisan and Fake News",
     "videourl": "https://vimeo.com/285800660",
-    "year": 2018
-  },
-  {
-    "id": "yu:2018b",
-    "category": "InProceedings",
-    "author": [["Ran", "Yu"], ["Ujwal", "Gadiraju"], ["Peter", "Holtz"], ["Markus", "Rokicki"], ["Philipp", "Kemkes"], ["Stefan", "Dietze"]],
-    "booktitle": "41st International ACM SIGIR Conference on Research & Development in Information Retrieval (SIGIR 2018)",
-    "doi": "10.1145/3209978.3210064",
-    "editor": [["Kevyn", "Collins-Thompson"], ["Qiaozhu", "Mei"], ["Brian", "Davison"], ["Yiqun", "Liu"], ["Emine", "Yilmaz"]],
-    "month": "jun",
-    "pages": "75--84",
-    "preprinturl": "http://arxiv.org/abs/1805.00823",
-    "publisher": "ACM, New York",
-    "title": "Predicting User Knowledge Gain in Informational Search Sessions",
     "year": 2018
   },
   {
@@ -1051,6 +1321,7 @@
     "booktitle": "7th Workshop on Learning & Education with Web Data (LILE2018), in conjunction with ACM Web Science 2018 (WebSci18)",
     "editor": [["Stefan", "Dietze"], ["Mathieu", "d'Aquin"], ["Dragan", "Gasevic"], ["Eelco", "Herder"], ["Joachim", "Kimmerle"]],
     "month": "may",
+    "preprinturl": "http://arxiv.org/abs/1806.11046",
     "title": "Detecting, Understanding and Supporting Everyday Learning in Web Search",
     "year": 2018
   },
@@ -1129,6 +1400,31 @@
     "year": 2017
   },
   {
+    "id": "dietze:2017a",
+    "category": "InProceedings",
+    "author": [["Stefan", "Dietze"], ["Davide", "Taibi"], ["Ran", "Yu"], ["Phil", "Barker"], ["Mathieu", "d'Aquin"]],
+    "booktitle": "26th International Conference on World Wide Web Companion (WWW 2017)",
+    "doi": "10.1145/3041021.3054160",
+    "editor": [["Rick", "Barrett"], ["Rick", "Cummings"], ["Eugene", "Agichtein"], ["Evgeniy", "Gabrilovich"]],
+    "month": "apr",
+    "pages": "283--292",
+    "publisher": "ACM",
+    "title": "Analysing and Improving Embedded Markup of Learning Resources on the Web",
+    "year": 2017
+  },
+  {
+    "id": "yu:2017a",
+    "category": "InProceedings",
+    "author": [["Ran", "Yu"], ["Ujwal", "Gadiraju"], ["Besnik", "Fetahu"], ["Stefan", "Dietze"]],
+    "booktitle": "33rd IEEE International Conference on Data Engineering (ICDE 2017)",
+    "doi": "10.1109/ICDE.2017.69",
+    "month": "apr",
+    "pages": "179--182",
+    "publisher": "IEEE Computer Society",
+    "title": "FuseM: Query-Centric Data Fusion on Structured Web Markup",
+    "year": 2017
+  },
+  {
     "id": "kiesel:2017b",
     "category": "InProceedings",
     "appurl": "https://demo.webis.de/wat-sl/",
@@ -1185,6 +1481,34 @@
     "year": 2016
   },
   {
+    "id": "yu:2016b",
+    "category": "InProceedings",
+    "author": [["Ran", "Yu"], ["Besnik", "Fetahu"], ["Ujwal", "Gadiraju"], ["Stefan", "Dietze"]],
+    "booktitle": "15th International Semantic Web Conference (ISWC 2016)",
+    "editor": [["Takahiro", "Kawamura"], ["Heiko", "Paulheim"]],
+    "month": "oct",
+    "publisher": "CEUR-WS.org",
+    "series": "CEUR Workshop Proceedings",
+    "title": "A Survey on Challenges in Web Markup Data for Entity Retrieval",
+    "url": "https://ceur-ws.org/Vol-1690/paper70.pdf",
+    "volume": "1690",
+    "year": 2016
+  },
+  {
+    "id": "beetz:2016a",
+    "category": "InCollection",
+    "author": [["Jakob", "Beetz"], ["Ina", "Bl\u00fcmel"], ["Stefan", "Dietze"], ["Besnik", "Fetahu"], ["Ujwal", "Gadiraju"], ["Martin", "Hecher"], ["Thomas", "Krijnen"], ["Michelle", "Lindlar"], ["Martin", "Tamke"], ["Raoul", "Wessel"], ["Ran", "Yu"]],
+    "booktitle": "3D Research Challenges in Cultural Heritage II - How to Manage Data and Knowledge Related to Interpretative Digital 3D Reconstructions of Cultural Heritage",
+    "doi": "10.1007/978-3-319-47647-6_11",
+    "editor": [["Sander", "M\u00fcnster"], ["Mieke", "Pfarr-Harfst"], ["Piotr", "Kuroczynski"], ["Marinos", "Ioannides"]],
+    "month": "oct",
+    "pages": "231--255",
+    "series": "Lecture Notes in Computer Science",
+    "title": "Enrichment and Preservation of Architectural Knowledge",
+    "volume": "10025",
+    "year": 2016
+  },
+  {
     "id": "riehmann:2016",
     "category": "InProceedings",
     "annote": "Honorable Mention Award of EUR 100",
@@ -1200,6 +1524,35 @@
     "site": "Groningen, Netherlands",
     "title": "Visualizing Article Similarities in Wikipedia",
     "year": 2016
+  },
+  {
+    "id": "yu:2016a",
+    "category": "InProceedings",
+    "author": [["Ran", "Yu"], ["Ujwal", "Gadiraju"], ["Xiaofei", "Zhu"], ["Besnik", "Fetahu"], ["Stefan", "Dietze"]],
+    "booktitle": "The Semantic Web - ESWC 2016 Satellite Events, Revised Selected Papers (ESWC 2016)",
+    "doi": "10.1007/978-3-319-47602-5_15",
+    "editor": [["Harald", "Sack"], ["Giuseppe", "Rizzo"], ["Nadine", "Steinmetz"], ["Dunja", "Mladenic"], ["S\u00f6ren", "Auer"], ["Christoph", "Lange"]],
+    "month": "may",
+    "pages": "69--73",
+    "series": "Lecture Notes in Computer Science",
+    "title": "Towards Entity Summarisation on Structured Web Markup",
+    "volume": "9989",
+    "year": 2016
+  },
+  {
+    "id": "yu:2015a",
+    "category": "InProceedings",
+    "author": [["Ran", "Yu"], ["Ujwal", "Gadiraju"], ["Besnik", "Fetahu"], ["Stefan", "Dietze"]],
+    "booktitle": "16th International Conference on Web Information Systems Engineering (WISE 2015)",
+    "doi": "10.1007/978-3-319-26190-4_37",
+    "editor": [["Jianyong", "Wang"], ["Wojciech", "Cellary"], ["Dingding", "Wang"], ["Hua", "Wang"], ["Shu-Ching", "Chen"], ["Tao", "Li"], ["Yanchun", "Zhang"]],
+    "month": "nov",
+    "pages": "554--569",
+    "publisher": "Springer",
+    "series": "Lecture Notes in Computer Science",
+    "title": "Adaptive Focused Crawling of Linked Data",
+    "volume": "9418",
+    "year": 2015
   },
   {
     "id": "wachsmuth:2015a",

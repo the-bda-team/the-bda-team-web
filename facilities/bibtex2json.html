@@ -3,6 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>BibTeX to BDA Publications JSON</title>
+<style>
+input[type="text"] {
+  width: 100%;
+}
+</style>
 <script src="https://cdn.jsdelivr.net/npm/bib2json@0.0.1/Parser.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@json-editor/json-editor@latest/dist/jsoneditor.min.js"></script>
 <script> // Bibtex
@@ -26,9 +31,9 @@ const parsePeople = (value) => {
 
 const bibtexFieldParsers = {
   "author": parsePeople,
-  "editors": parsePeople,
+  "editor": parsePeople,
   "pages": (value) => {
-    return value.replace(/-/g, "--");
+    return value.replace(/-/g, "--").replace(/----/g, "--");
   }
 }
 

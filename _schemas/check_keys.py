@@ -2,7 +2,7 @@ import sys
 import json
 import os
 
-foreign_keys = [ "events", "people", "publications" ]
+foreign_keys = [ "data", "events", "people", "publications" ]
 
 ids = {}
 data_dir = os.path.join(os.path.dirname(__file__), "..", "_data")
@@ -10,6 +10,13 @@ for foreign_key in foreign_keys:
     with open(os.path.join(data_dir, foreign_key + ".json")) as file:
         data_list = json.load(file)
     ids[foreign_key] = [item["id"] for item in data_list]
+
+    seen = set()
+    for key in ids[foreign_key]:
+        if key in seen:
+            print(f"Duplicate ID '{key}' in {foreign_key}.json", file=sys.stderr)
+            sys.exit(1)
+        seen.add(key)
 
 for filename in sys.argv[1:]:
     if filename.endswith("downloads-bda-team.json"):

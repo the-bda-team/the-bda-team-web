@@ -119,7 +119,7 @@ data-people="{%- if include.publication.author %}{% for author in include.public
   {{ include.publication.year }}.
   <i>{% if url %}<a href="{{ url }}">{% endif %}{{ include.publication.title }}{% if url %}</a>{% endif %}</i>.
   {{ site.months[include.publication.month] }}, {{ include.publication.year }}{% if include.publication.site %}, {{ include.publication.site }}{% endif %}.
-  {% if include.publication.series %}{{ include.publication.series }}{% if include.publication.volume %}{% if include.publication.number %}{{ include.publication.volume }}, {{ include.publication.number }}{% else %}{{ include.publication.volume }}{% endif %}{% elsif include.publication.number %}{{ include.publication.number }}{% endif %}.{% endif %}
+  {% if include.publication.series %}{{ include.publication.series }}{% if include.publication.volume %}{% if include.publication.number %} {{ include.publication.volume }}, {{ include.publication.number }}{% else %} {{ include.publication.volume }}{% endif %}{% elsif include.publication.number %} {{ include.publication.number }}{% endif %}.{% endif %}
   {%- if include.publication.publisher %} {{ include.publication.publisher }}{% if include.publication.address %}, {{ include.publication.address }}{% endif %}.{% endif %}
 {%- else -%}
 {{ include.publication -}}
