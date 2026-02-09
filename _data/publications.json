@@ -1961,12 +1961,12 @@
   {
     "id": "mayr:2016a",
     "category": "InProceedings",
-    "doi": "10.5281/zenodo.44609",
     "author": [["Philipp", "Mayr"], ["Fakhri", "Momeni"], ["Christoph", "Lange"]],
-    "preprinturl": "https://doi.org/10.48550/arXiv.1601.02927",
-    "month": "jan",
-    "title": "Opening Scholarly Communication in Social Sciences: Supporting Open Peer Review with Fidus Writer",
     "booktitle": "2016 Annual EA Conference (EA-AW 2016)",
+    "doi": "10.5281/zenodo.44609",
+    "month": "jan",
+    "preprinturl": "https://doi.org/10.48550/arXiv.1601.02927",
+    "title": "Opening Scholarly Communication in Social Sciences: Supporting Open Peer Review with Fidus Writer",
     "volume": "abs/1601.02927",
     "year": 2016
   },
