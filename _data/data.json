@@ -1,15 +1,5 @@
 [
   {
-    "id": "tweetscov19",
-    "description": "About 41,000,000 tweets from October 2019 to August 2022 on COVID-19",
-    "month": "sep",
-    "name": "TweetsCOV19",
-    "people": ["yu"],
-    "publications": ["dimitrov:2020a"],
-    "url": "https://data.gesis.org/tweetscov19/",
-    "year": 2020
-  },
-  {
     "id": "webis-newsreader-voice-clones-26",
     "description": "32 voice-cloned news clips",
     "doi": "10.5281/zenodo.18254602",
@@ -246,6 +236,16 @@
     "people": ["kiesel"],
     "publications": ["syed:2020a"],
     "url": "https://doi.org/10.5281/zenodo.4105765",
+    "year": 2020
+  },
+  {
+    "id": "tweetscov19",
+    "description": "About 41,000,000 tweets from October 2019 to August 2022 on COVID-19",
+    "month": "sep",
+    "name": "TweetsCOV19",
+    "people": ["yu"],
+    "publications": ["dimitrov:2020a"],
+    "url": "https://data.gesis.org/tweetscov19/",
     "year": 2020
   },
   {

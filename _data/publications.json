@@ -1,85 +1,4 @@
 [
-{
-    "id": "alishiba:2024a",
-    "category": "InCollection",
-    "month": "dec",
-    "title": "WorldKG: World-Scale Completion of Geographic Information",
-    "year": 2024,
-    "author": [
-      [
-        "Dsouza",
-        "Alishiba"
-      ],
-      [
-        "Tempelmeier",
-        "Nicolas"
-      ],
-      [
-        "Gottschalk",
-        "Simon"
-      ],
-      [
-        "Yu",
-        "Ran"
-      ],
-      [
-        "Demidova",
-        "Elena"
-      ]
-    ],
-    "booktitle": "Volunteered Geographic Information: Interpretation, Visualization and Social Context",
-    "pages": "3--19",
-    "editor": [
-      [
-        "Burghardt",
-        "Dirk"
-      ],
-      [
-        "Demidova",
-        "Elena"
-      ],
-      [
-        "Keim",
-        "Daniel A."
-      ]
-    ],
-    "publisher": "Springer Nature Switzerland",
-    "address": "Cham",
-    "isbn": "978-3-031-35374-1",
-    "doi": "10.1007/978-3-031-35374-1_1"
-  },
-{
-    "id": "pracheta:2016a",
-    "category": "InProceedings",
-    "month": "apr",
-    "title": "Analysing structured scholarly data embedded in web pages",
-    "year": 2016,
-    "author": [
-      [
-        "Pracheta",
-        "Sahoo"
-      ],
-      [
-        "Ujwal",
-        "Gadiraju"
-      ],
-      [
-        "Ran",
-        "Yu"
-      ],
-      [
-        "Sriparna",
-        "Saha"
-      ],
-      [
-        "Stefan",
-        "Dietze"
-      ]
-    ],
-    "booktitle": "International Workshop on Semantic, Analytics, Visualization",
-    "pages": "90--100",
-    "organization": "Springer"
-  },
   {
     "id": "kiesel:2026a",
     "category": "InProceedings",
@@ -317,6 +236,21 @@
     "doi": "10.5281/zenodo.11047522",
     "month": "dec",
     "title": "A Pilot Study for \"Linked Open Research Data\" (LORDpilot) - A LOD-based Concept Registry for Social Science Research Data",
+    "year": 2024
+  },
+  {
+    "id": "alishiba:2024a",
+    "category": "InCollection",
+    "address": "Cham",
+    "author": [["Dsouza", "Alishiba"], ["Tempelmeier", "Nicolas"], ["Gottschalk", "Simon"], ["Yu", "Ran"], ["Demidova", "Elena"]],
+    "booktitle": "Volunteered Geographic Information: Interpretation, Visualization and Social Context",
+    "doi": "10.1007/978-3-031-35374-1_1",
+    "editor": [["Burghardt", "Dirk"], ["Demidova", "Elena"], ["Keim", "Daniel A."]],
+    "isbn": "978-3-031-35374-1",
+    "month": "dec",
+    "pages": "3--19",
+    "publisher": "Springer Nature Switzerland",
+    "title": "WorldKG: World-Scale Completion of Geographic Information",
     "year": 2024
   },
   {
@@ -1099,11 +1033,11 @@
     "category": "InProceedings",
     "author": [["Rui", "Tang"], ["Ran", "Yu"], ["Markus", "Rokicki"], ["Ralph", "Ewerth"], ["Stefan", "Dietze"]],
     "booktitle": "2nd International Workshop on Investigating Learning During Web Search",
-    "month": "nov",
-    "title": "Domain-Specific Modeling of User Knowledge in Informational Search Sessions",
     "editor": [["Gao", "Cong"], ["Maya", "Ramanath"]],
+    "month": "nov",
     "publisher": "CEUR-WS.org",
     "series": "CEUR Workshop Proceedings",
+    "title": "Domain-Specific Modeling of User Knowledge in Informational Search Sessions",
     "url": "https://ceur-ws.org/Vol-3052/paper8.pdf",
     "volume": "3052",
     "year": 2021
@@ -2069,6 +2003,17 @@
     "series": "Lecture Notes in Computer Science",
     "title": "Towards Entity Summarisation on Structured Web Markup",
     "volume": "9989",
+    "year": 2016
+  },
+  {
+    "id": "pracheta:2016a",
+    "category": "InProceedings",
+    "author": [["Pracheta", "Sahoo"], ["Ujwal", "Gadiraju"], ["Ran", "Yu"], ["Sriparna", "Saha"], ["Stefan", "Dietze"]],
+    "booktitle": "International Workshop on Semantic, Analytics, Visualization",
+    "month": "apr",
+    "organization": "Springer",
+    "pages": "90--100",
+    "title": "Analysing structured scholarly data embedded in web pages",
     "year": 2016
   },
   {
