@@ -113,7 +113,7 @@
         {
           "if": { "properties": { "category": { "const": "TechReport" } } },
           "then": {
-            "required": [ "author", "institution" ],
+            "required": [ "author" ],
             "properties": {
               "author": { "type": "array", "items": { "$ref": "_schemas/base.json#/$defs/PersonName" }, "minItems": 1 },
               "number": { "type": "integer", "minimum": 1 },

@@ -217,6 +217,28 @@
     "year": 2025
   },
   {
+    "id": "ell:2025a",
+    "category": "Article",
+    "author": [["Theresia", "Ell"], ["D\u00e9bora B.", "Maehler"], ["Lydia", "Repke"], ["Fakhri", "Momeni"]],
+    "doi": "10.1080/00223980.2025.2462632",
+    "journal": "The Journal of Psychology: Interdisciplinary and Applied",
+    "month": "feb",
+    "number": 159,
+    "pages": "1--29",
+    "title": "Loneliness - A Scoping Review of Reviews from 2001 to 2023",
+    "volume": "8",
+    "year": 2025
+  },
+  {
+    "id": "daniel:2024a",
+    "category": "TechReport",
+    "author": [["Andreas", "Daniel"], ["Jan", "Goebel"], ["Dagmar", "Kern"], ["Daniel", "Klein"], ["Antonia", "May"], ["Fakhri", "Momeni"], ["Jana", "Nebelin"], ["Claudia", "Saalbach"], ["Pascal", "Siegers"], ["Knut", "Wenzig"], ["Benjamin", "Zapilko"]],
+    "doi": "10.5281/zenodo.11047522",
+    "month": "dec",
+    "title": "A Pilot Study for \"Linked Open Research Data\" (LORDpilot) - A LOD-based Concept Registry for Social Science Research Data",
+    "year": 2024
+  },
+  {
     "id": "rieger:2024a",
     "category": "PhDThesis",
     "author": [["Alisa", "Rieger"]],
@@ -284,6 +306,15 @@
     "journal": "CoRR",
     "month": "aug",
     "title": "Utilizing Large Language Models for Named Entity Recognition in Traditional Chinese Medicine against COVID-19 Literature: Comparative Study",
+    "year": 2024
+  },
+  {
+    "id": "momeni:2024a",
+    "category": "TechReport",
+    "author": [["Fakhri", "Momeni"], ["Eleni", "Adamidi"], ["Sven", "Ulpts"], ["Hajira", "Jabeen"], ["Muhammad Taimoor", "Khan"], ["Thomas", "Klebel"], ["Eva", "Kormann"], ["Barbara", "Leitner"], ["Allyson", "Lister"], ["Elli", "Papadopoulou"], ["Haris", "Papageorgiou"], ["Tony", "Ross-Hellauer"], ["Susanna-Assunta", "Sansone"], ["Jesper W.", "Schneider"], ["Joeri K.", "Tijdink"], ["Thanasis", "Vergoulis"]],
+    "doi": "10.17605/OSF.IO/GCT56",
+    "month": "jul",
+    "title": "TIER2 D4.2 - Pilot Implementation and Assessment Plans",
     "year": 2024
   },
   {
@@ -511,6 +542,16 @@
     "series": "Lecture Notes in Computer Science",
     "title": "Spatial Link Prediction with Spatial and Semantic Embeddings",
     "volume": "14265",
+    "year": 2023
+  },
+  {
+    "id": "momeni:2023c",
+    "category": "PhDThesis",
+    "author": [["Fakhri", "Momeni"]],
+    "month": "nov",
+    "school": "Heinrich-Heine-Universit\u00e4t, D\u00fcsseldorf, Germany",
+    "title": "Exploring the Dimensions of Scientific Impact: A Comprehensive Bibliometric Analysis Investigating the Influence of Gender, Mobility, and Open Access",
+    "url": "https://docserv.uni-duesseldorf.de/servlets/DerivateServlet/Derivate-69412/Dissertation_Final_versionFormatPFDA-1.pdf",
     "year": 2023
   },
   {
@@ -1961,12 +2002,12 @@
   {
     "id": "mayr:2016a",
     "category": "InProceedings",
-    "doi": "10.5281/zenodo.44609",
     "author": [["Philipp", "Mayr"], ["Fakhri", "Momeni"], ["Christoph", "Lange"]],
-    "preprinturl": "https://doi.org/10.48550/arXiv.1601.02927",
-    "month": "jan",
-    "title": "Opening Scholarly Communication in Social Sciences: Supporting Open Peer Review with Fidus Writer",
     "booktitle": "2016 Annual EA Conference (EA-AW 2016)",
+    "doi": "10.5281/zenodo.44609",
+    "month": "jan",
+    "preprinturl": "https://doi.org/10.48550/arXiv.1601.02927",
+    "title": "Opening Scholarly Communication in Social Sciences: Supporting Open Peer Review with Fidus Writer",
     "volume": "abs/1601.02927",
     "year": 2016
   },

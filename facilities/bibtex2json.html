@@ -80,6 +80,9 @@ function bibtex2json(bibtex, logElement) {
         data[normalizedKey] = value;
       }
     }
+    if (e.Fields.subtitle) {
+      data["title"] += " - " + e.Fields.subtitle;
+    }
     console.log(data);
     results.push(data);
   }
