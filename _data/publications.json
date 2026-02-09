@@ -1,5 +1,595 @@
 [
   {
+    "id": "rieger:2024a",
+    "category": "PhDThesis",
+    "author": [
+      [
+        "Alisa",
+        "Rieger"
+      ]
+    ],
+    "month": "nov",
+    "title": "Striving for Responsible Opinion Formation in Web Search on Debated Topics",
+    "school": "TU Delft, Delft, Netherlands",
+    "year": 2024,
+    "doi": "10.4233/uuid:703a1aad-d585-459a-b0b3-ac55d9e98fcd"
+  },
+    {
+    "id": "barile:2024a",
+    "category": "Article",
+    "author": [
+      [
+        "Francesco",
+        "Barile"
+      ],
+      [
+        "Tim",
+        "Draws"
+      ],
+      [
+        "Oana",
+        "Inel"
+      ],
+      [
+        "Alisa",
+        "Rieger"
+      ],
+      [
+        "Shabnam",
+        "Najafian"
+      ],
+      [
+        "Amir Ebrahimi",
+        "Fard"
+      ],
+      [
+        "Rishav",
+        "Hada"
+      ],
+      [
+        "Nava",
+        "Tintarev"
+      ]
+    ],
+    "month": "jun",
+    "title": "Evaluating Explainable Social Choice-Based Aggregation Strategies for Group Recommendation",
+    "year": 2024,
+    "journal": "User Modeling and User-Adapted Interaction",
+    "volume": "34",
+    "number": 1,
+    "pages": "1--58",
+    "doi": "10.1007/S11257-023-09363-0"
+  },
+  {
+    "id": "rieger:2024b",
+    "category": "InProceedings",
+    "author": [
+      [
+        "Alisa",
+        "Rieger"
+      ],
+      [
+        "Frank",
+        "Bredius"
+      ],
+      [
+        "Mariët",
+        "Theune"
+      ],
+      [
+        "Maria Soledad",
+        "Pera"
+      ]
+    ],
+    "month": "mar",
+    "title": "From Potential to Practice: Intellectual Humility During Search on Debated Topics",
+    "year": 2024,
+    "editor": [["Paul D.", "Clough"], ["Morgan", "Harvey"], ["Frank", "Hopfgartner"]],
+    "booktitle": "2024 ACM SIGIR Conference on Human Information Interaction and Retrieval (CHIIR 2024)",
+    "pages": "130--141",
+    "publisher": "ACM",
+    "doi": "10.1145/3627508.3638306"
+  },
+  {
+    "id": "rieger:2024c",
+    "category": "InProceedings",
+    "author": [
+      [
+        "Alisa",
+        "Rieger"
+      ],
+      [
+        "Tim",
+        "Draws"
+      ],
+      [
+        "Nicolas",
+        "Mattis"
+      ],
+      [
+        "David",
+        "Maxwell"
+      ],
+      [
+        "David",
+        "Elsweiler"
+      ],
+      [
+        "Ujwal",
+        "Gadiraju"
+      ],
+      [
+        "Dana",
+        "McKay"
+      ],
+      [
+        "Alessandro",
+        "Bozzon"
+      ],
+      [
+        "Maria Soledad",
+        "Pera"
+      ]
+    ],
+    "month": "mar",
+    "title": "Responsible Opinion Formation on Debated Topics in Web Search",
+    "year": 2024,
+    "editor": [["Nazli", "Goharian"], ["Nicola", "Tonellotto"], ["Yulan", "He"], ["Aldo", "Lipani"], ["Graham", "McDonald"], ["Craig", "Macdonald"], ["Iadh", "Ounis"]],
+    "booktitle": "Advances in Information Retrieval - 46th European Conference on Information Retrieval (ECIR 2024)",
+    "series": "Lecture Notes in Computer Science",
+    "volume": "14611",
+    "pages": "437--465",
+    "publisher": "Springer",
+    "doi": "10.1007/978-3-031-56066-8_32"
+  },
+  {
+    "id": "rieger:2024d",
+    "category": "InProceedings",
+    "author": [
+      [
+        "Alisa",
+        "Rieger"
+      ],
+      [
+        "Suleiman",
+        "Kulane"
+      ],
+      [
+        "Ujwal",
+        "Gadiraju"
+      ],
+      [
+        "Maria Soledad",
+        "Pera"
+      ]
+    ],
+    "month": "jul",
+    "title": "Disentangling Web Search on Debated Topics: A User-Centered Exploration",
+    "year": 2024,
+    "booktitle": "32nd ACM Conference on User Modeling, Adaptation and Personalization (UMAP 2024)",
+    "pages": "24--35",
+    "publisher": "ACM",
+    "doi": "10.1145/3627043.3659559"
+  },
+{
+    "id": "rieger:2024e",
+    "category": "Article",
+    "author": [
+      [
+        "Alisa",
+        "Rieger"
+      ],
+      [
+        "Tim",
+        "Draws"
+      ],
+      [
+        "Mariët",
+        "Theune"
+      ],
+      [
+        "Nava",
+        "Tintarev"
+      ]
+    ],
+    "month": "mar",
+    "title": "Nudges to Mitigate Confirmation Bias during Web Search on Debated Topics: Support vs. Manipulation",
+    "year": 2024,
+    "journal": "ACM Transactions on the Web",
+    "volume": "18",
+    "number": 2,
+    "pages": "1--27",
+    "doi": "10.1145/3635034"
+  },
+
+  {
+    "id": "rieger:2023a",
+    "category": "InProceedings",
+    "author": [
+      [
+        "Alisa",
+        "Rieger"
+      ],
+      [
+        "Frank",
+        "Bredius"
+      ],
+      [
+        "Nava",
+        "Tintarev"
+      ],
+      [
+        "Maria Soledad",
+        "Pera"
+      ]
+    ],
+    "month": "apr",
+    "title": "Searching for the Whole Truth: Harnessing the Power of Intellectual Humility to Boost Better Search on Debated Topics",
+    "year": 2023,
+    "editor": [["Albrecht", "Schmidt"], ["Kaisa", "Väänänen"], ["Tesh", "Goyal"], ["Per Ola", "Kristensson"], ["Anicia", "Peters"]],
+    "booktitle": "2023 CHI Conference on Human Factors in Computing Systems (CHI 2023)",
+    "pages": "1--8",
+    "publisher": "ACM",
+    "doi": "10.1145/3544549.3585693"
+  },
+  {
+    "id": "draws:2023a",
+    "category": "InProceedings",
+    "author": [
+      [
+        "Tim",
+        "Draws"
+      ],
+      [
+        "Nirmal",
+        "Roy"
+      ],
+      [
+        "Oana",
+        "Inel"
+      ],
+      [
+        "Alisa",
+        "Rieger"
+      ],
+      [
+        "Rishav",
+        "Hada"
+      ],
+      [
+        "Mehmet Orcun",
+        "Yalcin"
+      ],
+      [
+        "Benjamin",
+        "Timmermans"
+      ],
+      [
+        "Nava",
+        "Tintarev"
+      ]
+    ],
+    "month": "apr",
+    "title": "Viewpoint Diversity in Search Results",
+    "year": 2023,
+    "editor": [["Jaap", "Kamps"], ["Lorraine", "Goeuriot"], ["Fabio", "Crestani"], ["Maria", "Maistro"], ["Hideo", "Joho"], ["Brian", "Davis"], ["Cathal", "Gurrin"], ["Udo", "Kruschwitz"], ["Annalina", "Caputo"]],
+    "booktitle": "Advances in Information Retrieval - 45th European Conference on Information Retrieval (ECIR 2023)",
+    "series": "Lecture Notes in Computer Science",
+    "volume": "13980",
+    "pages": "279--297",
+    "publisher": "Springer",
+    "doi": "10.1007/978-3-031-28244-7_18"
+  },
+  {
+    "id": "wu:2023a",
+    "category": "InProceedings",
+    "author": [
+      [
+        "Zhangyi",
+        "Wu"
+      ],
+      [
+        "Tim",
+        "Draws"
+      ],
+      [
+        "Federico",
+        "Cau"
+      ],
+      [
+        "Francesco",
+        "Barile"
+      ],
+      [
+        "Alisa",
+        "Rieger"
+      ],
+      [
+        "Nava",
+        "Tintarev"
+      ]
+    ],
+    "month": "oct",
+    "title": "Explaining Search Result Stances to Opinionated People",
+    "year": 2023,
+    "editor": [["Luca", "Longo"]],
+    "booktitle": "Explainable Artificial Intelligence - First World Conference (xAI 2023)",
+    "series": "Communications in Computer and Information Science",
+    "volume": "1902",
+    "pages": "573--596",
+    "publisher": "Springer",
+    "doi": "10.1007/978-3-031-44067-0_29"
+  },
+    {
+    "id": "colmenarejo:2022a",
+    "category": "InProceedings",
+    "author": [
+      [
+        "Alejandra Bringas",
+        "Colmenarejo"
+      ],
+      [
+        "Luca",
+        "Nannini"
+      ],
+      [
+        "Alisa",
+        "Rieger"
+      ],
+      [
+        "Kristen M.",
+        "Scott"
+      ],
+      [
+        "Xuan",
+        "Zhao"
+      ],
+      [
+        "Gourab K.",
+        "Patro"
+      ],
+      [
+        "Gjergji",
+        "Kasneci"
+      ],
+      [
+        "Katharina",
+        "Kinder-Kurlanda"
+      ]
+    ],
+    "month": "may",
+    "title": "Fairness in Agreement With European Values: An Interdisciplinary Perspective on AI Regulation",
+    "year": 2022,
+    "editor": [["Vincent", "Conitzer"], ["John", "Tasioulas"], ["Matthias", "Scheutz"], ["Ryan", "Calo"], ["Martina", "Mara"], ["Annette", "Zimmermann"]],
+    "booktitle": "AAAI/ACM Conference on AI, Ethics, and Society (AIES 2022)",
+    "pages": "107--118",
+    "publisher": "ACM",
+    "doi": "10.1145/3514094.3534158"
+  },
+  {
+    "id": "rieger:2022a",
+    "category": "InProceedings",
+    "author": [
+      [
+        "Alisa",
+        "Rieger"
+      ],
+      [
+        "Qurat-ul-ain",
+        "Shaheen"
+      ],
+      [
+        "Carles",
+        "Sierra"
+      ],
+      [
+        "Mariët",
+        "Theune"
+      ],
+      [
+        "Nava",
+        "Tintarev"
+      ]
+    ],
+    "month": "jul",
+    "title": "Towards Healthy Engagement with Online Debates: An Investigation of Debate Summaries and Personalized Persuasive Suggestions",
+    "year": 2022,
+    "booktitle": "30th ACM Conference on User Modeling, Adaptation and Personalization (UMAP 2022)",
+    "pages": "192--199",
+    "publisher": "ACM",
+    "doi": "10.1145/3511047.3537692"
+  },
+  {
+    "id": "rieger:2022b",
+    "category": "InProceedings",
+    "author": [
+      [
+        "Alisa",
+        "Rieger"
+      ]
+    ],
+    "month": "jul",
+    "title": "Interactive Interventions to Mitigate Cognitive Bias",
+    "year": 2022,
+    "editor": [["Alejandro", "Bellogín"], ["Ludovico", "Boratto"], ["Olga C.", "Santos"], ["Liliana", "Ardissono"], ["Bart P.", "Knijnenburg"]],
+    "booktitle": "30th ACM Conference on User Modeling, Adaptation and Personalization (UMAP 2022)",
+    "pages": "316--320",
+    "publisher": "ACM",
+    "doi": "10.1145/3503252.3534362"
+  },
+    {
+    "id": "draws:2021a",
+    "category": "InProceedings",
+    "author": [
+      [
+        "Tim",
+        "Draws"
+      ],
+      [
+        "Alisa",
+        "Rieger"
+      ],
+      [
+        "Oana",
+        "Inel"
+      ],
+      [
+        "Ujwal",
+        "Gadiraju"
+      ],
+      [
+        "Nava",
+        "Tintarev"
+      ]
+    ],
+    "month": "oct",
+    "title": "A Checklist to Combat Cognitive Biases in Crowdsourcing",
+    "year": 2021,
+    "editor": [["Ece", "Kamar"], ["Kurt", "Luther"]],
+    "booktitle": "9th AAAI Conference on Human Computation and Crowdsourcing (HCOMP 2021)",
+    "pages": "48--59",
+    "publisher": "AAAI Press",
+    "doi": "10.1609/HCOMP.V9I1.18939"
+  },
+  {
+    "id": "rieger:2021a",
+    "category": "InProceedings",
+    "author": [
+      [
+        "Alisa",
+        "Rieger"
+      ],
+      [
+        "Tim",
+        "Draws"
+      ],
+      [
+        "Mariët",
+        "Theune"
+      ],
+      [
+        "Nava",
+        "Tintarev"
+      ]
+    ],
+    "month": "aug",
+    "title": "This Item Might Reinforce Your Opinion: Obfuscation and Labeling of Search Results to Mitigate Confirmation Bias",
+    "year": 2021,
+    "editor": [["Owen", "Conlan"], ["Eelco", "Herder"]],
+    "booktitle": "32nd ACM Conference on Hypertext and Social Media (HT 2021)",
+    "pages": "189--199",
+    "publisher": "ACM",
+    "doi": "10.1145/3465336.3475101"
+  },
+  {
+    "id": "barile:2021a",
+    "category": "InProceedings",
+    "author": [
+      [
+        "Francesco",
+        "Barile"
+      ],
+      [
+        "Shabnam",
+        "Najafian"
+      ],
+      [
+        "Tim",
+        "Draws"
+      ],
+      [
+        "Oana",
+        "Inel"
+      ],
+      [
+        "Alisa",
+        "Rieger"
+      ],
+      [
+        "Rishav",
+        "Hada"
+      ],
+      [
+        "Nava",
+        "Tintarev"
+      ]
+    ],
+    "month": "sep",
+    "title": "Toward Benchmarking Group Explanations: Evaluating the Effect of Aggregation Strategies versus Explanation",
+    "year": 2021,
+    "editor": [["Eva", "Zangerle"], ["Christine", "Bauer"], ["Alan", "Said"]],
+    "booktitle": "Perspectives on the Evaluation of Recommender Systems Workshop 2021 co-located with the 15th ACM Conference on Recommender Systems (RecSys 2021)",
+    "series": "CEUR Workshop Proceedings",
+    "volume": "2955",
+    "publisher": "CEUR-WS.org",
+    "url": "https://ceur-ws.org/Vol-2955/paper11.pdf"
+  },
+  {
+    "id": "rieger:2020a",
+    "category": "InProceedings",
+    "author": [
+      [
+        "Alisa",
+        "Rieger"
+      ],
+      [
+        "Mariët",
+        "Theune"
+      ],
+      [
+        "Nava",
+        "Tintarev"
+      ]
+    ],
+    "month": "dec",
+    "title": "Toward Natural Language Mitigation Strategies for Cognitive Biases in Recommender Systems",
+    "year": 2020,
+    "editor": [["José Maria", "Alonso"], ["Alejandro", "Catalá"]],
+    "booktitle": "2nd Workshop on Interactive Natural Language Technology for Explainable Artificial Intelligence (NL4XAI@INGL 2020)",
+    "pages": "50--54",
+    "publisher": "Association for Computational Linguistics",
+    "url": "https://aclanthology.org/2020.nl4xai-1.11/"
+  },
+  {
+    "id": "charrier:2019a",
+    "category": "InProceedings",
+    "author": [
+      [
+        "Laurianne",
+        "Charrier"
+      ],
+      [
+        "Alisa",
+        "Rieger"
+      ],
+      [
+        "Alexandre",
+        "Galdeano"
+      ],
+      [
+        "Amélie",
+        "Cordier"
+      ],
+      [
+        "Mathieu",
+        "Lefort"
+      ],
+      [
+        "Salima",
+        "Hassas"
+      ]
+    ],
+    "month": "mar",
+    "title": "The RoPE Scale: a Measure of How Empathic a Robot is Perceived",
+    "year": 2019,
+    "booktitle": "14th ACM/IEEE International Conference on Human-Robot Interaction (HRI 2019)",
+    "pages": "656--657",
+    "publisher": "IEEE",
+    "doi": "10.1109/HRI.2019.8673082"
+  },
+
+
+  {
     "id": "kiesel:2026a",
     "category": "InProceedings",
     "address": "Cham, Switzerland",
