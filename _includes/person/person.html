@@ -45,7 +45,7 @@ Topics:
 {%- if include.personal == false %}
 <span class="resources">
 {%- assign authorString = include.person.name | join: "_" -%}
-{%- if publications_people contains authorString %}<a href="{{ '/publications' | relative_url }}?q=author:{{ include.person.name[0] | append: ' ' | append: include.person.name[1] | replace: ' ', '%2B' | urlencode }}">publications</a>{%- endif -%}
+{%- if publications_people contains authorString %}<a href="{{ '/publications' | relative_url }}?q=people:{{ include.person.name[0] | append: ' ' | append: include.person.name[1] | replace: ' ', '%2B' | urlencode }}">publications</a>{%- endif -%}
 {%- if data_people contains include.person.id %}
 <a href="{{ '/data' | relative_url }}?q=people:{{ include.person.name[0] | append: ' ' | append: include.person.name[1] | replace: ' ', '%2B' | urlencode }}">data</a>{%- endif -%}
 {%- if event_people contains include.person.id %}
