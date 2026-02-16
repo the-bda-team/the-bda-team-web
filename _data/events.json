@@ -1,8 +1,119 @@
 [
   {
+    "id": "ecir2026-infuse",
+    "category": "Workshop",
+    "description": "First Workshop on INFormation access in Uncertainty ScEnarios (INFUSE 2026), held in conjunction with the 48th European Conference on Information Retrieval (ECIR 2026), co-organized by Alisa Rieger, Amir Ebrahimi Fard, Johanne Trippas, Nicolas Mattis, and Ran Yu",
+    "host": "ECIR2026",
+    "hosturl": "https://ecir2026.eu/",
+    "month": "apr",
+    "name": "INFUSE",
+    "people": ["rieger", "yu"],
+    "site": "Delft, Netherlands",
+    "url": "https://sites.google.com/view/infuse-workshop/",
+    "year": 2026
+  },
+  {
+    "id": "wsdm2025-iwilds",
+    "category": "Workshop",
+    "description": "5st International Workshop on Investigating Learning During Web Search (IWILDS 2025), held in conjunction with the 18th ACM International Conference on Web Search and Data Mining (WSDM 2025), co-organized by Anett Hoppe, Ran Yu, Jiqun Liu, and Nilavra Bhattacharya",
+    "host": "WSDM 2025",
+    "hosturl": "https://www.wsdm-conference.org/2025/",
+    "month": "mar",
+    "name": "IWILDS",
+    "people": ["yu"],
+    "publications": ["hoppe:2025a"],
+    "site": "Hannover, Germany",
+    "url": "https://iwilds2025.wordpress.com",
+    "year": 2025
+  },
+  {
+    "id": "chiir2023-iwilds",
+    "category": "Workshop",
+    "description": "4th International Workshop on Investigating Learning During Web Search (IWILDS 2023), held in conjunction with the 8th ACM SIGIR Conference on Human Information Interaction and Retrieval (CHIIR 2023), co-organized by Anett Hoppe, Ran Yu, Jiqun Liu, and Nilavra Bhattacharya",
+    "host": "CHIIR 2023",
+    "hosturl": "https://sigir.org/chiir2023/",
+    "month": "mar",
+    "name": "IWILDS",
+    "people": ["yu"],
+    "publications": ["oezgoebek:2023a"],
+    "site": "Austin, Texas",
+    "url": "https://iwilds2023.wordpress.com",
+    "year": 2023
+  },
+  {
+    "id": "sigir2022-iwilds",
+    "category": "Workshop",
+    "description": "3rd International Workshop on Investigating Learning During Web Search (IWILDS 2022), held in conjunction with the 45th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2022), co-organized by Anett Hoppe, Jiqun Liu, and Ran Yu",
+    "host": "SIGIR 2022",
+    "hosturl": "https://sigir.org/sigir2022/",
+    "month": "jul",
+    "name": "IWILDS",
+    "people": ["yu"],
+    "publications": ["hoppe:2022b"],
+    "site": "Madrid, Spain",
+    "url": "https://iwilds2022.wordpress.com",
+    "year": 2022
+  },
+  {
+    "id": "cikm2021-iwilds",
+    "category": "Workshop",
+    "description": "2nd International Workshop on Investigating Learning During Web Search (IWILDS 2021), held in conjunction with the 30th ACM International Conference on Information and Knowledge Management (CIKM 2021), co-organized by Anett Hoppe, Irina Brich, Jiqun Liu, and Ran Yu",
+    "host": "CIKM 2021",
+    "hosturl": "https://www.cikm2021.org/",
+    "month": "nov",
+    "name": "IWILDS",
+    "people": ["yu"],
+    "publications": ["hoppe:2021a"],
+    "site": "Online",
+    "url": "https://iwilds2021.wordpress.com",
+    "year": 2021
+  },
+  {
+    "id": "cikm2020-iwilds",
+    "category": "Workshop",
+    "description": "1st International Workshop on Investigating Learning During Web Search (IWILDS 2020), held in conjunction with the 29th ACM International Conference on Information and Knowledge Management (CIKM 2020), co-organized by Anett Hoppe, Ran Yu, Yvonne Kammerer, and Ladislao Salmerón",
+    "host": "CIKM 2020",
+    "hosturl": "https://web.archive.org/web/20250212120152/https://cikm2020.org/",
+    "month": "oct",
+    "name": "IWILDS",
+    "people": ["yu"],
+    "publications": ["hoppe:2020a"],
+    "site": "Online",
+    "url": "https://iwilds2020.wordpress.com",
+    "year": 2020
+  },
+  {
+    "id": "websci2019-lile",
+    "category": "Workshop",
+    "description": "8th International Workshop on Learning and Education with Web Data (LILE 2019), held in conjunction with the  11th ACM Conference on Web Science (WebSci 2019), co-organized by Ran Yu, Mathieu D’Aquin, Dragan Gasevic, Joachim Kimmerle, Eelco Herder, and Ralph Ewerth",
+    "host": "WebSci 2019",
+    "hosturl": "https://web.archive.org/web/20251210081053/https://websci19.webscience.org/",
+    "month": "jun",
+    "name": "LILE 2019",
+    "people": ["yu"],
+    "publications": ["hoppe:2018"],
+    "site": "Boston, USA",
+    "url": "https://lile2019.wordpress.com/",
+    "year": 2019
+  },
+  {
+    "id": "acmmm2019-salmm",
+    "category": "Workshop",
+    "description": "Search as Learning with Multimedia Information workshop (SALMM 2019), held in conjunction with the 27th ACM International Conference on Multimedia (ACMMM19), co-organized by Ralph Ewerth, Stefan Dietze, Anett Hoppe, and Ran Yu",
+    "host": "ACMMM19",
+    "hosturl": "https://www.acmmm.org/2019/",
+    "month": "oct",
+    "name": "First International Workshop on Search as Learning with Multimedia Information",
+    "people": ["yu"],
+    "publications": ["ewerth:2019a"],
+    "site": "Nice, France",
+    "url": "https://web.archive.org/web/20230321041858/https://salmm-workshop.org/",
+    "year": 2019
+  },
+  {
     "id": "clef2026-touche",
     "category": "Workshop",
-    "description": "Lab hosting four shared tasks on argumentation systems",
+    "description": "Lab hosting four shared tasks on argumentation systems, held in conjunction with the 27th Conference and Labs of the Evaluation Forum (CLEF 2026), co-organized by Johannes Kiesel, Marc Feger, Tim Hagen, Sebastian Heineking, Maximilian Heinrich, Maik Fröbe, Martin Potthast, and Benno Stein",
     "host": "CLEF 2026",
     "hosturl": "https://clef2026.clef-initiative.eu/",
     "keywords": ["computational argumentation"],
@@ -16,7 +127,7 @@
   {
     "id": "clef2026-touche-fallacy-detection",
     "category": "Shared Task",
-    "description": "Determine if and in which way an argument is fallacious",
+    "description": "Determine if and in which way an argument is fallacious, held as part of the 7th Touché Lab on Argumentation Systems (Touché @ CLEF 2026), co-organized by Maximilian Heinrich, Maik Fröbe, Benno Stein, and Johannes Kiesel",
     "host": "Touch\u00e9/CLEF 2026",
     "hosturl": "https://touche.webis.de/clef26/touche26-web/index.html",
     "keywords": ["computational argumentation"],
@@ -30,7 +141,7 @@
   {
     "id": "websci26-method-sharing-retreat",
     "category": "Tutorial",
-    "description": "Learn how to submit to Methods Hub using your own method",
+    "description": "Learn how to submit to Methods Hub using your own method, held in conjunction with the 18th ACM Web Science Conference (WebSci 2026), co-organized by Muhammad Taimoor Khan, Ran Yu, Felix Münch, Fakhri Momeni, Stephan Linzbach, Arnim Bleier, and Johannes Kiesel",
     "host": "WebSci 2026",
     "hosturl": "https://websci26.org/",
     "keywords": ["methods hub"],
@@ -56,7 +167,7 @@
   {
     "id": "smad2026-gesis-methods-hub-social-media-datasprint",
     "category": "Workshop",
-    "description": "Collaboratively explore social media datasets",
+    "description": "Collaboratively explore social media datasets, held in conjuction with the 2nd Social Media Access Days (SMAD 2026), co-organized by Johannes Kiesel, Christina Viehmann, Felix Münch, and Arnim Bleier",
     "host": "SMAD 2026",
     "hosturl": "https://www.dnb.de/EN/Professionell/Sammeln/Sammlung_Websites/SMAD2026/SocialMediaAccessDays.html",
     "keywords": ["methods hub"],
@@ -70,7 +181,7 @@
   {
     "id": "trec2025-ikat",
     "category": "Shared Task",
-    "description": "Build conversational agents that respond to users' immediate queries but adapt their responses based on the cumulative context of the interaction",
+    "description": "Build conversational agents that respond to users' immediate queries but adapt their responses based on the cumulative context of the interaction, held in conjunction with the 34th Text Retrieval Conference (TREC 2025), co-organized by Mohammad Aliannejadi, Zahra Abbasiantaeb, Simon Lupart, Nailia Mirzakhmedova, Marcel Gohsen, Johannes Kiesel, and Jeff Dalton",
     "host": "TREC 2025",
     "hosturl": "https://trec.nist.gov/",
     "keywords": ["conversational search", "user simulation"],
@@ -84,7 +195,7 @@
   {
     "id": "clef2025-touche",
     "category": "Workshop",
-    "description": "Lab hosting four shared tasks on argumentation systems",
+    "description": "Lab hosting four shared tasks on argumentation systems, held in conjunction with the 26th Conference and Labs of the Evaluation Forum (CLEF 2025), co-organized by Johannes Kiesel, Çağrı Çöltekin, Marcel Gohsen, Sebastian Heineking, Maximilian Heinrich, Maik Fröbe, Tim Hagen, Martin Potthast, and Benno Stein",
     "host": "CLEF 2025",
     "hosturl": "https://clef2025.clef-initiative.eu/",
     "keywords": ["computational argumentation"],
@@ -99,7 +210,7 @@
   {
     "id": "clef2025-touche-image-retrieval-generation-for-arguments",
     "category": "Shared Task",
-    "description": "Retrieve or generate images that help to convey central aspects of claims",
+    "description": "Retrieve or generate images that help to convey central aspects of claims, held as part of the 6th Touché Lab on Argumentation Systems (Touché @ CLEF 2025), co-organized by Maximilian Heinrich, Johannes Kiesel, Moritz Wolter, Martin Potthast, and Benno Stein",
     "host": "Touch\u00e9+ImageCLEF/CLEF 2025",
     "hosturl": "https://touche.webis.de/clef25/touche25-web/index.html",
     "keywords": ["computational argumentation"],
@@ -114,7 +225,7 @@
   {
     "id": "clef2025-touche-retrieval-augmented-debating",
     "category": "Shared Task",
-    "description": "Build conversational agents that argue against a debate partner and to evaluate such systems automatically",
+    "description": "Build conversational agents that argue against a debate partner and to evaluate such systems automatically, held as part of the 6th Touché Lab on Argumentation Systems (Touché @ CLEF 2025), co-organized by Marcel Gohsen, Nailia Mirzakhmedova, Harrisen Scells, Mohammad Aliannejadi, Maik Fröbe, Johannes Kiesel, and Benno Stein",
     "host": "Touch\u00e9/CLEF 2025",
     "hosturl": "https://touche.webis.de/clef25/touche25-web/index.html",
     "keywords": ["computational argumentation", "conversational search", "user simulation"],
@@ -141,7 +252,7 @@
   {
     "id": "methodsnet2025-hands-on-methods-hub",
     "category": "Tutorial",
-    "description": "Hands-on session on the Methods Hub held at the 2nd MethodsNET Conference (MethodsNET 2025), co-organized by Fakhri Momeni, Felix Victor M\u00fcnch, Chung-hong Chan, and Muhammad Taimoor Khan",
+    "description": "Hands-on session on the Methods Hub held in conjunction with the 2nd MethodsNET Conference (MethodsNET 2025), co-organized by Fakhri Momeni, Felix Victor M\u00fcnch, Chung-hong Chan, and Muhammad Taimoor Khan",
     "host": "MethodsNET 2025",
     "hosturl": "https://methodsnet.org/conference/2nd-methodsnet-conference/",
     "month": "sep",
@@ -181,7 +292,7 @@
   {
     "id": "weimar-machine-learning2425-kiesel",
     "category": "Teaching",
-    "description": "M.Sc. course on concepts and methods of machine learning (Winter term 24/25, 90 students, lectured by Johannes Kiesel)",
+    "description": "M.Sc. course on concepts and methods of machine learning in Winter term 24/25 lectured by Johannes Kiesel",
     "host": "Bauhaus-Universit\u00e4t Weimar",
     "name": "Introduction to Machine Learning",
     "people": ["kiesel"],
@@ -192,7 +303,7 @@
   {
     "id": "bauhaus2024-ai-seminar",
     "category": "Teaching",
-    "description": "Training seminar in 2024 by Benno Stein, Johannes Kiesel, and Marcel Gohsen",
+    "description": "Training seminar in 2024 lectured by Benno Stein, Johannes Kiesel, and Marcel Gohsen",
     "host": "Bauhaus-Universit\u00e4t Weimar",
     "month": "nov",
     "name": "Using AI in Everyday Life at the University",
@@ -203,7 +314,7 @@
   {
     "id": "eteach2024-keynote",
     "category": "Invited Talk",
-    "description": "Keynote of Benno Stein and Johannes Kiesel",
+    "description": "Keynote by Benno Stein and Johannes Kiesel",
     "host": "Jahrestagung eTeach-Netzwerk Th\u00fcringen",
     "hosturl": "https://indico.rz.uni-jena.de/event/133/overview",
     "month": "nov",
@@ -215,7 +326,7 @@
   {
     "id": "kinderuni-weimar2024-ai",
     "category": "Teaching",
-    "description": "Lecture at the Kinderuni Weimar by Benno Stein and Johannes Kiesel",
+    "description": "Invited lecture at the Kinderuni Weimar lectured by Benno Stein and Johannes Kiesel",
     "host": "Kinderuni Weimar 2024/25",
     "hosturl": "https://www.kinderuni-weimar.de/",
     "month": "nov",
@@ -227,7 +338,7 @@
   {
     "id": "clef2024-touche",
     "category": "Workshop",
-    "description": "Lab hosting three shared tasks on argumentation systems",
+    "description": "Lab hosting three shared tasks on argumentation systems, held in conjunction with the 25th Conference and Labs of the Evaluation Forum (CLEF 2024), co-organized by Johannes Kiesel, Çağrı Çöltekin, Maximilian Heinrich, Maik Fröbe, Martin Potthast, Henning Wachsmuth, and Benno Stein",
     "host": "CLEF 2024",
     "hosturl": "https://clef2024.clef-initiative.eu/",
     "keywords": ["computational argumentation"],
@@ -242,7 +353,7 @@
   {
     "id": "clef2024-touche-human-value-detection",
     "category": "Shared Task",
-    "description": "Detect the prevalent human values in texts and the values' valence",
+    "description": "Detect the prevalent human values in texts and the values' valence, held as part of the 5th Touché Lab on Argumentation Systems (Touché @ CLEF 2024), co-organized by Johannes Kiesel, Milad Alshomary, Nailia Mirzakhmedova, Nicolas Handke, Bertrand De Longueville, Theresa Reitis-Münstermann, Mario Scharfbillig, Nicolas Stefanovitch, Henning Wachsmuth, and Benno Stein",
     "host": "Touch\u00e9/CLEF 2024",
     "hosturl": "https://touche.webis.de/clef24/touche24-web/index.html",
     "keywords": ["computational argumentation", "human values"],
@@ -257,7 +368,7 @@
   {
     "id": "clef2024-touche-image-retrieval-generation-for-arguments",
     "category": "Shared Task",
-    "description": "Retrieve or generate images per topic and stance that show support for that stance",
+    "description": "Retrieve or generate images per topic and stance that show support for that stance, held as part of the 5th Touché Lab on Argumentation Systems (Touché @ CLEF 2024), co-organized by Maximilian Heinrich, Johannes Kiesel, Martin Potthast, and Benno Stein",
     "host": "Touch\u00e9+ImageCLEF/CLEF 2024",
     "hosturl": "https://touche.webis.de/clef24/touche24-web/index.html",
     "keywords": ["computational argumentation"],
@@ -272,7 +383,7 @@
   {
     "id": "clef2023-touche",
     "category": "Workshop",
-    "description": "Lab hosting four shared tasks on argumentation systems",
+    "description": "Lab hosting four shared tasks on argumentation systems, held in conjunction with the 24th Conference and Labs of the Evaluation Forum (CLEF 2023), co-organized by Alexander Bondarenko, Maik Fröbe, Johannes Kiesel, Ferdinand Schlatt, Jan Heinrich Reimer, Valentin Barriere, Léo Hemamou, Simon Luck, Brian Ravenet, Benno Stein, Martin Potthast, and Matthias Hagen",
     "host": "CLEF 2023",
     "hosturl": "https://clef2023.clef-initiative.eu/",
     "keywords": ["computational argumentation"],
@@ -287,7 +398,7 @@
   {
     "id": "clef2023-touche-image-retrieval-for-arguments",
     "category": "Shared Task",
-    "description": "Retrieve images per topic and stance that show support for that stance",
+    "description": "Retrieve images per topic and stance that show support for that stance, held as part of the 4th Touché Lab on Argumentation Systems (Touché @ CLEF 2023), co-organized by Johannes Kiesel, Maik Fröbe, Martin Potthast, and Benno Stein",
     "host": "Touch\u00e9/CLEF 2023",
     "hosturl": "https://touche.webis.de/clef23/touche23-web/index.html",
     "keywords": ["computational argumentation"],
@@ -313,7 +424,7 @@
   {
     "id": "semeval2023-touche-human-value-detection",
     "category": "Shared Task",
-    "description": "Detect the prevalent human values in arguments",
+    "description": "Detect the prevalent human values in arguments, held as part of the 17th International Workshop on Semantic Evaluation (SemEval 2023), co-organized by Johannes Kiesel, Milad Alshomary, Nailia Mirzakhmedova, Maximilian Heinrich, Nicolas Handke, Henning Wachsmuth, and Benno Stein",
     "host": "Touch\u00e9/SemEval 2023",
     "hosturl": "https://semeval.github.io/SemEval2023/",
     "keywords": ["computational argumentation", "human values"],
@@ -329,7 +440,7 @@
   {
     "id": "clef2022-touche",
     "category": "Workshop",
-    "description": "Lab hosting three shared tasks on argumentation systems",
+    "description": "Lab hosting three shared tasks on argumentation systems, held in conjunction with the 23th Conference and Labs of the Evaluation Forum (CLEF 2022), co-organized by Alexander Bondarenko, Maik Fröbe, Johannes Kiesel, Shahbaz Syed, Timon Gurcke, Meriem Beloucif, Alexander Panchenko, Chris Biemann, Benno Stein, Henning Wachsmuth, Martin Potthast, and Matthias Hagen",
     "host": "CLEF 2022",
     "hosturl": "https://clef2022.clef-initiative.eu/",
     "keywords": ["computational argumentation"],
@@ -344,7 +455,7 @@
   {
     "id": "clef2022-touche-image-retrieval-for-arguments",
     "category": "Shared Task",
-    "description": "Retrieve images per topic and stance that show support for that stance",
+    "description": "Retrieve images per topic and stance that show support for that stance, held as part of the 3th Touché Lab on Argumentation Systems (Touché @ CLEF 2022), co-organized by Johannes Kiesel, Martin Potthast, and Benno Stein",
     "host": "Touch\u00e9/CLEF 2022",
     "hosturl": "https://touche.webis.de/clef22/touche22-web/index.html",
     "keywords": ["computational argumentation"],
@@ -359,7 +470,7 @@
   {
     "id": "scai2021-qrecc",
     "category": "Shared Task",
-    "description": "Answer a series of contextually-dependent questions like they may occur in natural human-to-human conversations",
+    "description": "Answer a series of contextually-dependent questions like they may occur in natural human-to-human conversations, held as part of the 6th Search-Oriented Conversational AI Workshop (SCAI 2021), co-organized by Maik Fröbe, Johannes Kiesel, and Svitlana Vakulenko",
     "host": "SCAI 2021",
     "hosturl": "https://scai.info/scai-2021/",
     "keywords": ["conversational search"],
@@ -374,7 +485,7 @@
   {
     "id": "oase2020",
     "category": "Conference",
-    "description": "Co-rganized by Nicholas Fraser, Philipp Mayr, Fakhri Momeni, and Isabella Peters as part of the BMBF OASE project (Open Access Effects)",
+    "description": "Co-organized by Nicholas Fraser, Philipp Mayr, Fakhri Momeni, and Isabella Peters as part of the BMBF OASE project (Open Access Effects)",
     "month": "dec",
     "name": "OASE",
     "people": ["momeni"],
@@ -385,7 +496,7 @@
   {
     "id": "semeval2019-pan-hyperpartisan-news-detection",
     "category": "Shared Task",
-    "description": "Decide whether news articles exhibit blind, prejudiced, or unreasoning allegiance to one party, faction, cause, or person",
+    "description": "Decide whether news articles exhibit blind, prejudiced, or unreasoning allegiance to one party, faction, cause, or person, held as part of the 13th International Workshop on Semantic Evaluation (SemEval 2019), co-organized by Johannes Kiesel, Martin Potthast, Maria Mestre, Rishabh Shukla, Benno Stein, David Corney, Emmanuel Vincent, and Payam Adineh",
     "host": "PAN/SemEval 2019",
     "hosturl": "http://alt.qcri.org/semeval2019/",
     "month": "jun",
