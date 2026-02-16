@@ -425,19 +425,6 @@
     "year": 2024
   },
   {
-    "id": "rieger:2024b",
-    "category": "InProceedings",
-    "author": [["Alisa", "Rieger"], ["Frank", "Bredius"], ["Mari\u00ebt", "Theune"], ["Maria Soledad", "Pera"]],
-    "booktitle": "9th ACM SIGIR Conference on Human Information Interaction and Retrieval (CHIIR 2024)",
-    "doi": "10.1145/3627508.3638306",
-    "editor": [["Paul D.", "Clough"], ["Morgan", "Harvey"], ["Frank", "Hopfgartner"]],
-    "month": "mar",
-    "pages": "130--141",
-    "publisher": "ACM",
-    "title": "From Potential to Practice: Intellectual Humility During Search on Debated Topics",
-    "year": 2024
-  },
-  {
     "id": "frummet:2024a",
     "category": "InProceedings",
     "author": [["Alexander", "Frummet"], ["Andrea", "Papenmeier"], ["Maik", "Fr\u00f6be"], ["Johannes", "Kiesel"]],
@@ -450,6 +437,19 @@
     "series": "ACM",
     "site": "Sheffield, United Kingdon",
     "title": "8th Workshop on Search-Oriented Conversational Artificial Intelligence (SCAI 2024)",
+    "year": 2024
+  },
+  {
+    "id": "rieger:2024b",
+    "category": "InProceedings",
+    "author": [["Alisa", "Rieger"], ["Frank", "Bredius"], ["Mari\u00ebt", "Theune"], ["Maria Soledad", "Pera"]],
+    "booktitle": "9th ACM SIGIR Conference on Human Information Interaction and Retrieval (CHIIR 2024)",
+    "doi": "10.1145/3627508.3638306",
+    "editor": [["Paul D.", "Clough"], ["Morgan", "Harvey"], ["Frank", "Hopfgartner"]],
+    "month": "mar",
+    "pages": "130--141",
+    "publisher": "ACM",
+    "title": "From Potential to Practice: Intellectual Humility During Search on Debated Topics",
     "year": 2024
   },
   {
