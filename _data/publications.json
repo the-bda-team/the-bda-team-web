@@ -1,94 +1,5 @@
 [
   {
-    "id": "gohsen:2025a",
-    "category": "Article",
-    "month": "dec",
-    "title": "User Simulation in Practice: Lessons Learned from Three Shared Tasks",
-    "year": 2025,
-    "author": [
-      [
-        "Marcel",
-        "Gohsen"
-      ],
-      [
-        "Zahra",
-        "Abbasiantaeb"
-      ],
-      [
-        "Mohammad",
-        "Aliannejadi"
-      ],
-      [
-        "Krisztian",
-        "Balog"
-      ],
-      [
-        "Timo",
-        "Breuer"
-      ],
-      [
-        "Jeffrey",
-        "Dalton"
-      ],
-      [
-        "Maik",
-        "Fröbe"
-      ],
-      [
-        "Christin",
-        "Kreutz"
-      ],
-      [
-        "Andreas",
-        "Kruff"
-      ],
-      [
-        "Simon",
-        "Lupart"
-      ],
-      [
-        "Nailia",
-        "Mirzakhmedova"
-      ],
-      [
-        "Harrisen",
-        "Scells"
-      ],
-      [
-        "Philipp",
-        "Schaer"
-      ],
-      [
-        "Benno",
-        "Stein"
-        ], ["Johannes",
-        "Kiesel"
-      ]
-    ],
-    "editor": [
-      [
-        "Keping",
-        "Bi"
-      ],
-      [
-        "J. Shane",
-        "Culpepper"
-      ],
-      [
-        "Jiqun",
-        "Liu"
-      ]
-    ],
-    "journal": "SIGIR Forum",
-    "address": "New York",
-    "annote": "https://sigir.org/forum/issues/december-2025/",
-    "issn": "1558-0229",
-    "number": 2,
-    "numpages": 18,
-    "publisher": "ACM",
-    "volume": "59"
-  },
-  {
     "id": "kiesel:2026a",
     "category": "InProceedings",
     "address": "Cham, Switzerland",
@@ -128,6 +39,23 @@
     "publisher": "Schloss Dagstuhl -- Leibniz-Zentrum f\u00fcr Informatik",
     "title": "Conversational Agents: A Framework for Evaluation (CAFE) (Dagstuhl Perspectives Workshop 24352)",
     "volume": "11",
+    "year": 2025
+  },
+  {
+    "id": "gohsen:2025a",
+    "category": "Article",
+    "address": "New York",
+    "annote": "https://sigir.org/forum/issues/december-2025/",
+    "author": [["Marcel", "Gohsen"], ["Zahra", "Abbasiantaeb"], ["Mohammad", "Aliannejadi"], ["Krisztian", "Balog"], ["Timo", "Breuer"], ["Jeffrey", "Dalton"], ["Maik", "Fr\u00f6be"], ["Christin", "Kreutz"], ["Andreas", "Kruff"], ["Simon", "Lupart"], ["Nailia", "Mirzakhmedova"], ["Harrisen", "Scells"], ["Philipp", "Schaer"], ["Benno", "Stein"], ["Johannes", "Kiesel"]],
+    "editor": [["Keping", "Bi"], ["J. Shane", "Culpepper"], ["Jiqun", "Liu"]],
+    "issn": "1558-0229",
+    "journal": "SIGIR Forum",
+    "month": "dec",
+    "number": 2,
+    "numpages": 18,
+    "publisher": "ACM",
+    "title": "User Simulation in Practice: Lessons Learned from Three Shared Tasks",
+    "volume": "59",
     "year": 2025
   },
   {
