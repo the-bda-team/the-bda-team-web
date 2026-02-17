@@ -1,5 +1,94 @@
 [
   {
+    "id": "gohsen:2025a",
+    "category": "Article",
+    "month": "dec",
+    "title": "User Simulation in Practice: Lessons Learned from Three Shared Tasks",
+    "year": 2025,
+    "author": [
+      [
+        "Marcel",
+        "Gohsen"
+      ],
+      [
+        "Zahra",
+        "Abbasiantaeb"
+      ],
+      [
+        "Mohammad",
+        "Aliannejadi"
+      ],
+      [
+        "Krisztian",
+        "Balog"
+      ],
+      [
+        "Timo",
+        "Breuer"
+      ],
+      [
+        "Jeffrey",
+        "Dalton"
+      ],
+      [
+        "Maik",
+        "Fröbe"
+      ],
+      [
+        "Christin",
+        "Kreutz"
+      ],
+      [
+        "Andreas",
+        "Kruff"
+      ],
+      [
+        "Simon",
+        "Lupart"
+      ],
+      [
+        "Nailia",
+        "Mirzakhmedova"
+      ],
+      [
+        "Harrisen",
+        "Scells"
+      ],
+      [
+        "Philipp",
+        "Schaer"
+      ],
+      [
+        "Benno",
+        "Stein"
+        ], ["Johannes",
+        "Kiesel"
+      ]
+    ],
+    "editor": [
+      [
+        "Keping",
+        "Bi"
+      ],
+      [
+        "J. Shane",
+        "Culpepper"
+      ],
+      [
+        "Jiqun",
+        "Liu"
+      ]
+    ],
+    "journal": "SIGIR Forum",
+    "address": "New York",
+    "annote": "https://sigir.org/forum/issues/december-2025/",
+    "issn": "1558-0229",
+    "number": 2,
+    "numpages": 18,
+    "publisher": "ACM",
+    "volume": "59"
+  },
+  {
     "id": "kiesel:2026a",
     "category": "InProceedings",
     "address": "Cham, Switzerland",
