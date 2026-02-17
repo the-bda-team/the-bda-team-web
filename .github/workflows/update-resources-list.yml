@@ -24,7 +24,7 @@ jobs:
           --bucket "${{ secrets.R2_BUCKET_NAME }}" \
           --endpoint-url "https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com" \
           --output json \
-          | jq -c '[.Contents[].Key | select(.|endswith(".pdf"))]' \
+          | jq '[.Contents[].Key | select(.|endswith(".pdf"))]' \
           > _data/downloads-bda-team.json
     - name: Commit back changes
       uses: stefanzweifel/git-auto-commit-action@v7
