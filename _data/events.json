@@ -38,6 +38,7 @@
     "name": "Method Sharing Retreat (MESHARE)",
     "people": ["khan", "kiesel", "linzbach", "momeni", "muench", "yu"],
     "site": "Braunschweig, Germany",
+    "url": "https://methodshub.gesis.org/community/websci26-meshare/",
     "year": 2026
   },
   {
@@ -51,6 +52,30 @@
     "people": ["rieger", "yu"],
     "site": "Delft, Netherlands",
     "url": "https://sites.google.com/view/infuse-workshop/",
+    "year": 2026
+  },
+  {
+    "id": "isdt2026-methodshub",
+    "category": "Invited Talk",
+    "description": "By Johannes Kiesel",
+    "host": "ISDT 2026",
+    "hosturl": "https://isdt.ncp.edu.pk/",
+    "month": "apr",
+    "name": "The Methods Hub: A Platform for Sharing Reproducible Data Science Methods",
+    "people": ["kiesel"],
+    "site": "Islamabad, Pakistan and online",
+    "year": 2026
+  },
+  {
+    "id": "nfdi4ds-lectures2026-methodshub",
+    "category": "Invited Talk",
+    "description": "By Johannes Kiesel",
+    "host": "NFDI4DS Lectures 2026",
+    "hosturl": "https://www.nfdi4datascience.de/community/lecture-series/",
+    "month": "apr",
+    "name": "GESIS Methods Hub - the Collaborative Online Portal for Finding and Sharing Computational Methods in the Social Sciences",
+    "people": ["kiesel"],
+    "site": "Online",
     "year": 2026
   },
   {
@@ -152,6 +177,17 @@
     "year": 2025
   },
   {
+    "id": "methodsnet2025",
+    "category": "Conference",
+    "description": "2nd MethodsNET Conference, co-organized by Ulrike L\u00fche, Muhammad Taimoor Khan, and Beno\u00eet Rihoux",
+    "month": "sep",
+    "name": "MethodsNET 2025",
+    "people": ["khan"],
+    "site": "Louvain-la-Neuve, Belgium",
+    "url": "https://methodsnet.org/conference/2nd-methodsnet-conference/",
+    "year": 2025
+  },
+  {
     "id": "methodsnet2025-hands-on-methods-hub",
     "category": "Tutorial",
     "description": "Hands-on session on the Methods Hub held in conjunction with the 2nd MethodsNET Conference (MethodsNET 2025), co-organized by Fakhri Momeni, Felix Victor M\u00fcnch, Chung-hong Chan, and Muhammad Taimoor Khan",
@@ -175,6 +211,20 @@
     "people": ["khan", "momeni"],
     "site": "Copenhagen, Denmark",
     "url": "https://r2cass2025.wordpress.com/",
+    "year": 2025
+  },
+  {
+    "id": "valistad2025-reproducibility-session",
+    "category": "Tutorial",
+    "description": "Learn about the Methods Hub and how to use it, held as part of the 1st Workshop on Validating Social Text-as-Data Methods (VaLiSTAD 2025), co-organized by Muhammad Taimoor Khan, Saju Lorraine, and Arnim Bleier",
+    "host": "VaLiSTAD/ICWSM 2025",
+    "hosturl": "https://sites.google.com/view/valistad2025icwsm",
+    "keywords": ["methods hub"],
+    "month": "jun",
+    "name": "Online Computational Reproducibility",
+    "people": ["khan"],
+    "site": "Copenhagen, Denmark",
+    "url": "https://github.com/arnim/Reproducibility-ICWSM25",
     "year": 2025
   },
   {

@@ -1,4 +1,295 @@
 [
+{
+    "id": "khan:2025a",
+    "category": "InProceedings",
+    "month": "sep",
+    "title": "Characterization of Tweet Deletion Patterns in the Context of COVID-19 Discourse and Polarization",
+    "year": 2025,
+    "author": [
+      [
+        "Muhammad Taimoor",
+        "Khan"
+      ],
+      [
+        "Dimitar",
+        "Dimitrov"
+      ],
+      [
+        "Stefan",
+        "Dietze"
+      ]
+    ],
+    "booktitle": "36th ACM Conference on Hypertext and Social Media (HT 2025)",
+    "pages": "43--47",
+    "publisher": "ACM",
+    "doi": "10.1145/3720553.3746663",
+    "editor": [
+      [
+        "Yong",
+        "Zheng"
+      ],
+      [
+        "Ludovico",
+        "Boratto"
+      ],
+      [
+        "Charlie",
+        "Hargood"
+      ],
+      [
+        "Dongwon",
+        "Lee"
+      ]
+    ]
+  },
+  {
+    "id": "wajid:2024a",
+    "category": "Article",
+    "month": "mar",
+    "title": "A three-way decision approach for dynamically expandable networks",
+    "year": 2024,
+    "author": [
+      [
+        "Usman",
+        "Wajid"
+      ],
+      [
+        "Muhammad",
+        "Hamza"
+      ],
+      [
+        "Muhammad Taimoor",
+        "Khan"
+      ],
+      [
+        "Nouman",
+        "Azam"
+      ]
+    ],
+    "journal": "International Journal of Approximate Reasoning",
+    "doi": "10.1016/J.IJAR.2023.109105",
+    "volume": "166",
+    "numpages": 16
+  },
+  {
+    "id": "saadi:2022a",
+    "category": "InProceedings",
+    "month": "nov",
+    "title": "Effective Prevention of Semantic Drift in Continual Deep Learning",
+    "year": 2022,
+    "author": [
+      [
+        "Khouloud",
+        "Saadi"
+      ],
+      [
+        "Muhammad Taimoor",
+        "Khan"
+      ]
+    ],
+    "booktitle": "Intelligent Data Engineering and Automated Learning - 23rd International Conference (IDEAL 2022)",
+    "pages": "456--464",
+    "publisher": "Springer",
+    "doi": "10.1007/978-3-031-21753-1_44",
+    "editor": [
+      [
+        "Hujun",
+        "Yin"
+      ],
+      [
+        "David",
+        "Camacho"
+      ],
+      [
+        "Peter",
+        "Tiño"
+      ]
+    ],
+    "volume": "13756",
+    "series": "Lecture Notes in Computer Science",
+    "preprinturl": "https://arxiv.org/abs/2112.09175"
+  },
+  {
+    "id": "shah:2021a",
+    "category": "Article",
+    "month": "aug",
+    "title": "A Three-Way Clustering Approach for Novelty Detection",
+    "year": 2021,
+    "author": [
+      [
+        "Anwar",
+        "Shah"
+      ],
+      [
+        "Nouman",
+        "Azam"
+      ],
+      [
+        "Bahar",
+        "Ali"
+      ],
+      [
+        "Muhammad Taimoor",
+        "Khan"
+      ],
+      [
+        "Jing Tao",
+        "Yao"
+      ]
+    ],
+    "journal": "Information Sciences",
+    "pages": "650--668",
+    "doi": "10.1016/J.INS.2021.05.021",
+    "volume": "569"
+  },
+  {
+    "id": "khan:2018a",
+    "category": "InProceedings",
+    "month": "dec",
+    "title": "Graph Clustering Based Size Varying Rules for Lifelong Topic Modeling",
+    "year": 2018,
+    "author": [
+      [
+        "Muhammad Taimoor",
+        "Khan"
+      ],
+      [
+        "Shehzad",
+        "Khalid"
+      ],
+      [
+        "Furqan",
+        "Aziz"
+      ]
+    ],
+    "booktitle": "5th International Conference on Bioinformatics Research and Applications (ICBRA 1018)",
+    "pages": "73--77",
+    "publisher": "ACM",
+    "doi": "10.1145/3309129.3309146"
+  },
+  {
+    "id": "khan:2017a",
+    "category": "Article",
+    "month": "mar",
+    "title": "A three-way approach for learning rules in automatic knowledge-based topic models",
+    "year": 2017,
+    "author": [
+      [
+        "Muhammad Taimoor",
+        "Khan"
+      ],
+      [
+        "Nouman",
+        "Azam"
+      ],
+      [
+        "Shehzad",
+        "Khalid"
+      ],
+      [
+        "Jingtao",
+        "Yao"
+      ]
+    ],
+    "journal": "International Journal for Approximate Reasoning",
+    "volume": "82",
+    "pages": "210--226",
+    "doi": "10.1016/J.IJAR.2016.12.011"
+  },
+  {
+    "id": "khan:2016a",
+    "category": "Article",
+    "month": "feb",
+    "title": "Sentiment Analysis and the Complex Natural Language",
+    "year": 2016,
+    "author": [
+      [
+        "Muhammad Taimoor",
+        "Khan"
+      ],
+      [
+        "Mehr Yahya",
+        "Durrani"
+      ],
+      [
+        "Armughan",
+        "Ali"
+      ],
+      [
+        "Irum",
+        "Inayat"
+      ],
+      [
+        "Shehzad",
+        "Khalid"
+      ],
+      [
+        "Kamran Habib",
+        "Khan"
+      ]
+    ],
+    "journal": " Complex Adaptive Systems Modeling",
+    "volume": "4",
+    "doi": "10.1186/S40294-016-0016-9"
+  },
+  {
+    "id": "khan:2016b",
+    "category": "Article",
+    "month": "mar",
+    "title": "Lifelong Aspect Extraction from Big Data:Kknowledge eEgineering",
+    "year": 2016,
+    "author": [
+      [
+        "Muhammad Taimoor",
+        "Khan"
+      ],
+      [
+        "Mehr Yahya",
+        "Durrani"
+      ],
+      [
+        "Shehzad",
+        "Khalid"
+      ],
+      [
+        "Furqan",
+        "Aziz"
+      ]
+    ],
+    "journal": "Complex Adaptive Systtems Model",
+    "volume": "4",
+    "doi": "10.1186/S40294-016-0018-7",
+    "numpages": 15
+  },
+  {
+    "id": "khan:2016c",
+    "category": "Article",
+    "month": "jan",
+    "title": "Online Knowledge-Based Model for Big Data Topic Extraction",
+    "year": 2016,
+    "author": [
+      [
+        "Muhammad Taimoor",
+        "Khan"
+      ],
+      [
+        "Mehr Yahya",
+        "Durrani"
+      ],
+      [
+        "Shehzad",
+        "Khalid"
+      ],
+      [
+        "Furqan",
+        "Aziz"
+      ]
+    ],
+    "journal": "Computational Intelligence and Neuroscience",
+    "volume": "2016",
+    "pages": "1--10",
+    "doi": "10.1155/2016/6081804"
+  },
   {
     "id": "kiesel:2026a",
     "category": "InProceedings",
