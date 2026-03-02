@@ -1,4 +1,59 @@
 [
+    {
+    "id": "momeni:2026a",
+    "category": "InProceedings",
+    "month": "may",
+    "title": "From Guidelines to Practice: Evaluating the Reproducibility of Methods in Computational Social Science",
+    "year": 2026,
+    "author": [
+      [
+        "Fakhri",
+        "Momeni"
+      ],
+      [
+        "Sarah",
+        "Sajid"
+      ],
+      [
+        "Johannes",
+        "Kiesel"
+      ]
+    ],
+    "editor": [
+      [
+        "Gianluca",
+        "Demartini"
+      ],
+      [
+        "Stefan",
+        "Dietze"
+      ],
+      [
+        "Jennifer",
+        "Golbeck"
+      ],
+      [
+        "Shadi",
+        "Rezapour"
+      ],
+      [
+        "Marc",
+        "Spaniol"
+      ],
+      [
+        "Wolf-Tilo",
+        "Balke"
+      ],
+      [
+        "Florian",
+        "Plötzky"
+      ]
+    ],
+    "publisher": "ACM",
+    "site": "Braunschweig, Germany",
+    "booktitle": "18th ACM Web Science Conference (WebSci 2026)",
+    "todo": "pages, doi"
+  },
   {
     "id": "kiesel:2026a",
     "category": "InProceedings",
