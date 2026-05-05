@@ -1,5 +1,17 @@
 [
   {
+    "id": "heinrich:2026a",
+    "category": "InProceedings",
+    "author": [["Maximilian", "Heinrich"], ["Sharat", "Anand"], ["Johannes", "Kiesel"], ["Benno", "Stein"]],
+    "booktitle": "13th Workshop on Argument Mining and Reasoning (ArgMining 26)",
+    "month": "jul",
+    "publisher": "ACL",
+    "site": "San Diego, USA",
+    "title": "Illustrating Arguments with Images Using Aspect-Aware Prompting",
+    "todo": "doi, editor, pages",
+    "year": 2026
+  },
+  {
     "id": "abbasiantaeb:2026a",
     "category": "InProceedings",
     "author": [["Zahra", "Abbasiantaeb"], ["Simon", "Lupart"], ["Marcel", "Gohsen"], ["Nailia", "Mirzakhmedova"], ["Johannes", "Kiesel"], ["Jeffrey", "Dalton"], ["Mohammad", "Aliannejadi"]],
@@ -491,10 +503,11 @@
     "category": "InProceedings",
     "author": [["Lukas", "Gienapp"], ["Harrisen", "Scells"], ["Niklas", "Deckers"], ["Janek", "Bevendorff"], ["Shuai", "Wang"], ["Johannes", "Kiesel"], ["Shahbaz", "Syed"], ["Maik", "Fr\u00f6be"], ["Guido", "Zuccon"], ["Benno", "Stein"], ["Matthias", "Hagen"], ["Martin", "Potthast"]],
     "booktitle": "47th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2023)",
+    "doi": "10.1145/3626772.3657849",
     "month": "jul",
     "publisher": "ACM",
     "site": "Washington D.C., USA",
-    "title": "On the Evaluation of Generated Text SERPs",
+    "title": "Evaluating Generative Ad Hoc Information Retrieval",
     "year": 2024
   },
   {
@@ -614,6 +627,7 @@
     "category": "InProceedings",
     "author": [["Johannes", "Kiesel"], ["Marcel", "Gohsen"], ["Nailia", "Mirzakhmedova"], ["Matthias", "Hagen"], ["Benno", "Stein"]],
     "booktitle": "Advances in Information Retrieval. 46th European Conference on IR Research (ECIR 2024)",
+    "doi": "10.1007/978-3-031-56060-6_25",
     "month": "mar",
     "publisher": "Springer",
     "series": "Lecture Notes in Computer Science",
