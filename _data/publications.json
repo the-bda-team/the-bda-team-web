@@ -661,6 +661,32 @@
     "year": 2024
   },
   {
+    "id": "linzbach:2024a",
+    "category": "InProceedings",
+    "author": [["Stephan", "Linzbach"], ["Dimitar", "Dimitrov"], ["Laura", "Kallmeyer"], ["Kilian", "Evang"], ["Hajira", "Jabeen"], ["Stefan", "Dietze"]],
+    "booktitle": "2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (NAACL 2024)",
+    "doi": "10.18653/V1/2024.NAACL-LONG.201",
+    "editor": [["Kevin", "Duh"], ["Helena", "G\u00f3mez-Adorno"], ["Steven", "Bethard"]],
+    "month": "jan",
+    "pages": "3645--3655",
+    "publisher": "Association for Computational Linguistics",
+    "title": "Dissecting Paraphrases: The Impact of Prompt Syntax and supplementary Information on Knowledge Retrieval from Pretrained Language Models",
+    "year": 2024
+  },
+  {
+    "id": "ilkou:2024a",
+    "category": "InProceedings",
+    "author": [["Eleni", "Ilkou"], ["Stephan", "Linzbach"], ["Jonas", "Wallat"]],
+    "booktitle": "Proceedings of the Special Session on Harmonising Generative AI and Semantic Web Technologies (HGAIS 2024) co-located with the 23rd International Semantic Web Conference (ISWC 2024)",
+    "editor": [["Reham", "Alharbi"], ["Jacopo de", "Berardinis"], ["Paul", "Groth"], ["Albert", "Mero\u00f1o-Pe\u00f1uela"], ["Elena", "Simperl"], ["Valentina", "Tamma"]],
+    "month": "jan",
+    "publisher": "CEUR-WS.org",
+    "series": "CEUR Workshop Proceedings",
+    "title": "Hybrid Evaluation of Socratic Dialogue for Teaching",
+    "url": "https://ceur-ws.org/Vol-3953/363.pdf",
+    "year": 2024
+  },
+  {
     "id": "torky:2023",
     "category": "InProceedings",
     "author": [["Islam", "Torky"], ["Simon", "Ruth"], ["Shashi", "Sharma"], ["Mohamed", "Salama"], ["Krishna", "Chaitanya"], ["Tim", "Gollub"], ["Johannes", "Kiesel"], ["Benno", "Stein"]],
@@ -951,6 +977,32 @@
     "publisher": "ACM",
     "site": "Austin, USA",
     "title": "Guiding Oral Conversations: How to Nudge Users Towards Asking Questions?",
+    "year": 2023
+  },
+  {
+    "id": "linzbach:2023a",
+    "category": "InProceedings",
+    "author": [["Stephan", "Linzbach"], ["Tim", "Tressel"], ["Laura", "Kallmeyer"], ["Stefan", "Dietze"], ["Hajira", "Jabeen"]],
+    "booktitle": "Companion Proceedings of the ACM Web Conference 2023 (WWW 2023)",
+    "doi": "10.1145/3543873.3587655",
+    "editor": [["Ying", "Ding"], ["Jie", "Tang"], ["Juan F.", "Sequeda"], ["Lora", "Aroyo"], ["Carlos", "Castillo"], ["Geert-Jan", "Houben"]],
+    "month": "jan",
+    "pages": "1145--1149",
+    "publisher": "ACM",
+    "title": "Decoding Prompt Syntax: Analysing its Impact on Knowledge Retrieval in Large Language Models",
+    "year": 2023
+  },
+  {
+    "id": "dietze:2023a",
+    "category": "InProceedings",
+    "author": [["Stefan", "Dietze"], ["Hajira", "Jabeen"], ["Laura", "Kallmeyer"], ["Stephan", "Linzbach"]],
+    "booktitle": "Joint proceedings of the 1st workshop on Knowledge Base Construction from Pre-Trained Language Models (KBC-LM) and the 2nd challenge on Language Models for Knowledge Base Construction (LM-KBC) co-located with the 22nd International Semantic Web Conference (ISWC 2023)",
+    "editor": [["Simon", "Razniewski"], ["Jan-Christoph", "Kalo"], ["Sneha", "Singhania"], ["Jeff Z.", "Pan"]],
+    "month": "jan",
+    "publisher": "CEUR-WS.org",
+    "series": "CEUR Workshop Proceedings",
+    "title": "Towards syntax-aware pretraining and prompt engineering for knowledge retrieval from large language models",
+    "url": "https://ceur-ws.org/Vol-3577/paper18.pdf",
     "year": 2023
   },
   {
