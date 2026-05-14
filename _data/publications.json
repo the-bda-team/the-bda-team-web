@@ -315,8 +315,8 @@
     "id": "khan:2025b",
     "category": "InProceedings",
     "author": [["Muhammad Taimoor", "Khan"], ["Nasarullah Jan", "Wazir"], ["Imran", "Khan"], ["Muhammad Khan", "Afridi"], ["Omar Usman", "Khan"]],
-    "doi": "10.1109/ComTech65062.2025.11034604",
     "booktitle": "5th International Conference on Communication Technologies (ComTech 2025)",
+    "doi": "10.1109/ComTech65062.2025.11034604",
     "month": "apr",
     "pages": "1--6",
     "publisher": "IEEE",
@@ -328,12 +328,12 @@
     "category": "InProceedings",
     "author": [["Alaaeddin", "Alia"], ["Muhammad Taimoor", "Khan"]],
     "booktitle": "5th Workshop on Reducing Online Misinformation through Credible Information Retrieval (ROMCIR 2025)",
-    "url": "https://ceur-ws.org/Vol-3986/paper1.pdf",
     "editor": [["John", "Bianchi"], ["Gregor", "Donabauer"], ["Luca", "Herranz-Celotti"]],
     "month": "apr",
     "pages": "1--10",
     "publisher": "CEUR-WS.org",
     "title": "LLM-Based Bilingual Rumor Verification Using Evidence From Authorities",
+    "url": "https://ceur-ws.org/Vol-3986/paper1.pdf",
     "year": 2025
   },
   {
