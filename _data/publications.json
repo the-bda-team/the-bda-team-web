@@ -161,6 +161,19 @@
     "year": 2025
   },
   {
+    "id": "khan:2025c",
+    "category": "InProceedings",
+    "author": [["Muhammad Taimoor", "Khan"], ["Johannes", "Kiesel"], ["Dimitar", "Dimitrov"], ["Stefan", "Dietze"]],
+    "booktitle": "2nd MethodsNET Conference (MethodsNET 2025)",
+    "doi": "10.5281/zenodo.20203092",
+    "month": "sep",
+    "numpages": 2,
+    "publisher": "Zenodo",
+    "site": "Louvain-la-Neuve, Belgium",
+    "title": "Understanding Discourse-Topic Dependent Data Loss in Social Media Archives",
+    "year": 2025
+  },
+  {
     "id": "khan:2025a",
     "category": "InProceedings",
     "author": [["Muhammad Taimoor", "Khan"], ["Dimitar", "Dimitrov"], ["Stefan", "Dietze"]],
