@@ -161,19 +161,6 @@
     "year": 2025
   },
   {
-    "id": "momeni:2025d",
-    "category": "InProceedings",
-    "author": [["Fakhni", "Momeni"], ["Felix Victor", "Münch"], ["Chung-hong", "Chan"], ["Muhammad Taimoor", "Khan"]],
-    "booktitle": "2nd MethodsNET Conference (MethodsNET 2025)",
-    "doi": "10.5281/zenodo.20200438",
-    "month": "sep",
-    "numpages": 4,
-    "publisher": "Zenodo",
-    "site": "Louvain-la-Neuve, Belgium",
-    "title": "Session Report: Hands-On Session on the Methods Hub",
-    "year": 2025
-  },
-  {
     "id": "khan:2025c",
     "category": "InProceedings",
     "author": [["Muhammad Taimoor", "Khan"], ["Johannes", "Kiesel"], ["Dimitar", "Dimitrov"], ["Stefan", "Dietze"]],
@@ -184,6 +171,19 @@
     "publisher": "Zenodo",
     "site": "Louvain-la-Neuve, Belgium",
     "title": "Understanding Discourse-Topic Dependent Data Loss in Social Media Archives",
+    "year": 2025
+  },
+  {
+    "id": "momeni:2025d",
+    "category": "InProceedings",
+    "author": [["Fakhni", "Momeni"], ["Felix Victor", "M\u00fcnch"], ["Chung-hong", "Chan"], ["Muhammad Taimoor", "Khan"]],
+    "booktitle": "2nd MethodsNET Conference (MethodsNET 2025)",
+    "doi": "10.5281/zenodo.20200438",
+    "month": "sep",
+    "numpages": 4,
+    "publisher": "Zenodo",
+    "site": "Louvain-la-Neuve, Belgium",
+    "title": "Session Report: Hands-On Session on the Methods Hub",
     "year": 2025
   },
   {
