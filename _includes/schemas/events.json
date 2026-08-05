@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://the-bda.team/_schemas/events.json",
+  "$id": "https://the-bda.team/_includes/schemas/events.json",
   "type": "array",
   "items": {
     "$ref": "#/$defs/Event"
@@ -16,7 +16,7 @@
         "host": { "type": "string" },
         "hosturl": { "type": "string", "format": "uri" },
         "keywords": { "type": "array", "items": { "type": "string" } },
-        "month": { "$ref": "_schemas/base.json#/$defs/Month" },
+        "month": { "$ref": "_includes/schemas/base.json#/$defs/Month" },
         "name": { "type": "string" },
         "people": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
         "publications": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
@@ -25,7 +25,7 @@
         "slidesurl": { "type": "string", "format": "uri" },
         "url": { "type": "string", "format": "uri" },
         "videourl": { "type": "string", "format": "uri" },
-        "year": { "$ref": "_schemas/base.json#/$defs/Year" }
+        "year": { "$ref": "_includes/schemas/base.json#/$defs/Year" }
       },
       "additionalProperties": false
     }

@@ -111,8 +111,8 @@ document.getElementById("convert").addEventListener("click", () => {
 });
 
 Promise.all([
-  fetch("https://raw.githubusercontent.com/the-bda-team/the-bda-team-web/refs/heads/main/_schemas/publications.json"),
-  fetch("https://raw.githubusercontent.com/the-bda-team/the-bda-team-web/refs/heads/main/_schemas/base.json")
+  fetch("https://raw.githubusercontent.com/the-bda-team/the-bda-team-web/refs/heads/main/_includes/schemas/publications.json"),
+  fetch("https://raw.githubusercontent.com/the-bda-team/the-bda-team-web/refs/heads/main/_includes/schemas/base.json")
 ]).then(async ([publicationResponse, baseResponse]) => {
   schemas["publication"] = await publicationResponse.json();
   schemas["base"] = await baseResponse.json();
@@ -122,7 +122,7 @@ Promise.all([
   editor = new JSONEditor(element, {
     schema: schemas["publication"],
     refs: {
-      "_schemas/base.json": schemas["base"]
+      "_includes/schemas/base.json": schemas["base"]
     },
     display_required_only: true
   });

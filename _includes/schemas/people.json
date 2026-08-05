@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://the-bda.team/_schemas/people.json",
+  "$id": "https://the-bda.team/_includes/schemas/people.json",
   "type": "array",
   "items": {
     "$ref": "#/$defs/Person"
@@ -14,7 +14,7 @@
         "category": { "type": "string", "enum": ["Teamlead", "Former Staff", "Staff"] },
         "affiliation": { "type": "string" },
         "email": { "type": "string", "format": "email" },
-        "name": { "$ref": "_schemas/base.json#/$defs/PersonName" },
+        "name": { "$ref": "_includes/schemas/base.json#/$defs/PersonName" },
         "orcid": { "type": "string", "pattern": "^[0-9X]{4}-[0-9X]{4}-[0-9X]{4}-[0-9X]{4}$" },
         "title": { "type": "string", "enum": ["Dr.", "Prof."] },
         "topics": { "type": "array", "items": { "type": "string" }, "minItems": 1 },

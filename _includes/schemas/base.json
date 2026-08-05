@@ -1,7 +1,7 @@
 
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://the-bda.team/_schemas/base.json",
+  "$id": "https://the-bda.team/_includes/schemas/base.json",
   "$defs": {
     "DOI": { "type": "string", "pattern": "^10\\.\\d{4,9}/[-._;()/:a-zA-Z0-9]+$" },
     "PersonName": { "type": "array", "items": { "type": "string" }, "minItems": 2, "maxItems": 2 },

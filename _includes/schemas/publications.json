@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://the-bda.team/_schemas/publications.json",
+  "$id": "https://the-bda.team/_includes/schemas/publications.json",
   "type": "array",
   "items": {
     "$ref": "#/$defs/Publication"
@@ -17,11 +17,11 @@
         "appurl": { "type": "string", "format": "uri" },
         "awardurl": { "type": "string", "format": "uri" },
         "codeurl": { "type": "string", "format": "uri" },
-        "doi": { "$ref": "_schemas/base.json#/$defs/DOI" },
+        "doi": { "$ref": "_includes/schemas/base.json#/$defs/DOI" },
         "isbn": { "type": "string", "oneOf": [ { "pattern": "^(\\d-?){9}-[\\dX]$" }, { "pattern": "^(97[89])-(\\d-?){10}$" } ] },
         "issn": { "type": "string", "format": "^\\d{4}-\\d{3}[\\dX]$" },
         "keywords": { "type": "array", "items": { "type": "string" } },
-        "month": { "$ref": "_schemas/base.json#/$defs/Month" },
+        "month": { "$ref": "_includes/schemas/base.json#/$defs/Month" },
         "numpages": { "type": "integer", "minimum": 1 },
         "pages": { "type": "string", "pattern": "^[1-9][0-9]*--[1-9][0-9]*$" },
         "posterurl": { "type": "string", "format": "uri" },
@@ -32,7 +32,7 @@
         "url": { "type": "string", "format": "uri" },
         "versions": { "type": "array", "items": { "type": "object", "required": ["name", "url"], "properties": { "name": { "type": "string" }, "url": { "type": "string", "format": "uri" } } } },
         "videourl": { "type": "string", "format": "uri" },
-        "year": { "$ref": "_schemas/base.json#/$defs/Year" }
+        "year": { "$ref": "_includes/schemas/base.json#/$defs/Year" }
       },
       "allOf": [
         {
@@ -40,8 +40,8 @@
           "then": {
             "required": [ "author", "journal" ],
             "properties": {
-              "author": { "type": "array", "items": { "$ref": "_schemas/base.json#/$defs/PersonName" }, "minItems": 1 },
-              "editor": { "type": "array", "items": { "$ref": "_schemas/base.json#/$defs/PersonName" }, "minItems": 1 },
+              "author": { "type": "array", "items": { "$ref": "_includes/schemas/base.json#/$defs/PersonName" }, "minItems": 1 },
+              "editor": { "type": "array", "items": { "$ref": "_includes/schemas/base.json#/$defs/PersonName" }, "minItems": 1 },
               "journal": { "type": "string" },
               "number": { "type": "integer", "minimum": 1 },
               "publisher": { "type": "string" },
@@ -54,11 +54,11 @@
           "then": {
             "required": [ "author", "booktitle" ],
             "properties": {
-              "author": { "type": "array", "items": { "$ref": "_schemas/base.json#/$defs/PersonName" }, "minItems": 1 },
+              "author": { "type": "array", "items": { "$ref": "_includes/schemas/base.json#/$defs/PersonName" }, "minItems": 1 },
               "booktitle": { "type": "string" },
               "chapter": { "type": "string" },
               "edition": { "type": "string" },
-              "editor": { "type": "array", "items": { "$ref": "_schemas/base.json#/$defs/PersonName" }, "minItems": 1 },
+              "editor": { "type": "array", "items": { "$ref": "_includes/schemas/base.json#/$defs/PersonName" }, "minItems": 1 },
               "number": { "type": "integer", "minimum": 1 },
               "organization": { "type": "string" },
               "publisher": { "type": "string" },
@@ -73,9 +73,9 @@
           "then": {
             "required": [ "author", "booktitle" ],
             "properties": {
-              "author": { "type": "array", "items": { "$ref": "_schemas/base.json#/$defs/PersonName" }, "minItems": 1 },
+              "author": { "type": "array", "items": { "$ref": "_includes/schemas/base.json#/$defs/PersonName" }, "minItems": 1 },
               "booktitle": { "type": "string" },
-              "editor": { "type": "array", "items": { "$ref": "_schemas/base.json#/$defs/PersonName" }, "minItems": 1 },
+              "editor": { "type": "array", "items": { "$ref": "_includes/schemas/base.json#/$defs/PersonName" }, "minItems": 1 },
               "number": { "type": "integer", "minimum": 1 },
               "organization": { "type": "string" },
               "publisher": { "type": "string" },
@@ -90,7 +90,7 @@
           "then": {
             "required": [ "author", "school" ],
             "properties": {
-              "author": { "type": "array", "items": { "$ref": "_schemas/base.json#/$defs/PersonName" }, "minItems": 1 },
+              "author": { "type": "array", "items": { "$ref": "_includes/schemas/base.json#/$defs/PersonName" }, "minItems": 1 },
               "school": { "type": "string" }
             }
           }
@@ -100,7 +100,7 @@
           "then": {
             "required": [ "editor" ],
             "properties": {
-              "editor": { "type": "array", "items": { "$ref": "_schemas/base.json#/$defs/PersonName" }, "minItems": 1 },
+              "editor": { "type": "array", "items": { "$ref": "_includes/schemas/base.json#/$defs/PersonName" }, "minItems": 1 },
               "number": { "type": "integer", "minimum": 1 },
               "organization": { "type": "string" },
               "publisher": { "type": "string" },
@@ -115,7 +115,7 @@
           "then": {
             "required": [ "author" ],
             "properties": {
-              "author": { "type": "array", "items": { "$ref": "_schemas/base.json#/$defs/PersonName" }, "minItems": 1 },
+              "author": { "type": "array", "items": { "$ref": "_includes/schemas/base.json#/$defs/PersonName" }, "minItems": 1 },
               "number": { "type": "integer", "minimum": 1 },
               "institution": { "type": "string" }
             }

@@ -9,7 +9,7 @@ exclude:
   - .jekyll-cache/
   - Gemfile
   - Gemfile.lock
-  - _schemas/
+  - _util/
 
 liquid:
   error_mode: strict
