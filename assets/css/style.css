@@ -176,6 +176,10 @@ a, .resources > button {
 a:hover, .resources > button:hover {
   text-decoration: underline;
 }
+a:not([href]) {
+  color: var(--color-grayed-out-font) !important;
+  cursor: not-allowed;
+}
 [aria-hidden="true"] {
   display: none !important;
 }

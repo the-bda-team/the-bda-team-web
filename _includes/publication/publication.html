@@ -37,7 +37,7 @@ https://www.acm.org/publications/authors/reference-formatting
 {%- endif -%}
 
 {%- assign datasets = "" -%}
-{%- for dataset in site.data.data -%}
+{%- for dataset in site.data.database.data -%}
   {%- if dataset.publications contains include.publication.id -%}
     {%- if datasets != "" %}{% assign datasets = datasets | append: "," %}{% endif -%}
     {%- assign datasets = datasets | append: dataset.id -%}
@@ -45,7 +45,7 @@ https://www.acm.org/publications/authors/reference-formatting
 {%- endfor -%}
 
 {%- assign events = "" -%}
-{%- for event in site.data.events -%}
+{%- for event in site.data.database.events -%}
   {%- if event.publications contains include.publication.id -%}
     {%- if events != "" %}{% assign events = events | append: "," %}{% endif -%}
     {%- assign events = events | append: event.id -%}

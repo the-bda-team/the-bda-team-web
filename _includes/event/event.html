@@ -25,7 +25,7 @@ Parameters:
 {%- endif -%}
 
 {%- assign datasets = "" -%}
-{%- for dataset in site.data.data -%}
+{%- for dataset in site.data.database.data -%}
   {%- if dataset.events contains include.event.id -%}
     {%- if datasets != "" %}{% assign datasets = datasets | append: "," %}{% endif -%}
     {%- assign datasets = datasets | append: dataset.id -%}
@@ -41,7 +41,7 @@ Parameters:
 {%- if include.event.keywords %} data-keywords="{% for keyword in include.event.keywords %}{% if forloop.first == false %},{% endif %}{{ keyword }}{% endfor %}"{% endif %}
 {%- if include.event.month %} data-month="{{ include.event.month }}"{% endif %}
 {%- if include.event.name %} data-name="{{ include.event.name }}"{% endif %}
-{%- if include.event.people %} data-people="{% for person in include.event.people %}{% if forloop.first == false %},{% endif %}{{ person }},{% assign persondata = site.data.people | where: "id", person | first %}{{ persondata.name[0] }} {{ persondata.name[1] }}{% endfor %}"{% endif %}
+{%- if include.event.people %} data-people="{% for person in include.event.people %}{% if forloop.first == false %},{% endif %}{{ person }},{% assign persondata = site.data.database.people | where: "id", person | first %}{{ persondata.name[0] }} {{ persondata.name[1] }}{% endfor %}"{% endif %}
 {%- if posterurl %} data-posterurl="{{ posterurl }}"{% endif %}
 {%- if include.event.publications %} data-publications="{% for publication in include.event.publications %}{% if forloop.first == false %},{% endif %}{{ publication }}{% endfor %}"{% endif %}
 {%- if include.event.site %} data-site="{{ include.event.site }}"{% endif %}

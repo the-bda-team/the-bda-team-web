@@ -1,0 +1,47 @@
+---
+layout: base
+nav_active: facilities
+title: Facilities of the BDA Team
+breadcrumbs: [ "facilities" ]
+---
+
+<h1>Facilities</h1>
+
+<ul class="entries facilities">
+<li class="entry">
+<div>
+<span class="name">Edit BDA Database</span><br>
+<span class="description">Modify database entries.</span>
+<span class="resources">
+<a href="https://worker.the-bda.team/login">login</a>
+{% for type in site.data.database %}
+<a data-href-if-auth="/facilities/edit-bda-database.html?type={{ type[0] }}">{{ type[0] }}</a>
+{% endfor %}
+</span>
+</div>
+</li>
+</ul>
+
+<script src="/assets/js/api.js"></script>
+<script>
+checkAuth().then(user => {
+  if (user !== null) {
+    for (let element of Array.from(document.querySelectorAll("a[href='https://worker.the-bda.team/login']"))) {
+      element.setAttribute("href", "https://worker.the-bda.team/logout");
+      element.textContent = "logout (" + user.name + ")";
+    }
+    for (let element of Array.from(document.querySelectorAll("[data-href-if-auth]"))) {
+      element.setAttribute("href", element.getAttribute("data-href-if-auth"));
+    }
+  } else {
+    for (let element of Array.from(document.querySelectorAll("a[href='https://worker.the-bda.team/logout']"))) {
+      element.setAttribute("href", "https://worker.the-bda.team/login");
+      element.textContent = "login";
+    }
+    for (let element of Array.from(document.querySelectorAll("[data-href-if-auth]"))) {
+      element.setAttribute("title", "Requires being logged in");
+    }
+  }
+});
+</script>
+

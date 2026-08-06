@@ -2,12 +2,12 @@
 layout: base
 ---
 {%- assign person_id = page.name | remove: ".html" -%}
-{%- assign person = site.data.people | where: "id", person_id | first -%}
+{%- assign person = site.data.database.people | where: "id", person_id | first -%}
 
-{%- assign publications_people = site.data.publications | unique_authors %}
+{%- assign publications_people = site.data.database.publications | unique_authors %}
 {%- assign authorString = person.name | join: "_" -%}
-{%- assign data_people = site.data.data | map: "people" | uniq -%}
-{%- assign event_people = site.data.events | map: "people" | uniq -%}
+{%- assign data_people = site.data.database.data | map: "people" | uniq -%}
+{%- assign event_people = site.data.database.events | map: "people" | uniq -%}
 
 <h1>{% if person.title %}{{ person.title }} {% endif -%}{{ person.name[0] }} {{ person.name[1] }}</h1>
 
@@ -32,23 +32,23 @@ layout: base
 {%- if publications_people contains authorString %}
 <details id="publications" class="section" open><summary><h2>Publications</h2></summary>
 
-{% include publication/publications.html publications=site.data.publications headings="h3" by=person_id %}
+{% include publication/publications.html publications=site.data.database.publications headings="h3" by=person_id %}
 </details>
 {% endif %}
 
 {%- if data_people contains person_id %}
 <details id="data" class="section" open><summary><h2>Data</h2></summary>
 
-{% include data/datasets.html datasets=site.data.data headings="h3" by=person_id %}
+{% include data/datasets.html datasets=site.data.database.data headings="h3" by=person_id %}
 </details>
 {% endif %}
 
 {%- if event_people contains person_id %}
 <details id="events" class="section" open><summary><h2>Events</h2></summary>
 
-{% include event/events.html events=site.data.events headings="h3" by=person_id %}
+{% include event/events.html events=site.data.database.events headings="h3" by=person_id %}
 </details>
 {% endif %}
 
 
-{% assign event_people = site.data.events | map: "people" | uniq %}
+{% assign event_people = site.data.database.events | map: "people" | uniq %}

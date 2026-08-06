@@ -18,12 +18,12 @@ jobs:
     - name: Pre-commit Checks
       uses: pre-commit/action@v3.0.1
     - name: Format JSON
-      run: python3 _util/data_json_format.py _data/*.json
+      run: python3 _util/data_json_format.py _data/database/*.json
     - name: Commit back changes
       uses: stefanzweifel/git-auto-commit-action@v7
       with:
         commit_message: Automated Reformatting
-        file_pattern: '_data/*.json'
+        file_pattern: '_data/database/*.json'
 
   deploy:
     needs: test

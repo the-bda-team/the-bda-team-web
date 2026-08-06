@@ -7,7 +7,7 @@ breadcrumbs: ["people"]
 
 <h1>People</h1>
 
-{% assign peopleByCategory = site.data.people | group_by: "category" %}
+{% assign peopleByCategory = site.data.database.people | group_by: "category" %}
 <ul class="table-of-contents">
 {% for category in peopleByCategory %}
 <li><a href="#{{ category.name | downcase | replace: ' ', '' }}">{{ category.name }}</a></li>

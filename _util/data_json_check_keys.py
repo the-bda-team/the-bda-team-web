@@ -5,7 +5,7 @@ import os
 foreign_keys = [ "data", "events", "people", "publications" ]
 
 ids = {}
-data_dir = os.path.join(os.path.dirname(__file__), "..", "_data")
+data_dir = os.path.join(os.path.dirname(__file__), "..", "_data", "database")
 for foreign_key in foreign_keys:
     with open(os.path.join(data_dir, foreign_key + ".json")) as file:
         data_list = json.load(file)

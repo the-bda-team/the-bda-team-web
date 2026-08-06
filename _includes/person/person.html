@@ -14,9 +14,9 @@ Parameters:
 {% endunless -%}
 
 {% if include.personal == false -%}
-{% assign publications_people = site.data.publications | unique_authors -%}
-{% assign event_people = site.data.events | map: "people" | uniq -%}
-{% assign data_people = site.data.data | map: "people" | uniq -%}
+{% assign publications_people = site.data.database.publications | unique_authors -%}
+{% assign event_people = site.data.database.events | map: "people" | uniq -%}
+{% assign data_people = site.data.database.data | map: "people" | uniq -%}
 {% endif %}
 
 <div class="entry-image"><img src="/assets/img/people/{{ person.id }}.jpg"></div>

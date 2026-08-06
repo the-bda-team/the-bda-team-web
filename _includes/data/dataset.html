@@ -12,7 +12,7 @@ Parameters:
 {%- if include.dataset.keywords %} data-keywords="{% for keyword in include.dataset.keywords %}{% if forloop.first == false %},{% endif %}{{ keyword }}{% endfor %}"{% endif %}
 {%- if include.dataset.month %} data-month="{{ include.dataset.month }}"{% endif %}
 {%- if include.dataset.name %} data-name="{{ include.dataset.name }}"{% endif %}
-{%- if include.dataset.people %} data-people="{% for person in include.dataset.people %}{% if forloop.first == false %},{% endif %}{{ person }},{% assign persondata = site.data.people | where: "id", person | first %}{{ persondata.name[0] }} {{ persondata.name[1] }}{% endfor %}"{% endif %}
+{%- if include.dataset.people %} data-people="{% for person in include.dataset.people %}{% if forloop.first == false %},{% endif %}{{ person }},{% assign persondata = site.data.database.people | where: "id", person | first %}{{ persondata.name[0] }} {{ persondata.name[1] }}{% endfor %}"{% endif %}
 {%- if include.dataset.publications %} data-publications="{% for publication in include.dataset.publications %}{% if forloop.first == false %},{% endif %}{{ publication }}{% endfor %}"{% endif %}
 {%- if include.dataset.url %} data-url="{{ include.dataset.url }}"{% endif %}
 {%- if include.dataset.year %} data-year="{{ include.dataset.year }}"{% endif -%}

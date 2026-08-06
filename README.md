@@ -4,7 +4,7 @@ This repository contains the source of the [personal web page of the BDA team](h
 
 After uploading PDFs (for publications, events, etc.) to the [R2](https://dash.cloudflare.com/b30cbdf5bd2a6f2d7f7df34988116729/r2/default/buckets/bda-team), run the [update-resources-list workflow](https://github.com/the-bda-team/the-bda-team-web/actions/workflows/update-resources-list.yml) to add links to them from the publications page.
 
-To change your data, edit the files in [the `_data/` directory](_data/). To make an own web page, copy [`people/kiesel.html`](people/kiesel.html) and edit the content.
+To change your data, edit the files in [the `_data/database` directory](_data/database). To make an own web page, copy [`people/kiesel.html`](people/kiesel.html) and edit the content.
 
 ## Local Development
 
