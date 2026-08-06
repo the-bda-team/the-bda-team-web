@@ -80,11 +80,6 @@ function composeEntriesFromDom() {
 // Rendering: page shell
 // =====================================================================
 
-function renderHeader() {
-  document.getElementById("page-title").textContent = `BDA Team Database — ${TYPE_LABELS[state.type]}`;
-  document.getElementById("who").textContent = state.user ? `Signed in as ${state.user.login}` : "";
-}
-
 // "summary is name (if exists) or else the title"
 function summaryText(entry) {
   if (entry.name != null) return Array.isArray(entry.name) ? entry.name.join(" ") : String(entry.name);
@@ -761,8 +756,8 @@ async function init() {
     redirectToLogin("You need to log in first");
     return;
   }
-  state.user = user;
-  renderHeader();
+  const headline = document.querySelector("h1");
+  headline.textContent = headline.textContent + ` — ${TYPE_LABELS[state.type]}`;
   await loadAndRender();
 }
 
