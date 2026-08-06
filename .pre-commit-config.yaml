@@ -4,19 +4,19 @@ repos:
   hooks:
     - name: check-jsonschema-data
       id: check-jsonschema
-      files: ^_data/data.json$
+      files: ^_data/database/data.json$
       args: ["--base-uri", ".", "--schemafile", "_includes/schemas/data.json"]
     - name: check-jsonschema-events
       id: check-jsonschema
-      files: ^_data/events.json$
+      files: ^_data/database/events.json$
       args: ["--base-uri", ".", "--schemafile", "_includes/schemas/events.json"]
     - name: check-jsonschema-people
       id: check-jsonschema
-      files: ^_data/people.json$
+      files: ^_data/database/people.json$
       args: ["--base-uri", ".", "--schemafile", "_includes/schemas/people.json"]
     - name: check-jsonschema-publications
       id: check-jsonschema
-      files: ^_data/publications.json$
+      files: ^_data/database/publications.json$
       args: ["--base-uri", ".", "--schemafile", "_includes/schemas/publications.json"]
 - repo: local
   hooks:
@@ -24,6 +24,6 @@ repos:
       id: check-keys
       language: python
       entry: python3 _util/data_json_check_keys.py
-      files: ^_data/.*.json$
+      files: ^_data/database/.*.json$
 
 
