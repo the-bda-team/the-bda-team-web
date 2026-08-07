@@ -636,9 +636,9 @@ function validateEntry(type, entry, isNew, allCurrentEntries) {
 
 function updateModificationCounters() {
   const list = document.getElementById("entry-list");
-  for (let countType in ["edited", "added", "deleted"]) {
+  for (let countType of ["edited", "added", "deleted"]) {
     const count = list.querySelectorAll(".entry-" + countType).length;
-    for (let counterElement in Array.from(document.querySelectorAll(`[data-counter='${countType}']`))) {
+    for (let counterElement of Array.from(document.querySelectorAll(`[data-counter='${countType}']`))) {
       counterElement.textContent = count;
     }
   }
