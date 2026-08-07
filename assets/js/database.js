@@ -96,22 +96,12 @@ function searchableText(type, entry) {
     .toLowerCase();
 }
 
-let searchQuery = "";
-
 function renderPage(entries) {
-  const type = state.type;
-  document.getElementById("search").addEventListener("input", (e) => {
-    searchQuery = e.target.value;
-    applySearchFilter();
-  });
-  document.getElementById("add-new").addEventListener("click", () => addNewEntry());
-
-  const list = document.getElementById("entry-list");
+  const listElement = document.getElementById("entry-list");
   const sorted = [...entries].sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
   for (const entry of sorted) {
-    list.appendChild(buildEntryElement(entry, { isNew: false }));
+    listElement.appendChild(buildEntryElement(entry, { isNew: false }));
   }
-
   applySearchFilter();
   updateModificationCounters();
 }
@@ -151,7 +141,7 @@ function renderError(message, { url = null } = {}) {
 
 function applySearchFilter() {
   const type = state.type;
-  const q = searchQuery.trim().toLowerCase();
+  const q = document.querySelector(".filter input").value.trim().toLowerCase();
   const list = document.getElementById("entry-list");
   let shown = 0;
   list.querySelectorAll(":scope > details.entry").forEach((details) => {
