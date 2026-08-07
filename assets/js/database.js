@@ -74,9 +74,20 @@ function composeEntriesFromDom() {
 
 // "summary is name (if exists) or else the title"
 function summaryText(entry) {
-  if (entry.name != null) return Array.isArray(entry.name) ? entry.name.join(" ") : String(entry.name);
-  if (entry.title != null) return String(entry.title);
-  return entry.id || "(untitled)";
+  let text = "NEW ENTRY";
+  if (entry.name != null) {
+    text = Array.isArray(entry.name) ? entry.name.join(" ") : String(entry.name);
+  } else if (entry.title != null) {
+    text = String(entry.title);
+  } else if (entry.id != null) {
+    text = entry.id;
+  }
+
+  if (entry.year != null) {
+    text += ` (${entry.year})`;
+  }
+
+  return text;
 }
 
 function displayValue(entry, key) {
@@ -89,7 +100,7 @@ function displayValue(entry, key) {
   return String(v);
 }
 
-function searchableText(type, entry) {
+function searchableText(entry) {
   return Object.keys(entry)
     .map((k) => displayValue(entry, k))
     .join(" \u241f ")
@@ -140,20 +151,15 @@ function renderError(message, { url = null } = {}) {
 }
 
 function applySearchFilter() {
-  const type = state.type;
   const q = document.querySelector(".filter input").value.trim().toLowerCase();
   const list = document.getElementById("entry-list");
-  let shown = 0;
-  list.querySelectorAll(":scope > details.entry").forEach((details) => {
-    if (details.classList.contains("entry-added")) {
-      shown++; // always show in-progress new entries
-      return;
+  list.querySelectorAll(":scope > details.entry").forEach((entryElement) => {
+    if (entryElement.classList.contains("entry-added")) {
+      return; // always show new entries
     }
-    const matches = !q || searchableText(type, entryDataFor(details)).includes(q);
-    details.style.display = matches ? "" : "none";
-    if (matches) shown++;
+    const matches = !q || searchableText(entryDataFor(entryElement)).includes(q);
+    entryElement.style.display = matches ? "" : "none";
   });
-  document.getElementById("count").textContent = `${shown} ${shown === 1 ? "entry" : "entries"}`;
 }
 
 // =====================================================================
