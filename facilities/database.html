@@ -8,9 +8,32 @@ additional_css: [ "database" ]
 
 <h1>Edit BDA Database</h1>
 
-<div id="content"></div>
+<div class="filter">
+<input type="text" data-focus="true" placeholder="Type here to filter&hellip;">
+<div id="filtered-all-message" aria-hidden="true">No entries match your filter</div>
+</div>
 
-<div id="footer" hidden></div>
+<div class="buttons">
+<button id="add-new-button">Add new</button>
+</div>
+<div id="entry-list" class="entry-list"></div>
+
+<div id="footer">
+<ul id="errors"></ul>
+<div class="toolbar">
+
+<div class="counters">
+Edited: <span data-counter="edited">0</span> -
+Added: <span data-counter="added">0</span> -
+Deleted: <span data-counter="deleted">0</span>
+</div>
+
+<div class="buttons">
+<button id="save-button" onclick="saveAll()">Save</button>
+</div>
+
+</div>
+</div>
 
 <script src="/assets/js/api.js"></script>
 <script src="/assets/js/schemas.js"></script>

@@ -30,14 +30,6 @@ async function fetchTypeEntries(type) {
 }
 
 // =====================================================================
-// API + auth
-// =====================================================================
-
-function redirectToLogin(reason) {
-  window.location.href = "/facilities.html?redirect_reason=" + encodeURIComponent(reason);
-}
-
-// =====================================================================
 // DOM-as-state helpers
 // =====================================================================
 
@@ -106,17 +98,8 @@ function searchableText(type, entry) {
 
 let searchQuery = "";
 
-function renderPage(entries, commit, sha) {
+function renderPage(entries) {
   const type = state.type;
-  const content = document.getElementById("content");
-  content.innerHTML = `
-    <div class="toolbar">
-      <input id="search" type="search" placeholder="Search ${TYPE_LABELS[type].toLowerCase()}…">
-      <span class="count" id="count"></span>
-      <button id="add-new" class="primary">+ Add new</button>
-    </div>
-    <div id="entry-list" class="entry-list" data-commit="${escapeAttr(commit)}" data-sha="${escapeAttr(sha)}"></div>
-  `;
   document.getElementById("search").addEventListener("input", (e) => {
     searchQuery = e.target.value;
     applySearchFilter();
@@ -126,21 +109,44 @@ function renderPage(entries, commit, sha) {
   const list = document.getElementById("entry-list");
   const sorted = [...entries].sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
   for (const entry of sorted) {
-    list.appendChild(buildEntryDetails(entry, { isNew: false }));
+    list.appendChild(buildEntryElement(entry, { isNew: false }));
   }
 
   applySearchFilter();
-  updateFooter();
+  updateModificationCounters();
 }
 
 async function loadAndRender() {
-  const content = document.getElementById("content");
-  content.innerHTML = `<p class="muted">Loading ${TYPE_LABELS[state.type]}…</p>`;
   const res = await api(`/data?name=${encodeURIComponent(state.type)}`);
-  if (res.status === 401) { redirectToLogin("Your session expired — please log in again"); return; }
-  if (!res.ok) { content.innerHTML = `<p class="error">Failed to load ${TYPE_LABELS[state.type]}: ${res.status}</p>`; return; }
+  if (res.status === 401) { renderError("Your session expired — please log in again"); return; }
+  if (!res.ok) { renderError(`Failed to load ${state.type}: ${res.status}`); return; }
   const json = await res.json();
-  renderPage(json.content, json.commit, json.sha);
+  state.commit = json.commit;
+  state.sha = json.sha;
+  renderPage(json.content);
+}
+
+function renderError(message, { url = null } = {}) {
+  const errorElement = document.createElement("li");
+  if (url) {
+    const linkElement = document.createElement("a");
+    linkElement.setAttribute("href", url);
+    linkElement.setAttribute("target", "_blank");
+    linkElement.textContent = message;
+    errorElement.appendChild(linkElement);
+  } else {
+    errorElement.textContent = message;
+  }
+
+  const deleteButtonElement = document.createElement("button");
+  deleteButtonElement.setAttribute("type", "button");
+  deleteButtonElement.textContent = "delete";
+  deleteButtonElement.addEventListener("click", () => {
+    errorElement.remove();
+  });
+  errorElement.appendChild(deleteButtonElement);
+
+  document.getElementById("errors").appendChild(errorElement);
 }
 
 function applySearchFilter() {
@@ -149,7 +155,7 @@ function applySearchFilter() {
   const list = document.getElementById("entry-list");
   let shown = 0;
   list.querySelectorAll(":scope > details.entry").forEach((details) => {
-    if (details.classList.contains("entry-new")) {
+    if (details.classList.contains("entry-added")) {
       shown++; // always show in-progress new entries
       return;
     }
@@ -164,84 +170,77 @@ function applySearchFilter() {
 // Entry <details>: build shell, lazily build fields on first open
 // =====================================================================
 
-function buildEntryDetails(entry, { isNew }) {
-  const details = document.createElement("details");
-  details.className = "entry" + (isNew ? " entry-new" : "");
-  setEntryAttributes(details, entry);
+function buildEntryElement(entry, { isNew }) {
+  const entryElement = document.createElement("details");
+  entryElement.className = "entry" + (isNew ? " entry-added" : "");
+  setEntryAttributes(entryElement, entry);
 
   const summary = document.createElement("summary");
-  summary.innerHTML = `
-    <span class="summary-main">${escapeHtml(summaryText(entry))}</span>
-    <span class="summary-meta">${entry.category ? escapeHtml(entry.category) + " · " : ""}${escapeHtml(entry.id || "(no id yet)")}</span>
-  `;
-  details.appendChild(summary);
+  summary.textContent = summaryText(entry);
+  entryElement.appendChild(summary);
 
   const body = document.createElement("div");
   body.className = "entry-body";
-  details.appendChild(body);
+  entryElement.appendChild(body);
 
   if (isNew) {
-    details.open = true;
-    buildFieldsInto(details, body, { isNew: true });
+    entryElement.open = true;
+    buildFieldsInto(entryElement, body);
   } else {
-    details.addEventListener("toggle", () => {
-      if (details.open && !details.dataset.built) buildFieldsInto(details, body, { isNew: false });
+    // lazy build
+    entryElement.addEventListener("toggle", () => {
+      if (entryElement.open && !entryElement.dataset.built) {
+        buildFieldsInto(entryElement, body);
+      }
     });
   }
 
-  return details;
+  return entryElement;
 }
 
 // Builds (or rebuilds, e.g. on discard) the form inside `body`, using the
 // entry's current data-* attributes as the starting values.
-function buildFieldsInto(details, body, { isNew }) {
-  details.dataset.built = "1";
-  const draft = entryDataFor(details);
-
-  const onChange = () => {
-    if (!isNew) details.classList.add("entry-edited");
-    updateFooter();
-  };
-  const onDelete = isNew
-    ? () => { details.remove(); updateFooter(); }
-    : () => toggleDeleteMarker(details);
-
-  renderEntryForm(body, state.type, draft, { isNew, onChange, onDelete });
+function buildFieldsInto(entryElement, body) {
+  entryElement.dataset.built = "true";
+  const draft = entryDataFor(entryElement);
+  renderEntryForm(body, draft);
 }
 
-function resetEntryToOriginal(details) {
-  // Discard: rebuild the form fresh from the pristine data-* attributes,
-  details.classList.remove("entry-edited");
-  const body = details.querySelector(".entry-body");
-  buildFieldsInto(details, body, { isNew: false });
+function resetEntryToOriginal(entryElement) {
+  entryElement.classList.remove("entry-edited");
+  const body = entryElement.querySelector(".entry-body");
+  buildFieldsInto(entryElement, body, { isNew: false });
 }
 
-function toggleDeleteMarker(details) {
-  if (details.classList.contains("entry-deleted")) {
-    details.classList.remove("entry-deleted");
-    refreshDeleteButton(details);
-    updateFooter();
+function toggleDelete(entryElement) {
+  if (entryElement.classList.contains("entry-added")) {
+    entryElement.remove();
+    updateModificationCounters();
     return;
   }
-  const id = entryDataFor(details).id;
-  findReferences(state.type, id).then((refs) => {
-    if (refs.length) {
-      alert(
-        `Can't delete "${id}" — it's still referenced by:\n\n` +
-          refs.map((r) => `• ${TYPE_LABELS[r.type]} "${r.id}" (via "${r.field}")`).join("\n") +
-          `\n\nRemove those references first.`
-      );
-      return;
-    }
-    details.classList.add("entry-deleted");
-    refreshDeleteButton(details);
-    updateFooter();
-  });
-}
 
-function refreshDeleteButton(details) {
-  const btn = details.querySelector('button[data-role="delete"]');
-  if (btn) btn.textContent = details.classList.contains("entry-deleted") ? "Undo delete" : "Delete entry";
+  const deleteButtonElement = entryElement.querySelector("[data-role='delete']");
+  if (entryElement.classList.contains("entry-deleted")) {
+    entryElement.classList.remove("entry-deleted");
+    deleteButtonElement.textContent = "Delete";
+    updateModificationCounters();
+  } else {
+    const id = entryDataFor(entryElement).id;
+    findReferences(state.type, id).then((refs) => {
+      if (refs.length) {
+        renderError(
+          `Can't delete "${id}" — it's still referenced by:\n\n` +
+            refs.map((r) => `• ${TYPE_LABELS[r.type]} "${r.id}" (via "${r.field}")`).join("\n") +
+            `\n\nRemove those references first.`
+        );
+        return;
+      }
+      resetEntryToOriginal(entryElement);
+      entryElement.classList.add("entry-deleted");
+      deleteButtonElement.textContent = "Undo delete";
+      updateModificationCounters();
+    });
+  }
 }
 
 // =====================================================================
@@ -284,14 +283,16 @@ function blankEntry() {
 function addNewEntry() {
   const entry = blankEntry();
   const list = document.getElementById("entry-list");
-  const details = buildEntryDetails(entry, { isNew: true });
-  list.insertBefore(details, list.firstChild);
-  details.scrollIntoView({ behavior: "smooth", block: "center" });
-  updateFooter();
+  const entryElement = buildEntryElement(entry, { isNew: true });
+  list.insertBefore(entryElement, list.firstChild);
+  entryElement.scrollIntoView({ behavior: "smooth", block: "center" });
+  updateModificationCounters();
 }
 
-function renderEntryForm(container, type, draft, ctx) {
-  const schema = schemaFor(type);
+function renderEntryForm(container, draft) {
+  const schema = schemaFor(state.type);
+  const entryElement = container.closest(".entry");
+  const isAdded = entryElement.classList.contains("entry-added");
 
   function rebuild() {
     container.innerHTML = "";
@@ -308,31 +309,41 @@ function renderEntryForm(container, type, draft, ctx) {
       label.textContent = key + (required.has(key) ? " *" : "");
       wrap.appendChild(label);
       wrap.appendChild(
-        renderFieldInput(key, fs, kind, draft, ctx.isNew, (value) => {
+        renderFieldInput(key, fs, kind, draft, isAdded, (value) => {
           if (value === undefined || value === null || value === "" || (Array.isArray(value) && value.length === 0)) {
             delete draft[key];
           } else {
             draft[key] = value;
           }
-          ctx.onChange();
+          if (!isAdded) {
+            entryElement.classList.add("entry-edited");
+            updateModificationCounters();
+          }
           if (key === "category") rebuild();
         })
       );
       container.appendChild(wrap);
     }
 
-    const errorBox = document.createElement("div");
-    errorBox.className = "error field-errors";
-    errorBox.hidden = true;
-    container.appendChild(errorBox);
+    if (!isAdded) {
+      const resetButtonElement = document.createElement("button");
+      resetButtonElement.type = "button";
+      resetButtonElement.setAttribute("data-role", "reset");
+      resetButtonElement.textContent = "Reset";
+      resetButtonElement.addEventListener("click", () => {
+        resetEntryToOriginal(entryElement);
+      });
+      container.appendChild(resetButtonElement);
+    }
 
-    const delBtn = document.createElement("button");
-    delBtn.type = "button";
-    delBtn.className = "danger";
-    delBtn.dataset.role = "delete";
-    delBtn.textContent = ctx.isNew ? "Remove" : "Delete entry";
-    delBtn.addEventListener("click", ctx.onDelete);
-    container.appendChild(delBtn);
+    const deleteButtonElement = document.createElement("button");
+    deleteButtonElement.type = "button";
+    deleteButtonElement.setAttribute("data-role", "delete");
+    deleteButtonElement.textContent = "Delete";
+    deleteButtonElement.addEventListener("click", () => {
+      toggleDelete(entryElement);
+    });
+    container.appendChild(deleteButtonElement);
   }
 
   rebuild();
@@ -596,23 +607,28 @@ function renderObjectList(itemSchema, values, setValue) {
 
 function validateEntry(type, entry, isNew, allCurrentEntries) {
   const schema = schemaFor(type);
-  const errors = [];
+  let errors = 0;
   const required = requiredFields(schema, entry);
   for (const key of required) {
     const v = entry[key];
     const missing = v == null || v === "" || (Array.isArray(v) && v.length === 0);
-    if (missing) errors.push(`"${key}" is required`);
+    if (missing) {
+      errors += 1;
+      renderError(`${entry.id}: "${key}" is required`);
+    }
   }
   for (const key of allFieldKeys(schema)) {
     if (!(key in entry)) continue;
     const fs = fieldSchemaFor(schema, key);
     if (fs.type === "string" && typeof entry[key] === "string" && !stringMatchesSchema(fs, entry[key])) {
-      errors.push(`"${key}" doesn't match the required format`);
+      errors += 1;
+      renderError(`${entry.id}: "${key}" doesn't match the required format`);
     }
   }
   if (isNew) {
     if (allCurrentEntries.filter((e) => e !== entry).some((e) => e.id === entry.id)) {
-      errors.push(`id "${entry.id}" already exists in ${type}`);
+      errors += 1;
+      renderError(`${entry.id}: already exists in ${type}`);
     }
   }
   return errors;
@@ -622,87 +638,55 @@ function validateEntry(type, entry, isNew, allCurrentEntries) {
 // Sticky footer + batch save
 // =====================================================================
 
-function updateFooter() {
+function updateModificationCounters() {
   const list = document.getElementById("entry-list");
-  if (!list) return;
-  const edited = list.querySelectorAll(".entry-edited:not(.entry-deleted)").length;
-  const created = list.querySelectorAll(".entry-new:not(.entry-deleted)").length;
-  const deleted = list.querySelectorAll(".entry-deleted").length;
-  const footer = document.getElementById("footer");
-
-  if (edited + created + deleted === 0) {
-    footer.hidden = true;
-    footer.innerHTML = "";
-    return;
+  for (let countType in ["edited", "added", "deleted"]) {
+    const count = list.querySelectorAll(".entry-" + countType).length;
+    for (let counterElement in Array.from(document.querySelectorAll(`[data-counter='${countType}']`))) {
+      counterElement.textContent = count;
+    }
   }
-
-  const parts = [];
-  if (edited) parts.push(`${edited} edited`);
-  if (created) parts.push(`${created} new`);
-  if (deleted) parts.push(`${deleted} deleted`);
-
-  footer.hidden = false;
-  footer.innerHTML = `
-    <span>${parts.join(" · ")}</span>
-    <div class="footer-error" id="footer-error" hidden></div>
-    <button id="discard-btn">Discard all</button>
-    <button id="save-btn" class="primary">Save</button>
-  `;
-  document.getElementById("discard-btn").addEventListener("click", discardAll);
-  document.getElementById("save-btn").addEventListener("click", saveAll);
-}
-
-function discardAll() {
-  if (!confirm("Discard all unsaved changes?")) return;
-  const list = document.getElementById("entry-list");
-  list.querySelectorAll(".entry-new").forEach((el) => el.remove());
-  list.querySelectorAll(".entry-edited").forEach((details) => resetEntryToOriginal(details));
-  list.querySelectorAll(".entry-deleted").forEach((details) => {
-    details.classList.remove("entry-deleted");
-    refreshDeleteButton(details);
-  });
-  updateFooter();
 }
 
 async function saveAll() {
   const type = state.type;
   const list = document.getElementById("entry-list");
-  const errorBox = document.getElementById("footer-error");
 
   const current = composeEntriesFromDom();
   const toValidate = [];
-  list.querySelectorAll(".entry-edited:not(.entry-deleted)").forEach((d) => toValidate.push({ entry: entryDataFor(d), isNew: false }));
-  list.querySelectorAll(".entry-new:not(.entry-deleted)").forEach((d) => toValidate.push({ entry: entryDataFor(d), isNew: true }));
+  list.querySelectorAll(".entry-edited").forEach((d) => toValidate.push({ entry: entryDataFor(d), isNew: false }));
+  list.querySelectorAll(".entry-added").forEach((d) => toValidate.push({ entry: entryDataFor(d), isNew: true }));
 
-  const allErrors = [];
+  let errors = 0;
   for (const { entry, isNew } of toValidate) {
-    const errs = validateEntry(type, entry, isNew, current);
-    if (errs.length) allErrors.push(`${entry.id || "(new entry)"}: ${errs.join(", ")}`);
+    errors += validateEntry(type, entry, isNew, current);
   }
-  if (allErrors.length) {
-    errorBox.hidden = false;
-    errorBox.textContent = "Fix before saving — " + allErrors.join(" · ");
+  if (errors > 0) {
+    renderError("Errors need to be fixed before saving");
     return;
   }
 
-  const saveBtn = document.getElementById("save-btn");
-  saveBtn.disabled = true;
-  saveBtn.textContent = "Saving…";
+  const saveButtonElement = document.getElementById("save-button");
+  saveButtonElement.disabled = true;
+  saveButtonElement.textContent = "Saving…";
 
   const params = new URLSearchParams({
     name: type,
-    baseCommit: list.dataset.commit,
-    baseSha: list.dataset.sha,
+    baseCommit: state.commit,
+    baseSha: state.sha,
   });
   try {
     const res = await api(`/data?${params.toString()}`, {
       method: "PUT",
       body: JSON.stringify(current, null, 2),
     });
-    if (res.status === 401) { redirectToLogin("Your session expired — please log in again"); return; }
-    if (res.status === 409) {
-      errorBox.hidden = false;
-      errorBox.textContent = "Someone else changed this data. Reloading the latest version — please redo your edits.";
+    if (res.status === 401) {
+      renderError("Your session expired — log in on another tab");
+      return;
+    }
+    if (res.status === 405) {
+      const pullUrl = await res.text();
+      renderError("Merge conflict", pullUrl);
       await loadAndRender();
       return;
     }
@@ -711,11 +695,10 @@ async function saveAll() {
       throw new Error(text || `Save failed (${res.status})`);
     }
     await loadAndRender(); // fresh state from the server; also clears all local edit markers
-  } catch (err) {
-    errorBox.hidden = false;
-    errorBox.textContent = err.message;
-    saveBtn.disabled = false;
-    saveBtn.textContent = "Save";
+  } catch (error) {
+    renderError(`Error: ${error.message}`);
+    saveButtonElement.disabled = false;
+    saveButtonElement.textContent = "Save";
   }
 }
 
@@ -736,7 +719,7 @@ function escapeAttr(s) {
 
 window.addEventListener("beforeunload", (e) => {
   const list = document.getElementById("entry-list");
-  if (list && list.querySelector(".entry-edited, .entry-new, .entry-deleted")) {
+  if (list && list.querySelector(".entry-edited, .entry-added, .entry-deleted")) {
     e.preventDefault();
     e.returnValue = "";
   }
@@ -745,15 +728,14 @@ window.addEventListener("beforeunload", (e) => {
 async function init() {
   const type = new URLSearchParams(location.search).get("type");
   if (!TYPE_NAMES.includes(type)) {
-    document.getElementById("content").innerHTML =
-      `<p class="error">Missing or unknown "type" parameter. Valid values: ${TYPE_NAMES.join(", ")}.</p>`;
+    renderError(`Missing or unknown "type" parameter. Valid values: ${TYPE_NAMES.join(", ")}.`);
     return;
   }
   state.type = type;
 
   const user = await checkAuth();
   if (!user) {
-    redirectToLogin("You need to log in first");
+    window.location.href = "/facilities.html?redirect_reason=" + encodeURIComponent("Not logged in");
     return;
   }
   const headline = document.querySelector("h1");
