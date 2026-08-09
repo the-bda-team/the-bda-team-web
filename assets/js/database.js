@@ -37,8 +37,8 @@ async function fetchTypeEntries(type) {
 // live draft if it's been opened, otherwise reconstructed from its
 // pristine data-* attributes.
 function entryDataFor(entryElement) {
-  if (details._draft) {
-    return details._draft;
+  if (entryElement._draft) {
+    return entryElement._draft;
   } else {
     const obj = {};
     for (const attr of entryElement.attributes) {
@@ -162,8 +162,8 @@ function renderError(message, { url = null } = {}) {
   document.getElementById("errors").appendChild(errorElement);
 }
 
-function applySearchFilter(event) {
-  const inputElement = event.target;
+function applySearchFilter() {
+  const inputElement = document.querySelector(".filter-box input");
   const q = inputElement.value.trim().toLowerCase();
   const list = document.getElementById("entry-list");
   list.querySelectorAll(":scope > details.entry").forEach((entryElement) => {
