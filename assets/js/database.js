@@ -141,7 +141,8 @@ function renderError(message, { url = null } = {}) {
 
   const deleteButtonElement = document.createElement("button");
   deleteButtonElement.setAttribute("type", "button");
-  deleteButtonElement.textContent = "delete";
+  deleteButtonElement.setAttribute("role", "delete");
+  deleteButtonElement.textContent = "x";
   deleteButtonElement.addEventListener("click", () => {
     errorElement.remove();
   });
@@ -422,11 +423,11 @@ function renderTagsInput(values, setValue) {
       const chip = document.createElement("span");
       chip.className = "chip";
       chip.textContent = v;
-      const x = document.createElement("button");
-      x.type = "button";
-      x.textContent = "×";
-      x.addEventListener("click", () => { values.splice(i, 1); setValue([...values]); redraw(); });
-      chip.appendChild(x);
+      const buttonElement = document.createElement("button");
+      buttonElement.type = "button";
+      buttonElement.textContent = "×";
+      buttonElement.addEventListener("click", () => { values.splice(i, 1); setValue([...values]); redraw(); });
+      chip.appendChild(buttonElement);
       chips.appendChild(chip);
     });
   }
@@ -463,11 +464,11 @@ function renderIdRefsInput(targetType, values, setValue) {
       const chip = document.createElement("span");
       chip.className = "chip";
       chip.textContent = v;
-      const x = document.createElement("button");
-      x.type = "button";
-      x.textContent = "×";
-      x.addEventListener("click", () => { values.splice(i, 1); setValue([...values]); redraw(); });
-      chip.appendChild(x);
+      const buttonElement = document.createElement("button");
+      buttonElement.type = "button";
+      buttonElement.textContent = "×";
+      buttonElement.addEventListener("click", () => { values.splice(i, 1); setValue([...values]); redraw(); });
+      chip.appendChild(buttonElement);
       chips.appendChild(chip);
     });
   }
@@ -534,26 +535,26 @@ function renderTupleList(values, setValue) {
       const last = document.createElement("input");
       last.placeholder = "Last name";
       last.value = pair[1] || "";
-      const rm = document.createElement("button");
-      rm.type = "button";
-      rm.textContent = "Remove";
+      const buttonElement = document.createElement("button");
+      buttonElement.type = "button";
+      buttonElement.textContent = "Remove";
       function update() { values[i] = [first.value, last.value]; setValue([...values]); }
       first.addEventListener("input", update);
       last.addEventListener("input", update);
-      rm.addEventListener("click", () => { values.splice(i, 1); setValue([...values]); redraw(); });
+      buttonElement.addEventListener("click", () => { values.splice(i, 1); setValue([...values]); redraw(); });
       row.appendChild(first);
       row.appendChild(last);
-      row.appendChild(rm);
+      row.appendChild(buttonElement);
       rows.appendChild(row);
     });
   }
   redraw();
-  const addBtn = document.createElement("button");
-  addBtn.type = "button";
-  addBtn.textContent = "+ Add person";
-  addBtn.addEventListener("click", () => { values.push(["", ""]); setValue([...values]); redraw(); });
+  const buttonElement = document.createElement("button");
+  buttonElement.type = "button";
+  buttonElement.textContent = "Add person";
+  buttonElement.addEventListener("click", () => { values.push(["", ""]); setValue([...values]); redraw(); });
   wrap.appendChild(rows);
-  wrap.appendChild(addBtn);
+  wrap.appendChild(buttonElement);
   return wrap;
 }
 
@@ -579,21 +580,21 @@ function renderObjectList(itemSchema, values, setValue) {
         });
         row.appendChild(input);
       }
-      const rm = document.createElement("button");
-      rm.type = "button";
-      rm.textContent = "Remove";
-      rm.addEventListener("click", () => { values.splice(i, 1); setValue([...values]); redraw(); });
-      row.appendChild(rm);
+      const buttonElement = document.createElement("button");
+      buttonElement.type = "button";
+      buttonElement.textContent = "Remove";
+      buttonElement.addEventListener("click", () => { values.splice(i, 1); setValue([...values]); redraw(); });
+      row.appendChild(buttonElement);
       rows.appendChild(row);
     });
   }
   redraw();
-  const addBtn = document.createElement("button");
-  addBtn.type = "button";
-  addBtn.textContent = "+ Add";
-  addBtn.addEventListener("click", () => { values.push({}); setValue([...values]); redraw(); });
+  const buttonElement = document.createElement("button");
+  buttonElement.type = "button";
+  buttonElement.textContent = "Add";
+  buttonElement.addEventListener("click", () => { values.push({}); setValue([...values]); redraw(); });
   wrap.appendChild(rows);
-  wrap.appendChild(addBtn);
+  wrap.appendChild(buttonElement);
   return wrap;
 }
 

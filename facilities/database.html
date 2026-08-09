@@ -14,23 +14,21 @@ additional_css: [ "database" ]
 </div>
 
 <div class="buttons">
-<button id="add-new-button" onclick="addNewEntry()">Add new</button>
+<button id="add-new-button" type="button" onclick="addNewEntry()">Add new</button>
 </div>
 <div id="entry-list" class="entry-list"></div>
 
-<div id="footer">
+<footer>
 <ul id="errors"></ul>
 <div class="toolbar">
-
 <div class="counters">
-Edited: <span data-counter="edited">0</span> -
-Added: <span data-counter="added">0</span> -
+Edited: <span data-counter="edited">0</span>;
+Added: <span data-counter="added">0</span>;
 Deleted: <span data-counter="deleted">0</span>
 </div>
-
 <div class="buttons">
-<button id="save-button" onclick="saveAll()">Save</button>
-</div>
+<button id="save-button" type="button" onclick="saveAll()">Save</button>
+</footer>
 
 </div>
 </div>
