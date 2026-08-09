@@ -151,8 +151,9 @@ function renderError(message, { url = null } = {}) {
   document.getElementById("errors").appendChild(errorElement);
 }
 
-function applySearchFilter() {
-  const q = document.querySelector(".filter input").value.trim().toLowerCase();
+function applySearchFilter(event) {
+  const inputElement = event.target;
+  const q = inputElement.value.trim().toLowerCase();
   const list = document.getElementById("entry-list");
   list.querySelectorAll(":scope > details.entry").forEach((entryElement) => {
     if (entryElement.classList.contains("entry-added")) {
