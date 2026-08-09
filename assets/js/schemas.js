@@ -68,8 +68,10 @@ function ifClauseMatches(ifSchema, entry) {
 function fieldVisible(schema, key, entry) {
   if (schema.properties && schema.properties[key]) return true;
   for (const clause of schema.allOf || []) {
-    if (clause.then && clause.then.properties && clause.then.properties[key]) {
-      return ifClauseMatches(clause.if, entry);
+    if (ifClauseMatches(clause.if, entry)) {
+      if (clause.then && clause.then.properties && clause.then.properties[key]) {
+        return true;
+      }
     }
   }
   return false;

@@ -207,6 +207,7 @@ function resetEntryToOriginal(entryElement) {
   entryElement.classList.remove("entry-edited");
   const body = entryElement.querySelector(".entry-body");
   buildFieldsInto(entryElement, body, { isNew: false });
+  updateModificationCounters();
 }
 
 function toggleDelete(entryElement) {

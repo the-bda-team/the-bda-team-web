@@ -62,11 +62,16 @@ details.entry .field label {
 details.entry textarea {
   height: 7em;
 }
-details.entry .field .idref-row {
+details.entry .field .idref-row,
+details.entry .field .removable {
   display: flex;
+  margin-bottom: 1px;
 }
-details.entry .field .idref-row button {
+details.entry .field .idref-row button,
+details.entry .field .removable button {
   padding: 0 var(--space-default);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 
