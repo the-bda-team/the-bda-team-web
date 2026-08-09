@@ -749,14 +749,14 @@ window.addEventListener("beforeunload", (e) => {
 async function init() {
   const type = new URLSearchParams(location.search).get("type");
   if (!TYPE_NAMES.includes(type)) {
-    renderError(`Missing or unknown "type" parameter. Valid values: ${TYPE_NAMES.join(", ")}.`);
+    window.location.href = "/facilities.html#edit-bda-database";
     return;
   }
   state.type = type;
 
   const user = await checkAuth();
   if (!user) {
-    window.location.href = "/facilities.html?redirect_reason=" + encodeURIComponent("Not logged in");
+    window.location.href = "/facilities.html#edit-bda-database?redirect_reason=" + encodeURIComponent("Not logged in");
     return;
   }
   const headline = document.querySelector("h1");
