@@ -293,9 +293,17 @@ function renderEntryForm(container, draft) {
   const entryElement = container.closest(".entry");
   const isAdded = entryElement.classList.contains("entry-added");
 
+  function keySort(a, b) {
+    if (a === "id") { return -1; }
+    if (b === "id") { return 1; }
+    if (a === "category") { return -1; }
+    if (b === "category") { return 1; }
+    return a.localeCompare(b);
+  }
+
   function rebuild() {
     container.innerHTML = "";
-    const keys = allFieldKeys(schema).sort((a, b) => (a === "id" ? -1 : b === "id" ? 1 : a.localeCompare(b)));
+    const keys = allFieldKeys(schema).sort(keySort);
     const required = requiredFields(schema, draft);
 
     for (const key of keys) {
@@ -324,25 +332,30 @@ function renderEntryForm(container, draft) {
       container.appendChild(wrap);
     }
 
+    const buttonsElement = document.createElement("div");
+    buttonsElement.classList.add("buttons");
+
     if (!isAdded) {
       const resetButtonElement = document.createElement("button");
       resetButtonElement.type = "button";
       resetButtonElement.setAttribute("data-role", "reset");
-      resetButtonElement.textContent = "Reset";
+      resetButtonElement.textContent = "Reset entry";
       resetButtonElement.addEventListener("click", () => {
         resetEntryToOriginal(entryElement);
       });
-      container.appendChild(resetButtonElement);
+      buttonsElement.appendChild(resetButtonElement);
     }
 
     const deleteButtonElement = document.createElement("button");
     deleteButtonElement.type = "button";
     deleteButtonElement.setAttribute("data-role", "delete");
-    deleteButtonElement.textContent = "Delete";
+    deleteButtonElement.textContent = "Delete entry";
     deleteButtonElement.addEventListener("click", () => {
       toggleDelete(entryElement);
     });
-    container.appendChild(deleteButtonElement);
+    buttonsElement.appendChild(deleteButtonElement);
+
+    container.appendChild(buttonsElement);
   }
 
   rebuild();
@@ -386,7 +399,10 @@ function renderFieldInput(key, fs, kind, entry, isNew, setValue) {
       const input = document.createElement(useTextarea ? "textarea" : "input");
       if (!useTextarea) input.type = kind === "text" ? "text" : kind;
       input.value = value != null ? value : "";
-      if (key === "id" && !isNew) input.readOnly = true; // ids are immutable once created
+      if (key === "id" && !isNew) {
+        input.readOnly = true;
+        input.setAttribute("title", "IDs are immutable once created");
+      }
       input.addEventListener("input", () => setValue(input.value || undefined));
       return input;
     }

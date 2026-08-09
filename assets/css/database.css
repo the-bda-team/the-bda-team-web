@@ -66,6 +66,7 @@ details.entry .field .idref-row,
 details.entry .field .removable {
   display: flex;
   margin-bottom: 1px;
+  border-radius: 0px;
 }
 details.entry .field .idref-row button,
 details.entry .field .removable button {

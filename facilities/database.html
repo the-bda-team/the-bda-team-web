@@ -8,7 +8,7 @@ additional_css: [ "database" ]
 
 <h1>Edit BDA Database</h1>
 
-<div>
+<div class="filter-box">
 <input type="text" data-focus="true" placeholder="Type here to filter&hellip;" oninput="applySearchFilter()">
 </div>
 
@@ -32,7 +32,7 @@ Deleted: <span data-counter="deleted">0</span>
 </div>
 </div>
 
-<script src="/assets/js/api.js"></script>
-<script src="/assets/js/schemas.js"></script>
-<script src="/assets/js/database.js" defer></script>
+<script src="{{ '/assets/js/api.js' | relative_url }}?{{site.time | date: '%s'}}"></script>
+<script src="{{ '/assets/js/schemas.js' | relative_url }}?{{site.time | date: '%s'}}"></script>
+<script src="{{ '/assets/js/database.js' | relative_url }}?{{site.time | date: '%s'}}"></script>
 
