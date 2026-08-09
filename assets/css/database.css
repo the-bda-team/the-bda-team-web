@@ -6,6 +6,11 @@
   --color-edited-background: #EEF;
 }
 
+input[readonly] {
+  background-color: lightgray;
+  cursor: not-allowed;
+}
+
 main button {
   border-radius: var(--space-default);
   padding: calc(2*var(--space-default));

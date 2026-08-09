@@ -109,7 +109,13 @@ function searchableText(entry) {
 
 function renderPage(entries) {
   const listElement = document.getElementById("entry-list");
-  const sorted = [...entries].sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
+
+  function entrySort(a, b) {
+    if (a.year && b.year && a.year !== b.year) { return b.year - a.year; }
+    return a.id.localeCompare(b.id);
+  }
+
+  const sorted = [...entries].sort(entrySort);
   for (const entry of sorted) {
     listElement.appendChild(buildEntryElement(entry, { isNew: false }));
   }
