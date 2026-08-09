@@ -36,14 +36,18 @@ async function fetchTypeEntries(type) {
 // Reads an entry's current data straight from its <details> element: the
 // live draft if it's been opened, otherwise reconstructed from its
 // pristine data-* attributes.
-function entryDataFor(details) {
-  const obj = {};
-  for (const attr of details.attributes) {
-    if (attr.name.startsWith("data-")) {
-      obj[attr.name.slice(5)] = JSON.parse(attr.value);
+function entryDataFor(entryElement) {
+  if (details._draft) {
+    return details._draft;
+  } else {
+    const obj = {};
+    for (const attr of entryElement.attributes) {
+      if (attr.name.startsWith("data-") && attr.name !== "data-built") {
+        obj[attr.name.slice(5)] = JSON.parse(attr.value);
+      }
     }
+    return obj;
   }
-  return obj;
 }
 
 function setEntryAttributes(details, entry) {
@@ -112,7 +116,8 @@ function renderPage(entries) {
 
   function entrySort(a, b) {
     if (a.year && b.year && a.year !== b.year) { return b.year - a.year; }
-    return a.id.localeCompare(b.id);
+    if (a.month && b.month && a.month !== b.month) { return b.month - a.month; }
+    return summaryText(a).localeCompare(summaryText(b));
   }
 
   const sorted = [...entries].sort(entrySort);
@@ -207,6 +212,7 @@ function buildEntryElement(entry, { isNew }) {
 function buildFieldsInto(entryElement, body) {
   entryElement.dataset.built = "true";
   const draft = entryDataFor(entryElement);
+  entryElement._draft = draft;
   renderEntryForm(body, draft);
 }
 

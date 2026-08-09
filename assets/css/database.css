@@ -11,6 +11,17 @@ input[readonly] {
   cursor: not-allowed;
 }
 
+.filter-box input {
+  width: 95%;
+  max-width: 35rem;
+}
+
+main .buttons {
+  margin-top: var(--space-default);
+}
+main footer .buttons {
+  margin-top: 0;
+}
 main button {
   border-radius: var(--space-default);
   padding: calc(2*var(--space-default));
