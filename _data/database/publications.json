@@ -1,5 +1,19 @@
 [
   {
+    "id": "kiesel:2026a",
+    "category": "InProceedings",
+    "author": [["Johannes", "Kiesel"], ["Marc", "Feger"], ["Tim", "Hagen"], ["Sebastian", "Heineking"], ["Maximilian", "Heinrich"], ["Maik", "Fr\u00f6be"], ["Katarina", "Boland"], ["Christine", "Mathews"], ["Wilhelm", "Pertsch"], ["Julia", "Romberg"], ["Ines", "Zelch"], ["Stefan", "Dietze"], ["Matthias", "Hagen"], ["Martin", "Potthast"], ["Benno", "Stein"]],
+    "booktitle": "Experimental IR Meets Multilinguality, Multimodality, and Interaction. 17th International Conference of the CLEF Association (CLEF 2026)",
+    "month": "sep",
+    "publisher": "Springer",
+    "series": "Lecture Notes in Computer Science",
+    "site": "Jena, Germany",
+    "title": "Overview of Touch\u00e9 2026: Argumentation Systems",
+    "todo": "address, doi, pages, editor, clef worknotes",
+    "versions": [{"name": "ecir abstract", "url": "https://doi.org/10.1007/978-3-032-21321-1_38"}],
+    "year": 2026
+  },
+  {
     "id": "heinrich:2026a",
     "category": "InProceedings",
     "author": [["Maximilian", "Heinrich"], ["Sharat", "Anand"], ["Johannes", "Kiesel"], ["Benno", "Stein"]],
@@ -95,20 +109,6 @@
     "site": "Los Angeles, USA",
     "title": "Improving Reproducibility in Computational Social Science with the Methods Hub",
     "todo": "doi, editor, pages",
-    "year": 2026
-  },
-  {
-    "id": "kiesel:2026a",
-    "category": "InProceedings",
-    "author": [["Johannes", "Kiesel"], ["Marc", "Feger"], ["Tim", "Hagen"], ["Sebastian", "Heineking"], ["Maximilian", "Heinrich"], ["Maik", "Fr\u00f6be"], ["Katarina", "Boland"], ["Christine", "Mathews"], ["Wilhelm", "Pertsch"], ["Julia", "Romberg"], ["Ines", "Zelch"], ["Stefan", "Dietze"], ["Matthias", "Hagen"], ["Martin", "Potthast"], ["Benno", "Stein"]],
-    "booktitle": "Experimental IR Meets Multilinguality, Multimodality, and Interaction. 17th International Conference of the CLEF Association (CLEF 2026)",
-    "month": "sep",
-    "todo": "address, doi, pages, editor, clef worknotes",
-    "publisher": "Springer",
-    "series": "Lecture Notes in Computer Science",
-    "site": "Jena, Germany",
-    "title": "Overview of Touch\u00e9 2026: Argumentation Systems",
-    "versions": [{"name": "ecir abstract", "url": "https://doi.org/10.1007/978-3-032-21321-1_38"}],
     "year": 2026
   },
   {
