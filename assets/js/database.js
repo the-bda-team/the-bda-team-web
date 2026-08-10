@@ -722,11 +722,12 @@ async function saveAll() {
       throw new Error(text || `Save failed (${res.status})`);
     }
     await loadAndRender(); // fresh state from the server; also clears all local edit markers
+    updateModificationCounters();
   } catch (error) {
     renderError(`Error: ${error.message}`);
-    saveButtonElement.disabled = false;
-    saveButtonElement.textContent = "Save";
   }
+  saveButtonElement.disabled = false;
+  saveButtonElement.textContent = "Save";
 }
 
 // =====================================================================

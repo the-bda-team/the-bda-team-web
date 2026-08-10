@@ -90,14 +90,19 @@ button {
 /* Core */
 
 :root {
-  --color-background: #F8F8F8;
   --color-background-font: #666;
-  --color-headline-font: #444;
-  --color-selected: #D9E7F7;
-  --color-grayed-out-font: #666;
+  --color-background: #F8F8F8;
+  --color-button-background: #0d6efd;
+  --color-button-danger-background: #dc3545;
+  --color-button-hover-brightness: 85%;
   --color-dark-grayed-out-font: #444;
-  --color-link-font: rgb(6, 69, 173);
+  --color-edited-background: #EEF;
+  --color-edited-border: #00F;
+  --color-grayed-out-font: #666;
+  --color-headline-font: #444;
   --color-line: #DDD;
+  --color-link-font: rgb(6, 69, 173);
+  --color-selected: #D9E7F7;
   --space-default: 5px;
 }
 html, body {
@@ -165,6 +170,11 @@ i {
 input {
   padding: var(--space-default);
 }
+input[readonly] {
+  background-color: lightgray;
+  cursor: not-allowed;
+}
+
 a, .resources > button {
   background: none;
   border: none;
@@ -207,7 +217,8 @@ footer .content {
 .filter {
   margin-bottom: calc(4 * var(--space-default));
 }
-.filter input {
+.filter input,
+.filter-box input {
   width: 95%;
   max-width: 35rem;
 }
@@ -279,6 +290,36 @@ details.section[open] > summary > h2::after {
 .resources a::after, .resources button::after {
   content: "]";
 }
+
+/* Buttons generic */
+
+button[disabled] {
+  background-color: lightgray;
+}
+
+main .buttons {
+  margin-top: var(--space-default);
+}
+main footer .buttons {
+  margin-top: 0;
+}
+main button {
+  border-radius: var(--space-default);
+  padding: calc(2*var(--space-default));
+  background-color: var(--color-button-background);
+  cursor: pointer;
+  color: white;
+}
+main li button {
+  padding: 0px var(--space-default);
+}
+main button[role="delete"] {
+  background-color: var(--color-button-danger-background);
+}
+main button:hover {
+  filter: brightness(var(--color-button-hover-brightness)); 
+}
+
 
 /* Icon buttons */
 
