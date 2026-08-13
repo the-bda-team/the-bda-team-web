@@ -93,9 +93,6 @@ for filename in sys.argv[1:]:
     elif filename.endswith("publications.json"):
         get_sort_key = get_sort_key_publications
         print(filename + ": using publications sorting")
-    elif filename.endswith("downloads-bda-team.json"):
-        print(filename + ": skip formatting")
-        continue
     else:
         print(filename + ": using default sorting")
 

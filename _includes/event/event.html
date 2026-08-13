@@ -3,27 +3,6 @@ Parameters:
   - event. A single event 
 {% endcomment -%}
 
-{%- assign posterurl = nil -%}
-{%- assign slidesurl = nil -%}
-
-{%- assign pdf = include.event.id | replace: ":", "_" | append: ".pdf" -%}
-{%- if include.event.posterurl -%}
-  {%- assign posterurl = include.event.posterurl -%}
-{%- else -%}
-  {%- assign path = "events/posters/" | append: pdf -%}
-  {%- if site.data.downloads-bda-team contains path -%}
-    {%- assign posterurl = "https://downloads.the-bda.team/" | append: path -%}
-  {%- endif -%}
-{%- endif -%}
-{%- if include.event.slidesurl -%}
-  {%- assign slidesurl = include.event.slidesurl -%}
-{%- else -%}
-  {%- assign path = "events/slides/" | append: pdf -%}
-  {%- if site.data.downloads-bda-team contains path -%}
-    {%- assign slidesurl = "https://downloads.the-bda.team/" | append: path -%}
-  {%- endif -%}
-{%- endif -%}
-
 {%- assign datasets = "" -%}
 {%- for dataset in site.data.database.data -%}
   {%- if dataset.events contains include.event.id -%}
@@ -42,10 +21,10 @@ Parameters:
 {%- if include.event.month %} data-month="{{ include.event.month }}"{% endif %}
 {%- if include.event.name %} data-name="{{ include.event.name }}"{% endif %}
 {%- if include.event.people %} data-people="{% for person in include.event.people %}{% if forloop.first == false %},{% endif %}{{ person }},{% assign persondata = site.data.database.people | where: "id", person | first %}{{ persondata.name[0] }} {{ persondata.name[1] }}{% endfor %}"{% endif %}
-{%- if posterurl %} data-posterurl="{{ posterurl }}"{% endif %}
+{%- if include.event.posterurl %} data-posterurl="{{ include.event.posterurl }}"{% endif %}
 {%- if include.event.publications %} data-publications="{% for publication in include.event.publications %}{% if forloop.first == false %},{% endif %}{{ publication }}{% endfor %}"{% endif %}
 {%- if include.event.site %} data-site="{{ include.event.site }}"{% endif %}
-{%- if slidesurl %} data-slidesurl="{{ slidesurl }}"{% endif %}
+{%- if include.event.slidesurl %} data-slidesurl="{{ include.event.slidesurl }}"{% endif %}
 {%- if include.event.url %} data-url="{{ include.event.url }}"{% endif %}
 {%- if include.event.videourl %} data-url="{{ include.event.videourl }}"{% endif %}
 {%- if include.event.year %} data-year="{{ include.event.year }}"{% endif -%}
@@ -57,12 +36,12 @@ Parameters:
 <span class="resources">
 {%- if datasets != "" %}
 <a href="{{ '/data' | relative_url }}?q=events:{{ include.event.id | replace: ":", "" | urlencode }}">data</a>{% endif %}
-{%- if posterurl %}
-<a href="{{ posterurl }}">poster</a>{% endif %}
+{%- if include.event.posterurl %}
+<a href="{{ include.event.posterurl }}">poster</a>{% endif %}
 {%- if include.event.publications %}
 <a href="{{ '/publications' | relative_url }}?q=events:{{ include.event.id | urlencode }}">publications</a>{% endif %}
-{%- if slidesurl %}
-<a href="{{ slidesurl }}">slides</a>{% endif %}
+{%- if include.event.slidesurl %}
+<a href="{{ include.event.slidesurl }}">slides</a>{% endif %}
 {%- if include.event.videourl %}
 <a href="{{ include.event.videourl }}">video</a>{% endif %}
 </span>

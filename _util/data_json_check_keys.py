@@ -19,10 +19,6 @@ for foreign_key in foreign_keys:
         seen.add(key)
 
 for filename in sys.argv[1:]:
-    if filename.endswith("downloads-bda-team.json"):
-        print(filename + ": skip")
-        continue
-
     print(filename)
     with open(filename) as file:
         data_list = json.load(file)
