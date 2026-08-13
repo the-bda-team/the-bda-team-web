@@ -564,6 +564,22 @@
     "url": "https://downloads.the-bda.team/publications/papers/bleier_2026a.pdf"
   },
   {
+    "id": "hagen:2026a",
+    "category": "Article",
+    "address": "Dagstuhl, Germany",
+    "author": [["Matthias", "Hagen"], ["Josiane", "Mothe"], ["Smaranda", "Muresan"], ["Martin", "Potthast"], ["Min", "Zhang"], ["Benno", "Stein"], ["Sebastian", "Heineking"], ["Qinqyao", "Ai"], ["Mohammad", "Aliannejadi"], ["Liesbeth", "Allein"], ["Sophia", "Althammer"], ["Avishek", "Anand"], ["Nolwenn", "Bernard"], ["Niklas", "Deckers"], ["Gianluca", "Demartini"], ["Laura", "Dietz"], ["Carsten", "Eickhoff"], ["Nicola", "Ferro"], ["Maik", "Fr\u00f6be"], ["Norbert", "Fuhr"], ["Marcel", "Gohsen"], ["Michael", "Granitzer"], ["Faegheh", "Hasibi"], ["Djoerd", "Hiemstra"], ["Adam", "Jatowt"], ["Abhinav", "Joshi"], ["Johannes", "Kiesel"], ["Wojciech", "Kusa"], ["Sean", "MacAvaney"], ["Bhaskar", "Mitra"], ["Jian-Yun", "Nie"], ["Heather", "O'Brien"], ["Birte", "Platow"], ["Mark", "Sanderson"], ["Harrisen", "Scells"], ["Alan", "Smeaton"], ["Damiano", "Spina"], ["Johanne", "Trippas"], ["Stefan", "Voigt"], ["Arjen P.", "de Vries"], ["Guido", "Zuccon"]],
+    "doi": "10.4230/DagRep.15.9.71",
+    "issn": "2192-5283",
+    "journal": "Dagstuhl Reports",
+    "month": "may",
+    "number": 9,
+    "pages": "71--159",
+    "publisher": "Schloss Dagstuhl-Leibniz-Zentrum f{\\\"u}r Informatik",
+    "title": "Retrieval-Augmented Generation -- The Future of Search? (Dagstuhl Seminar 25391)",
+    "volume": "15",
+    "year": 2026
+  },
+  {
     "id": "gohsen:2026a",
     "category": "InProceedings",
     "author": [
