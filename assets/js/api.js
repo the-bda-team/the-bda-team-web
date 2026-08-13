@@ -46,6 +46,15 @@ async function saveType(type, entries) {
   return json;
 }
 
+async function uploadFile(directory, uploadType, id, file) {
+  const form = new FormData();
+  form.append("file", file);
+  form.append("directory", directory);
+  form.append("type", uploadType);
+  form.append("id", id);
+  return api("/file", { method: "PUT", body: form });
+}
+
 async function checkAuth() {
   try {
     const res = await api("/user");

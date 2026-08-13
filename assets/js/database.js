@@ -7,6 +7,11 @@
 const TYPE_NAMES = ["publications", "people", "events", "data"];
 const TYPE_LABELS = { publications: "Publications", people: "People", events: "Events", data: "Data" };
 
+const UPLOADABLE_FIELDS = {
+  events: { posterurl: "poster", slidesurl: "slide" },
+  publications: { posterurl: "poster", slidesurl: "slide", url: "paper" }
+};
+
 // =====================================================================
 // State
 // =====================================================================
@@ -319,28 +324,36 @@ function renderEntryForm(container, draft) {
     const required = requiredFields(schema, draft);
 
     for (const key of keys) {
-      if (!fieldVisible(schema, key, draft)) continue;
+      if (!fieldVisible(schema, key, draft)) { continue; }
+
+      const onChange = (value) => {
+        if (value === undefined || value === null || value === "" || (Array.isArray(value) && value.length === 0)) {
+          delete draft[key];
+        } else {
+          draft[key] = value;
+        }
+        if (!isAdded) {
+          entryElement.classList.add("entry-edited");
+          updateModificationCounters();
+        }
+        if (key === "category") rebuild();
+      };
       const fs = fieldSchemaFor(schema, key);
       const kind = fieldKind(key, fs);
+
       const wrap = document.createElement("div");
       wrap.className = "field";
+
       const label = document.createElement("label");
       label.textContent = key + (required.has(key) ? " *" : "");
       wrap.appendChild(label);
-      wrap.appendChild(
-        renderFieldInput(key, fs, kind, draft, isAdded, (value) => {
-          if (value === undefined || value === null || value === "" || (Array.isArray(value) && value.length === 0)) {
-            delete draft[key];
-          } else {
-            draft[key] = value;
-          }
-          if (!isAdded) {
-            entryElement.classList.add("entry-edited");
-            updateModificationCounters();
-          }
-          if (key === "category") rebuild();
-        })
-      );
+
+      const uploadType = UPLOADABLE_FIELDS[state.type] && UPLOADABLE_FIELDS[state.type][key];
+      if (uploadType) {
+        wrap.appendChild(renderUrlOrUploadInput(uploadType, key, draft, onChange));
+      } else {
+        wrap.appendChild(renderFieldInput(key, fs, kind, draft, isAdded, onChange));
+      }
       container.appendChild(wrap);
     }
 
@@ -436,6 +449,63 @@ function renderFieldInput(key, fs, kind, entry, isNew, setValue) {
       return input;
     }
   }
+}
+
+function renderUrlOrUploadInput(uploadType, key, entry, setValue) {
+  const wrap = document.createElement("div");
+  wrap.className = "url-or-upload";
+
+  const input = document.createElement("input");
+  input.type = "url";
+  input.value = entry[key] || "";
+  input.placeholder = "https://…";
+  input.addEventListener("input", () => setValue(input.value || undefined));
+  wrap.appendChild(input);
+
+  const id = entry.id;
+  if (!id) {
+    const hint = document.createElement("p");
+    hint.className = "muted small";
+    hint.textContent = "Enter an id first to enable file upload.";
+    wrap.appendChild(hint);
+    return wrap;
+  }
+
+  const uploadRow = document.createElement("div");
+  uploadRow.className = "upload-row";
+  const fileInput = document.createElement("input");
+  fileInput.type = "file";
+  fileInput.accept = "application/pdf";
+  const status = document.createElement("span");
+  status.className = "upload-status";
+  uploadRow.appendChild(fileInput);
+  uploadRow.appendChild(status);
+  wrap.appendChild(uploadRow);
+
+  fileInput.addEventListener("change", async () => {
+    const file = fileInput.files[0];
+    if (!file) return;
+    fileInput.disabled = true;
+    status.textContent = "Uploading…";
+    try {
+      const res = await uploadFile(state.type, uploadType, id, file);
+      if (!res.ok) {
+        const text = await res.text().catch(() => "");
+        throw new Error(text || `Upload failed (${res.status})`);
+      }
+      const json = await res.json();
+      input.value = json.url;
+      setValue(json.url); // same effect as a manual edit
+      status.textContent = "Uploaded.";
+    } catch (err) {
+      status.textContent = err.message;
+    } finally {
+      fileInput.disabled = false;
+      fileInput.value = "";
+    }
+  });
+
+  return wrap;
 }
 
 function renderTagsInput(values, setValue) {
