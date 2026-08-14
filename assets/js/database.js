@@ -326,7 +326,7 @@ function renderEntryForm(container, draft) {
     for (const key of keys) {
       if (!fieldVisible(schema, key, draft)) { continue; }
 
-      const onChange = (value) => {
+      const valueChangeCallback = (value) => {
         if (value === undefined || value === null || value === "" || (Array.isArray(value) && value.length === 0)) {
           delete draft[key];
         } else {
@@ -350,9 +350,9 @@ function renderEntryForm(container, draft) {
 
       const uploadType = UPLOADABLE_FIELDS[state.type] && UPLOADABLE_FIELDS[state.type][key];
       if (uploadType) {
-        wrap.appendChild(renderUrlOrUploadInput(uploadType, key, draft, onChange));
+        wrap.appendChild(renderUrlOrUploadInput(uploadType, key, draft, valueChangeCallback));
       } else {
-        wrap.appendChild(renderFieldInput(key, fs, kind, draft, isAdded, onChange));
+        wrap.appendChild(renderFieldInput(key, fs, kind, draft, isAdded, valueChangeCallback));
       }
       container.appendChild(wrap);
     }
@@ -386,7 +386,7 @@ function renderEntryForm(container, draft) {
   rebuild();
 }
 
-function renderFieldInput(key, fs, kind, entry, isNew, setValue) {
+function renderFieldInput(key, fs, kind, entry, isNew, valueChangeCallback) {
   const value = entry[key];
 
   switch (kind) {
@@ -405,7 +405,7 @@ function renderFieldInput(key, fs, kind, entry, isNew, setValue) {
         if (opt === value) o.selected = true;
         sel.appendChild(o);
       }
-      sel.addEventListener("change", () => setValue(sel.value || undefined));
+      sel.addEventListener("change", () => valueChangeCallback(sel.value || undefined));
       return sel;
     }
     case "number": {
@@ -414,7 +414,7 @@ function renderFieldInput(key, fs, kind, entry, isNew, setValue) {
       if (fs.minimum != null) input.min = fs.minimum;
       if (fs.maximum != null) input.max = fs.maximum;
       input.value = value != null ? value : "";
-      input.addEventListener("input", () => setValue(input.value === "" ? undefined : Number(input.value)));
+      input.addEventListener("input", () => valueChangeCallback(input.value === "" ? undefined : Number(input.value)));
       return input;
     }
     case "url":
@@ -428,30 +428,30 @@ function renderFieldInput(key, fs, kind, entry, isNew, setValue) {
         input.readOnly = true;
         input.setAttribute("title", "IDs are immutable once created");
       }
-      input.addEventListener("input", () => setValue(input.value || undefined));
+      input.addEventListener("input", () => valueChangeCallback(input.value || undefined));
       return input;
     }
     case "tags":
-      return renderTagsInput(value ? [...value] : [], setValue);
+      return renderTagsInput(value ? [...value] : [], valueChangeCallback);
     case "idrefs":
-      return renderIdRefsInput(key, value ? [...value] : [], setValue);
+      return renderIdRefsInput(key, value ? [...value] : [], valueChangeCallback);
     case "nametuple":
-      return renderNameTuple(value ? [...value] : ["", ""], setValue);
+      return renderNameTuple(value ? [...value] : ["", ""], valueChangeCallback);
     case "tuplelist":
-      return renderTupleList(value ? value.map((v) => [...v]) : [], setValue);
+      return renderTupleList(value ? value.map((v) => [...v]) : [], valueChangeCallback);
     case "objectlist":
-      return renderObjectList(fs.items, value ? value.map((v) => ({ ...v })) : [], setValue);
+      return renderObjectList(fs.items, value ? value.map((v) => ({ ...v })) : [], valueChangeCallback);
     default: {
       const input = document.createElement("input");
       input.type = "text";
       input.value = value != null ? value : "";
-      input.addEventListener("input", () => setValue(input.value || undefined));
+      input.addEventListener("input", () => valueChangeCallback(input.value || undefined));
       return input;
     }
   }
 }
 
-function renderUrlOrUploadInput(uploadType, key, entry, setValue) {
+function renderUrlOrUploadInput(uploadType, key, entry, valueChangeCallback) {
   const wrap = document.createElement("div");
   wrap.className = "url-or-upload";
 
@@ -459,7 +459,7 @@ function renderUrlOrUploadInput(uploadType, key, entry, setValue) {
   input.type = "url";
   input.value = entry[key] || "";
   input.placeholder = "https://…";
-  input.addEventListener("input", () => setValue(input.value || undefined));
+  input.addEventListener("input", () => valueChangeCallback(input.value || undefined));
   wrap.appendChild(input);
 
   const id = entry.id;
@@ -496,7 +496,7 @@ function renderUrlOrUploadInput(uploadType, key, entry, setValue) {
       const json = await res.json();
       if (json.url !== input.value) {
         input.value = json.url;
-        setValue(json.url); // same effect as a manual edit
+        valueChangeCallback(json.url); // same effect as a manual edit
       }
       status.textContent = "Uploaded.";
     } catch (err) {
@@ -510,7 +510,7 @@ function renderUrlOrUploadInput(uploadType, key, entry, setValue) {
   return wrap;
 }
 
-function renderTagsInput(values, setValue) {
+function renderTagsInput(values, valueChangeCallback) {
   const wrap = document.createElement("div");
   wrap.className = "chip-input";
   const chips = document.createElement("div");
@@ -528,7 +528,7 @@ function renderTagsInput(values, setValue) {
       const buttonElement = document.createElement("button");
       buttonElement.type = "button";
       buttonElement.textContent = "×";
-      buttonElement.addEventListener("click", () => { values.splice(i, 1); setValue([...values]); redraw(); });
+      buttonElement.addEventListener("click", () => { values.splice(i, 1); valueChangeCallback([...values]); redraw(); });
       chip.appendChild(buttonElement);
       chips.appendChild(chip);
     });
@@ -537,7 +537,7 @@ function renderTagsInput(values, setValue) {
     if (e.key === "Enter" && input.value.trim()) {
       e.preventDefault();
       values.push(input.value.trim());
-      setValue([...values]);
+      valueChangeCallback([...values]);
       input.value = "";
       redraw();
     }
@@ -548,7 +548,7 @@ function renderTagsInput(values, setValue) {
   return wrap;
 }
 
-function renderIdRefsInput(targetType, values, setValue) {
+function renderIdRefsInput(targetType, values, valueChangeCallback) {
   const wrap = document.createElement("div");
   wrap.className = "chip-input";
   const chips = document.createElement("div");
@@ -569,7 +569,7 @@ function renderIdRefsInput(targetType, values, setValue) {
       const buttonElement = document.createElement("button");
       buttonElement.type = "button";
       buttonElement.textContent = "×";
-      buttonElement.addEventListener("click", () => { values.splice(i, 1); setValue([...values]); redraw(); });
+      buttonElement.addEventListener("click", () => { values.splice(i, 1); valueChangeCallback([...values]); redraw(); });
       chip.appendChild(buttonElement);
       chips.appendChild(chip);
     });
@@ -591,7 +591,7 @@ function renderIdRefsInput(targetType, values, setValue) {
   addBtn.addEventListener("click", () => {
     if (select.value) {
       values.push(select.value);
-      setValue([...values]);
+      valueChangeCallback([...values]);
       const opt = select.querySelector(`option[value="${CSS.escape(select.value)}"]`);
       if (opt) opt.remove();
       select.value = "";
@@ -604,7 +604,7 @@ function renderIdRefsInput(targetType, values, setValue) {
   return wrap;
 }
 
-function renderNameTuple(pair, setValue) {
+function renderNameTuple(pair, valueChangeCallback) {
   const wrap = document.createElement("div");
   wrap.className = "tuple-row";
   const first = document.createElement("input");
@@ -613,7 +613,7 @@ function renderNameTuple(pair, setValue) {
   const last = document.createElement("input");
   last.placeholder = "Last name";
   last.value = pair[1] || "";
-  function update() { setValue([first.value, last.value]); }
+  function update() { valueChangeCallback([first.value, last.value]); }
   first.addEventListener("input", update);
   last.addEventListener("input", update);
   wrap.appendChild(first);
@@ -621,7 +621,7 @@ function renderNameTuple(pair, setValue) {
   return wrap;
 }
 
-function renderTupleList(values, setValue) {
+function renderTupleList(values, valueChangeCallback) {
   const wrap = document.createElement("div");
   wrap.className = "list-editor";
   const rows = document.createElement("div");
@@ -640,10 +640,10 @@ function renderTupleList(values, setValue) {
       const buttonElement = document.createElement("button");
       buttonElement.type = "button";
       buttonElement.textContent = "Remove";
-      function update() { values[i] = [first.value, last.value]; setValue([...values]); }
+      function update() { values[i] = [first.value, last.value]; valueChangeCallback([...values]); }
       first.addEventListener("input", update);
       last.addEventListener("input", update);
-      buttonElement.addEventListener("click", () => { values.splice(i, 1); setValue([...values]); redraw(); });
+      buttonElement.addEventListener("click", () => { values.splice(i, 1); valueChangeCallback([...values]); redraw(); });
       row.appendChild(first);
       row.appendChild(last);
       row.appendChild(buttonElement);
@@ -654,13 +654,13 @@ function renderTupleList(values, setValue) {
   const buttonElement = document.createElement("button");
   buttonElement.type = "button";
   buttonElement.textContent = "Add person";
-  buttonElement.addEventListener("click", () => { values.push(["", ""]); setValue([...values]); redraw(); });
+  buttonElement.addEventListener("click", () => { values.push(["", ""]); valueChangeCallback([...values]); redraw(); });
   wrap.appendChild(rows);
   wrap.appendChild(buttonElement);
   return wrap;
 }
 
-function renderObjectList(itemSchema, values, setValue) {
+function renderObjectList(itemSchema, values, valueChangeCallback) {
   const props = Object.keys(itemSchema.properties || {});
   const required = new Set(itemSchema.required || []);
   const wrap = document.createElement("div");
@@ -678,14 +678,14 @@ function renderObjectList(itemSchema, values, setValue) {
         input.value = obj[p] || "";
         input.addEventListener("input", () => {
           if (input.value) obj[p] = input.value; else delete obj[p];
-          setValue([...values]);
+          valueChangeCallback([...values]);
         });
         row.appendChild(input);
       }
       const buttonElement = document.createElement("button");
       buttonElement.type = "button";
       buttonElement.textContent = "Remove";
-      buttonElement.addEventListener("click", () => { values.splice(i, 1); setValue([...values]); redraw(); });
+      buttonElement.addEventListener("click", () => { values.splice(i, 1); valueChangeCallback([...values]); redraw(); });
       row.appendChild(buttonElement);
       rows.appendChild(row);
     });
@@ -694,7 +694,7 @@ function renderObjectList(itemSchema, values, setValue) {
   const buttonElement = document.createElement("button");
   buttonElement.type = "button";
   buttonElement.textContent = "Add";
-  buttonElement.addEventListener("click", () => { values.push({}); setValue([...values]); redraw(); });
+  buttonElement.addEventListener("click", () => { values.push({}); valueChangeCallback([...values]); redraw(); });
   wrap.appendChild(rows);
   wrap.appendChild(buttonElement);
   return wrap;
