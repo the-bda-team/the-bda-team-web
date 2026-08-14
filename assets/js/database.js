@@ -494,8 +494,10 @@ function renderUrlOrUploadInput(uploadType, key, entry, setValue) {
         throw new Error(text || `Upload failed (${res.status})`);
       }
       const json = await res.json();
-      input.value = json.url;
-      setValue(json.url); // same effect as a manual edit
+      if (json.url !== input.value) {
+        input.value = json.url;
+        setValue(json.url); // same effect as a manual edit
+      }
       status.textContent = "Uploaded.";
     } catch (err) {
       status.textContent = err.message;
