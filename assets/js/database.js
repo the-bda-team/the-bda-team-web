@@ -118,6 +118,7 @@ function searchableText(entry) {
 
 function renderPage(entries) {
   const listElement = document.getElementById("entry-list");
+  listElement.innerHTML = "";
 
   function entrySort(a, b) {
     if (a.year && b.year && a.year !== b.year) { return b.year - a.year; }
