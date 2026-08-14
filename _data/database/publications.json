@@ -26,6 +26,7 @@
     "publisher": "ACL",
     "site": "San Diego, USA",
     "title": "Illustrating Arguments with Images Using Aspect-Aware Prompting",
+    "url": "https://downloads.the-bda.team/publications/papers/heinrich_2026a.pdf",
     "year": 2026
   },
   {
@@ -33,6 +34,7 @@
     "category": "InProceedings",
     "author": [["Zahra", "Abbasiantaeb"], ["Simon", "Lupart"], ["Marcel", "Gohsen"], ["Nailia", "Mirzakhmedova"], ["Johannes", "Kiesel"], ["Jeffrey", "Dalton"], ["Mohammad", "Aliannejadi"]],
     "booktitle": "49th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2026)",
+    "codeurl": "https://github.com/irlabamsterdam/ikat2025",
     "doi": "10.1145/3805712.3808591",
     "editor": [["Alistair", "Moffat"], ["Falk", "Scholer"], ["Hannah", "Bast"], ["Marc", "Najork"], ["Min", "Zhang"]],
     "month": "jul",
@@ -40,6 +42,7 @@
     "publisher": "ACM",
     "site": "Melbourne, Australia",
     "title": "TREC iKAT 2025: A Test Collection for the Offline and Interactive Evaluation of Conversational Search",
+    "url": "https://downloads.the-bda.team/publications/papers/abbasiantaeb_2026a.pdf",
     "year": 2026
   },
   {
@@ -54,6 +57,7 @@
     "publisher": "ACM",
     "site": "Melbourne, Australia",
     "title": "Sim.API: A Middleware to Simplify the Use of User Simulators for Shared Tasks in Conversational Search",
+    "url": "https://downloads.the-bda.team/publications/papers/gohsen_2026b.pdf",
     "year": 2026
   },
   {
@@ -68,6 +72,7 @@
     "publisher": "ACM",
     "site": "Melbourne, Australia",
     "title": "Do Simulated Users Need to Remember? Analyzing the Impact of Memory Models in Conversational Search Evaluation",
+    "url": "https://downloads.the-bda.team/publications/papers/mirzakhmedova_2026a.pdf",
     "year": 2026
   },
   {
@@ -128,6 +133,7 @@
     "pages": "71--159",
     "publisher": "Schloss Dagstuhl-Leibniz-Zentrum f{\\\"u}r Informatik",
     "title": "Retrieval-Augmented Generation -- The Future of Search? (Dagstuhl Seminar 25391)",
+    "url": "https://downloads.the-bda.team/publications/papers/hagen_2026a.pdf",
     "volume": "15",
     "year": 2026
   },
