@@ -83,17 +83,23 @@ function composeEntriesFromDom() {
 
 // "summary is name (if exists) or else the title"
 function summaryText(entry) {
-  let text = "NEW ENTRY";
-  if (entry.name != null) {
-    text = Array.isArray(entry.name) ? entry.name.join(" ") : String(entry.name);
-  } else if (entry.title != null) {
-    text = String(entry.title);
-  } else if (entry.id != null) {
-    text = entry.id;
+  if (entry.id === null) {
+    return "NEW ENTRY";
   }
 
-  if (entry.year != null) {
-    text += ` (${entry.year})`;
+  let text = "";
+  if (entry.year !== null) {
+    text += `${entry.year} `;
+  }
+  if (entry.month !== null) {
+    text += `${entry.month} `
+  }
+  if (entry.name !== null) {
+    text += Array.isArray(entry.name) ? entry.name.join(" ") : String(entry.name);
+  } else if (entry.title !== null) {
+    text += String(entry.title);
+  } else {
+    text += entry.id;
   }
 
   return text;
@@ -120,9 +126,14 @@ function renderPage(entries) {
   const listElement = document.getElementById("entry-list");
   listElement.innerHTML = "";
 
+  const monthOrder = Object.fromEntries(
+    [ "jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec" ].map(
+    (month, index) => [month, index]
+  ));
+
   function entrySort(a, b) {
     if (a.year && b.year && a.year !== b.year) { return b.year - a.year; }
-    if (a.month && b.month && a.month !== b.month) { return b.month - a.month; }
+    if (a.month && b.month && a.month !== b.month) { return monthOrder[b.month] - monthOrder[a.month]; }
     return summaryText(a).localeCompare(summaryText(b));
   }
 
