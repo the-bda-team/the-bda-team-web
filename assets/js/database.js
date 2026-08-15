@@ -741,6 +741,7 @@ function renderTupleList(values, valueChangeCallback, suggestions) {
       const row = document.createElement("div");
       row.className = "tuple-row removable";
       const first = document.createElement("input");
+      first.type = "text";
       first.placeholder = "First name";
       first.setAttribute("autocomplete", "off");
       first.value = pair[0] || "";
@@ -748,6 +749,7 @@ function renderTupleList(values, valueChangeCallback, suggestions) {
         first.setAttribute("list", suggestions);
       }
       const last = document.createElement("input");
+      last.type = "text";
       last.placeholder = "Last name";
       last.setAttribute("autocomplete", "off");
       last.value = pair[1] || "";
