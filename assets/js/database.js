@@ -524,6 +524,10 @@ function renderEntryForm(container, draft) {
           renderError('"id" cannot be changed.');
           return;
         }
+        const allCurrentEntries = isAdded ? composeEntriesFromDom() : null; // only needed if added
+        if (validateEntry(entry, allCurrentEntries) > 0) {
+          return;
+        }
         const changed = !deepEqual(draft, parsed);
         Object.keys(draft).forEach(key => delete draft[key]);
         Object.assign(draft, parsed);
@@ -902,8 +906,9 @@ function renderObjectList(itemSchema, values, valueChangeCallback) {
 // Validation
 // =====================================================================
 
-function validateEntry(type, entry, isNew, allCurrentEntries) {
-  const schema = schemaFor(type);
+function validateEntry(entry, allCurrentEntries) {
+  const isAdded = entryElement.classList.contains("entry-added");
+  const schema = schemaFor(state.type);
   let errors = 0;
   const required = requiredFields(schema, entry);
   for (const key of required) {
@@ -922,10 +927,10 @@ function validateEntry(type, entry, isNew, allCurrentEntries) {
       renderError(`${entry.id}: "${key}" doesn't match the required format`);
     }
   }
-  if (isNew) {
+  if (isAdded) {
     if (allCurrentEntries.filter((e) => e !== entry).some((e) => e.id === entry.id)) {
       errors += 1;
-      renderError(`${entry.id}: already exists in ${type}`);
+      renderError(`${entry.id}: already exists in ${state.type}`);
     }
   }
   return errors;
@@ -951,12 +956,12 @@ async function saveAll() {
 
   const current = composeEntriesFromDom();
   const toValidate = [];
-  list.querySelectorAll(".entry-edited").forEach((d) => toValidate.push({ entry: entryDataFor(d), isNew: false }));
-  list.querySelectorAll(".entry-added").forEach((d) => toValidate.push({ entry: entryDataFor(d), isNew: true }));
+  list.querySelectorAll(".entry-edited").forEach((d) => toValidate.push(entryDataFor(d)));
+  list.querySelectorAll(".entry-added").forEach((d) => toValidate.push(entryDataFor(d)));
 
   let errors = 0;
-  for (const { entry, isNew } of toValidate) {
-    errors += validateEntry(type, entry, isNew, current);
+  for (const entry of toValidate) {
+    errors += validateEntry(entry, current);
   }
   if (errors > 0) {
     renderError("Errors need to be fixed before saving");
