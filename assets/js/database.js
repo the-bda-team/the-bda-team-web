@@ -320,6 +320,7 @@ function buildFieldsInto(entryElement, body) {
 }
 
 function resetEntryToOriginal(entryElement) {
+  delete entryElement._draft;
   entryElement.classList.remove("entry-edited");
   const body = entryElement.querySelector(".entry-body");
   buildFieldsInto(entryElement, body, { isNew: false });
