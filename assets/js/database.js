@@ -89,10 +89,10 @@ function summaryText(entry) {
 
   let text = "";
   if (entry.year !== undefined) {
-    text += `${entry.year} `;
+    text += `${entry.year} - `;
   }
   if (entry.month !== undefined) {
-    text += `${entry.month} `
+    text += `${entry.month} - `
   }
   if (entry.name !== undefined) {
     text += Array.isArray(entry.name) ? entry.name.join(" ") : String(entry.name);
