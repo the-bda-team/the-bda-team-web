@@ -530,13 +530,13 @@ function renderEntryForm(container, draft) {
         }
         mode = "form";
         rebuild();
-      }
+      });
     } else {
       editorToggleButtonElement.textContent = "Edit entry as JSON";
       editorToggleButtonElement.addEventListener("click", () => {
         mode = "json";
         rebuild();
-      }
+      });
     }
     buttonsElement.appendChild(editorToggleButtonElement);
 
