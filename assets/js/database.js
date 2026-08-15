@@ -824,7 +824,7 @@ function renderTupleList(values, valueChangeCallback, suggestions) {
       first.type = "text";
       first.placeholder = "First";
       first.setAttribute("autocomplete", "off");
-      first.setAttribute("name", crypto.randomUUID());
+      first.setAttribute("name", "Author1");
       first.value = pair[0] || "";
       if (suggestions) {
         first.setAttribute("list", suggestions);
@@ -833,7 +833,7 @@ function renderTupleList(values, valueChangeCallback, suggestions) {
       last.type = "text";
       last.placeholder = "Last";
       last.setAttribute("autocomplete", "off");
-      last.setAttribute("name", crypto.randomUUID());
+      last.setAttribute("name", "Author2");
       last.value = pair[1] || "";
       const buttonElement = document.createElement("button");
       buttonElement.type = "button";
