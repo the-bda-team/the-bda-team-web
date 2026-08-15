@@ -211,7 +211,11 @@ async function renderAuthorAndEditorSuggestions() {
     for (const field of ["author", "editor"]) {
       if (Array.isArray(entry[field])) {
         for (const [first, last] of entry[field]) {
-          KNOWN_AUTHORS_AND_EDITORS.set(`${first} ${last}`, [first, last]);
+          if (first !== "") {
+            KNOWN_AUTHORS_AND_EDITORS.set(`${first} ${last}`, [first, last]);
+          } else {
+            KNOWN_AUTHORS_AND_EDITORS.set(`${last}`, [first, last]);
+          }
         }
       }
     }

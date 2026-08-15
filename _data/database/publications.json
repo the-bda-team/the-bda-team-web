@@ -974,7 +974,7 @@
   {
     "id": "carnot:2023",
     "category": "InProceedings",
-    "author": [["Miriam Louise", "Carnot"], ["Lorenz", "Heinemann"], [" Jan", "Braker"], ["Tobias", "Schreieder"], ["Johannes", "Kiesel"], ["Maik", "Fr\u00f6be"], ["Martin", "Potthast"], ["Benno", "Stein"]],
+    "author": [["Miriam Louise", "Carnot"], ["Lorenz", "Heinemann"], ["Jan", "Braker"], ["Tobias", "Schreieder"], ["Johannes", "Kiesel"], ["Maik", "Fr\u00f6be"], ["Martin", "Potthast"], ["Benno", "Stein"]],
     "booktitle": "46th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2023)",
     "doi": "10.1145/3539618.3591917",
     "editor": [["Hsin-Hsi", "Chen"], ["Wei-Jou (Edward)", "Duh"], ["Hen-Hsen", "Huang"], ["Makoto P.", "Kato"], ["Josiane", "Mothe"], ["Barbara", "Poblete"]],
