@@ -530,15 +530,15 @@ function renderFieldInput(key, fs, kind, entry, isNew, valueChangeCallback) {
       return input;
     }
     case "tags":
-      const suggestions = key === "keywords" ? "autocomplete-keywords" : null;
-      return renderTagsInput(value ? [...value] : [], valueChangeCallback, suggestions);
+      const tagsSuggestions = key === "keywords" ? "autocomplete-keywords" : null;
+      return renderTagsInput(value ? [...value] : [], valueChangeCallback, tagsSuggestions);
     case "idrefs":
       return renderIdRefsInput(key, value ? [...value] : [], valueChangeCallback);
     case "nametuple":
       return renderNameTuple(value ? [...value] : ["", ""], valueChangeCallback);
     case "tuplelist":
-      const suggestions = (key === "author" || key === "editor") ? "autocomplete-authors-and-editors" : null;
-      return renderTupleList(value ? value.map((v) => [...v]) : [], valueChangeCallback, suggestions);
+      const tupleListSuggestions = (key === "author" || key === "editor") ? "autocomplete-authors-and-editors" : null;
+      return renderTupleList(value ? value.map((v) => [...v]) : [], valueChangeCallback, tupleListSuggestions);
     case "objectlist":
       return renderObjectList(fs.items, value ? value.map((v) => ({ ...v })) : [], valueChangeCallback);
     default: {
