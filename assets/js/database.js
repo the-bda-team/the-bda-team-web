@@ -475,7 +475,7 @@ function renderEntryForm(container, draft) {
 
   function renderJsonEditor() {
     const fieldElement = document.createElement("div");
-    fieldElement.classList.append("field");
+    fieldElement.classList.add("field");
     const textareaElement = document.createElement("textarea");
     textareaElement.className = "json-editor";
     textareaElement.value = JSON.stringify(draft, null, 2);
