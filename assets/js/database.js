@@ -623,6 +623,7 @@ function renderTagsInput(values, valueChangeCallback, suggestions) {
   const input = document.createElement("input");
   input.type = "text";
   input.placeholder = "Type and press Enter";
+  input.setAttribute("autocomplete", "off");
   if (suggestions) {
     input.setAttribute("list", suggestions);
   }
@@ -741,12 +742,14 @@ function renderTupleList(values, valueChangeCallback, suggestions) {
       row.className = "tuple-row removable";
       const first = document.createElement("input");
       first.placeholder = "First name";
+      first.setAttribute("autocomplete", "off");
       first.value = pair[0] || "";
       if (suggestions) {
         first.setAttribute("list", suggestions);
       }
       const last = document.createElement("input");
       last.placeholder = "Last name";
+      last.setAttribute("autocomplete", "off");
       last.value = pair[1] || "";
       const buttonElement = document.createElement("button");
       buttonElement.type = "button";
