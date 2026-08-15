@@ -729,7 +729,7 @@ function renderNameTuple(pair, valueChangeCallback) {
   return wrap;
 }
 
-function renderTupleList(values, valueChangeCallback) {
+function renderTupleList(values, valueChangeCallback, suggestions) {
   const wrap = document.createElement("div");
   wrap.className = "list-editor";
   const rows = document.createElement("div");
@@ -742,6 +742,9 @@ function renderTupleList(values, valueChangeCallback) {
       const first = document.createElement("input");
       first.placeholder = "First name";
       first.value = pair[0] || "";
+      if (suggestions) {
+        first.setAttribute("list", suggestions);
+      }
       const last = document.createElement("input");
       last.placeholder = "Last name";
       last.value = pair[1] || "";
