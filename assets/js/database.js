@@ -528,7 +528,7 @@ function renderEntryForm(container, draft) {
           return;
         }
         const allCurrentEntries = isAdded ? composeEntriesFromDom() : null; // only needed if added
-        if (validateEntry(entryDataFor(entryElement), isAdded, allCurrentEntries) > 0) {
+        if (validateEntry(parsed, isAdded, allCurrentEntries) > 0) {
           return;
         }
         const changed = !deepEqual(draft, parsed);
