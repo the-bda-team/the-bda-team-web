@@ -525,7 +525,7 @@ function renderEntryForm(container, draft) {
           return;
         }
         const allCurrentEntries = isAdded ? composeEntriesFromDom() : null; // only needed if added
-        if (validateEntry(entry, allCurrentEntries) > 0) {
+        if (validateEntry(entryDataFor(entryElement), allCurrentEntries) > 0) {
           return;
         }
         const changed = !deepEqual(draft, parsed);
@@ -853,12 +853,16 @@ function renderTupleList(values, valueChangeCallback, suggestions) {
     });
   }
   redraw();
+  wrap.appendChild(rows);
+
+  const buttonsElement = document.createElement("div");
+  buttonsElement.classList.add("buttons");
   const buttonElement = document.createElement("button");
   buttonElement.type = "button";
   buttonElement.textContent = "Add person";
   buttonElement.addEventListener("click", () => { values.push(["", ""]); valueChangeCallback([...values]); redraw(); });
-  wrap.appendChild(rows);
-  wrap.appendChild(buttonElement);
+  buttonsElement.appendChild(buttonElement);
+  wrap.appendChild(buttonsElement);
   return wrap;
 }
 
@@ -893,12 +897,16 @@ function renderObjectList(itemSchema, values, valueChangeCallback) {
     });
   }
   redraw();
+  wrap.appendChild(rows);
+
+  const buttonsElement = document.createElement("div");
+  buttonsElement.classList.add("buttons");
   const buttonElement = document.createElement("button");
   buttonElement.type = "button";
   buttonElement.textContent = "Add";
   buttonElement.addEventListener("click", () => { values.push({}); valueChangeCallback([...values]); redraw(); });
-  wrap.appendChild(rows);
-  wrap.appendChild(buttonElement);
+  buttonsElement.appendChild(buttonElement);
+  wrap.appendChild(buttonsElement);
   return wrap;
 }
 
