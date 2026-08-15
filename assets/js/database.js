@@ -493,7 +493,8 @@ function renderEntryForm(container, draft) {
       resetButtonElement.textContent = "Reset entry";
       resetButtonElement.addEventListener("click", () => {
         if (mode === "json") {
-          entryElement.querySelector(".json-editor").value = JSON.stringify(entryDataFor(entryElement, true));
+          entryElement.querySelector(".json-editor").value =
+            JSON.stringify(entryDataFor(entryElement, true), null, 2);
         } else {
           resetEntryToOriginal(entryElement);
         }
@@ -524,7 +525,7 @@ function renderEntryForm(container, draft) {
           return;
         }
         const changed = !deepEqual(draft, parsed);
-        draft.clear();
+        Object.keys(draft).forEach(key => delete draft[key]);
         Object.assign(draft, parsed);
         if (changed && !isAdded) {
           entryElement.classList.add("entry-edited");

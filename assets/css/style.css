@@ -316,6 +316,9 @@ main li button {
 main button[role="delete"] {
   background-color: var(--color-button-danger-background);
 }
+main button:not(:first-child) {
+  margin-left: var(--space-default);
+}
 main button:hover {
   filter: brightness(var(--color-button-hover-brightness)); 
 }
