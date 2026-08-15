@@ -131,10 +131,32 @@ function renderPage(entries) {
     (month, index) => [month, index]
   ));
 
+  function venue(entry) {
+    if (enty.booktitle) {
+      return `A${entry.booktitle}`;
+    } else if (enty.journal) {
+      return `B${entry.journal}`;
+    } else if (enty.school) {
+      return `C${entry.school}`;
+    }
+    return null;
+  }
+
   function entrySort(a, b) {
     if (a.year && b.year && a.year !== b.year) { return b.year - a.year; }
-    if (a.month && b.month && a.month !== b.month) { return monthOrder[b.month] - monthOrder[a.month]; }
-    return summaryText(a).localeCompare(summaryText(b));
+    if (a.month && b.month && a.month !== b.month) { return monthOrder[a.month] - monthOrder[b.month]; }
+    if (a.name && b.name) { 
+      if (Array.isArray(a.name) && Array.isArray(b.name)) {
+        return a.name.join(" ").localeCompare(b.name.join(" "));
+      } else {
+        return a.name.localeCompare(b.name);
+      }
+    }
+    if (a.title && b.title && a.title !== b.title) { return a.title.localeCompare(b.title); }
+    const avenue = venue(a);
+    const bvenue = venue(b);
+    if (avenue && bvenue && avenue !== bvenue) { return avenue.localeCompare(bvenue); }
+    return a.id.localeCompare(b.id);
   }
 
   const sorted = [...entries].sort(entrySort);
