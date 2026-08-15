@@ -83,20 +83,20 @@ function composeEntriesFromDom() {
 
 // "summary is name (if exists) or else the title"
 function summaryText(entry) {
-  if (entry.id === null) {
+  if (entry.id === undefined) {
     return "NEW ENTRY";
   }
 
   let text = "";
-  if (entry.year !== null) {
+  if (entry.year !== undefined) {
     text += `${entry.year} `;
   }
-  if (entry.month !== null) {
+  if (entry.month !== undefined) {
     text += `${entry.month} `
   }
-  if (entry.name !== null) {
+  if (entry.name !== undefined) {
     text += Array.isArray(entry.name) ? entry.name.join(" ") : String(entry.name);
-  } else if (entry.title !== null) {
+  } else if (entry.title !== undefined) {
     text += String(entry.title);
   } else {
     text += entry.id;
