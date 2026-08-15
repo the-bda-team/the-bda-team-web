@@ -43,8 +43,8 @@ async function fetchTypeEntries(type) {
 // Reads an entry's current data straight from its <details> element: the
 // live draft if it's been opened, otherwise reconstructed from its
 // pristine data-* attributes.
-function entryDataFor(entryElement) {
-  if (entryElement._draft) {
+function entryDataFor(entryElement, pristine = false) {
+  if (!pristine && entryElement._draft) {
     return entryElement._draft;
   } else {
     const obj = {};
@@ -324,10 +324,11 @@ function buildFieldsInto(entryElement, body) {
 }
 
 function resetEntryToOriginal(entryElement) {
+  const isNew = entryElement.classList.contains("entry-new");
   delete entryElement._draft;
   entryElement.classList.remove("entry-edited");
   const body = entryElement.querySelector(".entry-body");
-  buildFieldsInto(entryElement, body, { isNew: false });
+  buildFieldsInto(entryElement, body, { isNew });
   updateModificationCounters();
 }
 
@@ -410,6 +411,7 @@ function addNewEntry() {
 
 function renderEntryForm(container, draft) {
   const schema = schemaFor(state.type);
+  let mode = "form";
   const entryElement = container.closest(".entry");
   const isAdded = entryElement.classList.contains("entry-added");
 
@@ -423,6 +425,14 @@ function renderEntryForm(container, draft) {
 
   function rebuild() {
     container.innerHTML = "";
+    if (mode === "json") {
+      renderJsonEditor();
+    } else {
+      renderFormFields();
+    }
+  }
+
+  function renderFormFields() {
     const keys = allFieldKeys(schema).sort(keySort);
     const required = requiredFields(schema, draft);
 
@@ -460,6 +470,19 @@ function renderEntryForm(container, draft) {
       container.appendChild(wrap);
     }
 
+    appendActionButtons();
+  }
+
+  function renderJsonEditor() {
+    const textarea = document.createElement("textarea");
+    textarea.className = "json-editor";
+    textarea.value = JSON.stringify(draft, null, 2);
+    container.appendChild(textarea);
+
+    appendActionButtons();
+  }
+
+  function appendActionButtons(editorToggleLabel, editorToggleCallback) {
     const buttonsElement = document.createElement("div");
     buttonsElement.classList.add("buttons");
 
@@ -469,10 +492,53 @@ function renderEntryForm(container, draft) {
       resetButtonElement.setAttribute("data-role", "reset");
       resetButtonElement.textContent = "Reset entry";
       resetButtonElement.addEventListener("click", () => {
-        resetEntryToOriginal(entryElement);
+        if (mode === "json") {
+          entryElement.querySelector(".json-editor").value = JSON.stringify(entryDataFor(entryElement, true));
+        } else {
+          resetEntryToOriginal(entryElement);
+        }
       });
       buttonsElement.appendChild(resetButtonElement);
     }
+
+    const editorToggleButtonElement = document.createElement("button");
+    editorToggleButtonElement.type = "button";
+    if (mode === "json") {
+      editorToggleButtonElement.textContent = "Validate JSON";
+      editorToggleButtonElement.addEventListener("click", () => {
+        const editor = entryElement.querySelector(".json-editor");
+        try {
+          let parsed = JSON.parse(editor.value);
+        } catch (error) {
+          renderError("Invalid JSON: " + err.message);
+          return;
+        }
+        if (parsed === null || typeof parsed !== "object" || Array.isArray(parsed)) {
+          renderError("Must be a JSON object");
+          return
+        }
+        if (!isAdded && parsed.id !== draft.id) {
+          renderError('"id" cannot be changed.');
+          return;
+        }
+        const changed = !deepEqual(draft, parsed);
+        draft.clear();
+        Object.assign(draft, parsed);
+        if (changed && !isAdded) {
+          entryElement.classList.add("entry-edited");
+          updateModificationCounters();
+        }
+        mode = "form";
+        rebuild();
+      }
+    } else {
+      editorToggleButtonElement.textContent = "Edit entry as JSON";
+      editorToggleButtonElement.addEventListener("click", () => {
+        mode = "json";
+        rebuild();
+      }
+    }
+    buttonsElement.appendChild(editorToggleButtonElement);
 
     const deleteButtonElement = document.createElement("button");
     deleteButtonElement.type = "button";
@@ -940,6 +1006,20 @@ function escapeHtml(s) {
 }
 function escapeAttr(s) {
   return escapeHtml(s);
+}
+
+function deepEqual(a, b) {
+  if (a === b) return true;
+  if (Array.isArray(a) || Array.isArray(b)) {
+    if (!Array.isArray(a) || !Array.isArray(b) || a.length !== b.length) return false;
+    return a.every((v, i) => deepEqual(v, b[i]));
+  }
+  if (a && b && typeof a === "object" && typeof b === "object") {
+    const ak = Object.keys(a), bk = Object.keys(b);
+    if (ak.length !== bk.length) return false;
+    return ak.every((k) => deepEqual(a[k], b[k]));
+  }
+  return false;
 }
 
 // =====================================================================
