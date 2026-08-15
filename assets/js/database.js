@@ -793,12 +793,10 @@ function renderNameTuple(pair, valueChangeCallback) {
   const wrap = document.createElement("div");
   wrap.className = "tuple-row";
   const first = document.createElement("input");
-  first.placeholder = "First";
   first.setAttribute("autocomplete", "off");
   first.setAttribute("name", crypto.randomUUID());
   first.value = pair[0] || "";
   const last = document.createElement("input");
-  last.placeholder = "Last";
   last.setAttribute("autocomplete", "off");
   last.setAttribute("name", crypto.randomUUID());
   last.value = pair[1] || "";
@@ -822,7 +820,6 @@ function renderTupleList(values, valueChangeCallback, suggestions) {
       row.className = "tuple-row removable";
       const first = document.createElement("input");
       first.type = "text";
-      first.placeholder = "First";
       first.setAttribute("autocomplete", "off");
       first.setAttribute("name", "Author1");
       first.value = pair[0] || "";
@@ -831,7 +828,6 @@ function renderTupleList(values, valueChangeCallback, suggestions) {
       }
       const last = document.createElement("input");
       last.type = "text";
-      last.placeholder = "Last";
       last.setAttribute("autocomplete", "off");
       last.setAttribute("name", "Author2");
       last.value = pair[1] || "";
