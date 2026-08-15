@@ -527,15 +527,18 @@ function renderEntryForm(container, draft) {
           renderError('"id" cannot be changed.');
           return;
         }
-        const allCurrentEntries = isAdded ? composeEntriesFromDom() : null; // only needed if added
-        if (validateEntry(parsed, isAdded, allCurrentEntries) > 0) {
+        if (validateEntry(parsed, isAdded) > 0) {
           return;
         }
-        const changed = !deepEqual(draft, parsed);
         Object.keys(draft).forEach(key => delete draft[key]);
         Object.assign(draft, parsed);
-        if (changed && !isAdded) {
-          entryElement.classList.add("entry-edited");
+        if (!isAdded) {
+          const changed = !deepEqual(entryDataFor(entryElement, true), parsed);
+          if (changed) {
+            entryElement.classList.add("entry-edited");
+          } else {
+            entryElement.classList.remove("entry-edited");
+          }
           updateModificationCounters();
         }
         mode = "form";
@@ -913,7 +916,7 @@ function renderObjectList(itemSchema, values, valueChangeCallback) {
 // Validation
 // =====================================================================
 
-function validateEntry(entry, isAdded, allCurrentEntries) {
+function validateEntry(entry, isAdded) {
   const schema = schemaFor(state.type);
   let errors = 0;
   const required = requiredFields(schema, entry);
@@ -934,7 +937,10 @@ function validateEntry(entry, isAdded, allCurrentEntries) {
     }
   }
   if (isAdded) {
-    if (allCurrentEntries.filter((e) => e !== entry).some((e) => e.id === entry.id)) {
+    const idExists = Array.from(document.querySelectorAll(".entry:not(.entry-added):not(.entry-deleted)")).map(
+      entry => JSON.parse(entry.getAttribute("data-id"))
+    ).indexOf(entry.id) >= 0;
+    if (idExists) {
       errors += 1;
       renderError(`${entry.id}: already exists in ${state.type}`);
     }
@@ -960,14 +966,13 @@ async function saveAll() {
   const type = state.type;
   const list = document.getElementById("entry-list");
 
-  const current = composeEntriesFromDom();
   const toValidate = [];
   list.querySelectorAll(".entry-edited").forEach((d) => toValidate.push([entryDataFor(d), false]));
   list.querySelectorAll(".entry-added").forEach((d) => toValidate.push([entryDataFor(d), true]));
 
   let errors = 0;
   for (const [entry, isAdded] of toValidate) {
-    errors += validateEntry(entry, isAdded, current);
+    errors += validateEntry(entry, isAdded);
   }
   if (errors > 0) {
     renderError("Errors need to be fixed before saving");
