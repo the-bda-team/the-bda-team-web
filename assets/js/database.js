@@ -474,10 +474,13 @@ function renderEntryForm(container, draft) {
   }
 
   function renderJsonEditor() {
-    const textarea = document.createElement("textarea");
-    textarea.className = "json-editor";
-    textarea.value = JSON.stringify(draft, null, 2);
-    container.appendChild(textarea);
+    const fieldElement = document.createElement("div");
+    fieldElement.classList.append("field");
+    const textareaElement = document.createElement("textarea");
+    textareaElement.className = "json-editor";
+    textareaElement.value = JSON.stringify(draft, null, 2);
+    fieldElement.appendChild(textareaElement);
+    container.appendChild(fieldElement);
 
     appendActionButtons();
   }
@@ -525,7 +528,7 @@ function renderEntryForm(container, draft) {
           return;
         }
         const allCurrentEntries = isAdded ? composeEntriesFromDom() : null; // only needed if added
-        if (validateEntry(entryDataFor(entryElement), allCurrentEntries) > 0) {
+        if (validateEntry(entryDataFor(entryElement), isAdded, allCurrentEntries) > 0) {
           return;
         }
         const changed = !deepEqual(draft, parsed);
@@ -914,8 +917,7 @@ function renderObjectList(itemSchema, values, valueChangeCallback) {
 // Validation
 // =====================================================================
 
-function validateEntry(entry, allCurrentEntries) {
-  const isAdded = entryElement.classList.contains("entry-added");
+function validateEntry(entry, isAdded, allCurrentEntries) {
   const schema = schemaFor(state.type);
   let errors = 0;
   const required = requiredFields(schema, entry);
@@ -964,12 +966,12 @@ async function saveAll() {
 
   const current = composeEntriesFromDom();
   const toValidate = [];
-  list.querySelectorAll(".entry-edited").forEach((d) => toValidate.push(entryDataFor(d)));
-  list.querySelectorAll(".entry-added").forEach((d) => toValidate.push(entryDataFor(d)));
+  list.querySelectorAll(".entry-edited").forEach((d) => toValidate.push([entryDataFor(d), false]));
+  list.querySelectorAll(".entry-added").forEach((d) => toValidate.push([entryDataFor(d), true]));
 
   let errors = 0;
-  for (const entry of toValidate) {
-    errors += validateEntry(entry, current);
+  for (const [entry, isAdded] of toValidate) {
+    errors += validateEntry(entry, isAdded, current);
   }
   if (errors > 0) {
     renderError("Errors need to be fixed before saving");
