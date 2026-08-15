@@ -16,6 +16,8 @@ const UPLOADABLE_FIELDS = {
 // State
 // =====================================================================
 
+const KNOWN_AUTHORS_AND_EDITORS = new Map();
+
 const state = {
   type: null,
   user: null,
@@ -174,7 +176,52 @@ async function loadAndRender() {
   const json = await res.json();
   state.commit = json.commit;
   state.sha = json.sha;
+
+  renderKeywordSuggestions();
+  renderAuthorAndEditorSuggestions();
   renderPage(json.content);
+}
+
+async function renderKeywordSuggestions() {
+  const listElement = document.getElementById("autocomplete-keywords");
+  listElement.innerHTML = "";
+
+  const all = new Set();
+  const KEYWORD_TYPES = ["publications", "events", "data"]; // the types with a "keywords" field
+  for (const t of KEYWORD_TYPES) {
+    const entries = await loadType(t);
+    for (const e of entries) {
+      if (Array.isArray(e.keywords)) { e.keywords.forEach((k) => all.add(k)); }
+    }
+  }
+  for (const keyword of [...all].sort()) {
+    const optionElement = document.createElement("option");
+    optionElement.setAttribute("value", keyword);
+    optionElement.textContent = keyword;
+    listElement.appendChild(optionElement);
+  }
+}
+
+async function renderAuthorAndEditorSuggestions() {
+  const listElement = document.getElementById("autocomplete-authors-and-editors");
+  listElement.innerHTML = "";
+
+  KNOWN_AUTHORS_AND_EDITORS.clear();
+  for (const entry of await loadType("publications")) {
+    for (const field of ["author", "editor"]) {
+      if (Array.isArray(entry[field])) {
+        for (const [first, last] of entry[field]) {
+          KNOWN_AUTHORS_AND_EDITORS.set(`${first} ${last}`, [first, last]);
+        }
+      }
+    }
+  }
+  for (const fullName of [...KNOWN_AUTHORS_AND_EDITORS.keys()].sort()) {
+    const optionElement = document.createElement("option");
+    optionElement.setAttribute("value", fullName);
+    optionElement.textContent = fullName;
+    listElement.appendChild(optionElement);
+  }
 }
 
 function renderError(message, { url = null } = {}) {
@@ -212,6 +259,23 @@ function applySearchFilter() {
     const matches = !q || searchableText(entryDataFor(entryElement)).includes(q);
     entryElement.style.display = matches ? "" : "none";
   });
+}
+
+async function getPublicationNameSuggestions() {
+  const entries = await fetchTypeEntries("publications");
+  const firstNames = new Set();
+  const lastNames = new Set();
+  for (const e of entries) {
+    for (const field of ["author", "editor"]) {
+      if (Array.isArray(e[field])) {
+        for (const pair of e[field]) {
+          if (pair[0]) firstNames.add(pair[0]);
+          if (pair[1]) lastNames.add(pair[1]);
+        }
+      }
+    }
+  }
+  return { firstNames: [...firstNames].sort(), lastNames: [...lastNames].sort() };
 }
 
 // =====================================================================
@@ -466,13 +530,15 @@ function renderFieldInput(key, fs, kind, entry, isNew, valueChangeCallback) {
       return input;
     }
     case "tags":
-      return renderTagsInput(value ? [...value] : [], valueChangeCallback);
+      const suggestions = key === "keywords" ? "autocomplete-keywords" : null;
+      return renderTagsInput(value ? [...value] : [], valueChangeCallback, suggestions);
     case "idrefs":
       return renderIdRefsInput(key, value ? [...value] : [], valueChangeCallback);
     case "nametuple":
       return renderNameTuple(value ? [...value] : ["", ""], valueChangeCallback);
     case "tuplelist":
-      return renderTupleList(value ? value.map((v) => [...v]) : [], valueChangeCallback);
+      const suggestions = (key === "author" || key === "editor") ? "autocomplete-authors-and-editors" : null;
+      return renderTupleList(value ? value.map((v) => [...v]) : [], valueChangeCallback, suggestions);
     case "objectlist":
       return renderObjectList(fs.items, value ? value.map((v) => ({ ...v })) : [], valueChangeCallback);
     default: {
@@ -544,7 +610,7 @@ function renderUrlOrUploadInput(uploadType, key, entry, valueChangeCallback) {
   return wrap;
 }
 
-function renderTagsInput(values, valueChangeCallback) {
+function renderTagsInput(values, valueChangeCallback, suggestions) {
   const wrap = document.createElement("div");
   wrap.className = "chip-input";
   const chips = document.createElement("div");
@@ -552,6 +618,9 @@ function renderTagsInput(values, valueChangeCallback) {
   const input = document.createElement("input");
   input.type = "text";
   input.placeholder = "Type and press Enter";
+  if (suggestions) {
+    input.setAttribute("list", suggestions);
+  }
 
   function redraw() {
     chips.innerHTML = "";
@@ -675,7 +744,14 @@ function renderTupleList(values, valueChangeCallback) {
       buttonElement.type = "button";
       buttonElement.textContent = "Remove";
       function update() { values[i] = [first.value, last.value]; valueChangeCallback([...values]); }
-      first.addEventListener("input", update);
+      first.addEventListener("input", () => {
+        if (KNOWN_AUTHORS_AND_EDITORS.has(first.value)) {
+          const [knownFirst, knownLast] = KNOWN_AUTHORS_AND_EDITORS.get(first.value);
+          first.value = knownFirst;
+          last.value = knownLast;
+        }
+        update();
+      });
       last.addEventListener("input", update);
       buttonElement.addEventListener("click", () => { values.splice(i, 1); valueChangeCallback([...values]); redraw(); });
       row.appendChild(first);
