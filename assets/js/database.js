@@ -718,9 +718,13 @@ function renderNameTuple(pair, valueChangeCallback) {
   wrap.className = "tuple-row";
   const first = document.createElement("input");
   first.placeholder = "First name";
+  first.setAttribute("autocomplete", "off");
+  first.setAttribute("name", crypto.randomUUID());
   first.value = pair[0] || "";
   const last = document.createElement("input");
   last.placeholder = "Last name";
+  last.setAttribute("autocomplete", "off");
+  last.setAttribute("name", crypto.randomUUID());
   last.value = pair[1] || "";
   function update() { valueChangeCallback([first.value, last.value]); }
   first.addEventListener("input", update);
@@ -744,6 +748,7 @@ function renderTupleList(values, valueChangeCallback, suggestions) {
       first.type = "text";
       first.placeholder = "First name";
       first.setAttribute("autocomplete", "off");
+      first.setAttribute("name", crypto.randomUUID());
       first.value = pair[0] || "";
       if (suggestions) {
         first.setAttribute("list", suggestions);
@@ -752,6 +757,7 @@ function renderTupleList(values, valueChangeCallback, suggestions) {
       last.type = "text";
       last.placeholder = "Last name";
       last.setAttribute("autocomplete", "off");
+      last.setAttribute("name", crypto.randomUUID());
       last.value = pair[1] || "";
       const buttonElement = document.createElement("button");
       buttonElement.type = "button";
