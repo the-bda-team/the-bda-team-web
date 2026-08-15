@@ -36,6 +36,12 @@ details.entry .field label {
 details.entry textarea {
   height: 7em;
 }
+details.entry textarea.json-editor {
+  width: 100%;
+  min-height: 21em;
+  resize: vertical;
+  font-family: monospace;
+}
 details.entry .field .idref-row,
 details.entry .field .removable {
   display: flex;

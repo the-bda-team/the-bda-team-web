@@ -504,13 +504,15 @@ function renderEntryForm(container, draft) {
     const editorToggleButtonElement = document.createElement("button");
     editorToggleButtonElement.type = "button";
     if (mode === "json") {
+      const editor = entryElement.querySelector(".json-editor");
+      editor.scrollIntoView();
       editorToggleButtonElement.textContent = "Validate JSON";
       editorToggleButtonElement.addEventListener("click", () => {
-        const editor = entryElement.querySelector(".json-editor");
+        let parsed = null;
         try {
-          let parsed = JSON.parse(editor.value);
+          parsed = JSON.parse(editor.value);
         } catch (error) {
-          renderError("Invalid JSON: " + err.message);
+          renderError("Invalid JSON: " + error.message);
           return;
         }
         if (parsed === null || typeof parsed !== "object" || Array.isArray(parsed)) {
