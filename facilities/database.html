@@ -13,9 +13,17 @@ additional_css: [ "database" ]
 </div>
 
 <div class="buttons">
-<button id="add-new-button" type="button" onclick="addNewEntry()">Add new</button>
+<button id="add-new-button" type="button" onclick="addNewEntry()">Add new entry</button>
+<button id="toggle-conversion-prompt" type="button" aria-expanded="false" aria-controls="conversion-prompt">Show conversion prompt</button>
 </div>
-<div id="entry-list" class="entry-list"></div>
+<div id="conversion-prompt" aria-hidden="true">
+<span class="element-actions" data-target="conversion-prompt">
+<button class="icon" type="button" data-action="copy" title="copy">{% include icon/copy.svg %}</button>
+</span>
+<textarea></textarea>
+</div>
+
+<div id="entry-list" class="entry-list">Loading</div>
 
 <footer>
 <ul id="errors"></ul>

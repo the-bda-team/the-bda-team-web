@@ -304,17 +304,16 @@ main footer .buttons {
   margin-top: 0;
 }
 main button {
-  border-radius: var(--space-default);
-  padding: calc(2*var(--space-default));
-  background-color: var(--color-button-background);
   cursor: pointer;
-  color: white;
 }
 main li button {
   padding: 0px var(--space-default);
 }
-main button[role="delete"] {
-  background-color: var(--color-button-danger-background);
+main .buttons > button {
+  padding: calc(2*var(--space-default));
+  color: white;
+  border-radius: var(--space-default);
+  background-color: var(--color-button-background);
 }
 main .buttons > button:not(:first-child) {
   margin-left: var(--space-default);

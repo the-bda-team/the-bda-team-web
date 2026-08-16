@@ -650,7 +650,7 @@ function renderUrlOrUploadInput(uploadType, key, entry, valueChangeCallback) {
   if (!id) {
     const hint = document.createElement("p");
     hint.className = "muted small";
-    hint.textContent = "Enter an id first to enable file upload.";
+    hint.textContent = "Save once to enable file upload.";
     wrap.appendChild(hint);
     return wrap;
   }
@@ -983,6 +983,7 @@ async function saveAll() {
   saveButtonElement.disabled = true;
   saveButtonElement.textContent = "Saving…";
 
+  const current = composeEntriesFromDom();
   const params = new URLSearchParams({
     name: type,
     baseCommit: state.commit,
