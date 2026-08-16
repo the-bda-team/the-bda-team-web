@@ -1,5 +1,16 @@
 [
   {
+    "id": "desires2027",
+    "category": "Conference",
+    "description": "5th International Conference on the Design of Experimental Search & Information REtrieval Systems (DESIRES 2027). General chairs: Johannes Kiesel and Johanne Trippas",
+    "month": "mar",
+    "name": "DESIRES",
+    "people": ["kiesel"],
+    "site": "Cologne, Germany",
+    "url": "https://desires-conf.org/2027/",
+    "year": 2027
+  },
+  {
     "id": "clef2026-touche",
     "category": "Workshop",
     "description": "Lab hosting four shared tasks on argumentation systems, held in conjunction with the 27th Conference and Labs of the Evaluation Forum (CLEF 2026), co-organized by Johannes Kiesel, Marc Feger, Tim Hagen, Sebastian Heineking, Maximilian Heinrich, Maik Fr\u00f6be, Martin Potthast, and Benno Stein",
