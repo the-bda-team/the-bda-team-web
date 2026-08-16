@@ -970,7 +970,6 @@ function updateModificationCounters() {
 async function saveAll() {
   const type = state.type;
   const list = document.getElementById("entry-list");
-  list.textContent = "Saving. Wait for changes to be committed and redeployed.";
 
   const toValidate = [];
   list.querySelectorAll(".entry-edited").forEach((d) => toValidate.push([entryDataFor(d), false]));
@@ -987,7 +986,7 @@ async function saveAll() {
 
   const saveButtonElement = document.getElementById("save-button");
   saveButtonElement.disabled = true;
-  saveButtonElement.textContent = "Saving…";
+  saveButtonElement.textContent = "Committing…";
 
   const current = composeEntriesFromDom();
   const params = new URLSearchParams({
@@ -995,6 +994,8 @@ async function saveAll() {
     baseCommit: state.commit,
     baseSha: state.sha,
   });
+
+  list.textContent = "Saving. Wait for changes to be committed and redeployed.";
   try {
     const response = await api(`/data?${params.toString()}`, {
       method: "PUT",
@@ -1016,11 +1017,11 @@ async function saveAll() {
     }
     const json = await response.json();
     if (json.mergeSha) {
-      saveButtonElement.textContent = "Waiting for checks…";
+      saveButtonElement.textContent = "Waiting for checks and redeploy…";
       await waitForChecks(json.mergeSha, (status) => {
-        saveButtonElement.textContent = status.total
-          ? `Waiting for checks… (${status.completed}/${status.total})`
-          : "Waiting for checks…";
+        saveButtonElement.textContent = status.completed
+          ? `Waiting for checks and redeploy… (${status.completed})`
+          : "Waiting for checks and redeploy…";
       });
     }
     await loadAndRender(); // fresh state from the server; also clears all local edit markers
