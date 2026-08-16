@@ -46,6 +46,25 @@ async function saveType(type, entries) {
   return json;
 }
 
+async function waitForChecks(mergeSha, callback) {
+  const POLL_INTERVAL_MS = 3000;
+  const WAIT_TIMEOUT_MS = 120000;
+  const start = Date.now();
+  while (Date.now() - start < WAIT_TIMEOUT_MS) {
+    let response;
+    try {
+      response = await api(`/workflow-status?sha=${encodeURIComponent(mergeSha)}`);
+    } catch (error) {
+      return; // network hiccup — don't block the save on this
+    }
+    if (!response.ok) return; // don't block the save over a status-check failure
+    const status = await response.json();
+    if (status.allDone) return;
+    callback(status);
+    await new Promise((resolve) => setTimeout(resolve, POLL_INTERVAL_MS));
+  }
+}
+
 async function uploadFile(directory, uploadType, id, file) {
   const form = new FormData();
   form.append("file", file);

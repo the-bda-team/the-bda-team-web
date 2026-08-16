@@ -1,7 +1,8 @@
 #conversion-prompt {
-  position: absolute;
+  position: relative;
 }
 #conversion-prompt textarea {
+  margin-top: 1px;
   width: 100%;
   min-height: 21em;
   resize: vertical;

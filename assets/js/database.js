@@ -990,23 +990,32 @@ async function saveAll() {
     baseSha: state.sha,
   });
   try {
-    const res = await api(`/data?${params.toString()}`, {
+    const response = await api(`/data?${params.toString()}`, {
       method: "PUT",
       body: JSON.stringify(current, null, 2),
     });
-    if (res.status === 401) {
+    if (response.status === 401) {
       renderError("Your session expired — log in on another tab");
       return;
     }
-    if (res.status === 405) {
-      const pullUrl = await res.text();
+    if (response.status === 405) {
+      const pullUrl = await response.text();
       renderError("Merge conflict", pullUrl);
       await loadAndRender();
       return;
     }
-    if (!res.ok) {
-      const text = await res.text().catch(() => "");
+    if (!response.ok) {
+      const text = await response.text().catch(() => "");
       throw new Error(text || `Save failed (${res.status})`);
+    }
+    const json = await response.json();
+    if (json.mergeSha) {
+      saveButtonElement.textContent = "Waiting for checks…";
+      await waitForChecks(json.mergeSha, (status) => {
+        saveButtonElement.textContent = status.total
+          ? `Waiting for checks… (${status.completed}/${status.total})`
+          : "Waiting for checks…";
+      });
     }
     await loadAndRender(); // fresh state from the server; also clears all local edit markers
     updateModificationCounters();
