@@ -1067,8 +1067,12 @@ async function init() {
     window.location.href = "/facilities.html#edit-bda-database?redirect_reason=" + encodeURIComponent("Not logged in");
     return;
   }
+
   const headline = document.querySelector("h1");
   headline.textContent = headline.textContent + ` — ${TYPE_LABELS[state.type]}`;
+
+  document.querySelector("#conversion-prompt textarea").textContent = "Convert to JSON following this schema, names being formatted as ['first and other names', 'last name']:\n\n" + JSON.stringify(schemaFor(type), null, 2) + "\n";
+
   await loadAndRender();
 }
 

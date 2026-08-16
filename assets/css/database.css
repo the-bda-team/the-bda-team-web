@@ -1,3 +1,13 @@
+#conversion-prompt {
+  position: absolute;
+}
+#conversion-prompt textarea {
+  width: 100%;
+  min-height: 21em;
+  resize: vertical;
+  font-family: monospace;
+}
+
 main footer {
   border: 1px solid black;
   position: sticky;
