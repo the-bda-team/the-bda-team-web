@@ -293,8 +293,10 @@ details.section[open] > summary > h2::after {
 
 /* Buttons generic */
 
+main .buttons > button[disabled],
 button[disabled] {
   background-color: lightgray;
+  cursor: not-allowed;
 }
 
 main .buttons {

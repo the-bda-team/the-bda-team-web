@@ -686,7 +686,7 @@ function renderUrlOrUploadInput(uploadType, key, entry, valueChangeCallback) {
     } catch (err) {
       status.textContent = err.message;
     } finally {
-      fileInput.disabled = false;
+      fileInput.removeAttribute("disabled");
       fileInput.value = "";
     }
   });
@@ -953,11 +953,16 @@ function validateEntry(entry, isAdded) {
 // =====================================================================
 
 function updateModificationCounters() {
+  const saveButtonElement = document.getElementById("save-button");
+  saveButtonElement.disabled = true;
   const list = document.getElementById("entry-list");
   for (let countType of ["edited", "added", "deleted"]) {
     const count = list.querySelectorAll(".entry-" + countType).length;
     for (let counterElement of Array.from(document.querySelectorAll(`[data-counter='${countType}']`))) {
       counterElement.textContent = count;
+    }
+    if (count > 0) {
+      saveButtonElement.removeAttribute("disabled");
     }
   }
 }
@@ -965,6 +970,7 @@ function updateModificationCounters() {
 async function saveAll() {
   const type = state.type;
   const list = document.getElementById("entry-list");
+  list.textContent = "Saving. Wait for changes to be committed and redeployed.";
 
   const toValidate = [];
   list.querySelectorAll(".entry-edited").forEach((d) => toValidate.push([entryDataFor(d), false]));
@@ -1022,7 +1028,7 @@ async function saveAll() {
   } catch (error) {
     renderError(`Error: ${error.message}`);
   }
-  saveButtonElement.disabled = false;
+  saveButtonElement.removeAttribute("disabled");
   saveButtonElement.textContent = "Save";
 }
 
