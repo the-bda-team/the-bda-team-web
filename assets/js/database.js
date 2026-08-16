@@ -146,7 +146,7 @@ function renderPage(entries) {
 
   function entrySort(a, b) {
     if (a.year && b.year && a.year !== b.year) { return b.year - a.year; }
-    if (a.month && b.month && a.month !== b.month) { return monthOrder[a.month] - monthOrder[b.month]; }
+    if (a.month && b.month && a.month !== b.month) { return monthOrder[b.month] - monthOrder[a.month]; }
     if (a.name && b.name) { 
       if (Array.isArray(a.name) && Array.isArray(b.name)) {
         return a.name.join(" ").localeCompare(b.name.join(" "));
@@ -744,9 +744,12 @@ function renderIdRefsInput(targetType, values, valueChangeCallback) {
   const row = document.createElement("div");
   row.className = "idref-row";
   const select = document.createElement("select");
-  const addBtn = document.createElement("button");
-  addBtn.type = "button";
-  addBtn.textContent = "Add";
+  const buttonsElement = document.createElement("div");
+  buttonsElement.classList.add("buttons");
+  const addButtonElement = document.createElement("button");
+  addButtonElement.type = "button";
+  addButtonElement.textContent = "Add";
+  buttonsElement.appendChild(addButtonElement);
 
   function redraw() {
     chips.innerHTML = "";
@@ -776,7 +779,7 @@ function renderIdRefsInput(targetType, values, valueChangeCallback) {
       ? `<option value="">Select ${targetType}…</option>` + available.map((id) => `<option value="${escapeAttr(id)}">${escapeHtml(id)}</option>`).join("")
       : `<option value="">No ${targetType} available</option>`;
   });
-  addBtn.addEventListener("click", () => {
+  addButtonElement.addEventListener("click", () => {
     if (select.value) {
       values.push(select.value);
       valueChangeCallback([...values]);
@@ -787,7 +790,7 @@ function renderIdRefsInput(targetType, values, valueChangeCallback) {
     }
   });
   row.appendChild(select);
-  row.appendChild(addBtn);
+  row.appendChild(buttonsElement);
   wrap.appendChild(row);
   return wrap;
 }
@@ -834,9 +837,12 @@ function renderTupleList(values, valueChangeCallback, suggestions) {
       last.setAttribute("autocomplete", "off");
       last.setAttribute("name", "Author2");
       last.value = pair[1] || "";
+      const buttonsElement = document.createElement("div");
+      buttonsElement.classList.add("buttons");
       const buttonElement = document.createElement("button");
       buttonElement.type = "button";
       buttonElement.textContent = "Remove";
+      buttonsElement.appendChild(buttonElement);
       function update() { values[i] = [first.value, last.value]; valueChangeCallback([...values]); }
       first.addEventListener("input", () => {
         if (KNOWN_AUTHORS_AND_EDITORS.has(first.value)) {
@@ -850,7 +856,7 @@ function renderTupleList(values, valueChangeCallback, suggestions) {
       buttonElement.addEventListener("click", () => { values.splice(i, 1); valueChangeCallback([...values]); redraw(); });
       row.appendChild(first);
       row.appendChild(last);
-      row.appendChild(buttonElement);
+      row.appendChild(buttonsElement);
       rows.appendChild(row);
     });
   }
@@ -890,11 +896,14 @@ function renderObjectList(itemSchema, values, valueChangeCallback) {
         });
         row.appendChild(input);
       }
+      const buttonsElement = document.createElement("div");
+      buttonsElement.classList.add("buttons");
       const buttonElement = document.createElement("button");
       buttonElement.type = "button";
       buttonElement.textContent = "Remove";
       buttonElement.addEventListener("click", () => { values.splice(i, 1); valueChangeCallback([...values]); redraw(); });
-      row.appendChild(buttonElement);
+      buttonsElement.appendChild(buttonElement);
+      row.appendChild(buttonsElement);
       rows.appendChild(row);
     });
   }

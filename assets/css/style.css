@@ -214,7 +214,7 @@ footer .content {
 
 /* Filter */
 
-.filter {
+.filter, .filter-box {
   margin-bottom: calc(4 * var(--space-default));
 }
 .filter input,
@@ -299,9 +299,6 @@ button[disabled] {
   cursor: not-allowed;
 }
 
-main .buttons {
-  margin-top: var(--space-default);
-}
 main footer .buttons {
   margin-top: 0;
 }

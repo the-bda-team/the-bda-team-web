@@ -60,7 +60,6 @@ details.entry .field .removable {
 }
 details.entry .field .idref-row button,
 details.entry .field .removable button {
-  padding: 0 var(--space-default);
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
