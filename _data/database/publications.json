@@ -15,6 +15,21 @@
     "year": 2026
   },
   {
+    "id": "scharfbillig:2026a",
+    "category": "Article",
+    "author": [["Mario", "Scharfbillig"], ["Theresa", "Reitis-M\u00fcnstermann"], ["Nicolas", "Stefanovitch"], ["Johannes", "Kiesel"], ["Paula Schulze", "Brock"], ["Joanne", "Sneddon"], ["Emmanuel", "Cartier"], ["Murat", "Ardag"], ["Sharon", "Arieli"], ["Ella", "Daniel"], ["Henrik", "Dobewall"], ["Johannes", "Karl"], ["Anna", "Krasteva"], ["Thomas Peter", "Oeschger"], ["Georgios", "Petasis"], ["Luana", "Russo"], ["Antonella", "Seddone"], ["Aurelia", "Tamo-Larrieux"], ["Hester", "van Herk"], ["Nazan", "Avc\u0131"], ["Giuliano", "Bobba"], ["Pierre", "Chiron"], ["Ahmet", "\u00c7oymak"], ["Maria", "Dagioglou"], ["Dora", "Katsamori"], ["Ingmar", "Leijen"], ["Berna", "\u00d6ney"], ["Ricarda", "Scholz-Kuhn"], ["Emilia", "Zankina"], ["Sandrine", "Astor"], ["Petra", "Auer"], ["Livia", "Aulino"], ["Anat", "Bardi"], ["Fiorella", "Battaglia"], ["Constanze", "Beierlein"], ["Maya", "Benish-Weisman"], ["Christina", "Christodoulou"], ["Patricia R.", "Collins"], ["Irene", "Coppola"], ["Mafalda", "D\u00e2maso"], ["Meike", "Morren"], ["Einat", "Elizarov"], ["Naama", "Erlich"], ["Peculiar", "Ezeigwe-Ephraim"], ["Ronald", "Fischer"], ["Maria Cristina", "Gaeta"], ["Lucilla", "Gatt"], ["Noam", "Gerera"], ["Sjoukje", "Goldman"], ["Frederic", "Gonthier"], ["Stefanie", "Habermann"], ["Mina", "Hristova"], ["Demet Islambay", "Yapali"], ["Luigi", "Izzo"], ["Panos", "Kapetanakis"], ["Re\u015fit", "K\u0131\u015fl\u0131o\u011flu"], ["Chaya", "Koleva"], ["Roberta", "Koleva"], ["Joshua", "Lake"], ["Mael", "Mesplou"], ["Vanina", "Ninova"], ["Elif Sandal", "\u00d6nal"], ["Shani", "Oppenheim-Weller"], ["Duygu", "Ozturk"], ["Ioannis Elissaios", "Paparrigopoulos"], ["Vladimir", "Ponizovskiy"], ["Tim", "Reeskens"], ["Maria Francesca", "Romano"], ["Torven", "Schalk"], ["Alina", "Starovolsky-Shitrit"], ["Oscar", "Smallenbroek"], ["\u00d6mer", "Topuz"], ["Christin-Melanie", "Vauclair"], ["Giuseppe", "Di Vetta"], ["Sheng", "Ye"]],
+    "doi": "10.3758/s13428-026-03092-z",
+    "editor": [["Erin M.", "Buchanan"], ["Dora", "Matzke"]],
+    "issn": "1554-3528",
+    "journal": "Behavior Research Methods",
+    "month": "aug",
+    "number": 10,
+    "publisher": "Springer",
+    "title": "ValuesML: A new multilingual dataset for values detection in news and political manifestos",
+    "volume": "58",
+    "year": 2026
+  },
+  {
     "id": "heinrich:2026a",
     "category": "InProceedings",
     "author": [["Maximilian", "Heinrich"], ["Sharat", "Anand"], ["Johannes", "Kiesel"], ["Benno", "Stein"]],
