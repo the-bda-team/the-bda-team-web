@@ -1,48 +1,26 @@
 [
   {
-    "id": "kiesel",
-    "category": "Teamlead",
-    "affiliation": "GESIS \u2013 Leibniz Institute for  the Social Sciences, Cologne",
-    "email": "Johannes.Kiesel@gesis.org",
-    "name": ["Johannes", "Kiesel"],
-    "orcid": "0000-0002-1617-6508",
+    "id": "rieger",
+    "category": "Staff",
+    "affiliation": "GESIS – Leibniz Institute for  the Social Sciences, Cologne",
+    "email": "Alisa.Rieger@gesis.org",
+    "name": [
+      "Alisa",
+      "Rieger"
+    ],
+    "orcid": "0000-0002-2274-1606",
     "title": "Dr.",
-    "topics": ["Conversational AI", "Computational Argumentation", "Human Values", "Methods Hub", "User Simulation"]
-  },
-  {
-    "id": "hirak",
-    "category": "Staff",
-    "affiliation": "Heinrich Heine University, D\u00fcsseldorf",
-    "email": "vitalii.hirak@hhu.de",
-    "name": ["Vitalii", "Hirak"],
-    "orcid": "0009-0008-8456-5629",
-    "years": "2025 - today"
-  },
-  {
-    "id": "khan",
-    "category": "Staff",
-    "affiliation": "GESIS \u2013 Leibniz Institute for  the Social Sciences, Cologne",
-    "email": "Taimoor.Khan@gesis.org",
-    "name": ["Muhammad Taimoor", "Khan"],
-    "orcid": "0000-0002-6542-9217",
-    "title": "Dr.",
-    "years": "2025 - today"
-  },
-  {
-    "id": "linzbach",
-    "category": "Staff",
-    "affiliation": "GESIS \u2013 Leibniz Institute for  the Social Sciences, Cologne",
-    "email": "Stephan.Linzbach@gesis.org",
-    "name": ["Stephan", "Linzbach"],
-    "orcid": "0009-0009-6955-2368",
     "years": "2025 - today"
   },
   {
     "id": "momeni",
     "category": "Staff",
-    "affiliation": "GESIS \u2013 Leibniz Institute for  the Social Sciences, Cologne",
+    "affiliation": "GESIS – Leibniz Institute for  the Social Sciences, Cologne",
     "email": "Fakhri.Momeni@gesis.org",
-    "name": ["Fakhri", "Momeni"],
+    "name": [
+      "Fakhri",
+      "Momeni"
+    ],
     "orcid": "0000-0002-5572-575X",
     "title": "Dr.",
     "years": "2025 - today"
@@ -50,9 +28,12 @@
   {
     "id": "muench",
     "category": "Staff",
-    "affiliation": "GESIS \u2013 Leibniz Institute for  the Social Sciences, Cologne",
+    "affiliation": "GESIS – Leibniz Institute for  the Social Sciences, Cologne",
     "email": "Felix.Muench@gesis.org",
-    "name": ["Felix Victor", "M\u00fcnch"],
+    "name": [
+      "Felix Victor",
+      "Münch"
+    ],
     "orcid": "0000-0001-8808-6790",
     "title": "Dr.",
     "url": "https://felixvictor.net/",
@@ -61,31 +42,45 @@
   {
     "id": "randhawa",
     "category": "Staff",
-    "affiliation": "GESIS \u2013 Leibniz Institute for  the Social Sciences, Cologne",
+    "affiliation": "GESIS – Leibniz Institute for  the Social Sciences, Cologne",
     "email": "Ghazal.Randhawa@gesis.org",
-    "name": ["Ghazal", "Randhawa"],
+    "name": [
+      "Ghazal",
+      "Randhawa"
+    ],
     "orcid": "0009-0000-2837-2066",
     "years": "2026 - today"
   },
   {
-    "id": "rieger",
-    "category": "Staff",
-    "affiliation": "GESIS \u2013 Leibniz Institute for  the Social Sciences, Cologne",
-    "email": "Alisa.Rieger@gesis.org",
-    "name": ["Alisa", "Rieger"],
-    "orcid": "0000-0002-2274-1606",
+    "id": "kiesel",
+    "category": "Teamlead",
+    "affiliation": "GESIS – Leibniz Institute for  the Social Sciences, Cologne",
+    "email": "Johannes.Kiesel@gesis.org",
+    "name": [
+      "Johannes",
+      "Kiesel"
+    ],
+    "orcid": "0000-0002-1617-6508",
     "title": "Dr.",
-    "years": "2025 - today"
+    "topics": [
+      "Conversational AI",
+      "Computational Argumentation",
+      "Human Values",
+      "Methods Hub",
+      "User Simulation"
+    ]
   },
   {
-    "id": "yu",
+    "id": "khan",
     "category": "Staff",
-    "affiliation": "GESIS \u2013 Leibniz Institute for  the Social Sciences, Cologne",
-    "email": "Ran.Yu@gesis.org",
-    "name": ["Ran", "Yu"],
-    "orcid": "0000-0002-1619-3164",
+    "affiliation": "GESIS – Leibniz Institute for  the Social Sciences, Cologne",
+    "email": "Taimoor.Khan@gesis.org",
+    "name": [
+      "Muhammad Taimoor",
+      "Khan"
+    ],
+    "orcid": "0000-0002-6542-9217",
     "title": "Dr.",
-    "url": "https://ranyu2020.wordpress.com/",
     "years": "2025 - today"
   },
   {
@@ -93,10 +88,50 @@
     "category": "Former Staff",
     "affiliation": "MBZUAI - Mohamed bin Zayed University of Artificial Intelligence, Abu Dhabi",
     "email": "PoChun.Chang@mbzuai.ac.ae",
-    "name": ["Po-Chun", "Chang"],
+    "name": [
+      "Po-Chun",
+      "Chang"
+    ],
     "orcid": "0009-0002-9371-8582",
-    "topics": ["Methods Hub"],
     "url": "https://github.com/poch4319",
     "years": "2025 - 2026"
+  },
+  {
+    "id": "yu",
+    "category": "Staff",
+    "affiliation": "GESIS – Leibniz Institute for  the Social Sciences, Cologne",
+    "email": "Ran.Yu@gesis.org",
+    "name": [
+      "Ran",
+      "Yu"
+    ],
+    "orcid": "0000-0002-1619-3164",
+    "title": "Dr.",
+    "url": "https://ranyu2020.wordpress.com/",
+    "years": "2025 - today"
+  },
+  {
+    "id": "linzbach",
+    "category": "Staff",
+    "affiliation": "GESIS – Leibniz Institute for  the Social Sciences, Cologne",
+    "email": "Stephan.Linzbach@gesis.org",
+    "name": [
+      "Stephan",
+      "Linzbach"
+    ],
+    "orcid": "0009-0009-6955-2368",
+    "years": "2025 - today"
+  },
+  {
+    "id": "hirak",
+    "category": "Staff",
+    "affiliation": "Heinrich Heine University, Düsseldorf",
+    "email": "vitalii.hirak@hhu.de",
+    "name": [
+      "Vitalii",
+      "Hirak"
+    ],
+    "orcid": "0009-0008-8456-5629",
+    "years": "2025 - today"
   }
 ]
