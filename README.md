@@ -1,8 +1,6 @@
 # The BDA Team Web
 
-This repository contains the source of the [personal web page of the BDA team](https://the-bda.team/).
-
-To change your data, edit the files in [the `_data/database` directory](_data/database). To make an own web page, copy [`people/kiesel.html`](people/kiesel.html) and edit the content.
+This repository contains the source of the [personal web page of the BDA team](https://the-bda.team/). To edit the data, see the [facilities](https://the-bda.team/facilities).
 
 ## Local Development
 
